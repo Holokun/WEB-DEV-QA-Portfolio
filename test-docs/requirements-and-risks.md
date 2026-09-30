@@ -7,8 +7,8 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 | ID | Area | Criterion |
 | --- | --- | --- |
 | CAT-01 | Catalogue | On load, the page requests `GET /api/games`, shows a loading state while waiting, then displays every returned game with its title and genre. |
-| CAT-02 | Search | Search matches a case-insensitive, trimmed substring of a game title. An empty search restores the unfiltered catalogue. |
-| CAT-03 | Genre filter | Selecting a genre shows only games in that genre. Clearing the selection restores games from all genres. |
+| CAT-02 | Search | Search matches a case-insensitive, trimmed substring of a game title. Clearing search removes only the search restriction; if a genre is selected, results still show only that genre. |
+| CAT-03 | Genre filter | Selecting a genre shows only games in that genre. Clearing the genre removes only the genre restriction; any search text still limits the results. |
 | CAT-04 | Combined controls | Search and genre apply together with AND logic. Changing either control updates the results and their count without requiring a page reload. |
 | CAT-05 | No results | A valid search/filter combination with zero matches displays “No games found” and a way to clear the controls. It does not show a blank page. |
 | CAT-06 | Load failure | A failed catalogue request displays a distinct error message and a Retry action. The UI never presents an API failure as “No games found.” |
@@ -27,15 +27,23 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 
 | ID | Request | Expected result |
 | --- | --- | --- |
-| API-01 | `GET /api/games` | `200` with `{ games, total, filters }`; `total` equals the number of returned games. Results are ordered by title ascending, then ID ascending. |
+| API-01 | `GET /api/games` | `200` with `{ games, total, filters }`, where `filters` is `{ search: string, genre: string }`. Both values are `""` when omitted; `search` contains the trimmed query and `genre` contains the selected genre. `total` equals the number of returned games. Results are ordered by title ascending, then ID ascending. |
 | API-02 | `GET /api/games?search=<text>&genre=<genre>` | `200` with games matching both supplied controls. Search is trimmed, case-insensitive, and at most 80 characters. Genre exactly matches one of `Action`, `Adventure`, `Puzzle`, `Racing`, `RPG`, or `Strategy`; an empty genre means all genres. |
 | API-03 | `GET /api/games/:id` | `200` with `{ game }` for a known positive integer ID. A valid but unknown ID returns `404`. |
 | API-04 | `GET /api/games/:id/patch-notes` | `200` with `{ patchNotes }` for a known game, sorted newest first. A valid but unknown game ID returns `404`. |
 | API-05 | Invalid parameters | Unsupported or repeated query keys, an invalid genre, an overlong search, and a malformed game ID return `400`. Values are treated as data, never as SQL syntax. |
-| API-06 | Error shape | Every API error returns `{ "error": { "code": "...", "message": "..." } }`. An unexpected dependency failure returns `500` with a generic message and no stack trace or SQL details. |
-| API-07 | Feedback | `POST /api/feedback` accepts JSON `{ gameId, email, description }` and returns `201` with `{ id }`; invalid content returns `400` without inserting a row. |
+| API-06 | Error shape | Every API error returns `{ "error": { "code": "...", "message": "..." } }` using the status/code mapping below. An unexpected dependency failure returns `500` with a generic message and no stack trace or SQL details. |
+| API-07 | Feedback | `POST /api/feedback` accepts JSON `{ gameId, email, description }` and returns `201` with `{ id }`. Malformed JSON, missing fields, or values that fail FBK-02 return `400 INVALID_BODY`; a well-formed positive `gameId` that does not exist returns `404 NOT_FOUND`. Neither error inserts a row. |
 
 Each game response has `{ id, title, genre, releaseYear, platforms, description }`, with `platforms` as a string array. Each patch note has `{ id, gameId, version, publishedAt, summary }`, with `publishedAt` in `YYYY-MM-DD` format. The API uses the same error shape for `400`, `404`, and `500` responses.
+
+| Status | Error code | When used |
+| --- | --- | --- |
+| `400` | `INVALID_QUERY` | List query has an unsupported or repeated key, invalid genre, or search longer than 80 characters. |
+| `400` | `INVALID_ID` | A game ID in a detail or patch-note URL is not a positive integer. |
+| `400` | `INVALID_BODY` | Feedback JSON is malformed, a field is missing/invalid, or `gameId` is not a positive integer. |
+| `404` | `NOT_FOUND` | A well-formed game ID is absent, including a feedback request that refers to an unknown game. |
+| `500` | `INTERNAL_ERROR` | An unexpected server or database failure. |
 
 ## Risk list
 
