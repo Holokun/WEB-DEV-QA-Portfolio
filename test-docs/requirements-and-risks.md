@@ -7,15 +7,15 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 | ID | Area | Criterion |
 | --- | --- | --- |
 | REQ-CAT-01 | Catalogue | On load, the page requests `GET /api/games`, shows a loading state while waiting, then displays every returned game with its title and genre. |
-| REQ-CAT-02 | Search | Search matches a case-insensitive, trimmed substring of a game title. Clearing search removes only the search restriction; if a genre is selected, results still show only that genre. |
+| REQ-CAT-02 | Search | Search matches a trimmed substring of a game title using the ASCII case rule below. Clearing search removes only the search restriction; if a genre is selected, results still show only that genre. If trimmed search exceeds 80 Unicode code points, show “Search must be 80 characters or fewer” beside the input, mark it invalid, and send no catalogue request. Keep the previous results visible and identify their previous valid search and genre values. Resume requests and remove the validation message when the value becomes valid. |
 | REQ-CAT-03 | Genre filter | Selecting a genre shows only games in that genre. Clearing the genre removes only the genre restriction; any search text still limits the results. |
 | REQ-CAT-04 | Combined controls | Search and genre apply together with AND logic. Changing either control updates the results and their count without requiring a page reload. |
 | REQ-CAT-05 | No results | A valid search/filter combination with zero matches displays “No games found” and a way to clear the controls. It does not show a blank page. |
 | REQ-CAT-06 | Load failure | A failed catalogue request displays a distinct error message and a Retry action. The UI never presents an API failure as “No games found.” |
 | REQ-DET-01 | Game detail | Opening a catalogue game shows the matching game's title, genre, description, release information, and platforms; the user can return to the catalogue. |
-| REQ-DET-02 | Patch notes | The detail view links to that game's patch notes. Notes appear newest first; a game with no notes has an explicit empty message. |
+| REQ-DET-02 | Patch notes | The detail view links to that game's patch notes. Notes appear by publication date descending, then ID descending for notes on the same date; a game with no notes has an explicit empty message. |
 | REQ-FAV-01 | Favourites | A user can add or remove a game from favourites. The button state, favourite list, and count update immediately. |
-| REQ-FAV-02 | Persistence | Favourites survive a page reload through browser local storage. Invalid or obsolete stored IDs do not break the page. |
+| REQ-FAV-02 | Persistence | Favourites survive a page reload through browser local storage. Malformed JSON or a value that is not an array is treated as an empty favourites list. Within an array, ignore invalid or obsolete game IDs and remove duplicates; retain valid, known positive safe integer IDs. The page remains usable and the count reflects the recovered list. |
 | REQ-FBK-01 | Required fields | The feedback form requires a game, email address, and description. Empty submission does not send a request and identifies each field to fix. |
 | REQ-FBK-02 | Validation | Trim surrounding whitespace from email and description. Email must follow the format rules and examples below; description must contain at least 20 Unicode code points after trimming. Invalid values receive useful field-level messages. The API applies the same rules even if called directly. |
 | REQ-FBK-03 | Submission | Valid feedback produces a success confirmation; `POST /api/feedback` returns `201` with a record ID, and one matching row is stored. A failed submission preserves entered values and shows an error. |
@@ -27,10 +27,10 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 
 | ID | Request | Expected result |
 | --- | --- | --- |
-| REQ-API-01 | `GET /api/games` | `200` with `{ games, total, filters }`, where `filters` is `{ search: string, genre: string }`. Both values are `""` when omitted; `search` contains the trimmed query and `genre` contains the selected genre. `total` equals the number of returned games. Results are ordered by title ascending, then ID ascending. |
-| REQ-API-02 | `GET /api/games?search=<text>&genre=<genre>` | `200` with games matching both supplied controls. Decode the query, trim search, then measure its length: at most 80 Unicode code points. Matching is case-insensitive. Genre exactly matches one of `Action`, `Adventure`, `Puzzle`, `Racing`, `RPG`, or `Strategy`; an empty genre means all genres. Genre is not trimmed or case-normalized. |
+| REQ-API-01 | `GET /api/games` | `200` with `{ games, total, filters }`, where `filters` is `{ search: string, genre: string }`. Both values are `""` when omitted; `search` contains the trimmed query and `genre` contains the selected genre. `total` equals the number of returned games. Results use the title comparison rule below, then ID ascending. |
+| REQ-API-02 | `GET /api/games?search=<text>&genre=<genre>` | `200` with games matching both supplied controls. Decode the query, trim search, then measure its length: at most 80 Unicode code points. Matching uses the ASCII case rule below. Genre exactly matches one of `Action`, `Adventure`, `Puzzle`, `Racing`, `RPG`, or `Strategy`; an empty genre means all genres. Genre is not trimmed or case-normalized. |
 | REQ-API-03 | `GET /api/games/:id` | `200` with `{ game }` for a known positive integer ID. A valid but unknown ID returns `404`. |
-| REQ-API-04 | `GET /api/games/:id/patch-notes` | `200` with `{ patchNotes }` for a known game, sorted newest first. A valid but unknown game ID returns `404`. |
+| REQ-API-04 | `GET /api/games/:id/patch-notes` | `200` with `{ patchNotes }` for a known game, ordered by `publishedAt` descending, then ID descending. A known game without notes returns `{ patchNotes: [] }`; a valid but unknown game ID returns `404`. |
 | REQ-API-05 | Invalid parameters | Unsupported or repeated query keys, an invalid genre, an overlong search, and a malformed game ID return `400`. Values are treated as data, never as SQL syntax. |
 | REQ-API-06 | Error shape | Every API error returns `{ "error": { "code": "...", "message": "..." } }` using the status/code mapping below. An unexpected dependency failure returns `500` with a generic message and no stack trace or SQL details. |
 | REQ-API-07 | Feedback | `POST /api/feedback` accepts a JSON object `{ gameId, email, description }` with the types below and returns `201` with `{ id }`. Malformed JSON, missing/extra fields, incorrect types, or values that fail REQ-FBK-02 return `400 INVALID_BODY`; once all fields pass validation, a positive `gameId` that does not exist returns `404 NOT_FOUND`. Neither error inserts a row. Store email and description after trimming. |
@@ -66,8 +66,17 @@ The project uses a simple email format rule: exactly one `@`; a nonempty local p
 | Search consisting of spaces | Accepted | Normalized to `""`; any selected genre remains active. |
 | Search with 80 `a` characters plus surrounding spaces | Accepted | Trimmed length is 80. |
 | Search with 81 `a` characters | Rejected | Returns `400 INVALID_QUERY`. |
+| Search with 80 `🎮` characters | Accepted | Each emoji counts as one code point. |
 | Description `"  12345678901234567890  "` | Accepted | Stored without surrounding spaces; length is 20. |
 | Description `"1234567890123456789"` | Rejected | Trimmed length is 19; returns `400 INVALID_BODY`. |
+
+The search examples describe direct API requests. In the UI, an overlong value produces the field validation behavior in `REQ-CAT-02` and no request. Allow the user to enter or paste the full value so it can be explained rather than silently truncated. For an invalid search entered before any valid results have loaded, show the validation message with no catalogue results. Invalidating the input cancels any pending search update and prevents an older response from replacing the retained results. Associate the message with the input and announce it to assistive technology.
+
+### Search comparison and ordering
+
+- For search matching, convert only ASCII `A`–`Z` to `a`–`z` in both title and query, then perform a literal substring comparison. All other Unicode code points stay unchanged; there is no accent removal or Unicode normalization. For example, `ÉCH` matches `Écho`, while `éch` and `echo` do not match `Écho`.
+- For catalogue ordering, apply the same ASCII conversion to titles, then compare their Unicode code-point sequences in ascending numeric order. A shorter sequence sorts first when it is a prefix of the other. Do not use browser or operating-system locale ordering. When these title keys are equal, sort by numeric game ID ascending.
+- For patch notes, compare valid `YYYY-MM-DD` publication dates descending; equal dates sort by numeric note ID descending. If notes 8 and 9 share a date, note 9 appears first.
 
 The API uses the same error shape for `400`, `404`, and `500` responses.
 
@@ -83,9 +92,12 @@ The API uses the same error shape for `400`, `404`, and `500` responses.
 
 - Keep the sample games and patch notes in a versioned seed file. Its exact records are the reference for all reset comparisons.
 - Initialize a newly created app database with those games and notes and no feedback. Starting the app with an existing database preserves its records.
-- The explicit test reset command operates only on a dedicated test database. It restores every seeded game and patch note, removes extra games/notes, clears all feedback, and resets the feedback ID counter. Perform the reset in one transaction; failure leaves the previous contents intact.
-- The test runner stops the app, resets the test database, and starts the app before each smoke or full suite run. Reset runs once per suite invocation; it does not run during normal requests or automatically between individual tests.
-- Parallel test workers use separate database files. Tests that change games or notes use their own database and reset it before their check. Feedback tests use unique values so they do not depend on earlier submissions.
+- The explicit test reset command operates only on a dedicated test database. It restores every seeded game and patch note, removes extra games/notes, clears all feedback, and resets the feedback ID counter so the next accepted feedback record has ID `1`. Perform the reset in one transaction; failure leaves all previous records and ID-counter state intact.
+- Run all app/database-dependent tests serially (`workers: 1` in Playwright, with no overlapping browser projects against the same app). Each suite invocation or independent CI job allocates its own absolute database path, for example `test-results/<run-id>/games.sqlite`; that path is not shared between invocations or jobs.
+- The runner passes that exact path through `DB_PATH` to both the reset command and the app process. It starts one app on an available port, obtains its URL, and sets the browser/API test base URL to that instance. SQL verification opens the same `DB_PATH`. The runner owns this app process and stops it at the end of the run.
+- Before the ordinary suite tests, stop the owned app if present, wait for it to exit and release SQLite connections, reset the database once, then start the app and wait for readiness. Ordinary tests do not reset between cases; feedback tests use unique values and never assume their new ID is `1`.
+- Exception for mutation, reset, or server-dependency-failure tests: allocate a separate per-test database path and app instance. Pass that path to every reset, app, and SQL operation for that test. Reset before the test's setup; stop and await the isolated app before any reset inside the test, then restart it if the check requires requests. These additional resets never affect the ordinary suite database. The first-feedback-ID assertion belongs to this isolated reset check.
+- A failed-reset variant injects a controlled failure after database changes have begun and before commit in the isolated database. Compare all rows and ID-counter state before and after the failed command to verify rollback. The failure hook is available only to the test reset mechanism.
 - Database reset does not clear browser local storage. Tests that need an empty favourites list clear storage separately.
 
 ## Risk list
