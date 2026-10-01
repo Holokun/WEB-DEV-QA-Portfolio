@@ -35,9 +35,9 @@ Use TypeScript for the Node.js API, frontend, and tests; SQLite for games, patch
 
 - Write explicit acceptance criteria for search matching, combined filters, no-results behavior, favourites persistence, feedback validation, and API errors.
 - Define a small API contract, including status codes, response shapes, and invalid-parameter behavior. For example: `200` for a valid list/detail, `400` for an invalid query, `404` for an unknown game, and `201` for accepted feedback.
-- Seed 8–12 varied games and several patch notes, including titles and genres that make search and filter results unambiguous.
+- Seed 8–12 varied games and several patch notes, including titles and genres that make search and filter results unambiguous. Include non-ASCII titles, distinct games with equal ASCII-folded title keys, equal-date notes for the same game, and a game without notes; follow the [fixture prerequisites](test-docs/requirements-and-risks.md#seed-fixture-prerequisites).
 - Give every element used by a test a user-facing label or role. Use HTML `data-testid` attributes only where accessible locators are ambiguous; these attributes are separate from the `TEST-` IDs used in the test inventory.
-- Keep test data deterministic: run app/database-dependent tests serially against one owned app per suite invocation and one explicit `DB_PATH`. Reset that database before ordinary suite tests. Mutation/reset/dependency-failure checks use a separate per-test database and app, with extra resets as specified in `test-docs/requirements-and-risks.md`. Create unique feedback records per ordinary test; clear local storage before tests that need a fresh favourites state.
+- Keep test data deterministic: run app/database-dependent tests serially against one owned app per suite invocation and one explicit `DB_PATH`. Reset that database before ordinary suite tests. Checks that mutate catalogue/patch notes, verify database startup or reset, or fail a server dependency use a separate per-test database and app, with setup and extra resets as specified in the [reset rules](test-docs/requirements-and-risks.md#database-initialization-and-test-reset). Ordinary feedback submissions use the suite database and unique values per test; clear local storage before tests that need a fresh favourites state.
 
 ## Build phases and completion gates
 
@@ -76,26 +76,26 @@ Run smoke checks on every push. Run the full regression suite on pull requests a
 | ID | Area | Assertion | Priority |
 | --- | --- | --- | --- |
 | TEST-UI-01 | Catalogue | Seeded games render with title and genre | Smoke |
-| TEST-UI-02 | Search | Exact/partial search follows the ASCII case rule; 80 code points are accepted, and 81 show field validation without a request, preserve previous results, and recover after correction | Smoke |
-| TEST-UI-03 | Filter | Genre filter returns only matching games | Regression |
-| TEST-UI-04 | Search + filter | Combined controls narrow results correctly; clearing either control preserves the other restriction | Regression |
+| TEST-UI-02 | Search | Exact/partial search follows the ASCII case rule; 80 code points are accepted, and 81 show field validation without a request, preserve previous results, block requests from genre changes and Retry, and recover using the current controls after correction | Smoke |
+| TEST-UI-03 | Filter | Genre filter returns only matching games when search is valid | Regression |
+| TEST-UI-04 | Search + filter | Combined controls narrow results correctly; clearing either control preserves the other restriction; an invalid search defers genre updates until correction | Regression |
 | TEST-UI-05 | Empty state | Unmatched search explains that no games were found | Regression |
 | TEST-UI-06 | Detail | Opening a result shows correct details and ordered patch notes; a game without notes shows an explicit empty message | Smoke |
 | TEST-UI-07 | Favourites | Add then remove a game; count/list update | Smoke |
-| TEST-UI-08 | Favourites | Selection survives reload; malformed/wrong-shape storage recovers to empty, and invalid/obsolete/duplicate IDs are ignored while valid selections remain | Regression |
+| TEST-UI-08 | Favourites | Selection survives reload; malformed/wrong-shape storage recovers to empty; complete unfiltered catalogue validation removes obsolete IDs, retains games hidden by filters, and removes invalid/duplicate IDs; failed catalogue requests preserve saved selections until validation succeeds | Regression |
 | TEST-UI-09 | Feedback | Required fields reject empty submission | Regression |
 | TEST-UI-10 | Feedback | Email examples and description length boundaries follow the requirements and show useful errors | Regression |
 | TEST-UI-11 | Feedback | Valid submission confirms and is stored; server/network failure shows an error and preserves all entered values | Smoke |
 | TEST-UI-12 | Keyboard | Catalogue, favourite button, and form can be operated by keyboard | Regression |
 | TEST-UI-13 | Mobile | At a phone viewport, search/filter, detail content, and feedback controls remain usable without horizontal overflow | Regression |
-| TEST-UI-14 | Error handling | Controlled `500` and network failures show an error distinct from empty results; restore the response, click Retry, and verify the expected catalogue loads | Regression |
+| TEST-UI-14 | Error handling | Controlled `500` and network failures show an error distinct from empty results; with valid search, restore the response and click Retry to load the current search/genre and clear the error; with invalid search, Retry sends no request and correction resumes requests using the latest genre | Regression |
 | TEST-A11Y-01 | Accessibility | Catalogue has no critical/serious axe violations | Regression |
 | TEST-A11Y-02 | Accessibility | Detail and feedback views have no critical/serious axe violations | Regression |
 | TEST-API-01 | API | List/detail/notes return expected status/body/schema; assert ASCII/non-ASCII search and title ordering, equal-date note ID ordering, and empty note arrays | Regression |
 | TEST-API-02 | API | Query boundaries, malformed IDs, invalid feedback fields/types, and unknown games return contract-compliant `400`/`404` bodies without inserting feedback | Regression |
 | TEST-API-03 | API + database | Valid feedback returns `201` and the inserted row matches a SQL verification query | Regression |
 | TEST-API-04 | API error handling | An isolated server dependency failure returns a safe, contract-compliant `500` body | Regression |
-| TEST-DATA-01 | Database reset | In an isolated database, reset restores every seeded field/ID, clears feedback, and makes the next feedback ID `1`; repeat reset for equality and inject a pre-commit failure to verify records/counter roll back unchanged | Regression |
+| TEST-DATA-01 | Database startup and reset | Isolated variants: first startup at a nonexistent database path creates the exact seeded games/notes with no feedback; restart preserves record changes, additions, and deletions, plus feedback and counter state; reset restores every seeded field/ID, clears feedback, and makes the next feedback ID `1`; repeat reset for equality and inject a pre-commit failure to verify records/counter roll back unchanged | Regression |
 
 Use a controlled failure in the test environment for TEST-UI-14 and TEST-API-04; document the failure mechanism so the check is reproducible. Use data-driven variants for the accepted/rejected examples and boundaries in `test-docs/requirements-and-risks.md`; the executed test count may exceed the 21 inventory entries. Keep visual regression to one or two stable screenshots after the core checks are reliable; use fixed data, viewport, browser, and fonts. This avoids making screenshot baselines the main QA story.
 
