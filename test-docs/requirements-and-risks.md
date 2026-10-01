@@ -14,6 +14,8 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 | REQ-CAT-06 | Load failure | A failed catalogue request displays a distinct error message and a Retry action. The UI never presents an API failure as “No games found.” Retry requests the current search and genre only when search is valid. If search is invalid, activating Retry sends no request, keeps the error and any previous results visible, and shows the REQ-CAT-02 validation message. |
 | REQ-DET-01 | Game detail | Opening a catalogue game shows the matching game's title, genre, description, release information, and platforms; the user can return to the catalogue. |
 | REQ-DET-02 | Patch notes | The detail view links to that game's patch notes. Notes appear by publication date descending, then ID descending for notes on the same date; a game with no notes has an explicit empty message. |
+| REQ-DET-03 | Detail loading and failure | While the detail request is pending, show a detail loading message and keep navigation back to the catalogue available. HTTP `500` or a network failure shows “Could not load game details” and a Retry action, without showing another game's content or a not-found message. Retry requests the same currently selected game ID, shows loading, and on success clears the error and displays that game. `404 NOT_FOUND` shows “Game not found” and a way back to the catalogue; no Retry is offered for `404`. Navigating to another game or back to the catalogue prevents an older response from replacing the current view. |
+| REQ-DET-04 | Patch-note loading and failure | When the user follows the patch-note link, show a notes loading message while the request is pending. HTTP `500` or a network failure shows “Could not load patch notes” and a notes Retry action; it never shows the no-notes message for a failed request. Keep the successfully loaded game details and catalogue navigation available. Retry requests notes for the currently selected game, shows loading, and on success clears the error and displays the ordered notes or the explicit no-notes message for `200` with an empty array. `404 NOT_FOUND` shows “Game not found” in the notes area with a way back and no notes Retry. Navigating away prevents an older notes response from updating another game's view. |
 | REQ-FAV-01 | Favourites | A user can add or remove a game from favourites. The button state, favourite list, and count update immediately. |
 | REQ-FAV-02 | Persistence | Favourites survive a page reload through browser local storage. Malformed JSON or a value that is not an array is treated as an empty favourites list. Within an array, ignore invalid IDs and remove duplicates; validate the remaining positive safe integer IDs against a successfully loaded complete, unfiltered catalogue. “Known” means present in that catalogue; “obsolete” means absent from it. Filtered results cannot establish that an ID is obsolete. If the complete catalogue has not loaded or its request fails, retain those candidate IDs in memory and storage and defer obsolete-ID removal until a complete request succeeds. Failed search/filter requests also never remove saved favourites. The page remains usable and the count reflects the retained list. |
 | REQ-FBK-01 | Required fields | The feedback form requires a game, email address, and description. Empty submission does not send a request and identifies each field to fix. |
@@ -29,11 +31,11 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 | --- | --- | --- |
 | REQ-API-01 | `GET /api/games` | `200` with `{ games, total, filters }`, where `filters` is `{ search: string, genre: string }`. Both values are `""` when omitted; `search` contains the trimmed query and `genre` contains the selected genre. `total` equals the number of returned games. Results use the title comparison rule below, then ID ascending. |
 | REQ-API-02 | `GET /api/games?search=<text>&genre=<genre>` | `200` with games matching both supplied controls. Decode the query, trim search, then measure its length: at most 80 Unicode code points. Matching uses the ASCII case rule below. Genre exactly matches one of `Action`, `Adventure`, `Puzzle`, `Racing`, `RPG`, or `Strategy`; an empty genre means all genres. Genre is not trimmed or case-normalized. |
-| REQ-API-03 | `GET /api/games/:id` | `200` with `{ game }` for a known positive integer ID. A valid but unknown ID returns `404`. |
-| REQ-API-04 | `GET /api/games/:id/patch-notes` | `200` with `{ patchNotes }` for a known game, ordered by `publishedAt` descending, then ID descending. A known game without notes returns `{ patchNotes: [] }`; a valid but unknown game ID returns `404`. |
-| REQ-API-05 | Invalid parameters | Unsupported or repeated query keys, an invalid genre, an overlong search, and a malformed game ID return `400`. Values are treated as data, never as SQL syntax. |
+| REQ-API-03 | `GET /api/games/:id` | `200` with `{ game }` for a known positive integer ID. A valid but unknown ID returns `404`. This endpoint accepts no query keys. |
+| REQ-API-04 | `GET /api/games/:id/patch-notes` | `200` with `{ patchNotes }` for a known game, ordered by `publishedAt` descending, then ID descending. A known game without notes returns `{ patchNotes: [] }`; a valid but unknown game ID returns `404`. This endpoint accepts no query keys. |
+| REQ-API-05 | Invalid parameters | The list endpoint accepts only `search` and `genre`, each at most once. Unsupported/repeated keys, an invalid genre, or an overlong search return `400 INVALID_QUERY`. Detail, patch-note, and feedback endpoints accept no query keys: any supplied key, including an empty-valued or repeated key, returns `400 INVALID_QUERY`. A malformed path ID returns `400 INVALID_ID`. Values are treated as data, never as SQL syntax. Follow the validation order below when more than one input is invalid. |
 | REQ-API-06 | Error shape | Every API error returns `{ "error": { "code": "...", "message": "..." } }` using the status/code mapping below. An unexpected dependency failure returns `500` with a generic message and no stack trace or SQL details. |
-| REQ-API-07 | Feedback | `POST /api/feedback` accepts a JSON object `{ gameId, email, description }` with the types below and returns `201` with `{ id }`. Malformed JSON, missing/extra fields, incorrect types, or values that fail REQ-FBK-02 return `400 INVALID_BODY`; once all fields pass validation, a positive `gameId` that does not exist returns `404 NOT_FOUND`. Neither error inserts a row. Store email and description after trimming. |
+| REQ-API-07 | Feedback | `POST /api/feedback` accepts no query keys and a JSON object `{ gameId, email, description }` with the types below, returning `201` with `{ id }`. After query validation succeeds, malformed JSON, missing/extra fields, incorrect types, or values that fail REQ-FBK-02 return `400 INVALID_BODY`; once all fields pass validation, a positive `gameId` that does not exist returns `404 NOT_FOUND`. No error inserts a row. Store email and description after trimming. |
 
 ### JSON field types
 
@@ -49,6 +51,17 @@ Source: [`PROJECT_PLAN.md`](../PROJECT_PLAN.md). These criteria define observabl
 | Error response | `error`: object containing `code` and `message` string fields. |
 
 Numeric IDs must be JSON numbers, so `"1"`, `null`, `true`, arrays, and objects are rejected as `gameId`. A safe integer is no greater than `9007199254740991`. IDs in URL paths must consist of decimal digits, start with `1`–`9`, and fit that range.
+
+### Query scope and validation order
+
+| Endpoint | Allowed query keys | Validation order |
+| --- | --- | --- |
+| `GET /api/games` | `search`, `genre`; each may occur once, including an empty value | Validate query keys/cardinality, then values, then read the database. |
+| `GET /api/games/:id` | None | Validate path ID, then reject any query keys, then look up the game. |
+| `GET /api/games/:id/patch-notes` | None | Validate path ID, then reject any query keys, then look up the game and its notes. |
+| `POST /api/feedback` | None | Reject any query keys, then parse/validate the body, then look up the game and insert. |
+
+A bare trailing `?` contains no keys and is accepted. `?search=` is a supplied key and is rejected on detail, notes, and feedback routes. Query names are case-sensitive. For example, an unknown positive detail ID with `?genre=Action` returns `400 INVALID_QUERY`; a malformed detail ID with that query returns `400 INVALID_ID`. Feedback without query keys validates every body field before deciding whether a game exists.
 
 ### Validation rules and examples
 
@@ -70,6 +83,40 @@ The project uses a simple email format rule: exactly one `@`; a nonempty local p
 | Description `"  12345678901234567890  "` | Accepted | Stored without surrounding spaces; length is 20. |
 | Description `"1234567890123456789"` | Rejected | Trimmed length is 19; returns `400 INVALID_BODY`. |
 
+#### Named email variants
+
+Execute every row through both the feedback UI (`TEST-UI-10`) and the direct API (`TEST-API-02`). Keep the selected game valid and the description at least 20 code points so each row isolates the email rule. Accepted API variants return `201` and store the trimmed address; rejected UI variants show a field error with no submission, and rejected API variants return `400 INVALID_BODY` with no inserted row. Use a unique synthetic description per accepted submission.
+
+| Variant | Email input | Expected | Rule exercised |
+| --- | --- | --- | --- |
+| EMAIL-01 | `  player@example.com  ` | Accept as `player@example.com` | Surrounding whitespace is trimmed. |
+| EMAIL-02 | `Player09.first_qa+tag-test@example.com` | Accept | Local part permits ASCII upper/lowercase letters, digits, single dots, underscore, plus, and hyphen. |
+| EMAIL-03 | `player@games-2.example.com` | Accept | Multiple domain labels, digits, and an internal hyphen are allowed. |
+| EMAIL-04 | `player@example.co` | Accept | Final label with exactly two ASCII letters is valid. |
+| EMAIL-05 | `player@example.COM` | Accept | Final-label letters can be uppercase; do not lowercase stored email. |
+| EMAIL-06 | `@example.com` | Reject | Local part is empty. |
+| EMAIL-07 | `.player@example.com` | Reject | Local part starts with a dot. |
+| EMAIL-08 | `player.@example.com` | Reject | Local part ends with a dot. |
+| EMAIL-09 | `play..er@example.com` | Reject | Local part has consecutive dots. |
+| EMAIL-10 | `player!qa@example.com` | Reject | Local part contains a disallowed ASCII character. |
+| EMAIL-11 | `pláyer@example.com` | Reject | Local part contains a non-ASCII letter. |
+| EMAIL-12 | `player name@example.com` | Reject | Local part contains internal whitespace. |
+| EMAIL-13 | `player.example.com` | Reject | Missing `@`. |
+| EMAIL-14 | `player@@example.com` | Reject | More than one `@`. |
+| EMAIL-15 | `player@` | Reject | Domain is empty. |
+| EMAIL-16 | `player@example` | Reject | Domain has only one label. |
+| EMAIL-17 | `player@.example.com` | Reject | First domain label is empty. |
+| EMAIL-18 | `player@example..com` | Reject | Intermediate domain label is empty. |
+| EMAIL-19 | `player@example.com.` | Reject | Final domain label is empty. |
+| EMAIL-20 | `player@-example.com` | Reject | Domain label starts with a hyphen. |
+| EMAIL-21 | `player@example-.com` | Reject | Domain label ends with a hyphen. |
+| EMAIL-22 | `player@exam_ple.com` | Reject | Domain contains a disallowed ASCII character. |
+| EMAIL-23 | `player@exámple.com` | Reject | Domain contains a non-ASCII letter. |
+| EMAIL-24 | `player@ example.com` | Reject | Domain contains internal whitespace. |
+| EMAIL-25 | `player@example.c` | Reject | Final label has fewer than two letters. |
+| EMAIL-26 | `player@example.c0m` | Reject | Final label contains a digit. |
+| EMAIL-27 | `player@example.co-m` | Reject | Final label contains a hyphen. |
+
 The search examples describe direct API requests. In the UI, an overlong value produces the field validation behavior in `REQ-CAT-02` and no request. Allow the user to enter or paste the full value so it can be explained rather than silently truncated. For an invalid search entered before any valid results have loaded, show the validation message with no catalogue results. Invalidating the input cancels any pending search update and prevents an older response from replacing the retained results. Associate the message with the input and announce it to assistive technology.
 
 While search is invalid, changing or clearing genre updates the control's selected value only; it does not change displayed results, their count, or the label identifying the previous valid controls. Retry cannot bypass this rule. Correcting or clearing search resumes requests with the latest genre selection; a successful response replaces retained results and clears any catalogue error.
@@ -84,7 +131,7 @@ The API uses the same error shape for `400`, `404`, and `500` responses.
 
 | Status | Error code | When used |
 | --- | --- | --- |
-| `400` | `INVALID_QUERY` | List query has an unsupported or repeated key, invalid genre, or trimmed search longer than 80 Unicode code points. |
+| `400` | `INVALID_QUERY` | List query has an unsupported or repeated key, invalid genre, or trimmed search longer than 80 Unicode code points; or any query key is supplied to detail, patch-note, or feedback endpoints. |
 | `400` | `INVALID_ID` | A game ID in a detail or patch-note URL fails the decimal format or positive safe integer range defined above. |
 | `400` | `INVALID_BODY` | Feedback JSON is malformed, a field is missing/extra, a field has the wrong type or fails validation, or `gameId` is not a positive safe integer. |
 | `404` | `NOT_FOUND` | A well-formed game ID is absent, including a feedback request that refers to an unknown game. |
@@ -126,11 +173,12 @@ Keep exact IDs, field values, dates, and fixture expectations versioned. Tests c
 | Favourites disappear after reload or attach to the wrong game | High | The persistence promise fails. | Add/remove and reload checks; verify storage recovery, complete-catalogue validation, and retention during filtered or failed requests. |
 | Invalid feedback is accepted or valid feedback is lost | High | Stored reports become unusable or disappear. | Check client and API validation; verify `201` against a SQL row with unique synthetic test data. |
 | Detail view shows the wrong game or wrong patch-note order | High | Navigation and update history cannot be trusted. | Compare selected card, detail response, and newest-first note dates using fixed seed IDs. |
+| Detail or notes failures are hidden or a late response shows another game | High | Users may trust missing or unrelated information. | Hold requests to observe loading; simulate detail and notes failures separately, verify scoped Retry and `404`, and navigate while an older response is pending. |
 | Startup changes existing data or test baselines drift | High | Saved records may be lost; tests become flaky and results cannot be reproduced. | Use a dedicated test database; verify new/existing database startup and the full reset with `TEST-DATA-01`, including every seeded field/ID, feedback, and counter state. |
 | Invalid input triggers SQL errors or exposes internals | High | Reliability and data safety are at risk. | Validate parameter names, lengths, genre, and ID; use parameterized SQL; assert safe `400`/`500` bodies. |
 | Mobile controls or content overflow | Medium | Phone users cannot complete core paths. | Test a documented 375 px viewport; inspect search/filter, detail, and form with no horizontal scroll. |
 | Keyboard or accessible naming gaps | Medium | Controls may be unusable without a pointer or screen reader. | Run axe checks and a manual keyboard/focus pass on catalogue, detail, and feedback. |
-| Browser-specific behavior differs | Medium | A smoke pass in one browser may hide failures elsewhere. | Run smoke UI checks in Chromium, Firefox, and WebKit; run the full UI suite in all three in CI. |
+| Browser-specific behavior differs | Medium | A smoke pass in one browser may hide failures elsewhere. | Run desktop smoke and full desktop UI regression in Chromium, Firefox, and WebKit; run the phone layout variant in Chromium, with optional WebKit coverage. |
 
 ## First smoke-test focus
 

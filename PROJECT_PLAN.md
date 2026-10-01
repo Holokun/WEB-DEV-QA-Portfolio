@@ -45,6 +45,8 @@ Use TypeScript for the Node.js API, frontend, and tests; SQLite for games, patch
 
 Maintain `test-docs/requirements-and-risks.md` and create `test-docs/test-plan.md`, `test-docs/test-scenarios.md`, and `test-docs/traceability-matrix.md`. Use `REQ-` for requirement IDs (for example, `REQ-CAT-01`, `REQ-FAV-01`, and `REQ-FBK-01`) and `TEST-` for automated test IDs. A traceability row can link `REQ-API-03` (detail endpoint) to `TEST-API-01` (list/detail check); `TEST-API-03` identifies the separate feedback/database check. Use `SCN-` for manual scenarios, `BUG-` for genuine defect records, and `SIM-` for failure-simulation investigations. Prioritize risks: incorrect search/filter combinations, lost favourites, invalid feedback accepted, broken mobile controls, and API failures hidden by the UI.
 
+Use the [chat task plan](test-docs/chat-task-plan.md) for document ownership, dependencies, handoffs, and copy-ready task prompts. The [test plan](test-docs/test-plan.md) defines execution scope and gates; the [manual scenarios](test-docs/test-scenarios.md) define procedures and expected results. These documents describe planned work and do not establish that testing has been executed.
+
 **Done when:** Each feature has observable acceptance criteria; high-risk criteria have planned tests; the test plan states browser/viewport coverage, test data, entry/exit criteria, and known exclusions.
 
 ### 2. Minimal test subject
@@ -80,11 +82,11 @@ Run smoke checks on every push. Run the full regression suite on pull requests a
 | TEST-UI-03 | Filter | Genre filter returns only matching games when search is valid | Regression |
 | TEST-UI-04 | Search + filter | Combined controls narrow results correctly; clearing either control preserves the other restriction; an invalid search defers genre updates until correction | Regression |
 | TEST-UI-05 | Empty state | Unmatched search explains that no games were found | Regression |
-| TEST-UI-06 | Detail | Opening a result shows correct details and ordered patch notes; a game without notes shows an explicit empty message | Smoke |
+| TEST-UI-06 | Detail | Opening a result shows correct details and ordered patch notes; a game without notes shows an explicit empty message. Regression variants cover separate detail/notes loading, HTTP `500`/network errors and Retry, unknown-game `404`, and navigation while an older request is pending | Smoke |
 | TEST-UI-07 | Favourites | Add then remove a game; count/list update | Smoke |
 | TEST-UI-08 | Favourites | Selection survives reload; malformed/wrong-shape storage recovers to empty; complete unfiltered catalogue validation removes obsolete IDs, retains games hidden by filters, and removes invalid/duplicate IDs; failed catalogue requests preserve saved selections until validation succeeds | Regression |
 | TEST-UI-09 | Feedback | Required fields reject empty submission | Regression |
-| TEST-UI-10 | Feedback | Email examples and description length boundaries follow the requirements and show useful errors | Regression |
+| TEST-UI-10 | Feedback | Every named email variant and description length boundary in the requirements follows the same UI/API validation rule and shows useful field errors | Regression |
 | TEST-UI-11 | Feedback | Valid submission confirms and is stored; server/network failure shows an error and preserves all entered values | Smoke |
 | TEST-UI-12 | Keyboard | Catalogue, favourite button, and form can be operated by keyboard | Regression |
 | TEST-UI-13 | Responsive layout | Desktop variant: 1280 px viewport width. Phone variant: 375 px viewport width. In each variant, search, filter, catalogue cards, detail content, and feedback controls remain usable without horizontal overflow | Regression |
@@ -92,7 +94,7 @@ Run smoke checks on every push. Run the full regression suite on pull requests a
 | TEST-A11Y-01 | Accessibility | Catalogue has no critical/serious axe violations | Regression |
 | TEST-A11Y-02 | Accessibility | Detail and feedback views have no critical/serious axe violations | Regression |
 | TEST-API-01 | API | List/detail/notes return expected status/body/schema; assert ASCII/non-ASCII search and title ordering, equal-date note ID ordering, and `{ patchNotes: [] }` for a known game without notes | Regression |
-| TEST-API-02 | API | Query boundaries, malformed IDs, invalid feedback fields/types, and unknown games return contract-compliant `400`/`404` bodies without inserting feedback | Regression |
+| TEST-API-02 | API | Endpoint-specific query rules, query boundaries, malformed IDs, invalid feedback fields/types, and unknown games return contract-compliant `400`/`404` bodies without insertion. Every named email variant is checked: accepted values return `201` and store trimmed email; rejected values return `400 INVALID_BODY` without insertion | Regression |
 | TEST-API-03 | API + database | Valid feedback returns `201` and the inserted row matches a SQL verification query | Regression |
 | TEST-API-04 | API error handling | An isolated server dependency failure returns a safe, contract-compliant `500` body | Regression |
 | TEST-DATA-01 | Database startup and reset | Isolated variants: first startup at a nonexistent database path creates the exact seeded games/notes with no feedback; restart preserves record changes, additions, and deletions, plus feedback and counter state; reset restores every seeded field/ID, clears feedback, and makes the next feedback ID `1`; repeat reset for equality and inject a pre-commit failure to verify records/counter roll back unchanged | Regression |
@@ -103,9 +105,9 @@ For entries marked Smoke, run the primary successful path in the smoke suite; th
 
 ### Browser coverage
 
-- Run all smoke UI tests in Chromium, Firefox, and WebKit.
-- Run the full UI regression in all three browsers in CI; keep API/database checks in one project because they are browser-independent.
-- Run the 375 px phone variant of TEST-UI-13 in at least Chromium; add WebKit phone coverage if stable in CI.
+- Run all smoke UI tests at the 1280 x 800 desktop viewport in Chromium, Firefox, and WebKit.
+- Run the full desktop UI regression, including keyboard and axe checks, in all three browsers in CI. This three-browser requirement applies to desktop; keep API/database checks in one project because they are browser-independent.
+- Run the 375 x 812 phone variant of TEST-UI-13 in Chromium in full regression. This is a responsive viewport check, not the full UI suite on mobile or a real-device certification. WebKit phone coverage is optional; record whether it ran. Firefox phone coverage is outside the required scope.
 - Treat axe results as a useful automated screen, and include a manual keyboard/focus review because axe does not cover every accessibility issue.
 
 ## Evidence and bug-report standard
