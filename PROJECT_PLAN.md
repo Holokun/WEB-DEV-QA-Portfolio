@@ -87,11 +87,11 @@ Run smoke checks on every push. Run the full regression suite on pull requests a
 | TEST-UI-10 | Feedback | Email examples and description length boundaries follow the requirements and show useful errors | Regression |
 | TEST-UI-11 | Feedback | Valid submission confirms and is stored; server/network failure shows an error and preserves all entered values | Smoke |
 | TEST-UI-12 | Keyboard | Catalogue, favourite button, and form can be operated by keyboard | Regression |
-| TEST-UI-13 | Mobile | At a phone viewport, search/filter, detail content, and feedback controls remain usable without horizontal overflow | Regression |
+| TEST-UI-13 | Responsive layout | Desktop variant: 1280 px viewport width. Phone variant: 375 px viewport width. In each variant, search, filter, catalogue cards, detail content, and feedback controls remain usable without horizontal overflow | Regression |
 | TEST-UI-14 | Error handling | Controlled `500` and network failures show an error distinct from empty results; with valid search, restore the response and click Retry to load the current search/genre and clear the error; with invalid search, Retry sends no request and correction resumes requests using the latest genre | Regression |
 | TEST-A11Y-01 | Accessibility | Catalogue has no critical/serious axe violations | Regression |
 | TEST-A11Y-02 | Accessibility | Detail and feedback views have no critical/serious axe violations | Regression |
-| TEST-API-01 | API | List/detail/notes return expected status/body/schema; assert ASCII/non-ASCII search and title ordering, equal-date note ID ordering, and empty note arrays | Regression |
+| TEST-API-01 | API | List/detail/notes return expected status/body/schema; assert ASCII/non-ASCII search and title ordering, equal-date note ID ordering, and `{ patchNotes: [] }` for a known game without notes | Regression |
 | TEST-API-02 | API | Query boundaries, malformed IDs, invalid feedback fields/types, and unknown games return contract-compliant `400`/`404` bodies without inserting feedback | Regression |
 | TEST-API-03 | API + database | Valid feedback returns `201` and the inserted row matches a SQL verification query | Regression |
 | TEST-API-04 | API error handling | An isolated server dependency failure returns a safe, contract-compliant `500` body | Regression |
@@ -105,7 +105,7 @@ For entries marked Smoke, run the primary successful path in the smoke suite; th
 
 - Run all smoke UI tests in Chromium, Firefox, and WebKit.
 - Run the full UI regression in all three browsers in CI; keep API/database checks in one project because they are browser-independent.
-- Run the mobile check in at least Chromium with a documented phone viewport; add WebKit mobile coverage if stable in CI.
+- Run the 375 px phone variant of TEST-UI-13 in at least Chromium; add WebKit phone coverage if stable in CI.
 - Treat axe results as a useful automated screen, and include a manual keyboard/focus review because axe does not cover every accessibility issue.
 
 ## Evidence and bug-report standard
