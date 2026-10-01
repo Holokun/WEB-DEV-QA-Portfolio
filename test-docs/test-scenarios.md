@@ -50,6 +50,16 @@ Requirements: `REQ-CAT-06`, `REQ-CAT-02`. Automation: `TEST-UI-14`.
 3. Repeat a failure, then enter 81 code points, change genre, and activate Retry. Verify no request, associated validation, and retained error/results.
 4. Correct search and verify recovery uses the latest genre. Record each injected failure as a simulation.
 
+### SCN-CAT-05 — Overlapping valid requests and response order
+
+Requirements: `REQ-CAT-04`. Automation: regression variants of `TEST-UI-04`.
+
+1. From the seed expectations, choose two valid search/genre combinations A and B with different expected game IDs and counts. Run search-only changes, genre-only changes, combined changes, and clearing one control as separate variants; search remains valid throughout. Include a variant where A has matches and B has none.
+2. Apply A and hold its request. Apply B before A completes and hold B's request. Verify both requests use their respective control values.
+3. Release B successfully first. Verify B's exact game IDs/count and no catalogue error or loading message; for no-match B, verify “No games found” and a way to clear the controls. Release A successfully afterwards; B's results/count and all catalogue status messages remain unchanged, and the controls still show B.
+4. Repeat with B succeeding first, then fail A using HTTP `500` and a network abort as separate variants. B's results/count remain, with no error, Retry, or renewed loading caused by A. Also complete A while B is still held; A's success or failure cannot end B's loading state or replace the displayed results/messages. Release B and verify its expected results/count.
+5. Repeat with B returning `500` first, then release A successfully. The catalogue error and Retry for B remain; A cannot replace them with its results or a no-results message. Record the request URLs, completion order, and expected/actual state for each variant; label injected failures as simulations.
+
 ## Detail and patch notes
 
 ### SCN-DET-01 — Correct game, note ordering, and empty notes

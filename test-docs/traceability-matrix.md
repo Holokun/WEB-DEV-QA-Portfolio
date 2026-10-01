@@ -7,7 +7,7 @@ Sources: [acceptance criteria and API contract](requirements-and-risks.md) and [
 | `REQ-CAT-01` | `TEST-UI-01` | Hold the initial response to observe loading; release it and verify every seeded title/genre appears. |
 | `REQ-CAT-02` | `TEST-UI-02`, `TEST-UI-04`, `TEST-UI-14` | Exact/partial and ASCII case search; clearing search retains genre. Boundary variants: 80 code points accepted, 81 show the field message and make no request; include emoji and surrounding spaces. While invalid, change/clear genre and activate Retry: no requests, retained results/count and their previous valid control labels stay unchanged. First-load invalid input shows no results. Correcting/clearing search removes validation and requests the latest genre selection. An older pending response cannot replace retained results after input becomes invalid. |
 | `REQ-CAT-03` | `TEST-UI-03`, `TEST-UI-04` | With valid search, selected genre includes only matching games; clearing genre keeps the active title search. With invalid search, selection changes but results/count remain unchanged until correction. |
-| `REQ-CAT-04` | `TEST-UI-04` | Search and genre use AND logic; with valid search, changing or clearing either updates the count/results without reload. Invalid-search precedence defers genre updates; correcting search applies the current genre. |
+| `REQ-CAT-04` | `TEST-UI-04`, `SCN-CAT-05` | Search and genre use AND logic; with valid search, changing or clearing either updates the count/results without reload. Invalid-search precedence defers genre updates; correcting search applies the current genre. Hold overlapping valid requests A then B; complete B before A for search-only, genre-only, combined, and clearing-control variants, including no-match B. B's exact results/count and loading/empty/error states remain authoritative after A succeeds or fails. A cannot end loading while B is pending or clear B's error after B fails. |
 | `REQ-CAT-05` | `TEST-UI-05` | No-match search/filter shows “No games found”; clearing controls restores the catalogue. |
 | `REQ-CAT-06` | `TEST-UI-14` | Separate variants for HTTP `500` and an aborted network request: show error and Retry, never empty results. With valid search, restore a successful response, click Retry, and verify results match the current search/genre and the error disappears. Invalid-search variant: after failure, enter 81 code points, change genre, and activate Retry; no request is sent and error/retained results remain. Correct search and verify recovery uses the latest genre. |
 | `REQ-DET-01` | `TEST-UI-06` | Card and detail refer to the same game; title, genre, description, release year, and platforms match; Back returns to the catalogue. |
@@ -37,7 +37,8 @@ The procedures, preconditions, expected results, and execution-record fields are
 | Requirement(s) | Manual scenario(s) |
 | --- | --- |
 | `REQ-CAT-01` | `SCN-CAT-01` |
-| `REQ-CAT-02`, `REQ-CAT-03`, `REQ-CAT-04` | `SCN-CAT-02`, `SCN-CAT-03` |
+| `REQ-CAT-02`, `REQ-CAT-03` | `SCN-CAT-02`, `SCN-CAT-03` |
+| `REQ-CAT-04` | `SCN-CAT-02`, `SCN-CAT-03`, `SCN-CAT-05` |
 | `REQ-CAT-05` | `SCN-CAT-02` |
 | `REQ-CAT-06` | `SCN-CAT-04` |
 | `REQ-DET-01`, `REQ-DET-02` | `SCN-DET-01` |

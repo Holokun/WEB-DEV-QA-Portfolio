@@ -10,7 +10,7 @@ Demonstrate a reproducible QA workflow for a small game companion app. Verify ob
 
 | In scope | Planned coverage |
 | --- | --- |
-| Catalogue and search/filter | Loading, exact/partial ASCII-case matching, AND combinations, clearing controls, code-point boundaries, empty/error states, Retry, invalid-input precedence, and late responses. |
+| Catalogue and search/filter | Loading, exact/partial ASCII-case matching, AND combinations, clearing controls, code-point boundaries, empty/error states, Retry, invalid-input precedence, and overlapping valid requests completed in reverse order (including late successes and failures). |
 | Game detail and patch notes | Matching content, date/ID order, no notes, separate loading/error/Retry, unknown game, and navigation during pending requests. |
 | Favourites | Add/remove, reload, malformed storage, invalid/duplicate IDs, complete-catalogue validation, and retention during filtered/failed requests. |
 | Feedback | Required fields, EMAIL-01 through EMAIL-27, trim/code-point boundaries, success, failure preservation, API validation, and SQL verification. |
@@ -71,7 +71,7 @@ Use `BUG-` for genuine defects and `SIM-` for controlled failure investigations.
 
 | Gate | Entry | Exit |
 | --- | --- | --- |
-| Requirements/design | Current three source documents and the five review findings. | Browser/query/failure/email decisions agree across documents; every requirement has planned automation and a manual scenario; plan and scenario files exist; review finds no unresolved scope conflict. |
+| Requirements/design | Current versions of [PROJECT_PLAN.md](../PROJECT_PLAN.md), [requirements-and-risks.md](requirements-and-risks.md), [test-plan.md](test-plan.md), [test-scenarios.md](test-scenarios.md), [traceability-matrix.md](traceability-matrix.md), and [chat-task-plan.md](chat-task-plan.md); the [original five review findings](chat-task-plan.md#current-state-and-the-five-findings) and any subsequent documented consistency findings. | Browser/query/failure/email and catalogue response-order decisions agree across these documents; every requirement has planned automation and a manual scenario; review finds no unresolved scope conflict or coverage gap. |
 | Initial manual pass | Runnable minimal app; documented start/reset commands; fixed seed and expected results; UI/API contract implemented for the features under review. | Required scenarios attempted with results or explicit blocks; focused exploratory notes and at least one evidenced investigation recorded. |
 | Automation readiness | Manual pass identifies usable behavior; test runner owns app/database; reset/isolation and failure mechanisms are available. | Five smoke paths and all 21 inventory entries/required variants implemented; appropriate local checks pass; failures retain evidence. |
 | Portfolio release | Reproducible clean checkout and required CI jobs available. | Latest required smoke/full CI run passes with no required skip; high-risk scenarios have execution evidence; keyboard/screen-reader review is recorded; no unresolved high-impact defect; summary honestly records remaining limitations and optional coverage. |

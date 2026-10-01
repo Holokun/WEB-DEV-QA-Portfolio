@@ -80,7 +80,7 @@ Run smoke checks on every push. Run the full regression suite on pull requests a
 | TEST-UI-01 | Catalogue | Seeded games render with title and genre | Smoke |
 | TEST-UI-02 | Search | Exact/partial search follows the ASCII case rule; 80 code points are accepted, and 81 show field validation without a request, preserve previous results, block requests from genre changes and Retry, and recover using the current controls after correction | Smoke |
 | TEST-UI-03 | Filter | Genre filter returns only matching games when search is valid | Regression |
-| TEST-UI-04 | Search + filter | Combined controls narrow results correctly; clearing either control preserves the other restriction; an invalid search defers genre updates until correction | Regression |
+| TEST-UI-04 | Search + filter | Combined controls narrow results correctly; clearing either control preserves the other restriction; an invalid search defers genre updates until correction. Overlapping valid search/filter requests completed in reverse order preserve the latest controls' results, count, and loading/empty/error states; older successes or failures cannot overwrite them | Regression |
 | TEST-UI-05 | Empty state | Unmatched search explains that no games were found | Regression |
 | TEST-UI-06 | Detail | Opening a result shows correct details and ordered patch notes; a game without notes shows an explicit empty message. Regression variants cover separate detail/notes loading, HTTP `500`/network errors and Retry, unknown-game `404`, and navigation while an older request is pending | Smoke |
 | TEST-UI-07 | Favourites | Add then remove a game; count/list update | Smoke |
