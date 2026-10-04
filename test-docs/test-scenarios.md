@@ -4,7 +4,9 @@ Status: **All scenarios are planned; none has been executed.** Sources: [require
 
 ## Common setup and recording
 
-Use the documented app/build and a dedicated seeded test database. The implementation owner must first provide actual start/reset commands, the versioned seed, and literal expected IDs/content/order. Record browser/version, viewport, base URL, `DB_PATH`, build/commit, and any failure-injection method. Use synthetic values and a unique feedback description per submission.
+Use the documented app/build and a dedicated seeded test database. The implementation owner must first provide actual start/reset commands, the versioned seed, and literal expected IDs/content/order. Record browser/version, viewport, base URL, `DB_PATH`, build/commit, and any failure-injection method.
+
+Use synthetic values and unique feedback descriptions except for fixed boundary inputs, which must remain unchanged and may repeat across UI/API/browser runs. Follow the [feedback data and verification rules](requirements-and-risks.md#feedback-test-data-and-insertion-verification): capture before/after feedback row counts for each accepted submission, require an increase of exactly one, and verify its row by the returned `201` record ID rather than by description alone.
 
 Begin storage-sensitive cases with the stated storage state. For catalogue/notes mutations, startup/reset, or a real server-dependency failure, use an isolated per-scenario database/app and follow the stop/reset/restart rules in the requirements. Browser request interception alone does not require database isolation.
 
@@ -124,14 +126,14 @@ Requirements: `REQ-FBK-02`, `REQ-API-07`. Automation: `TEST-UI-10`, `TEST-API-02
 
 1. Select a known game and use a unique valid description. For each `EMAIL-01` through `EMAIL-27` in the [named email table](requirements-and-risks.md#named-email-variants), submit through the UI and direct API as separate variants.
 2. Accepted email: UI confirmation/API `201`; the stored address equals the trimmed original, including preserved letter case. Rejected email: field error and no UI request; API `400 INVALID_BODY` and no inserted row.
-3. With valid email, run description variants: empty, whitespace-only, 19 digits, 20 digits, 20 digits surrounded by whitespace, 19 emoji, and 20 emoji. Only values of at least 20 trimmed code points succeed; SQL stores trimmed accepted content.
-4. Record a result per email and description variant, including actual response and insertion/non-insertion evidence.
+3. With valid email, run description variants through both the UI and direct API: empty, whitespace-only, `1234567890123456789`, `12345678901234567890`, `  12345678901234567890  `, 19 repetitions of `🎮`, and 20 repetitions of `🎮`. Preserve these fixed inputs exactly, without unique suffixes. Only values of at least 20 trimmed code points succeed; SQL stores trimmed accepted content.
+4. For each accepted email or description variant, record feedback row counts immediately before submission and after `201`; require exactly one new row, query it by the returned ID, and compare game ID, trimmed email, and trimmed description. Capture the ID from the network response for UI variants. For rejected variants, verify the UI sends no request and the API returns `400 INVALID_BODY`, with unchanged rows/count. Record a result and insertion/non-insertion evidence per variant; repeated boundary payloads must not be mistaken for earlier records.
 
 ### SCN-FBK-03 — Successful storage and failure preservation
 
 Requirements: `REQ-FBK-03`, `REQ-API-07`. Automation: `TEST-UI-11`, `TEST-API-03`.
 
-1. Submit a valid form with synthetic unique content. Verify success, `201` with numeric positive safe ID, and exactly one matching row in the same `DB_PATH`.
+1. Submit a valid form with synthetic unique content. Verify success and `201` with a numeric positive safe ID. In the same `DB_PATH`, require the feedback row count to increase by exactly one, then query by that returned ID and compare the game ID and trimmed email/description.
 2. Fail the feedback request with `500` and network abort separately. Verify an error and that selected game, email, and description stay exactly as entered, including surrounding spaces.
 3. For direct API calls without query keys, test malformed JSON, missing/extra fields, wrong types, and invalid values. Verify `400 INVALID_BODY` and no insertion.
 4. Submit a valid body with an unknown positive game ID: `404 NOT_FOUND` and no insertion. Combine an invalid body field with an unknown game: `400 INVALID_BODY` precedes lookup. Use unique content for accepted requests and do not assume an ID of `1` here.
@@ -150,7 +152,7 @@ Requirements: `REQ-LAY-01`. Automation: `TEST-UI-13`.
 
 Requirements: `REQ-A11Y-01`. Automation: `TEST-UI-12`, `TEST-A11Y-01`, `TEST-A11Y-02`.
 
-1. Use only the keyboard to navigate catalogue, detail/notes, favourites, and feedback; operate controls, follow links, submit, and Retry. Verify accessible names, logical focus, and visible focus throughout.
+1. Use only the keyboard to operate catalogue search/filter and game links, follow detail and patch-note links, use Back/page navigation, add/remove favourites, and enter/submit feedback. Trigger catalogue, detail, and notes errors separately, restore each response, and activate its Retry by keyboard. Verify accessible names, logical focus order, and visible focus throughout. All these paths are required automated variants of `TEST-UI-12` in Chromium, Firefox, and WebKit desktop regression, as well as part of this manual review.
 2. With an available screen-reader/browser pairing, trigger loading, no results, each request error, feedback confirmation, and overlong search. Verify useful announcements and validation associations; record the actual pairing/version.
 3. Run axe on catalogue, detail, and feedback when the automation/tooling is available. No critical/serious violations are allowed. Record lower-impact findings separately; axe does not establish full accessibility conformance.
 

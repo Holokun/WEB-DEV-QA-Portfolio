@@ -11,7 +11,7 @@ The portfolio's main product is the QA work. Keep the application deliberately s
 1. A README that explains the app, the QA approach, and how to run the smoke and full suites.
 2. A short test plan with risks, scope, environments, and exit criteria.
 3. A traceability matrix linking requirements to manual scenarios, automated tests, and bugs.
-4. About 20 meaningful automated test cases with readable names and stable data.
+4. All 21 automated inventory entries and their required variants, with readable names and stable data.
 5. A CI run with a Playwright HTML report, traces/screenshots for failures, and a concise test summary.
 6. Aim for two or three reproducible investigations with supporting evidence. Document genuine defects when found; otherwise use clearly labelled failure-simulation investigations. Report the actual number of defects found honestly. Do not invent defects or claim a known seeded defect was discovered independently.
 
@@ -37,7 +37,7 @@ Use TypeScript for the Node.js API, frontend, and tests; SQLite for games, patch
 - Define a small API contract, including status codes, response shapes, and invalid-parameter behavior. For example: `200` for a valid list/detail, `400` for an invalid query, `404` for an unknown game, and `201` for accepted feedback.
 - Seed 8–12 varied games and several patch notes, including titles and genres that make search and filter results unambiguous. Include non-ASCII titles, distinct games with equal ASCII-folded title keys, equal-date notes for the same game, and a game without notes; follow the [fixture prerequisites](test-docs/requirements-and-risks.md#seed-fixture-prerequisites).
 - Give every element used by a test a user-facing label or role. Use HTML `data-testid` attributes only where accessible locators are ambiguous; these attributes are separate from the `TEST-` IDs used in the test inventory.
-- Keep test data deterministic: run app/database-dependent tests serially against one owned app per suite invocation and one explicit `DB_PATH`. Reset that database before ordinary suite tests. Checks that mutate catalogue/patch notes, verify database startup or reset, or fail a server dependency use a separate per-test database and app, with setup and extra resets as specified in the [reset rules](test-docs/requirements-and-risks.md#database-initialization-and-test-reset). Ordinary feedback submissions use the suite database and unique values per test; clear local storage before tests that need a fresh favourites state.
+- Keep test data deterministic: run app/database-dependent tests serially against one owned app per suite invocation and one explicit `DB_PATH`. Reset that database before ordinary suite tests. Checks that mutate catalogue/patch notes, verify database startup or reset, or fail a server dependency use a separate per-test database and app, with setup and extra resets as specified in the [reset rules](test-docs/requirements-and-risks.md#database-initialization-and-test-reset). Ordinary feedback submissions use the suite database and unique synthetic descriptions, except for fixed boundary inputs; follow the [feedback verification rules](test-docs/requirements-and-risks.md#feedback-test-data-and-insertion-verification). Clear local storage before tests that need a fresh favourites state.
 
 ## Build phases and completion gates
 
@@ -65,13 +65,13 @@ Execute a small manual checklist before automation. Write an exploratory charter
 
 Implement the test inventory below. Start with a small smoke set, then add API, accessibility, mobile, and database checks. Prefer independent tests with precise assertions over long end-to-end scripts. Avoid fixed sleeps.
 
-**Done when:** Roughly 20 tests pass locally; smoke tests are reliable across Chromium, Firefox, and WebKit; failed runs retain a trace and screenshot; the full suite can run from a clean seeded test database.
+**Done when:** The [test plan's Automation readiness gate](test-docs/test-plan.md#entry-and-exit-criteria) is met: all 21 inventory entries and every required variant are implemented and pass locally with no required skip, using the specified browser/viewport coverage and a clean seeded test database. The five smoke paths pass in Chromium, Firefox, and WebKit; browser failures retain a trace and screenshot. Count inventory entries, variants, and browser executions separately.
 
 ### 5. CI and portfolio presentation
 
 Run smoke checks on every push. Run the full regression suite on pull requests and pushes to the default branch; optionally schedule a nightly run. Upload the Playwright HTML report and failure artifacts. Complete the summary report and README with a coverage map, commands, sample results, limitations, and links to evidence.
 
-**Done when:** A fresh checkout can follow the README and reproduce the results; the repository has a visible successful CI run; every claim in the summary links to a test, report, query, or bug record.
+**Done when:** The [test plan's Portfolio release gate](test-docs/test-plan.md#entry-and-exit-criteria) is met; a fresh checkout can follow the README and reproduce the results; the latest required smoke/full CI run passes with no required skip; every claim in the summary links to a test, report, query, or investigation record.
 
 ## Proposed automated test inventory (21 cases)
 
@@ -88,7 +88,7 @@ Run smoke checks on every push. Run the full regression suite on pull requests a
 | TEST-UI-09 | Feedback | Required fields reject empty submission | Regression |
 | TEST-UI-10 | Feedback | Every named email variant and description length boundary in the requirements follows the same UI/API validation rule and shows useful field errors | Regression |
 | TEST-UI-11 | Feedback | Valid submission confirms and is stored; server/network failure shows an error and preserves all entered values | Smoke |
-| TEST-UI-12 | Keyboard | Catalogue, favourite button, and form can be operated by keyboard | Regression |
+| TEST-UI-12 | Keyboard | Keyboard-only variants cover catalogue search/filter and game links, detail and patch-note links, Back/page navigation, favourites add/remove, feedback entry/submission, and catalogue/detail/notes Retry; verify accessible names, logical focus order, and visible focus throughout | Regression |
 | TEST-UI-13 | Responsive layout | Desktop variant: 1280 px viewport width. Phone variant: 375 px viewport width. In each variant, search, filter, catalogue cards, detail content, and feedback controls remain usable without horizontal overflow | Regression |
 | TEST-UI-14 | Error handling | Controlled `500` and network failures show an error distinct from empty results; with valid search, restore the response and click Retry to load the current search/genre and clear the error; with invalid search, Retry sends no request and correction resumes requests using the latest genre | Regression |
 | TEST-A11Y-01 | Accessibility | Catalogue has no critical/serious axe violations | Regression |

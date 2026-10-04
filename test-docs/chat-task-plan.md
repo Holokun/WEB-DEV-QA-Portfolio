@@ -18,6 +18,16 @@ The repository has documentation drafts and no application/test implementation. 
 
 These are explicit version-one design choices. If you prefer a different choice, send the change to A first, then update B/C and run D's consistency review. A test author must not silently change product behavior to fit the tests.
 
+## Subsequent consistency review (2026-10-01)
+
+| Finding | Documentation resolution | Sources |
+| --- | --- | --- |
+| Keyboard coverage differed between inventory and manual scenario | All keyboard paths in `SCN-A11Y-01` are required `TEST-UI-12` desktop variants in Chromium, Firefox, and WebKit, including detail/notes, navigation, and catalogue/detail/notes Retry. Manual keyboard and screen-reader review still supplements automation. | [Inventory](../PROJECT_PLAN.md#proposed-automated-test-inventory-21-cases), [strategy](test-plan.md#priorities-and-approach), [scenario](test-scenarios.md#scn-a11y-01--keyboard-focus-and-announcements), [matrix](traceability-matrix.md). |
+| Completion checklist used an approximate test count | Automation completion requires all 21 entries and every required variant to pass locally with no required skip under the specified coverage. Project completion gates reference the test plan's Automation readiness and Portfolio release gates. | [Project gates](../PROJECT_PLAN.md#build-phases-and-completion-gates), [test-plan gates](test-plan.md#entry-and-exit-criteria). |
+| Unique descriptions conflicted with fixed boundary inputs | Fixed description-boundary inputs remain unchanged and may repeat across UI/API/browser runs. Each accepted submission is verified by its returned `201` record ID, matching stored fields, and a before/after row-count increase of exactly one. Other accepted descriptions remain unique. | [Data and verification rules](requirements-and-risks.md#feedback-test-data-and-insertion-verification), [scenario](test-scenarios.md#scn-fbk-02--named-email-variants-and-description-boundaries), [matrix](traceability-matrix.md). |
+
+These three findings are resolved in the planning documents. This review does not establish implemented coverage or executed tests.
+
 ## File ownership
 
 | Chat | Purpose | Files it may edit | Completion condition |
@@ -45,7 +55,7 @@ flowchart LR
 1. **A first:** review the explicit decisions and provide a stable handoff. Fix genuine unresolved requirements before the other chats depend on them.
 2. **B and C together:** after A's handoff, they can work in parallel because they own different files. They may flag a contract issue, but A owns its resolution. C does not need to wait for a finished test plan to draft functional steps.
 3. **D last:** review the final versions from A/B/C, update the matrix, and report any gap to its owner. Repeat D only after a relevant correction.
-4. **Coordinator gate:** check that all five findings are resolved, files/IDs/coverage agree, and every remaining item is either future implementation work or an explicit scope decision. Document review completion separately from execution completion.
+4. **Coordinator gate:** check that the original five findings and subsequent documented consistency findings are resolved, files/IDs/coverage agree, and every remaining item is either future implementation work or an explicit scope decision. Document review completion separately from execution completion.
 
 For each wave, give the receiving chat the predecessor's handoff and the current files. If A changes the contract after B/C start, pause dependent edits until the updated contract is handed off. Do not rely on another chat remembering this conversation.
 
@@ -166,7 +176,7 @@ Each owner returns these five items in their chat:
 4. Open issues with the owner and proposed resolution.
 5. What the next chat can start and what still blocks it.
 
-The coordinator records the review outcome here after those handoffs. Current outcome: **drafts prepared; independent chat reviews not performed; no application/test execution.**
+The coordinator records the review outcome here after those handoffs. Current outcome: **drafts prepared; the three subsequent consistency findings resolved on 2026-10-01; independent chat reviews not performed; no application/test execution.**
 
 ## Later implementation split
 
