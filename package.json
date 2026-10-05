@@ -13,7 +13,7 @@
     "dev": "pnpm build && node dist/app/api/server.js",
     "reset:test-db": "pnpm build && node dist/app/db/reset.js",
     "test:api": "pnpm build && playwright test --project=api",
-    "test:ui": "pnpm build && playwright test --project=chromium --project=firefox --project=webkit --project=phone",
+    "test:ui": "pnpm build && playwright test --project=chromium --project=firefox --project=webkit",
     "test": "pnpm build && playwright test"
   },
   "devDependencies": {

@@ -2,7 +2,6 @@ import { test as base } from '@playwright/test';
 import { spawn, type ChildProcess } from 'node:child_process';
 import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
-import { resetTestDatabase } from '../../app/db/reset.js';
 
 export function ownedDatabase(): string {
   const root = resolve('test-results/owned-databases');
@@ -49,10 +48,10 @@ async function stopProcess(child: ChildProcess): Promise<void> {
 
 export const test = base.extend<{ dbPath: string }, { ownedApp: { baseURL: string; dbPath: string } }>({
   ownedApp: [async ({}, use) => {
-    const dbPath = ownedDatabase();
-    resetTestDatabase(dbPath);
-    const app = await startApp(dbPath);
-    try { await use({ ...app, dbPath }); } finally { await app.stop(); }
+    const baseURL = process.env.GAME_TEST_URL;
+    const dbPath = process.env.GAME_TEST_DB;
+    if (!baseURL || !dbPath) throw new Error('Suite-owned app is not ready');
+    await use({ baseURL, dbPath });
   }, { scope: 'worker' }],
   baseURL: async ({ ownedApp }, use) => { await use(ownedApp.baseURL); },
   dbPath: async ({ ownedApp }, use) => { await use(ownedApp.dbPath); },
