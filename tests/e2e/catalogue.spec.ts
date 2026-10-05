@@ -87,6 +87,40 @@ for (const [label, character] of [['ASCII', 'a'], ['emoji', '🎮']] as const) {
   });
 }
 
+test('TEST-UI-02: invalid search announces its reason and associates the message only while invalid', async ({ page }) => {
+  await page.goto('/');
+  await expect(cards(page)).toHaveCount(10);
+  const search = page.getByRole('textbox', { name: 'Search games' });
+  const validation = page.locator('#search-validation');
+  // A mounted, initially empty live region can announce its subsequent text update.
+  expect.soft(await search.getAttribute('aria-describedby')).toBeNull();
+  expect.soft(await validation.getAttribute('aria-live')).toBe('polite');
+  expect.soft(await validation.getAttribute('hidden')).toBeNull();
+  expect.soft(await validation.textContent()).toBe('');
+
+  await search.fill('x'.repeat(81));
+  await expect(search).toHaveAttribute('aria-invalid', 'true');
+  await expect(search).toHaveAttribute('aria-describedby', 'search-validation');
+  await expect(validation).toBeVisible();
+  await expect(validation).toHaveText('Search must be 80 characters or fewer');
+  await expect(cards(page)).toHaveCount(10);
+
+  await search.fill('x'.repeat(80));
+  await expect(page.getByRole('status')).toContainText('No games found');
+  await expect(search).not.toHaveAttribute('aria-invalid', 'true');
+  expect.soft(await search.getAttribute('aria-describedby')).toBeNull();
+  expect.soft(await validation.textContent()).toBe('');
+
+  await search.fill('x'.repeat(81));
+  await expect(validation).toHaveText('Search must be 80 characters or fewer');
+  await expect(search).toHaveAttribute('aria-describedby', 'search-validation');
+  await page.getByRole('button', { name: 'Clear controls' }).click();
+  await expect(cards(page)).toHaveCount(10);
+  await expect(search).not.toHaveAttribute('aria-invalid', 'true');
+  expect.soft(await search.getAttribute('aria-describedby')).toBeNull();
+  expect.soft(await validation.textContent()).toBe('');
+});
+
 for (const [search, titles] of [
   ['Orbit', ['Orbit', 'ORBIT']], ['ÉCH', ['Écho']], ['éch', []], ['echo', []], ["%' OR 1=1 --", []],
 ] as const) {

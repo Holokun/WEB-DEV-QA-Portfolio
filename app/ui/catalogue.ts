@@ -8,8 +8,8 @@ export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (i
   view.innerHTML = `<p class="eyebrow">THE LIBRARY</p><h1>Find your next world.</h1>
     <p class="intro">Explore the collection by title or genre.</p>
     <div class="controls"><div class="field"><label for="game-search">Search games</label>
-      <input id="game-search" type="text" placeholder="Try Ember or Orbit" autocomplete="off" aria-describedby="search-validation">
-      <p id="search-validation" class="validation" hidden>Search must be 80 characters or fewer</p></div>
+      <input id="game-search" type="text" placeholder="Try Ember or Orbit" autocomplete="off">
+      <p id="search-validation" class="validation" aria-live="polite" aria-atomic="true"></p></div>
     <div class="field"><label for="game-genre">Genre</label><select id="game-genre">
       <option value="">All genres</option><option>Action</option><option>Adventure</option><option>Puzzle</option>
       <option>Racing</option><option>RPG</option><option>Strategy</option></select></div>
@@ -41,13 +41,16 @@ export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (i
     request?.abort();
     const trimmed = search.value.trim();
     if ([...trimmed].length > 80) {
-      validation.hidden = false;
+      const message = 'Search must be 80 characters or fewer';
+      if (validation.textContent !== message) validation.textContent = message;
       search.setAttribute('aria-invalid', 'true');
+      search.setAttribute('aria-describedby', 'search-validation');
       status.textContent = resultStatus() || 'Search needs correction.';
       return;
     }
-    validation.hidden = true;
+    validation.textContent = '';
     search.removeAttribute('aria-invalid');
+    search.removeAttribute('aria-describedby');
     request = new AbortController();
     const filters = new URLSearchParams();
     if (trimmed) filters.set('search', trimmed);
