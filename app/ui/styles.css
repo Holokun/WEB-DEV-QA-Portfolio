@@ -29,6 +29,22 @@ button { cursor: pointer; background: #174e3b; color: white; font-weight: 650; }
 .request-error p { margin: 0 0 12px; }
 .result-summary { font-size: .85rem; color: #50695c; overflow-wrap: anywhere; }
 footer { color: #66766d; font-size: .8rem; padding-top: 40px; }
+.detail { max-width: 780px; overflow-wrap: anywhere; }
+.back-link, .notes-link { display: inline-block; color: #174e3b; min-height: 44px; padding: 12px 0; font-weight: 650; text-underline-offset: 4px; }
+.detail .eyebrow { margin-top: 25px; }
+.description { font-size: 1.1rem; line-height: 1.65; }
+.game-facts { display: flex; flex-wrap: wrap; gap: 24px 60px; margin: 28px 0; }
+.game-facts div { min-width: 0; max-width: 100%; }
+dt { color: #50695c; font-size: .8rem; margin-bottom: 8px; }
+dd { margin: 0; font-weight: 650; }
+.patch-notes { border-top: 1px solid #d2dbd5; margin-top: 28px; padding-top: 22px; }
+h2 { font-size: 1.6rem; }
+.note-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+.note-list li { border: 1px solid #d2dbd5; background: white; border-radius: 12px; padding: 22px; min-width: 0; }
+.note-list h3 { margin: 0 0 8px; }
+.note-list time { font-size: .8rem; color: #50695c; }
+.note-list p { line-height: 1.6; margin-bottom: 0; }
+#app:focus { outline: none; }
 @media (max-width: 640px) {
   .site-header, main, footer { padding-left: 20px; padding-right: 20px; }
   .site-header { flex-direction: column; gap: 5px; }

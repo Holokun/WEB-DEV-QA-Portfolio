@@ -1,6 +1,6 @@
 # Game Companion — Test Plan
 
-Status: **Design draft; tests have not been implemented or executed.** The repository currently contains planning documents only. Commands, fixture IDs, tool versions, and evidence links must be supplied by the implementation and execution owners before a run is claimed.
+Status: **First catalogue/detail/patch-note slice implemented and executed; full-version test plan remains open.** [First-slice results](first-slice-results.md) record the actual environment, commands, coverage and blocked Firefox setup. Future features and required full-version acceptance/release gates below remain unchanged; this slice does not complete the full test plan.
 
 Sources: [project plan](../PROJECT_PLAN.md), [requirements and risks](requirements-and-risks.md), [manual scenarios](test-scenarios.md), and [traceability](traceability-matrix.md). Task ownership is in the [chat task plan](chat-task-plan.md).
 

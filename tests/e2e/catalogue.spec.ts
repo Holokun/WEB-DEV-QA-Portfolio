@@ -315,7 +315,11 @@ test('TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible 
   await expect(cards(page).first()).toHaveCSS('outline-style', 'solid');
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/\/#\/games\/6$/);
+  await expect(page.getByRole('heading', { name: 'Ember Quest', exact: true })).toBeVisible();
   await expect(page.getByRole('status')).toHaveAttribute('aria-live', 'polite');
+  await page.getByRole('link', { name: 'Back', exact: true }).click();
+  await expect(cards(page)).toHaveCount(10);
+  await page.getByLabel('Genre').selectOption('RPG');
   const fail = (route: Route) => route.abort('failed');
   await page.route('**/api/games?**', fail);
   await search.focus();

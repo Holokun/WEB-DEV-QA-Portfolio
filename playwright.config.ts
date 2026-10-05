@@ -13,5 +13,6 @@ export default defineConfig({
     ...(['chromium', 'firefox', 'webkit'] as const).map(browserName => ({
       name: browserName, testMatch: 'e2e/**/*.spec.ts', use: { browserName, viewport: { width: 1280, height: 800 } },
     })),
+    { name: 'chromium-phone', testMatch: 'e2e/layout.spec.ts', use: { browserName: 'chromium', viewport: { width: 375, height: 812 } } },
   ],
 });
