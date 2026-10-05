@@ -10,7 +10,7 @@
 
 **Spec:** [Acceptance criteria and API contract](../../../test-docs/requirements-and-risks.md), interpreted within the [first implementation milestone](../../../PROJECT_PLAN.md#recommended-working-order). Existing acceptance rules remain authoritative.
 
-**Status:** Prepared for user review. The user has selected subagent-driven-development and work in `main`; implementation starts after review of this written plan. No product implementation or test execution is claimed here.
+**Status:** Approved by the user on 2026-10-05. Execute with subagent-driven-development in `main`. Approval records intent, not implementation or test results.
 
 ## Global Constraints
 
@@ -154,4 +154,4 @@ Also assert normalized filters/total/schema, literal punctuation, ASCII/non-ASCI
 
 ## Plan self-review record
 
-The selected catalogue/detail/GET contract has an owning task; feedback/favourites portions are explicitly deferred. API types/lifecycle are produced in Task 1, request client/catalogue in Task 2, detail consumes both in Task 3. All three tasks own independently testable behaviour. The five review-focus items have assigned checks. No required broader inventory count is used as a misleading first-slice pass count. Work on `main` and SDD were selected by the user; dependency installation and implementation remain pending review of this plan.
+The selected catalogue/detail/GET contract has an owning task; feedback/favourites portions are explicitly deferred. API types/lifecycle are produced in Task 1, request client/catalogue in Task 2, detail consumes both in Task 3. All three tasks own independently testable behaviour. The five review-focus items have assigned checks. No required broader inventory count is used as a misleading first-slice pass count. Work on `main`, SDD and this written plan were approved by the user.
