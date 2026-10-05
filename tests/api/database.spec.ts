@@ -3,8 +3,8 @@ import { expectedGames, expectedNotes } from '../fixtures/expected-data.js';
 import { DatabaseSync } from 'node:sqlite';
 import { resetTestDatabase } from '../../app/db/reset.js';
 import { createApplication } from '../../app/api/application.js';
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { dirname, isAbsolute, join, relative, resolve, sep } from 'node:path';
 
 function snapshot(dbPath: string) {
   const db = new DatabaseSync(dbPath);
@@ -15,6 +15,20 @@ function snapshot(dbPath: string) {
     };
   } finally { db.close(); }
 }
+
+test('Suite ownership: databases and owner markers stay outside artifact cleanup', async ({ dbPath }, testInfo) => {
+  // Moving owned databases beneath the runner's cleanup directory would erase another invocation's live data.
+  for (const candidate of [dbPath, ownedDatabase()]) {
+    expect(isAbsolute(candidate)).toBe(true);
+    const marker = join(dirname(candidate), '.game-companion-test-owner');
+    expect(readFileSync(marker, 'utf8')).toBe('game-companion-test-database-v1\n');
+    for (const ownedPath of [candidate, marker]) {
+      const fromCleanup = relative(testInfo.project.outputDir, ownedPath);
+      const insideCleanup = fromCleanup !== '..' && !fromCleanup.startsWith(`..${sep}`) && !isAbsolute(fromCleanup);
+      expect(insideCleanup, `Owned path ${ownedPath} must stay outside cleanup directory ${testInfo.project.outputDir}`).toBe(false);
+    }
+  }
+});
 
 test('TEST-DATA-01 current slice: new path seeds every literal game/note field once', async ({}) => {
   const dbPath = ownedDatabase();
@@ -90,12 +104,12 @@ test('REQ-API-06: static allowlist does not disclose database, repository, or pa
   } finally { await request.dispose(); await app.stop(); }
 });
 
-test('Application import creates a stopped server; close releases its database', async ({}) => {
+test('Application import creates a stopped server; close leaves no conflicting SQLite lock', async ({}) => {
   const dbPath = ownedDatabase();
   const app = createApplication({ dbPath });
   expect(app.server.listening).toBe(false);
   await app.close();
-  // Real exclusive schema write verifies that cleanup did not leave a transaction or connection holding a lock.
+  // An exclusive write proves there is no conflicting SQLite lock; it does not establish handle closure.
   const db = new DatabaseSync(dbPath);
   try { db.exec("BEGIN EXCLUSIVE; UPDATE games SET title='After close' WHERE id=1; COMMIT;"); }
   finally { db.close(); }

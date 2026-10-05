@@ -3,6 +3,7 @@ import { defineConfig } from '@playwright/test';
 delete process.env.NO_COLOR;
 export default defineConfig({
   testDir: './tests',
+  outputDir: './test-results/artifacts',
   fullyParallel: false,
   workers: 1,
   globalSetup: './tests/fixtures/suite.ts',
