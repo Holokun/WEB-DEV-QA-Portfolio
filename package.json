@@ -1,0 +1,24 @@
+{
+  "name": "game-companion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc && node scripts/copy-assets.mjs",
+    "dev": "pnpm build && node dist/app/api/server.js",
+    "reset:test-db": "pnpm build && node dist/app/db/reset.js",
+    "test:api": "pnpm build && playwright test --project=api",
+    "test:ui": "pnpm build && playwright test --project=chromium --project=firefox --project=webkit --project=phone",
+    "test": "pnpm build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "24.19.1",
+    "typescript": "7.0.2"
+  }
+}
