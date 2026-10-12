@@ -11,6 +11,10 @@ export function createSchema(db: DatabaseSync): void {
   CREATE TABLE IF NOT EXISTS patch_notes (
     id INTEGER PRIMARY KEY, game_id INTEGER NOT NULL REFERENCES games(id),
     version TEXT NOT NULL, summary TEXT NOT NULL, published_at TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS feedback (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, game_id INTEGER NOT NULL REFERENCES games(id),
+    email TEXT NOT NULL, description TEXT NOT NULL
   );`);
 }
 
@@ -32,7 +36,7 @@ export function openDatabase(dbPath: string): DatabaseSync {
       db.exec('BEGIN IMMEDIATE');
       try { createSchema(db); insertSeed(db); db.exec('COMMIT'); }
       catch (error) { db.exec('ROLLBACK'); throw error; }
-    }
+    } else createSchema(db);
     return db;
   } catch (error) { db.close(); throw error; }
 }

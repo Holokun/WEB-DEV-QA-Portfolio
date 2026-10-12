@@ -17,3 +17,5 @@ export interface GameListResponse { games: Game[]; total: number; filters: { sea
 export interface GameDetailResponse { game: Game }
 export interface PatchNotesResponse { patchNotes: PatchNote[] }
 export interface ApiErrorResponse { error: { code: string; message: string } }
+export interface FeedbackInput { gameId: number; email: string; description: string }
+export interface FeedbackResponse { id: number }

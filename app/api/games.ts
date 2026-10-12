@@ -1,9 +1,9 @@
 import type { DatabaseSync, SQLOutputValue } from 'node:sqlite';
-import type { ApiErrorResponse, Game, GameDetailResponse, GameListResponse, PatchNote, PatchNotesResponse } from '../shared/contracts.js';
+import type { ApiErrorResponse, FeedbackResponse, Game, GameDetailResponse, GameListResponse, PatchNote, PatchNotesResponse } from '../shared/contracts.js';
 
 export interface ApiResult {
   status: number;
-  body: GameListResponse | GameDetailResponse | PatchNotesResponse | ApiErrorResponse;
+  body: GameListResponse | GameDetailResponse | PatchNotesResponse | FeedbackResponse | ApiErrorResponse;
 }
 
 export function apiError(status: number, code: string, message: string): ApiResult {

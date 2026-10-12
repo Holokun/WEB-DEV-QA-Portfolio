@@ -20,15 +20,16 @@ function assertOwnedTestPath(dbPath: string): void {
   }
 }
 
-export function resetTestDatabase(dbPath: string): void {
+export function resetTestDatabase(dbPath: string, options?: { beforeCommit?: () => void }): void {
   assertOwnedTestPath(dbPath);
   const db = new DatabaseSync(dbPath);
   try {
     db.exec('PRAGMA foreign_keys=ON; BEGIN IMMEDIATE');
     try {
       createSchema(db);
-      db.exec('DELETE FROM patch_notes; DELETE FROM games;');
+      db.exec("DELETE FROM feedback; DELETE FROM sqlite_sequence WHERE name='feedback'; DELETE FROM patch_notes; DELETE FROM games;");
       insertSeed(db);
+      options?.beforeCommit?.();
       db.exec('COMMIT');
     } catch (error) { db.exec('ROLLBACK'); throw error; }
   } finally { db.close(); }
