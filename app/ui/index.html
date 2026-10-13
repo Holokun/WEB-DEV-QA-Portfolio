@@ -8,7 +8,9 @@
     <script type="module" src="/main.js"></script>
   </head>
   <body>
-    <header class="site-header"><span class="brand">Game Companion</span><span>Synthetic game library</span></header>
+    <header class="site-header"><span class="brand">Game Companion</span>
+      <nav class="site-nav" aria-label="Main"><a href="/" tabindex="0" data-library-link>Library</a><a href="/#/favourites" tabindex="0" data-favourites-link aria-live="polite" aria-atomic="true">Favourites (0)</a></nav>
+      <p class="persistence-warning" data-persistence-warning aria-live="polite" aria-atomic="true" hidden></p></header>
     <main id="app"></main>
     <footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>
   </body>

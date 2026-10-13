@@ -1,7 +1,9 @@
 import { ApiRequestError, getJson } from './api-client.js';
-import type { GameDetailResponse, PatchNotesResponse } from '../shared/contracts.js';
+import type { Game, GameDetailResponse, PatchNotesResponse } from '../shared/contracts.js';
+import type { FavouritesStore } from './favourites.js';
+import { createFavouriteButton, updateFavouriteButton } from './favourite-button.js';
 
-export function mountDetail(container: HTMLElement, gameId: number, options: { onBack: () => void }): { destroy(): void } {
+export function mountDetail(container: HTMLElement, gameId: number, options: { store: FavouritesStore; onBack: () => void }): { destroy(): void } {
   const view = document.createElement('section');
   view.className = 'detail';
   // Fixed UI copy only; every API value is assigned through textContent.
@@ -36,6 +38,10 @@ export function mountDetail(container: HTMLElement, gameId: number, options: { o
   let detailVersion = 0;
   let notesVersion = 0;
   let notesOpened = false;
+  let favourite: { game: Game; button: HTMLButtonElement } | undefined;
+  const unsubscribe = options.store.subscribe(() => {
+    if (favourite) updateFavouriteButton(favourite.button, favourite.game, options.store);
+  });
 
   function showError(element: HTMLElement, retry: HTMLButtonElement, error: unknown, copy: string): void {
     const notFound = error instanceof ApiRequestError && error.status === 404;
@@ -58,6 +64,9 @@ export function mountDetail(container: HTMLElement, gameId: number, options: { o
       content.querySelector('.description')!.textContent = game.description;
       content.querySelector('[data-year]')!.textContent = String(game.releaseYear);
       content.querySelector('[data-platforms]')!.textContent = game.platforms.join(', ');
+      favourite?.button.remove();
+      favourite = { game, button: createFavouriteButton(game, options.store) };
+      content.append(favourite.button);
       content.hidden = false;
       detailStatus.textContent = 'Game details loaded.';
     } catch (error) {
@@ -122,6 +131,8 @@ export function mountDetail(container: HTMLElement, gameId: number, options: { o
     detailRequest?.abort();
     notesRequest?.abort();
     listeners.abort();
+    unsubscribe();
+    favourite = undefined;
     view.remove();
   } };
 }

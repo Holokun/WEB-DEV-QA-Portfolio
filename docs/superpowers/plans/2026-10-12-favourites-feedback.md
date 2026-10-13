@@ -62,7 +62,7 @@
 
 ## Task 2: Favourites model and views
 
-**Files:** create `app/ui/favourites.ts`, `app/ui/favourite-button.ts`, `app/ui/favourites-view.ts`, `tests/e2e/favourites.spec.ts`; modify `app/ui/catalogue.ts`, `app/ui/detail.ts`, `app/ui/main.ts`, `app/ui/index.html`, `app/ui/styles.css`, `app/api/application.ts` only for asset entries.
+**Files:** create `app/ui/favourites.ts`, `app/ui/favourite-button.ts`, `app/ui/favourites-view.ts`, `tests/e2e/favourites.spec.ts`; modify `app/ui/catalogue.ts`, `app/ui/detail.ts`, `app/ui/main.ts`, `app/ui/index.html`, `app/ui/styles.css`, `app/api/application.ts` only for asset entries. A narrow additive reverse-focus assertion in `tests/e2e/layout.spec.ts` accounts for the detail favourite control; retain notes/Back assertions. The direct cleanup probe in `tests/e2e/catalogue.spec.ts` supplies the now-required shared store and verifies subscription cleanup without weakening existing destroy/request assertions.
 
 **Consumes:** existing Game contracts/API, current view ownership, shared model interface above.
 **Produces:** working saved favourites on catalogue/detail/favourites route, immediate count/list/button states and complete-only validation.
@@ -90,7 +90,7 @@
 
 ## Task 4: Integration coverage, evidence and portfolio documentation
 
-**Files:** modify `tests/e2e/layout.spec.ts`; add targeted keyboard coverage to existing/new tests as appropriate; create `sql/verification-queries.sql`, `test-docs/favourites-feedback-results.md` and dated evidence. Update README/test-plan/traceability status around actual implementation without changing historical reports or claiming future gates complete.
+**Files:** modify `tests/e2e/layout.spec.ts`, `README.md`, `test-docs/test-plan.md`, `test-docs/traceability-matrix.md`; narrowly rename the primary successful submission in `tests/api/feedback.spec.ts` to its existing inventory ID TEST-API-03. Create `sql/verification-queries.sql`, `test-docs/favourites-feedback-results.md`, `bug-reports/BUG-FAV-01-memory-navigation.md`, `bug-reports/BUG-API-01-unsafe-feedback-id.md`, with dated native evidence. Preserve historical reports and future gates.
 
 **Consumes:** all three reviewed implementations and their recorded tests.
 **Produces:** required successful keyboard paths, desktop/phone feature layout checks, fresh regression evidence and clear run/SQL documentation.

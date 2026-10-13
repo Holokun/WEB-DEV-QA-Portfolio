@@ -1,7 +1,9 @@
 import { getJson } from './api-client.js';
-import type { GameListResponse } from '../shared/contracts.js';
+import type { Game, GameListResponse } from '../shared/contracts.js';
+import type { FavouritesStore } from './favourites.js';
+import { createFavouriteButton, updateFavouriteButton } from './favourite-button.js';
 
-export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (id: number) => void }): { destroy(): void } {
+export function mountCatalogue(container: HTMLElement, options: { store: FavouritesStore; onOpenGame: (id: number) => void }): { destroy(): void } {
   const view = document.createElement('section');
   view.className = 'catalogue';
   // The template is fixed UI copy. API values only enter textContent below.
@@ -32,6 +34,10 @@ export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (i
   let request: AbortController | undefined;
   let version = 0;
   let results: GameListResponse | undefined;
+  const buttons = new Map<number, { game: Game; button: HTMLButtonElement }>();
+  const unsubscribe = options.store.subscribe(() => {
+    for (const { game, button } of buttons.values()) updateFavouriteButton(button, game, options.store);
+  });
   function resultStatus(): string {
     return results ? (results.total ? `${results.total} games` : '0 games · No games found') : '';
   }
@@ -61,7 +67,9 @@ export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (i
       const data = await getJson<GameListResponse>(`/api/games${filters.size ? `?${filters}` : ''}`, request.signal);
       if (current !== version) return;
       results = data;
+      if (!trimmed && !genre.value) options.store.validate(data.games);
       list.replaceChildren();
+      buttons.clear();
       for (const game of data.games) {
         const card = document.createElement('li');
         const link = document.createElement('a');
@@ -74,7 +82,9 @@ export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (i
         const tag = document.createElement('p');
         tag.className = 'genre';
         tag.textContent = game.genre;
-        card.append(link, tag);
+        const button = createFavouriteButton(game, options.store);
+        buttons.set(game.id, { game, button });
+        card.append(link, tag, button);
         list.append(card);
       }
       status.textContent = resultStatus();
@@ -97,5 +107,5 @@ export function mountCatalogue(container: HTMLElement, options: { onOpenGame: (i
     options.onOpenGame(Number(link.dataset.gameId));
   }, { signal: listeners.signal });
   void load();
-  return { destroy() { ++version; request?.abort(); listeners.abort(); view.remove(); } };
+  return { destroy() { ++version; request?.abort(); listeners.abort(); unsubscribe(); buttons.clear(); view.remove(); } };
 }

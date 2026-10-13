@@ -116,6 +116,8 @@ test('TEST-UI-12 first-slice: keyboard opens game, follows notes and returns wit
   await page.keyboard.press('Enter');
   await expect(page.getByRole('region', { name: 'Patch notes' }).getByRole('listitem')).toHaveCount(3);
   await page.keyboard.press('Shift+Tab');
+  await visibleFocus(page, 'Add Orbit to favourites', 'button');
+  await page.keyboard.press('Shift+Tab');
   await visibleFocus(page, 'Patch notes', 'link');
   await page.keyboard.press('Shift+Tab');
   await visibleFocus(page, 'Back', 'link');

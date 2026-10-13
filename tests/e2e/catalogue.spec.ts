@@ -379,12 +379,15 @@ test('Catalogue destroy: removed view listeners and a late response cannot updat
   await expect(cards(page)).toHaveCount(10);
   await page.evaluate(async moduleURL => {
     const { mountCatalogue } = await import(moduleURL);
+    const storeURL = '/favourites.js';
+    const { createFavouritesStore } = await import(storeURL);
+    const store = createFavouritesStore();
     const host = document.createElement('div');
     host.id = 'cleanup-probe';
     document.body.append(host);
     let opened = 0;
-    const mounted = mountCatalogue(host, { onOpenGame: () => { ++opened; } });
-    (window as unknown as { cleanupProbe: unknown }).cleanupProbe = { host, mounted, opened: () => opened };
+    const mounted = mountCatalogue(host, { store, onOpenGame: () => { ++opened; } });
+    (window as unknown as { cleanupProbe: unknown }).cleanupProbe = { host, mounted, store, opened: () => opened };
   }, '/catalogue.js');
   await expect(page.getByRole('list', { name: 'Games' }).nth(1).getByRole('link')).toHaveCount(10);
   const held = await heldRequests(page);
@@ -399,15 +402,16 @@ test('Catalogue destroy: removed view listeners and a late response cannot updat
   const requests: string[] = [];
   page.on('request', request => { if (new URL(request.url()).pathname === '/api/games') requests.push(request.url()); });
   const snapshot = await page.evaluate(() => {
-    const probe = (window as unknown as { cleanupProbe: { host: HTMLElement; opened(): number; view: HTMLElement } }).cleanupProbe;
+    const probe = (window as unknown as { cleanupProbe: { host: HTMLElement; opened(): number; view: HTMLElement; store: { toggle(id: number): void; ids(): readonly number[] } } }).cleanupProbe;
+    probe.store.toggle(10);
     const search = probe.view.querySelector('input')!;
     search.value = 'Orbit';
     search.dispatchEvent(new Event('input', { bubbles: true }));
     probe.view.querySelector('select')!.dispatchEvent(new Event('change', { bubbles: true }));
     probe.view.querySelector<HTMLButtonElement>('[data-clear]')!.click();
     probe.view.querySelector<HTMLAnchorElement>('a')!.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-    return { hostChildren: probe.host.childElementCount, titles: [...probe.view.querySelectorAll('a')].map(link => link.textContent), opened: probe.opened() };
+    return { hostChildren: probe.host.childElementCount, titles: [...probe.view.querySelectorAll('a')].map(link => link.textContent), opened: probe.opened(), savedIds: probe.store.ids(), favouritePressed: probe.view.querySelector('.favourite-button')!.getAttribute('aria-pressed') };
   });
-  expect(snapshot).toEqual({ hostChildren: 0, titles: ['Atlas Tactics', 'Ember Quest', 'Ember Trail', 'Iron Citadel', 'Moss Garden', 'Neon Sprint', 'Orbit', 'ORBIT', 'Zeta', 'Écho'], opened: 0 });
+  expect(snapshot).toEqual({ hostChildren: 0, titles: ['Atlas Tactics', 'Ember Quest', 'Ember Trail', 'Iron Citadel', 'Moss Garden', 'Neon Sprint', 'Orbit', 'ORBIT', 'Zeta', 'Écho'], opened: 0, savedIds: [10], favouritePressed: 'false' });
   expect(requests).toEqual([]);
 });
