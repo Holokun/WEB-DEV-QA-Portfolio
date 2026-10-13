@@ -2,11 +2,13 @@ import { mountCatalogue } from './catalogue.js';
 import { mountDetail } from './detail.js';
 import { createFavouritesStore } from './favourites.js';
 import { mountFavourites } from './favourites-view.js';
+import { mountFeedback } from './feedback.js';
 
 const container = document.querySelector<HTMLElement>('#app')!;
 const store = createFavouritesStore();
 const libraryLink = document.querySelector<HTMLAnchorElement>('[data-library-link]')!;
 const favouritesLink = document.querySelector<HTMLAnchorElement>('[data-favourites-link]')!;
+const feedbackLink = document.querySelector<HTMLAnchorElement>('[data-feedback-link]')!;
 const warning = document.querySelector<HTMLElement>('[data-persistence-warning]')!;
 let unsubscribeHeader: (() => void) | undefined;
 let mounted: { destroy(): void } | undefined;
@@ -28,11 +30,14 @@ function render(): void {
   const onOpenGame = (gameId: number): void => { window.location.hash = `/games/${gameId}`; };
   mounted = currentHash === '#/favourites'
     ? mountFavourites(container, { store, onOpenGame })
+    : currentHash === '#/feedback'
+      ? mountFeedback(container, { store, onBack: () => { window.location.hash = ''; } })
     : id !== undefined && Number.isSafeInteger(id)
       ? mountDetail(container, id, { store, onBack: () => { window.location.hash = ''; } })
       : mountCatalogue(container, { store, onOpenGame });
   for (const link of document.querySelectorAll<HTMLAnchorElement>('.site-nav a')) {
-    const selected = link === favouritesLink ? currentHash === '#/favourites' : !currentHash || currentHash === '#/';
+    const selected = link === favouritesLink ? currentHash === '#/favourites'
+      : link === feedbackLink ? currentHash === '#/feedback' : !currentHash || currentHash === '#/';
     if (selected) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
   }

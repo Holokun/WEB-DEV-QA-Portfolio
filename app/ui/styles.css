@@ -18,7 +18,7 @@ h1 { font-size: clamp(2rem, 4vw, 3.25rem); letter-spacing: -.04em; margin: 10px 
 .field { display: grid; gap: 8px; min-width: 0; }
 .field:first-child { flex: 1; }
 label { font-size: .85rem; font-weight: 650; }
-input, select, button { font: inherit; padding: 11px 13px; border: 1px solid #8eaaa0; border-radius: 7px; min-height: 44px; color: inherit; background: white; max-width: 100%; }
+input, select, textarea, button { font: inherit; padding: 11px 13px; border: 1px solid #8eaaa0; border-radius: 7px; min-height: 44px; color: inherit; background: white; max-width: 100%; }
 input { width: 100%; }
 select { min-width: 170px; }
 button { cursor: pointer; background: #174e3b; color: white; font-weight: 650; }
@@ -51,6 +51,13 @@ h2 { font-size: 1.6rem; }
 .note-list time { font-size: .8rem; color: #50695c; }
 .note-list p { line-height: 1.6; margin-bottom: 0; }
 #app:focus { outline: none; }
+.feedback { max-width: 780px; }
+.feedback-form { display: grid; gap: 20px; padding: 22px; background: white; border: 1px solid #d2dbd5; border-radius: 12px; }
+.feedback-form select, .feedback-form textarea { width: 100%; min-width: 0; }
+.feedback-form textarea { resize: vertical; }
+.feedback-form button { justify-self: start; }
+.field-help { margin: 0; font-size: .85rem; color: #50695c; }
+.feedback-form button:disabled { cursor: wait; opacity: .7; }
 @media (max-width: 640px) {
   .site-header, main, footer { padding-left: 20px; padding-right: 20px; }
   .site-header { flex-direction: column; gap: 5px; }

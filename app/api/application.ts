@@ -10,7 +10,7 @@ const uiAssets = new Map<string, readonly [string, string]>([
   ['/index.html', ['index.html', 'text/html; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
   ['/shared/feedback-validation.js', ['shared/feedback-validation.js', 'text/javascript; charset=utf-8']],
-  ...['main', 'api-client', 'catalogue', 'detail', 'favourites', 'favourite-button', 'favourites-view'].map(name => [`/${name}.js`, [`${name}.js`, 'text/javascript; charset=utf-8']] as const),
+  ...['main', 'api-client', 'catalogue', 'detail', 'favourites', 'favourite-button', 'favourites-view', 'feedback'].map(name => [`/${name}.js`, [`${name}.js`, 'text/javascript; charset=utf-8']] as const),
 ]);
 
 export function createApplication(options: { dbPath: string; uiDir?: string }): { server: Server; close(): Promise<void> } {

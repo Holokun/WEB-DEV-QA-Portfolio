@@ -5,8 +5,7 @@ export class ApiRequestError extends Error {
   }
 }
 
-export async function getJson<T>(url: string, signal?: AbortSignal): Promise<T> {
-  const response = await fetch(url, { signal });
+async function readJson<T>(response: Response): Promise<T> {
   if (!response.ok) {
     let code: string | undefined;
     try {
@@ -19,4 +18,14 @@ export async function getJson<T>(url: string, signal?: AbortSignal): Promise<T> 
     throw new ApiRequestError(response.status, code);
   }
   return await response.json() as T;
+}
+
+export async function getJson<T>(url: string, signal?: AbortSignal): Promise<T> {
+  return readJson<T>(await fetch(url, { signal }));
+}
+
+export async function postJson<T>(url: string, body: unknown, signal?: AbortSignal): Promise<T> {
+  return readJson<T>(await fetch(url, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal,
+  }));
 }
