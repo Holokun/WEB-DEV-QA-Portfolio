@@ -1,0 +1,23 @@
+
+Running 18 tests using 1 worker
+
+  ok  1 [chromium] › tests\e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence (745ms)
+  ok  2 [chromium] › tests\e2e\favourites.spec.ts:50:3 › TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state (245ms)
+  ok  3 [chromium] › tests\e2e\favourites.spec.ts:50:3 › TEST-UI-08: malformed/non-array storage {"id":1} recovers to usable empty state (226ms)
+  ok  4 [chromium] › tests\e2e\favourites.spec.ts:50:3 › TEST-UI-08: malformed/non-array storage null recovers to usable empty state (263ms)
+  ok  5 [chromium] › tests\e2e\favourites.spec.ts:62:1 › TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success (390ms)
+  ok  6 [chromium] › tests\e2e\favourites.spec.ts:93:1 › TEST-UI-08: games hidden by search and genre remain saved (328ms)
+  ok  7 [chromium] › tests\e2e\favourites.spec.ts:107:3 › TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue (225ms)
+  ok  8 [chromium] › tests\e2e\favourites.spec.ts:107:3 › TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue (245ms)
+  ok  9 [chromium] › tests\e2e\favourites.spec.ts:135:3 › TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable (292ms)
+  ok 10 [chromium] › tests\e2e\favourites.spec.ts:135:3 › TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable (293ms)
+  ok 11 [chromium] › tests\e2e\favourites.spec.ts:135:3 › TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable (278ms)
+  ok 12 [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage write failure (475ms)
+  ok 13 [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage access failure (461ms)
+  ok 14 [chromium] › tests\e2e\favourites.spec.ts:193:1 › TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success (196ms)
+  ok 15 [chromium] › tests\e2e\favourites.spec.ts:219:1 › TEST-UI-08: failed storage writes keep the last persisted selection on reload (258ms)
+  ok 16 [chromium] › tests\e2e\favourites.spec.ts:233:1 › TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading (175ms)
+  ok 17 [chromium] › tests\e2e\favourites.spec.ts:251:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px (325ms)
+  ok 18 [chromium] › tests\e2e\favourites.spec.ts:251:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px (303ms)
+
+  18 passed (6.5s)

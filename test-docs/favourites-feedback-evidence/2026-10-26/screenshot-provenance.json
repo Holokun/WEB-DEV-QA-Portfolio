@@ -1,0 +1,62 @@
+[
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-07-08-1-3232a-fit-the-configured-viewport-chromium/favourites-view.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/desktop-favourites-view.png",
+    "sha256": "362f23c87429bfdeca545ffd443c65c0af2febd927ab08e53acd4de936e95370"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-07-08-1-3232a-fit-the-configured-viewport-chromium-phone/favourites-view.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/phone-favourites-view.png",
+    "sha256": "8a20b243060d77c6fbb0a823122ddd9ce1c5e12be45d5e778993955812f2915c"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-12-13-k-32eb5-bmits-with-SQL-verification-chromium/feedback-normal.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/desktop-feedback-normal.png",
+    "sha256": "0b56dd1b547679b1a4c9717637ce9c4740f027871f647576d0d0c77aeaac0c1e"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-12-13-k-32eb5-bmits-with-SQL-verification-chromium/feedback-validation.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/desktop-feedback-validation.png",
+    "sha256": "2dce3689a3777fe2ef7728f181f21b2e058dca4513e050214fa304b9201a5df3"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-12-13-k-32eb5-bmits-with-SQL-verification-chromium/feedback-success.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/desktop-feedback-success.png",
+    "sha256": "a03a412c90d424f2814884f3af308ee10dffdf307c73831944a53a448731f635"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-12-13-k-32eb5-bmits-with-SQL-verification-chromium-phone/feedback-normal.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/phone-feedback-normal.png",
+    "sha256": "76a753051c4fd8996eba7d4bbf2fb8cac69ce5d613eb3a071b4df5d0ace220dc"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-12-13-k-32eb5-bmits-with-SQL-verification-chromium-phone/feedback-validation.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/phone-feedback-validation.png",
+    "sha256": "66adb35e6480b441f8e7ecf45e505ac79ef397d0527563f1570ddf4d0a78c2c2"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-12-13-k-32eb5-bmits-with-SQL-verification-chromium-phone/feedback-success.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/phone-feedback-success.png",
+    "sha256": "40e3d0c0eb64d687326463657b65b56578d6c4742797e4279c74da55a3fe62f5"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-13-firs-9c84a--cards-detail-and-notes-fit-chromium/catalogue-view.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/desktop-catalogue-view.png",
+    "sha256": "dceacf9cb133b1399fcbc5a995132d70cf8a4427be6facfa3db6bd383a7c56d6"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-13-firs-9c84a--cards-detail-and-notes-fit-chromium/detail-view.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/desktop-detail-view.png",
+    "sha256": "2b67c066d38911a7f44810bcebb430f6ec866551aa6f46924b81a11392f67145"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-13-firs-9c84a--cards-detail-and-notes-fit-chromium-phone/catalogue-view.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/phone-catalogue-view.png",
+    "sha256": "404b9d7c2e81ece420b8334ef6254e6b34af9a60e524aecfc18a9c163eecf8bb"
+  },
+  {
+    "source": "test-docs/favourites-feedback-evidence/2026-10-26/artifacts/e2e-layout-TEST-UI-13-firs-9c84a--cards-detail-and-notes-fit-chromium-phone/detail-view.png",
+    "target": "test-docs/favourites-feedback-evidence/2026-10-26/phone-detail-view.png",
+    "sha256": "be74544b470b894bd71af03a03c6537d88d9f5b06a539e4a455dcc1ba69e941d"
+  }
+]

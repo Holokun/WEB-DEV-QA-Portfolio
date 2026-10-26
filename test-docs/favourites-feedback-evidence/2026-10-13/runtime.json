@@ -1,0 +1,98 @@
+{
+  "startedAt": "2026-10-13T05:22:56.732Z",
+  "clientCalendar": "2026-10-13",
+  "timeZone": "Asia/Yerevan",
+  "node": "v24.19.0",
+  "nodeExecutable": "C:\\Users\\Betelgoida\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "os": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "version": "Windows 11 Pro for Workstations",
+    "arch": "x64"
+  },
+  "playwright": "1.63.0",
+  "pnpm": "11.25.0",
+  "fixtureVersion": 1,
+  "workers": 1,
+  "fullyParallel": false,
+  "retries": [
+    {
+      "project": "api",
+      "retries": 0
+    },
+    {
+      "project": "chromium",
+      "retries": 0
+    },
+    {
+      "project": "firefox",
+      "retries": 0
+    },
+    {
+      "project": "webkit",
+      "retries": 0
+    },
+    {
+      "project": "chromium-phone",
+      "retries": 0
+    }
+  ],
+  "projects": [
+    {
+      "name": "api"
+    },
+    {
+      "name": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "browserName": "chromium"
+    },
+    {
+      "name": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "browserName": "firefox",
+      "launchOptions": {
+        "executablePath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe"
+      }
+    },
+    {
+      "name": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "browserName": "webkit"
+    },
+    {
+      "name": "chromium-phone",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "browserName": "chromium"
+    }
+  ],
+  "browsers": {
+    "chromium": {
+      "version": "153.0.8010.12",
+      "executable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe"
+    },
+    "firefox": {
+      "version": "155.0",
+      "executable": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe"
+    },
+    "webkit": {
+      "version": "26.6",
+      "executable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\webkit-2359\\Playwright.exe"
+    }
+  },
+  "baseURL": "http://127.0.0.1:61024",
+  "DB_PATH": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\owned-databases\\run-pjk7IV\\games.sqlite",
+  "finishedAt": "2026-10-13T05:26:36.430Z",
+  "status": "passed"
+}

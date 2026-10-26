@@ -1,0 +1,93 @@
+{
+  "nativeReport": "test-results/sdd/favourites-feedback-2026-10-12/task-4-results.json",
+  "stats": {
+    "startTime": "2026-10-13T05:22:56.16Z",
+    "duration": 220171.064,
+    "expected": 559,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "inventoryTotal": 21,
+  "inventoryIDsObserved": [
+    "TEST-API-01",
+    "TEST-API-02",
+    "TEST-API-03",
+    "TEST-API-04",
+    "TEST-DATA-01",
+    "TEST-UI-01",
+    "TEST-UI-02",
+    "TEST-UI-03",
+    "TEST-UI-04",
+    "TEST-UI-05",
+    "TEST-UI-06",
+    "TEST-UI-07",
+    "TEST-UI-08",
+    "TEST-UI-09",
+    "TEST-UI-10",
+    "TEST-UI-11",
+    "TEST-UI-12",
+    "TEST-UI-13",
+    "TEST-UI-14"
+  ],
+  "expandedDefinitions": 286,
+  "projectExecutions": 559,
+  "projects": [
+    {
+      "name": "api",
+      "executions": 156,
+      "statuses": [
+        {
+          "status": "expected",
+          "count": 156
+        }
+      ],
+      "retries": 0
+    },
+    {
+      "name": "chromium",
+      "executions": 132,
+      "statuses": [
+        {
+          "status": "expected",
+          "count": 132
+        }
+      ],
+      "retries": 0
+    },
+    {
+      "name": "chromium-phone",
+      "executions": 7,
+      "statuses": [
+        {
+          "status": "expected",
+          "count": 7
+        }
+      ],
+      "retries": 0
+    },
+    {
+      "name": "firefox",
+      "executions": 132,
+      "statuses": [
+        {
+          "status": "expected",
+          "count": 132
+        }
+      ],
+      "retries": 0
+    },
+    {
+      "name": "webkit",
+      "executions": 132,
+      "statuses": [
+        {
+          "status": "expected",
+          "count": 132
+        }
+      ],
+      "retries": 0
+    }
+  ],
+  "errors": []
+}

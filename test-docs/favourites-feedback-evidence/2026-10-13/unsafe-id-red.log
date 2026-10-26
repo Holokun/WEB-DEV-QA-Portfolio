@@ -1,0 +1,150 @@
+
+Running 2 tests using 1 worker
+
+  x  1 [api] › tests\api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740990 preserves the safe response ID contract (208ms)
+  x  2 [api] › tests\api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740991 preserves the safe response ID contract (180ms)
+
+
+  1) [api] › tests\api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740990 preserves the safe response ID contract 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 9
+
+    @@ -1,11 +1,8 @@
+      Object {
+        "body": Object {
+    -     "error": Object {
+    -       "code": "INTERNAL_ERROR",
+    -       "message": "An unexpected server error occurred.",
+    -     },
+    +     "id": 9007199254740992,
+        },
+        "database": Object {
+          "feedback": Array [
+            Object {
+              "description": "Synthetic preexisting feedback",
+    @@ -17,10 +14,16 @@
+              "description": "Synthetic feedback 5897d1b9-c49a-4c78-a1d2-1e0a96273b1e",
+              "email": "player@example.com",
+              "game_id": 1,
+              "id": "9007199254740991",
+            },
+    +       Object {
+    +         "description": "Synthetic feedback 35225158-1380-423b-980c-6a5fec147b33",
+    +         "email": "player@example.com",
+    +         "game_id": 1,
+    +         "id": "9007199254740992",
+    +       },
+          ],
+          "games": Array [
+            Object {
+              "description": "Defend a tiny space station from drifting robots.",
+              "genre": "Action",
+    @@ -133,11 +136,11 @@
+            },
+          ],
+          "sequence": Array [
+            Object {
+              "name": "feedback",
+    -         "seq": "9007199254740991",
+    +         "seq": "9007199254740992",
+            },
+          ],
+        },
+    -   "status": 500,
+    +   "status": 201,
+      }
+
+      202 |       const response = await request.post('/api/feedback', { data: valid() });
+      203 |       // One assertion captures the erroneous response and any committed row/counter change together.
+    > 204 |       expect({ status: response.status(), body: await response.json(), database: allocationSnapshot(dbPath) }).toEqual({
+          |                                                                                                                ^
+      205 |         status: 500,
+      206 |         body: { error: { code: 'INTERNAL_ERROR', message: 'An unexpected server error occurred.' } },
+      207 |         database: beforeRejected,
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\feedback.spec.ts:204:112
+
+    Error Context: test-results\artifacts\api-feedback-REQ-API-07-fe-7ab64-e-safe-response-ID-contract-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\api-feedback-REQ-API-07-fe-7ab64-e-safe-response-ID-contract-api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\artifacts\api-feedback-REQ-API-07-fe-7ab64-e-safe-response-ID-contract-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [api] › tests\api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740991 preserves the safe response ID contract 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 9
+
+    @@ -1,20 +1,23 @@
+      Object {
+        "body": Object {
+    -     "error": Object {
+    -       "code": "INTERNAL_ERROR",
+    -       "message": "An unexpected server error occurred.",
+    -     },
+    +     "id": 9007199254740992,
+        },
+        "database": Object {
+          "feedback": Array [
+            Object {
+              "description": "Synthetic preexisting feedback",
+              "email": "player@example.com",
+              "game_id": 1,
+              "id": "1",
+            },
+    +       Object {
+    +         "description": "Synthetic feedback 24d17dd6-ed24-4299-aafc-1743339302e5",
+    +         "email": "player@example.com",
+    +         "game_id": 1,
+    +         "id": "9007199254740992",
+    +       },
+          ],
+          "games": Array [
+            Object {
+              "description": "Defend a tiny space station from drifting robots.",
+              "genre": "Action",
+    @@ -127,11 +130,11 @@
+            },
+          ],
+          "sequence": Array [
+            Object {
+              "name": "feedback",
+    -         "seq": "9007199254740991",
+    +         "seq": "9007199254740992",
+            },
+          ],
+        },
+    -   "status": 500,
+    +   "status": 201,
+      }
+
+      202 |       const response = await request.post('/api/feedback', { data: valid() });
+      203 |       // One assertion captures the erroneous response and any committed row/counter change together.
+    > 204 |       expect({ status: response.status(), body: await response.json(), database: allocationSnapshot(dbPath) }).toEqual({
+          |                                                                                                                ^
+      205 |         status: 500,
+      206 |         body: { error: { code: 'INTERNAL_ERROR', message: 'An unexpected server error occurred.' } },
+      207 |         database: beforeRejected,
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\feedback.spec.ts:204:112
+
+    Error Context: test-results\artifacts\api-feedback-REQ-API-07-fe-20fef-e-safe-response-ID-contract-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\artifacts\api-feedback-REQ-API-07-fe-20fef-e-safe-response-ID-contract-api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\artifacts\api-feedback-REQ-API-07-fe-20fef-e-safe-response-ID-contract-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [api] › tests\api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740990 preserves the safe response ID contract 
+    [api] › tests\api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740991 preserves the safe response ID contract 

@@ -1,0 +1,154 @@
+[
+  {
+    "path": "app/api/application.ts",
+    "sha256": "4bad52640de602170f0c9f6e7159a02e63dd9a3bc3ce381c54b23f07626f4ede"
+  },
+  {
+    "path": "app/api/feedback.ts",
+    "sha256": "de0928671686bafa1d97633fbf737507ff515ad62ea003a61466c72064fd4a21"
+  },
+  {
+    "path": "app/api/games.ts",
+    "sha256": "455b2be3a7c25923c62f30fb68299f0ae8ce5ff51e3f054a4957d41a4f98eebc"
+  },
+  {
+    "path": "app/api/server.ts",
+    "sha256": "84d951f26ea77aa5b11be1f7aac88b1d596e236605e198bf0202bdb211226cd6"
+  },
+  {
+    "path": "app/db/database.ts",
+    "sha256": "15650bb8198a795736bab1dcf68ddc7026cfb6e10a03befce7cc10d8f0e2cccd"
+  },
+  {
+    "path": "app/db/reset.ts",
+    "sha256": "a9c46386e489dc44f15337c4ef72ad989eab3a0e0ff83d771bb00ce41c28ce6a"
+  },
+  {
+    "path": "app/db/seed.ts",
+    "sha256": "c1d360e9d062099caab3f2b02e7a41bba059ab4fd51ed0646011a93a90f486c4"
+  },
+  {
+    "path": "app/shared/contracts.ts",
+    "sha256": "dab99cfe2da33431b99f80338aca14e11ccc60beb2168a9f006864012f89612a"
+  },
+  {
+    "path": "app/shared/feedback-validation.ts",
+    "sha256": "5bc04b01374b113b7d38425192e618a2b4577a02db7c68006400904437fa8756"
+  },
+  {
+    "path": "app/ui/api-client.ts",
+    "sha256": "b0634c06652f5c4d5ccccf1b57013947cb83978464c77478903523fe4869bc38"
+  },
+  {
+    "path": "app/ui/catalogue.ts",
+    "sha256": "429df6dba91e2d98348c63577a58891fcd180398b7d10bba147ae9e5fe63525a"
+  },
+  {
+    "path": "app/ui/detail.ts",
+    "sha256": "2afaf34a21c9c1c9251c24ab82e77fe24f28e99a70ca2e9ecb1a4c54acb5b89d"
+  },
+  {
+    "path": "app/ui/favourite-button.ts",
+    "sha256": "e3df485b9d6919ac02cb8762334ed219d9d592d1727ec3ed8ca9c3a85bbbc5d0"
+  },
+  {
+    "path": "app/ui/favourites-view.ts",
+    "sha256": "4812f78d385be2be80e7a24b256038f7454b8d8cd34c73ae1af69e291fa74661"
+  },
+  {
+    "path": "app/ui/favourites.ts",
+    "sha256": "ed21d5034996e544d7b220a2470dc7fbc900cec94beb1d40d0807590af91b445"
+  },
+  {
+    "path": "app/ui/feedback.ts",
+    "sha256": "ff6d6e95dc77eeac405bda906c938fa690f4602982e22f25cba7a8e3c85a81a1"
+  },
+  {
+    "path": "app/ui/index.html",
+    "sha256": "528488312405bfdda6ed81a7355a76b97d7dbba9ebfa326ec4c8e37da166fe0d"
+  },
+  {
+    "path": "app/ui/main.ts",
+    "sha256": "7745c42b0af61f6633a0d1823eb03c31f303b0462f90ef033122de1094f90b67"
+  },
+  {
+    "path": "app/ui/styles.css",
+    "sha256": "fba84ed73aee65f109598a3bc7e4febc06ebe993ac521860b366856e142bfe08"
+  },
+  {
+    "path": "package.json",
+    "sha256": "12d94b5a66c877794e34e4c9f393d3fe430f9814073cb527b253d54ea2e1a6dc"
+  },
+  {
+    "path": "playwright.config.ts",
+    "sha256": "f317583a826b330f08d172c3847e3dbb643864d5c943f7638400ee0547805680"
+  },
+  {
+    "path": "pnpm-lock.yaml",
+    "sha256": "cf6bf31c8956bf9cadb0de311435da7ddafe1eb09ea11f091967e7831d20e78f"
+  },
+  {
+    "path": "pnpm-workspace.yaml",
+    "sha256": "561dfd879b2a1a7ead5f4319f434e9277cddf7f32f2bec01d72b1045fb587515"
+  },
+  {
+    "path": "scripts/copy-assets.mjs",
+    "sha256": "eb0c6987992ee10fa79886028483d3ef611ad659c68f434f921001218ca90fbb"
+  },
+  {
+    "path": "scripts/install-browsers.mjs",
+    "sha256": "0ee05d039c67b4583b0edf954d78e11c36ed059cecdc89b60462a1ce9bf3836d"
+  },
+  {
+    "path": "tests/api/database.spec.ts",
+    "sha256": "dd2eb5fdaa3167d6f3f72b0811e534f0aa124142769a03e81de0a0d2c8f0aed7"
+  },
+  {
+    "path": "tests/api/feedback.spec.ts",
+    "sha256": "243cb4b0bc51b90a93ffae9b897250584a5623080d54ff8c34c4ac6b0f538339"
+  },
+  {
+    "path": "tests/api/games.spec.ts",
+    "sha256": "94f9ae213e1dffa559f971f098d0323ad0f46ded652e98baf26e5dd851f9b48a"
+  },
+  {
+    "path": "tests/e2e/catalogue.spec.ts",
+    "sha256": "6f703a516e4c3cea47bd85d78794c9078858993c4c60756acaa41f0b968703f5"
+  },
+  {
+    "path": "tests/e2e/detail.spec.ts",
+    "sha256": "adda4596b8399c475bf7895559ec6672c83e257e3a241715381373aea64c0b81"
+  },
+  {
+    "path": "tests/e2e/favourites.spec.ts",
+    "sha256": "01daeb606c6f3a05433445fc5f49cc6ab81fe9bcf26a1376bb50248166fed906"
+  },
+  {
+    "path": "tests/e2e/feedback.spec.ts",
+    "sha256": "f74efdec242ba23d34fec46670f1b9e5fc045820a03d7ad6cfd86d488c013086"
+  },
+  {
+    "path": "tests/e2e/layout.spec.ts",
+    "sha256": "ce8b16320ff0a7908a306e857e8c9ed30c5032d4fd06da167e1af8c8a8a3c7c8"
+  },
+  {
+    "path": "tests/fixtures/app.ts",
+    "sha256": "8f0f1a158d46904efd0b2999bbc60e08791bfe2a2fb4e403069b2f93abc5caf0"
+  },
+  {
+    "path": "tests/fixtures/expected-data.ts",
+    "sha256": "e673e35213c41d716215ca60358b95d405eccbc85770bfcaf4f6fc45387fb9a2"
+  },
+  {
+    "path": "tests/fixtures/feedback-data.ts",
+    "sha256": "74c29004ec2fdb9d5de858ac62727ea58afb0780f2c1b763157a41d1359a2134"
+  },
+  {
+    "path": "tests/fixtures/suite.ts",
+    "sha256": "ff50efa507e0fe789556180ed6a6dcfb2d22e57ca8716af555238ad82e123c2c"
+  },
+  {
+    "path": "tsconfig.json",
+    "sha256": "c07b203b95ec1e87b391b017dd219cee02a2b273349b4d729c69442bb4085679"
+  }
+]

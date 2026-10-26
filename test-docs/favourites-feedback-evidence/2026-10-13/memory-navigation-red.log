@@ -1,0 +1,88 @@
+
+Running 2 tests using 1 worker
+
+  x  1 [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage write failure (5.5s)
+  x  2 [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage access failure (5.4s)
+
+
+  1) [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage write failure 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('navigation', { name: 'Main' }).getByRole('link', { name: /^Favourites/ })
+    Expected: "Favourites (1)"
+    Received: "Favourites (0)"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('navigation', { name: 'Main' }).getByRole('link', { name: /^Favourites/ }) with timeout 5000ms
+      - waiting for getByRole('navigation', { name: 'Main' }).getByRole('link', { name: /^Favourites/ })
+        14 × locator resolved to <a tabindex="0" aria-live="polite" aria-atomic="true" href="/#/favourites" data-favourites-link="">Favourites (0)</a>
+           - unexpected value "Favourites (0)"
+
+
+      165 |     await library.click();
+      166 |     await expect(page.getByRole('list', { name: 'Games' }).getByRole('link')).toHaveCount(10);
+    > 167 |     await expect(nav(page)).toHaveText('Favourites (1)');
+          |                             ^
+      168 |     await expect(page.getByRole('button', { name: 'Remove Orbit from favourites', exact: true })).toHaveAttribute('aria-pressed', 'true');
+      169 |     await expect(page.getByRole('main')).toBeFocused();
+      170 |     expect(new URL(page.url()).hash).toBe('');
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\e2e\favourites.spec.ts:167:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--9445d-after-storage-write-failure-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--9445d-after-storage-write-failure-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--9445d-after-storage-write-failure-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--9445d-after-storage-write-failure-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage access failure 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('navigation', { name: 'Main' }).getByRole('link', { name: /^Favourites/ })
+    Expected: "Favourites (1)"
+    Received: "Favourites (0)"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('navigation', { name: 'Main' }).getByRole('link', { name: /^Favourites/ }) with timeout 5000ms
+      - waiting for getByRole('navigation', { name: 'Main' }).getByRole('link', { name: /^Favourites/ })
+        14 × locator resolved to <a tabindex="0" aria-live="polite" aria-atomic="true" href="/#/favourites" data-favourites-link="">Favourites (0)</a>
+           - unexpected value "Favourites (0)"
+
+
+      165 |     await library.click();
+      166 |     await expect(page.getByRole('list', { name: 'Games' }).getByRole('link')).toHaveCount(10);
+    > 167 |     await expect(nav(page)).toHaveText('Favourites (1)');
+          |                             ^
+      168 |     await expect(page.getByRole('button', { name: 'Remove Orbit from favourites', exact: true })).toHaveAttribute('aria-pressed', 'true');
+      169 |     await expect(page.getByRole('main')).toBeFocused();
+      170 |     expect(new URL(page.url()).hash).toBe('');
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\e2e\favourites.spec.ts:167:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--937a4-fter-storage-access-failure-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--937a4-fter-storage-access-failure-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--937a4-fter-storage-access-failure-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\sdd\favourites-feedback-2026-10-12\task-2-fix-1-red-artifacts\e2e-favourites-TEST-UI-08--937a4-fter-storage-access-failure-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage write failure 
+    [chromium] › tests\e2e\favourites.spec.ts:154:3 › TEST-UI-08: Library return retains memory favourites after storage access failure 

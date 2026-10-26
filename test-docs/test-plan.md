@@ -1,6 +1,10 @@
 # Game Companion — Test Plan
 
-Status: **First catalogue/detail/patch-note slice implemented and executed; full-version test plan remains open.** [First-slice results](first-slice-results.md) record the actual environment, commands, coverage and blocked Firefox setup. Future features and required full-version acceptance/release gates below remain unchanged; this slice does not complete the full test plan.
+Status: **First catalogue/detail/patch-note slice implemented and executed; full-version test plan remains open.** [First-slice results](first-slice-results.md) and the [2026-10-05 Firefox rerun](firefox-rerun-results.md) record historical launch failures. After the [launch repair](firefox-launch-repair.md), the [full Firefox rerun on 2026-10-06](firefox-regression-results-2026-10-06.md) passed all 66 existing automated checks, without skips or retries. Diagnostic lifecycle warnings are recorded for triage. Other projects were not rerun. Future features and required full-version acceptance/release gates below remain unchanged; this slice does not complete the full test plan.
+
+Current implementation includes favourites, feedback and the complete feedback/counter/reset lifecycle. The [regression report](favourites-feedback-results.md) separates the 2026-10-13 run from fresh verification on 2026-10-26: 559 passed across 288 expanded definitions, representing 19 of 21 inventory entries. It records keyboard feedback/header navigation, real SQL checks, and desktop/phone evidence. Historical results above describe their original scope. The full plan remains open for the two axe inventory entries, manual screen-reader review, required CI and release gates; no pending activity is counted as passed.
+
+Latest manual reporting: the [polished Vadim session](manual/testing-session-by-Vadim.md), [separate 2026-10-12 assistant checks](manual/follow-up-2026-10-12.md) and [user-reported network simulation](../bug-reports/SIM-CAT-01-network-recovery.md) document partial first-slice coverage. The [coverage review](manual/testing-session-by-Vadim-review.md) retains the unexecuted portions; no full manual or release gate closure is inferred.
 
 Sources: [project plan](../PROJECT_PLAN.md), [requirements and risks](requirements-and-risks.md), [manual scenarios](test-scenarios.md), and [traceability](traceability-matrix.md). Task ownership is in the [chat task plan](chat-task-plan.md).
 
@@ -8,15 +12,15 @@ Sources: [project plan](../PROJECT_PLAN.md), [requirements and risks](requiremen
 
 Demonstrate a reproducible QA workflow for a small game companion app. Verify observable behavior, API contracts, persisted data, and recovery from controlled failures; retain evidence that a reviewer can follow.
 
-| In scope | Planned coverage |
-| --- | --- |
+| In scope                    | Planned coverage                                                                                                                                                                                                                                                |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Catalogue and search/filter | Loading, exact/partial ASCII-case matching, AND combinations, clearing controls, code-point boundaries, empty/error states, Retry, invalid-input precedence, and overlapping valid requests completed in reverse order (including late successes and failures). |
-| Game detail and patch notes | Matching content, date/ID order, no notes, separate loading/error/Retry, unknown game, and navigation during pending requests. |
-| Favourites | Add/remove, reload, malformed storage, invalid/duplicate IDs, complete-catalogue validation, and retention during filtered/failed requests. |
-| Feedback | Required fields, EMAIL-01 through EMAIL-27, trim/code-point boundaries, success, failure preservation, API validation, and SQL verification. |
-| API | Response schemas/order, endpoint-specific query keys, ID ranges, error codes/precedence, rejected-body non-insertion, and safe dependency failure. |
-| Data lifecycle | Exact new-database seed, existing-database preservation, complete transactional reset, repeat reset, ID counter, and rollback. |
-| Access and layout | Three-browser desktop UI/keyboard/axe coverage, Chromium phone layout, manual focus and screen-reader review. |
+| Game detail and patch notes | Matching content, date/ID order, no notes, separate loading/error/Retry, unknown game, and navigation during pending requests.                                                                                                                                  |
+| Favourites                  | Add/remove, reload, malformed storage, invalid/duplicate IDs, complete-catalogue validation, and retention during filtered/failed requests.                                                                                                                     |
+| Feedback                    | Required fields, EMAIL-01 through EMAIL-27, trim/code-point boundaries, success, failure preservation, API validation, and SQL verification.                                                                                                                    |
+| API                         | Response schemas/order, endpoint-specific query keys, ID ranges, error codes/precedence, rejected-body non-insertion, and safe dependency failure.                                                                                                              |
+| Data lifecycle              | Exact new-database seed, existing-database preservation, complete transactional reset, repeat reset, ID counter, and rollback.                                                                                                                                  |
+| Access and layout           | Three-browser desktop UI/keyboard/axe coverage, Chromium phone layout, manual focus and screen-reader review.                                                                                                                                                   |
 
 Out of scope for version one: authentication, accounts, administration, third-party integrations, load/performance certification, a comprehensive security audit, full mobile regression, real devices, and operating-system coverage certification. One or two stable visual snapshots may be added after the core suite is reliable; they are optional.
 
@@ -84,4 +88,4 @@ Lower-impact open defects must have severity, impact, and a documented dispositi
 
 Each executing chat reports what was run, what passed/failed/was blocked, evidence links, and remaining work. The documentation coordinator maintains shared decisions; file ownership and prompts are in [chat-task-plan.md](chat-task-plan.md).
 
-The eventual `test-summary-report.md` records requirement coverage, entry/variant/project counts, actual environment, manual/exploratory results, defects versus simulations, optional coverage, and limitations. The eventual README documents verified commands and evidence. Neither is an execution claim in this design phase.
+The current [favourites/feedback report](favourites-feedback-results.md) and README document local commands, requirement coverage, entry/definition/project counts, actual environment, review defects versus controlled failures, and remaining limits. The eventual `test-summary-report.md` will consolidate manual/exploratory, CI and release evidence when those gates are executed.

@@ -1,0 +1,176 @@
+{
+  "DB_PATH": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\owned-databases\\run-LiFMrx\\games.sqlite",
+  "sourceHashesUnchangedAfterRun": true,
+  "sourceMismatches": [],
+  "userVersion": {
+    "user_version": 1
+  },
+  "schema": [
+    {
+      "name": "feedback",
+      "sql": "CREATE TABLE feedback (\n    id INTEGER PRIMARY KEY AUTOINCREMENT, game_id INTEGER NOT NULL REFERENCES games(id),\n    email TEXT NOT NULL, description TEXT NOT NULL\n  )"
+    },
+    {
+      "name": "games",
+      "sql": "CREATE TABLE games (\n    id INTEGER PRIMARY KEY, title TEXT NOT NULL, genre TEXT NOT NULL,\n    description TEXT NOT NULL, release_year INTEGER NOT NULL, platforms TEXT NOT NULL\n  )"
+    },
+    {
+      "name": "patch_notes",
+      "sql": "CREATE TABLE patch_notes (\n    id INTEGER PRIMARY KEY, game_id INTEGER NOT NULL REFERENCES games(id),\n    version TEXT NOT NULL, summary TEXT NOT NULL, published_at TEXT NOT NULL\n  )"
+    },
+    {
+      "name": "sqlite_sequence",
+      "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+    }
+  ],
+  "returnedIDs": [
+    {
+      "returnedID": 21,
+      "row": {
+        "id": 21,
+        "game_id": 10,
+        "email": "Keyboard@example.com",
+        "description": "Keyboard feedback chromium 1793025597350"
+      }
+    },
+    {
+      "returnedID": 32,
+      "row": {
+        "id": 32,
+        "game_id": 10,
+        "email": "Keyboard@example.com",
+        "description": "Keyboard feedback firefox 1793025697327"
+      }
+    },
+    {
+      "returnedID": 43,
+      "row": {
+        "id": 43,
+        "game_id": 10,
+        "email": "Keyboard@example.com",
+        "description": "Keyboard feedback webkit 1793025783769"
+      }
+    },
+    {
+      "returnedID": 44,
+      "row": {
+        "id": 44,
+        "game_id": 10,
+        "email": "Keyboard@example.com",
+        "description": "Keyboard feedback chromium-phone 1793025790481"
+      }
+    }
+  ],
+  "catalogue": [
+    {
+      "id": 1,
+      "title": "Orbit",
+      "genre": "Action",
+      "description": "Defend a tiny space station from drifting robots.",
+      "release_year": 2018,
+      "platforms": "[\"Windows\",\"Linux\"]"
+    },
+    {
+      "id": 2,
+      "title": "ORBIT",
+      "genre": "RPG",
+      "description": "Gather a crew and explore a ring of forgotten worlds.",
+      "release_year": 2020,
+      "platforms": "[\"Windows\"]"
+    },
+    {
+      "id": 3,
+      "title": "Écho",
+      "genre": "Puzzle",
+      "description": "Follow sound patterns through a quiet crystal maze.",
+      "release_year": 2024,
+      "platforms": "[\"Windows\",\"Linux\"]"
+    },
+    {
+      "id": 4,
+      "title": "Zeta",
+      "genre": "Strategy",
+      "description": "Plan supply routes across a fictional frontier.",
+      "release_year": 2022,
+      "platforms": "[\"Windows\"]"
+    },
+    {
+      "id": 5,
+      "title": "Ember Trail",
+      "genre": "Adventure",
+      "description": "Walk a lantern trail and uncover woodland stories.",
+      "release_year": 2021,
+      "platforms": "[\"Windows\",\"Linux\"]"
+    },
+    {
+      "id": 6,
+      "title": "Ember Quest",
+      "genre": "RPG",
+      "description": "Build a party to restore the valley lanterns.",
+      "release_year": 2023,
+      "platforms": "[\"Windows\"]"
+    },
+    {
+      "id": 7,
+      "title": "Neon Sprint",
+      "genre": "Racing",
+      "description": "Race glowing circuits above a fictional city.",
+      "release_year": 2019,
+      "platforms": "[\"Windows\"]"
+    },
+    {
+      "id": 8,
+      "title": "Iron Citadel",
+      "genre": "Action",
+      "description": "Protect a clockwork fortress with a magnetic shield.",
+      "release_year": 2017,
+      "platforms": "[\"Windows\",\"Linux\"]"
+    },
+    {
+      "id": 9,
+      "title": "Moss Garden",
+      "genre": "Puzzle",
+      "description": "Arrange stepping stones to grow an imaginary garden.",
+      "release_year": 2025,
+      "platforms": "[\"Windows\"]"
+    },
+    {
+      "id": 10,
+      "title": "Atlas Tactics",
+      "genre": "Strategy",
+      "description": "Guide mapmakers through turn-based island expeditions.",
+      "release_year": 2020,
+      "platforms": "[\"Windows\",\"Linux\"]"
+    }
+  ],
+  "notes": [
+    {
+      "id": 2,
+      "game_id": 1,
+      "version": "1.1.1",
+      "summary": "Fixed training arena navigation.",
+      "published_at": "2026-09-01"
+    },
+    {
+      "id": 1,
+      "game_id": 1,
+      "version": "1.1.0",
+      "summary": "Added a training arena.",
+      "published_at": "2026-09-01"
+    },
+    {
+      "id": 3,
+      "game_id": 1,
+      "version": "1.0.0",
+      "summary": "Initial release.",
+      "published_at": "2026-08-01"
+    },
+    {
+      "id": 4,
+      "game_id": 6,
+      "version": "1.2.0",
+      "summary": "Added a quest journal.",
+      "published_at": "2026-09-20"
+    }
+  ]
+}

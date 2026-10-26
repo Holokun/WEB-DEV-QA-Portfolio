@@ -52,13 +52,13 @@
 **Consumes:** `apiError`, `ApiResult`, `openDatabase`, `createSchema`, `insertSeed`, ownedDatabase/startApp helpers and existing fixture values.
 **Produces:** shared validation/types, actual POST endpoint/schema/reset behavior, literal email fixtures for Task 3 and served browser validation module.
 
-- [ ] Write HTTP/SQL failing tests first: valid synthetic submission returns 201 and exactly one trimmed row selected by returned ID; every EMAIL-01–27 value and fixed description boundaries; malformed JSON/missing/extra/wrong-type/body/query/unknown game precedence; no insertion for errors. Verify generic isolated dependency failure.
-- [ ] Add lifecycle tests: old games/notes-only database gets feedback table without data restoration; new path empty feedback; restart preserves feedback/counter; reset clears rows and next insert ID is 1; repeat reset equality; pre-commit failure preserves all rows/counter.
-- [ ] Run new focused tests against the baseline and record expected RED before product code.
-- [ ] Implement pure validation and strict POST handling, parameterized insertion and non-destructive schema creation. Keep API errors generic and handle async request failures without double sends. Do not introduce an unspecified description maximum.
-- [ ] Extend safe test reset in one transaction, with callback only at the reset boundary; preserve ownership guard.
-- [ ] Copy/allowlist pure browser validator and run `pnpm build`, `pnpm exec playwright test tests/api/feedback.spec.ts tests/api/database.spec.ts --project=api`; include relevant existing games API checks if routing changed. Record GREEN and self-review.
-- [ ] Controller review, fix loop if needed, then commit only this task's assigned changes.
+- [x] Write HTTP/SQL failing tests first: valid synthetic submission returns 201 and exactly one trimmed row selected by returned ID; every EMAIL-01–27 value and fixed description boundaries; malformed JSON/missing/extra/wrong-type/body/query/unknown game precedence; no insertion for errors. Verify generic isolated dependency failure.
+- [x] Add lifecycle tests: old games/notes-only database gets feedback table without data restoration; new path empty feedback; restart preserves feedback/counter; reset clears rows and next insert ID is 1; repeat reset equality; pre-commit failure preserves all rows/counter.
+- [x] Run new focused tests against the baseline and record expected RED before product code.
+- [x] Implement pure validation and strict POST handling, parameterized insertion and non-destructive schema creation. Keep API errors generic and handle async request failures without double sends. Do not introduce an unspecified description maximum.
+- [x] Extend safe test reset in one transaction, with callback only at the reset boundary; preserve ownership guard.
+- [x] Copy/allowlist pure browser validator and run `pnpm build`, `pnpm exec playwright test tests/api/feedback.spec.ts tests/api/database.spec.ts --project=api`; include relevant existing games API checks if routing changed. Record GREEN and self-review.
+- [x] Controller review, fix loop if needed, then commit only this task's assigned changes.
 
 ## Task 2: Favourites model and views
 
@@ -67,12 +67,12 @@
 **Consumes:** existing Game contracts/API, current view ownership, shared model interface above.
 **Produces:** working saved favourites on catalogue/detail/favourites route, immediate count/list/button states and complete-only validation.
 
-- [ ] Add failing TEST-UI-07/08 browser tests: add/remove from cards/detail/list, reload; malformed/non-array/invalid/duplicate IDs; hidden-by-filter retention; failed complete and filtered requests preserve candidate IDs, later complete success removes obsolete IDs. Use isolated app for catalogue mutations; do not reset suite DB. Include localStorage access/write failure usability.
-- [ ] Run the new focused Chromium tests and record RED before implementation.
-- [ ] Implement model, accessible shared buttons, list/loading/error/Retry, header count/nav and routing. Preserve current catalogue/result ownership and normal number of catalogue requests.
-- [ ] Keep subscriptions/destroy cleanup, literal text rendering, screen widths and visible focus. No favourites server endpoint or account system.
-- [ ] Run `pnpm build` and focused favourites tests; run existing catalogue/detail/layout checks when changed behavior warrants it. Record GREEN and self-review.
-- [ ] Controller review/fix/re-review, then task commit. Task 3 may add Feedback header link after this task.
+- [x] Add failing TEST-UI-07/08 browser tests: add/remove from cards/detail/list, reload; malformed/non-array/invalid/duplicate IDs; hidden-by-filter retention; failed complete and filtered requests preserve candidate IDs, later complete success removes obsolete IDs. Use isolated app for catalogue mutations; do not reset suite DB. Include localStorage access/write failure usability.
+- [x] Run the new focused Chromium tests and record RED before implementation.
+- [x] Implement model, accessible shared buttons, list/loading/error/Retry, header count/nav and routing. Preserve current catalogue/result ownership and normal number of catalogue requests.
+- [x] Keep subscriptions/destroy cleanup, literal text rendering, screen widths and visible focus. No favourites server endpoint or account system.
+- [x] Run `pnpm build` and focused favourites tests; run existing catalogue/detail/layout checks when changed behavior warrants it. Record GREEN and self-review.
+- [x] Controller review/fix/re-review, then task commit. Task 3 may add Feedback header link after this task.
 
 ## Task 3: Feedback form and persistence checks
 
@@ -81,25 +81,25 @@
 **Consumes:** Task 1 validator/types/endpoint/fixtures, Task 2 store and header/routing.
 **Produces:** required-field validation, exact email/description rules, successful HTTP/SQL-backed submission and value-preserving recovery.
 
-- [ ] Write failing TEST-UI-09/10/11 checks: empty submit identifies all fields and sends no request; every named email example; 19/20 ASCII and 19/20 emoji, whitespace/trim; accepted requests add exactly one row and match its returned ID; rejected UI requests do not insert.
-- [ ] Add controlled network and HTTP 500 submit failures (separate from the historical catalogue simulation), verify preserved game/email/description and retry success. Double-submit pending action sends one request. Navigation prevents a late response changing the current view. Label controlled conditions accurately.
-- [ ] Record focused Chromium RED before implementing the form.
-- [ ] Implement form and postJson with accessible validation/status, complete game list, shared model validation only after complete success, no native-validator conflicts and deterministic destroy cleanup.
-- [ ] Run `pnpm build` and focused feedback UI tests; record GREEN, self-review and hand off.
-- [ ] Controller review/fix/re-review, then task commit.
+- [x] Write failing TEST-UI-09/10/11 checks: empty submit identifies all fields and sends no request; every named email example; 19/20 ASCII and 19/20 emoji, whitespace/trim; accepted requests add exactly one row and match its returned ID; rejected UI requests do not insert.
+- [x] Add controlled network and HTTP 500 submit failures (separate from the historical catalogue simulation), verify preserved game/email/description and retry success. Double-submit pending action sends one request. Navigation prevents a late response changing the current view. Label controlled conditions accurately.
+- [x] Record focused Chromium RED before implementing the form.
+- [x] Implement form and postJson with accessible validation/status, complete game list, shared model validation only after complete success, no native-validator conflicts and deterministic destroy cleanup.
+- [x] Run `pnpm build` and focused feedback UI tests; record GREEN, self-review and hand off.
+- [x] Controller review/fix/re-review, then task commit.
 
 ## Task 4: Integration coverage, evidence and portfolio documentation
 
-**Files:** modify `tests/e2e/layout.spec.ts`, `README.md`, `test-docs/test-plan.md`, `test-docs/traceability-matrix.md`; narrowly rename the primary successful submission in `tests/api/feedback.spec.ts` to its existing inventory ID TEST-API-03. Create `sql/verification-queries.sql`, `test-docs/favourites-feedback-results.md`, `bug-reports/BUG-FAV-01-memory-navigation.md`, `bug-reports/BUG-API-01-unsafe-feedback-id.md`, with dated native evidence. Preserve historical reports and future gates.
+**Files:** modify `tests/e2e/layout.spec.ts`, `README.md`, `test-docs/test-plan.md`, `test-docs/traceability-matrix.md`; add the reviewed loaded-form readiness wait in `tests/e2e/feedback.spec.ts`; narrowly align existing primary titles in `tests/api/feedback.spec.ts` and `tests/api/games.spec.ts` with TEST-API-03/04. Create `sql/verification-queries.sql`, `test-docs/favourites-feedback-results.md`, `bug-reports/BUG-FAV-01-memory-navigation.md`, `bug-reports/BUG-API-01-unsafe-feedback-id.md`, with dated native evidence. Preserve historical reports and future gates.
 
 **Consumes:** all three reviewed implementations and their recorded tests.
 **Produces:** required successful keyboard paths, desktop/phone feature layout checks, fresh regression evidence and clear run/SQL documentation.
 
-- [ ] Add meaningful keyboard paths for add/remove/list and feedback entry/submission, plus feedback layout at desktop and phone. Account for existing render focus and actual nav order; do not weaken existing assertions to hide regressions. Retain browser-independent SQL row checks in UI successes.
-- [ ] Run fresh build/typecheck and full existing+new suite in Chromium, Firefox, WebKit and required Chromium-phone configuration. Record distinct definitions vs variants vs browser executions; retain native JSON/HTML/failure evidence. Investigate actual failures rather than reducing the browser matrix.
-- [ ] Capture/inspect representative normal/validation/favourites/feedback desktop and phone screenshots. Keep Playwright browsers separate from Vadim's ordinary Firefox session.
-- [ ] Add SQL queries for catalogue/notes and feedback verification by returned ID, counts and sqlite_sequence. Document actual storage key, routes, migration/reset and commands. Keep screen-reader/axe/CI and deployment/apply-to-Larian work pending.
-- [ ] Task review/fixes, whole-change final review, focused fix re-review if needed, then verified task commit. No automatic push, merge or TestRail result publication.
+- [x] Add meaningful keyboard paths for add/remove/list and feedback entry/submission, plus feedback layout at desktop and phone. Account for existing render focus and actual nav order; do not weaken existing assertions to hide regressions. Retain browser-independent SQL row checks in UI successes.
+- [x] Run fresh build/typecheck and full existing+new suite in Chromium, Firefox, WebKit and required Chromium-phone configuration. Record distinct definitions vs variants vs browser executions; retain native JSON/HTML/failure evidence. Investigate actual failures rather than reducing the browser matrix.
+- [x] Capture/inspect representative normal/validation/favourites/feedback desktop and phone screenshots. Keep Playwright browsers separate from Vadim's ordinary Firefox session.
+- [x] Add SQL queries for catalogue/notes and feedback verification by returned ID, counts and sqlite_sequence. Document actual storage key, routes, migration/reset and commands. Keep screen-reader/axe/CI and deployment/apply-to-Larian work pending.
+- [x] Task review/fixes, whole-change final review, focused fix re-review if needed, then verified task commit. No automatic push, merge or TestRail result publication.
 
 ## Controller preflight and progress
 

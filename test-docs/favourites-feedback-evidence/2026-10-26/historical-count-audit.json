@@ -1,0 +1,95 @@
+{
+  "note": "Original 13-Oct summary retained unchanged at 286. Native case-sensitive file+line+column+title count is 288. Case-insensitive deduplication merges two pairs of deliberately case-distinct query/search variants and yields 286; see collapsedTitles.",
+  "nativeReport": "test-results/sdd/favourites-feedback-2026-10-12/task-4-results.json",
+  "stats": {
+    "startTime": "2026-10-13T05:22:56.160Z",
+    "duration": 220171.064,
+    "expected": 559,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "expandedDefinitions": 288,
+  "projectExecutions": 559,
+  "inventoryTotal": 21,
+  "inventoryIDsObserved": [
+    "TEST-API-01",
+    "TEST-API-02",
+    "TEST-API-03",
+    "TEST-API-04",
+    "TEST-DATA-01",
+    "TEST-UI-01",
+    "TEST-UI-02",
+    "TEST-UI-03",
+    "TEST-UI-04",
+    "TEST-UI-05",
+    "TEST-UI-06",
+    "TEST-UI-07",
+    "TEST-UI-08",
+    "TEST-UI-09",
+    "TEST-UI-10",
+    "TEST-UI-11",
+    "TEST-UI-12",
+    "TEST-UI-13",
+    "TEST-UI-14"
+  ],
+  "inventoryPending": [
+    "TEST-A11Y-01",
+    "TEST-A11Y-02"
+  ],
+  "projects": {
+    "api": {
+      "executions": 156,
+      "statuses": {
+        "expected": 156
+      },
+      "attempts": 156,
+      "retries": 0
+    },
+    "chromium": {
+      "executions": 132,
+      "statuses": {
+        "expected": 132
+      },
+      "attempts": 132,
+      "retries": 0
+    },
+    "firefox": {
+      "executions": 132,
+      "statuses": {
+        "expected": 132
+      },
+      "attempts": 132,
+      "retries": 0
+    },
+    "webkit": {
+      "executions": 132,
+      "statuses": {
+        "expected": 132
+      },
+      "attempts": 132,
+      "retries": 0
+    },
+    "chromium-phone": {
+      "executions": 7,
+      "statuses": {
+        "expected": 7
+      },
+      "attempts": 7,
+      "retries": 0
+    }
+  },
+  "caseSensitiveDefinitions": 288,
+  "caseInsensitiveDefinitions": 286,
+  "collapsedTitles": [
+    [
+      "TEST-API-01: rejects invalid query Genre=Action",
+      "TEST-API-01: rejects invalid query genre=action"
+    ],
+    [
+      "TEST-UI-02: literal ASCII-only search ÉCH",
+      "TEST-UI-02: literal ASCII-only search éch"
+    ]
+  ]
+}

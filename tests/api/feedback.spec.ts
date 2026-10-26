@@ -40,7 +40,7 @@ async function rejected(response: APIResponse, dbPath: string, before: ReturnTyp
   expect(rows(dbPath)).toEqual(before);
 }
 
-test('TEST-API-02: trims a valid synthetic submission and inserts exactly one row selected by response ID', async ({ request, dbPath }) => {
+test('TEST-API-03: trims a valid synthetic submission and inserts exactly one row selected by response ID', async ({ request, dbPath }) => {
   await accepted(request, dbPath, { ...valid(), email: ' \tplayer@example.com\n', description: `  Synthetic feedback ${randomUUID()}  ` });
 });
 for (const variant of emailVariants) test(`TEST-API-02: ${variant.id} ${variant.accepted ? 'accepts' : 'rejects'} literal email`, async ({ request, dbPath }) => {

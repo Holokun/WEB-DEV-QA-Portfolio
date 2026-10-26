@@ -1,0 +1,40 @@
+{
+  "DB_PATH": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\owned-databases\\run-LiFMrx\\games.sqlite",
+  "counts": {
+    "games": 10,
+    "patch_notes": 4,
+    "feedback": 44
+  },
+  "sequence": [
+    {
+      "name": "feedback",
+      "seq": "44"
+    }
+  ],
+  "keyboardSubmissions": [
+    {
+      "id": 21,
+      "game_id": 10,
+      "email": "Keyboard@example.com",
+      "description": "Keyboard feedback chromium 1793025597350"
+    },
+    {
+      "id": 32,
+      "game_id": 10,
+      "email": "Keyboard@example.com",
+      "description": "Keyboard feedback firefox 1793025697327"
+    },
+    {
+      "id": 43,
+      "game_id": 10,
+      "email": "Keyboard@example.com",
+      "description": "Keyboard feedback webkit 1793025783769"
+    },
+    {
+      "id": 44,
+      "game_id": 10,
+      "email": "Keyboard@example.com",
+      "description": "Keyboard feedback chromium-phone 1793025790481"
+    }
+  ]
+}

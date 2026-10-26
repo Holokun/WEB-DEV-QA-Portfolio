@@ -1,0 +1,11 @@
+# BUG-FAV-01 — Library navigation discarded memory favourites after storage failure
+
+Status: fixed before the favourites feature commit. Severity: medium; normal navigation lost the fallback selections during the same visit when persistence was unavailable. Requirements: REQ-FAV-01/02. Regression: TEST-UI-08, storage write/access variants.
+
+Discovery: assistant review of the uncommitted Task 2 draft, followed by a focused Chromium experiment and two failing regression variants. This was not a shipped defect or a finding from Vadim's historical manual session. The record was prepared on 2026-10-13 (Asia/Yerevan); no independent occurrence timestamp is claimed.
+
+Reproduce against that draft in an isolated browser context: make `Storage.prototype.setItem` throw `QuotaExceededError` (or deny localStorage access), open `/`, add Orbit, follow Favourites, then activate header Library. Before Library, the list contains Orbit and count is 1. Actual: Library loaded another root document, recreated the store from unchanged storage, and showed count 0 / Add Orbit. Expected: ordinary internal navigation preserves the current visit's memory selections and the persistence warning. Explicit reload may restore the last successful persisted value.
+
+Root cause: the plain `href="/"` Library link replaced the document. The fix intercepts ordinary unmodified primary clicks to clear the current hash; modified clicks retain native behavior. The regression also verifies count, pressed state, list membership, focus and intentional reload behavior.
+
+Native evidence: [two failing variants](../test-docs/favourites-feedback-evidence/2026-10-13/memory-navigation-red.log), [18 passing favourites checks after the final fix](../test-docs/favourites-feedback-evidence/2026-10-13/memory-navigation-green.log), [original failed-write screenshot](../test-docs/favourites-feedback-evidence/2026-10-13/memory-navigation-red.png). Original review/fix records remain in `test-results/sdd/favourites-feedback-2026-10-12/task-2-review.md`, `task-2-fix-1-package.md` and `task-2-fix-1-review.md`. Storage failure is the deliberate test condition; losing the promised memory fallback during ordinary navigation is the defect.

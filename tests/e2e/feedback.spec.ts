@@ -40,6 +40,7 @@ test('TEST-UI-09: empty submission identifies all required fields without reques
   const before = rows(dbPath);
   await page.goto('/#/feedback');
   await expect(submit(page)).toBeVisible();
+  await expect(page.getByLabel('Game', { exact: true })).toBeEnabled();
   await submit(page).click();
   for (const name of ['Game', 'Email', 'Description']) {
     const field = page.getByLabel(name, { exact: true });

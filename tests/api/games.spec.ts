@@ -131,7 +131,7 @@ test('TEST-API-01: ordering compares supplementary Unicode code points and prefi
   } finally { await request.dispose(); await app.stop(); }
 });
 
-test('REQ-API-06: a real broken SQLite dependency yields generic errors after validation', async ({ playwright }) => {
+test('TEST-API-04 / REQ-API-06: a real broken SQLite dependency yields generic errors after validation', async ({ playwright }) => {
   const dbPath = ownedDatabase();
   resetTestDatabase(dbPath);
   const app = await startApp(dbPath);
