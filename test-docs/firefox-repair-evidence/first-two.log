@@ -1,0 +1,9 @@
+Started: 2026-10-05T23:41:20.3066631+04:00; No PLAYWRIGHT_BROWSERS_PATH override
+
+Running 2 tests using 1 worker
+
+  ok 1 [firefox] › tests\e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links (1.1s)
+  ok 2 [firefox] › tests\e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other (476ms)
+
+  2 passed (2.7s)
+Finished: 2026-10-05T23:41:23.8991119+04:00; Exit code: 0

@@ -1,0 +1,14 @@
+{
+  "node": "v24.19.0",
+  "architecture": "x64",
+  "playwright": "1.63.0",
+  "browserName": "firefox",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "executablePath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe",
+  "workers": 1,
+  "explicitCacheOverride": null,
+  "retries": 0
+}

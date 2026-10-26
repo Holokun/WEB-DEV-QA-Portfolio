@@ -1,0 +1,67 @@
+﻿Case,Project,Title,File,Line,Status,DurationMs,Retries,NativeId
+1,firefox,"TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links",e2e/catalogue.spec.ts,12,passed,1283,0,1c15ccb58390e006a442-ec6e67472399592a9c7d
+2,firefox,TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other,e2e/catalogue.spec.ts,22,passed,531,0,1c15ccb58390e006a442-d4ef314e1e69115f449d
+3,firefox,TEST-UI-05 catalogue: zero matches exposes clear controls and restores results,e2e/catalogue.spec.ts,38,passed,360,0,1c15ccb58390e006a442-7fd0b0672e9accd43e20
+4,firefox,TEST-UI-01 loading: initial held response shows a perceivable loading state,e2e/catalogue.spec.ts,47,passed,342,0,1c15ccb58390e006a442-a8128f590079666d1a5c
+5,firefox,TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results,e2e/catalogue.spec.ts,59,passed,563,0,1c15ccb58390e006a442-6bc60742b2e2f3e25e76
+6,firefox,TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results,e2e/catalogue.spec.ts,59,passed,766,0,1c15ccb58390e006a442-c1db507513217e00d06e
+7,firefox,TEST-UI-02: invalid search announces its reason and associates the message only while invalid,e2e/catalogue.spec.ts,90,passed,895,0,1c15ccb58390e006a442-cf09cc7a086b6da4f8c1
+8,firefox,TEST-UI-02: literal ASCII-only search Orbit,e2e/catalogue.spec.ts,127,passed,362,0,1c15ccb58390e006a442-4dbfd917d43f89060a95
+9,firefox,TEST-UI-02: literal ASCII-only search ÉCH,e2e/catalogue.spec.ts,127,passed,386,0,1c15ccb58390e006a442-2315866d6ca2f14a148b
+10,firefox,TEST-UI-02: literal ASCII-only search éch,e2e/catalogue.spec.ts,127,passed,1013,0,1c15ccb58390e006a442-fc98089ae80f480f3a29
+11,firefox,TEST-UI-02: literal ASCII-only search echo,e2e/catalogue.spec.ts,127,passed,413,0,1c15ccb58390e006a442-4bca76f4778e730c25f1
+12,firefox,TEST-UI-02: literal ASCII-only search %' OR 1=1 --,e2e/catalogue.spec.ts,127,passed,339,0,1c15ccb58390e006a442-75453ab0f26b8a5003c7
+13,firefox,"TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover",e2e/catalogue.spec.ts,135,passed,537,0,1c15ccb58390e006a442-acc8786d336167faa62e
+14,firefox,"TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover",e2e/catalogue.spec.ts,135,passed,525,0,1c15ccb58390e006a442-7f6555a629ab422c98b9
+15,firefox,TEST-UI-04 stale success cannot replace latest results,e2e/catalogue.spec.ts,198,passed,601,0,1c15ccb58390e006a442-83c2888288f41dbd458d
+16,firefox,TEST-UI-04 stale success cannot replace latest empty,e2e/catalogue.spec.ts,198,passed,611,0,1c15ccb58390e006a442-f77ab149ca54c47f3484
+17,firefox,TEST-UI-04 stale success cannot replace latest error,e2e/catalogue.spec.ts,198,passed,616,0,1c15ccb58390e006a442-860e8c94971e8774b324
+18,firefox,TEST-UI-04 stale success cannot replace latest loading,e2e/catalogue.spec.ts,198,passed,621,0,1c15ccb58390e006a442-aedc0f1acaef595ccf2c
+19,firefox,TEST-UI-04 stale failure cannot replace latest results,e2e/catalogue.spec.ts,198,passed,656,0,1c15ccb58390e006a442-ea98f7e43ef499aac254
+20,firefox,TEST-UI-04 stale failure cannot replace latest empty,e2e/catalogue.spec.ts,198,passed,1379,0,1c15ccb58390e006a442-f41377306b38a2ad4ee4
+21,firefox,TEST-UI-04 stale failure cannot replace latest error,e2e/catalogue.spec.ts,198,passed,643,0,1c15ccb58390e006a442-82f8d8e7ac912c2ebf4a
+22,firefox,TEST-UI-04 stale failure cannot replace latest loading,e2e/catalogue.spec.ts,198,passed,644,0,1c15ccb58390e006a442-e184e6a8443d3dd2286b
+23,firefox,TEST-UI-02: invalidating first request ignores its late success,e2e/catalogue.spec.ts,226,passed,392,0,1c15ccb58390e006a442-e5301c83a4711b1dd3b5
+24,firefox,TEST-UI-02: invalidating first request ignores its late failure,e2e/catalogue.spec.ts,226,passed,395,0,1c15ccb58390e006a442-2e194d4535c9411027df
+25,firefox,TEST-UI-04 genre only: late success preserves current controls,e2e/catalogue.spec.ts,247,passed,614,0,1c15ccb58390e006a442-6a140a8d05110f8bc426
+26,firefox,TEST-UI-04 genre only: late failure preserves current controls,e2e/catalogue.spec.ts,247,passed,617,0,1c15ccb58390e006a442-bdf16fc19ed9082f5282
+27,firefox,TEST-UI-04 combined controls: late success preserves current controls,e2e/catalogue.spec.ts,247,passed,613,0,1c15ccb58390e006a442-977c562f5fd919c14084
+28,firefox,TEST-UI-04 combined controls: late failure preserves current controls,e2e/catalogue.spec.ts,247,passed,647,0,1c15ccb58390e006a442-d45238a9eb502fa74dbc
+29,firefox,TEST-UI-04 clearing search: late success preserves current controls,e2e/catalogue.spec.ts,247,passed,633,0,1c15ccb58390e006a442-8637a30b025cbd911830
+30,firefox,TEST-UI-04 clearing search: late failure preserves current controls,e2e/catalogue.spec.ts,247,passed,1242,0,1c15ccb58390e006a442-382868c25651433220cb
+31,firefox,TEST-UI-04 clearing genre: late success preserves current controls,e2e/catalogue.spec.ts,247,passed,649,0,1c15ccb58390e006a442-3cecbb5c9081e0f57add
+32,firefox,TEST-UI-04 clearing genre: late failure preserves current controls,e2e/catalogue.spec.ts,247,passed,579,0,1c15ccb58390e006a442-30997fac53bbeb65201c
+33,firefox,TEST-UI-02: invalidating a pending success retains earlier successful results,e2e/catalogue.spec.ts,278,passed,539,0,1c15ccb58390e006a442-5b52ceff7241e5f838ac
+34,firefox,TEST-UI-02: invalidating a pending failure retains earlier successful results,e2e/catalogue.spec.ts,278,passed,505,0,1c15ccb58390e006a442-caa655eb103828a35361
+35,firefox,"TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status",e2e/catalogue.spec.ts,295,passed,745,0,1c15ccb58390e006a442-68e91d29413981be59ea
+36,firefox,REQ-A11Y-01 literal text: an isolated HTML-like database title never becomes markup,e2e/catalogue.spec.ts,340,passed,417,0,1c15ccb58390e006a442-bba5815b0d4ab260b9b6
+37,firefox,API client: non-2xx raises typed status/code and non-JSON preserves status,e2e/catalogue.spec.ts,356,passed,323,0,1c15ccb58390e006a442-dfc0290bc5618a647833
+38,firefox,Catalogue destroy: removed view listeners and a late response cannot update retained DOM,e2e/catalogue.spec.ts,376,passed,487,0,1c15ccb58390e006a442-22322a1d5145fcc90671
+39,firefox,"TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back",e2e/detail.spec.ts,57,passed,658,0,e1c908847aaff9063c61-f59832b77ea768b8011e
+40,firefox,TEST-UI-06 direct detail entry and browser history restore exactly one view,e2e/detail.spec.ts,69,passed,1173,0,e1c908847aaff9063c61-6164e57909aaffd3797f
+41,firefox,TEST-UI-06 notes: known game without notes shows explicit empty state,e2e/detail.spec.ts,82,passed,409,0,e1c908847aaff9063c61-c708f712a626d23ade97
+42,firefox,REQ-DET-03 held detail shows loading with usable Back before success,e2e/detail.spec.ts,91,passed,372,0,e1c908847aaff9063c61-9502a6a6e31e84dfa9d3
+43,firefox,REQ-DET-04 notes load separately and retain usable details while pending,e2e/detail.spec.ts,102,passed,479,0,e1c908847aaff9063c61-033de18f869b221cd729
+44,firefox,REQ-DET-03 detail HTTP 500: current-game Retry recovers content,e2e/detail.spec.ts,119,passed,434,0,e1c908847aaff9063c61-7f4cff462a77c7af272e
+45,firefox,REQ-DET-04 notes HTTP 500: Retry game 1 to ordered notes,e2e/detail.spec.ts,134,passed,474,0,e1c908847aaff9063c61-c79074eeafee44d07b0c
+46,firefox,REQ-DET-04 notes HTTP 500: Retry game 9 to empty notes,e2e/detail.spec.ts,134,passed,455,0,e1c908847aaff9063c61-0eaeac3fa4c2a0461227
+47,firefox,REQ-DET-03 detail network abort: current-game Retry recovers content,e2e/detail.spec.ts,119,passed,374,0,e1c908847aaff9063c61-e4ac5bded349777175b0
+48,firefox,REQ-DET-04 notes network abort: Retry game 1 to ordered notes,e2e/detail.spec.ts,134,passed,505,0,e1c908847aaff9063c61-0fd70f2b7103d4c2c19a
+49,firefox,REQ-DET-04 notes network abort: Retry game 9 to empty notes,e2e/detail.spec.ts,134,passed,467,0,e1c908847aaff9063c61-2f783180d4e509d0821f
+50,firefox,REQ-DET-03 unknown game is distinct from transient error and has no Retry,e2e/detail.spec.ts,154,passed,1080,0,e1c908847aaff9063c61-1e0d7c05b27d97b46766
+51,firefox,"REQ-DET-04 notes 404 retains details, Back and no notes Retry",e2e/detail.spec.ts,163,passed,493,0,e1c908847aaff9063c61-e12c1df9d09712b70ada
+52,firefox,REQ-DET-03/04 stale detail success cannot replace another game,e2e/detail.spec.ts,178,passed,460,0,e1c908847aaff9063c61-7863bfc7a9b9a5a606de
+53,firefox,REQ-DET-03/04 stale detail success cannot replace catalogue,e2e/detail.spec.ts,178,passed,407,0,e1c908847aaff9063c61-b9759dc1c0a49660b2be
+54,firefox,REQ-DET-03/04 stale detail failure cannot replace another game,e2e/detail.spec.ts,178,passed,434,0,e1c908847aaff9063c61-d455cd8f28c8647b7d23
+55,firefox,REQ-DET-03/04 stale detail failure cannot replace catalogue,e2e/detail.spec.ts,178,passed,443,0,e1c908847aaff9063c61-2dd781487f96e9900a50
+56,firefox,REQ-DET-03/04 stale notes success cannot replace another game,e2e/detail.spec.ts,178,passed,473,0,e1c908847aaff9063c61-bdcb4de85996e81dc7ed
+57,firefox,REQ-DET-03/04 stale notes success cannot replace catalogue,e2e/detail.spec.ts,178,passed,491,0,e1c908847aaff9063c61-09b50d31c06a67f67775
+58,firefox,REQ-DET-03/04 stale notes failure cannot replace another game,e2e/detail.spec.ts,178,passed,501,0,e1c908847aaff9063c61-3065e5ec08411bd6e3c9
+59,firefox,REQ-DET-03/04 stale notes failure cannot replace catalogue,e2e/detail.spec.ts,178,passed,604,0,e1c908847aaff9063c61-0ea382fca57caec18416
+60,firefox,REQ-DET-03 persisted pagehide/pageshow remounts one fresh current route,e2e/detail.spec.ts,204,passed,1071,0,e1c908847aaff9063c61-23acfa77169b6c3579ad
+61,firefox,REQ-A11Y-01 detail and note fixture text renders literally,e2e/detail.spec.ts,221,passed,444,0,e1c908847aaff9063c61-b381b1b1b9a0db7046f6
+62,firefox,"TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit",e2e/layout.spec.ts,16,passed,511,0,564210e2aadc2ee898ac-0b19349b85004af66f67
+63,firefox,TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow,e2e/layout.spec.ts,34,passed,462,0,564210e2aadc2ee898ac-53f636e9f802027272c7
+64,firefox,"TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap",e2e/layout.spec.ts,69,passed,504,0,564210e2aadc2ee898ac-5c8cdf0db893f74de3c4
+65,firefox,"TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus",e2e/layout.spec.ts,97,passed,649,0,564210e2aadc2ee898ac-e74cfc3285a076c3e381
+66,firefox,TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard,e2e/layout.spec.ts,126,passed,612,0,564210e2aadc2ee898ac-bb9cc086e0911be835cc

@@ -1,0 +1,1777 @@
+{
+  "kind": "Assistant-executed Playwright follow-up; separate from human manual results",
+  "startedAtUtc": "2026-10-12T11:01:07.971Z",
+  "environment": {
+    "node": "v24.19.0",
+    "os": "win32 10.0.26200",
+    "playwright": "1.63.0",
+    "commit": "b3b0dc4e12e3aa5a2e6bcafd8d88065ae9b435bd",
+    "workingTreeStatus": " M .gitignore\n M README.md\n M package.json\n M playwright.config.ts\n M test-docs/first-slice-results.md\n M test-docs/test-plan.md\n M test-docs/test-scenarios.md\n?? .agents/\n?? .codex-remote-attachments/\n?? AGENTS.md\n?? Untitled-1.py\n?? scripts/install-browsers.mjs\n?? test-docs/firefox-launch-repair.md\n?? test-docs/firefox-regression-2026-10-06-evidence/\n?? test-docs/firefox-regression-results-2026-10-06.md\n?? test-docs/firefox-repair-evidence/\n?? test-docs/firefox-rerun-results.md\n?? test-docs/manual-testing-session-template.md\n?? test-docs/manual-testing-start.md\n?? test-docs/manual/\n?? test-docs/testrail-transfer/\n",
+    "fixture": "v1; unchanged synthetic games and notes",
+    "databasePath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\owned-databases\\run-Kbfw4t\\games.sqlite",
+    "separateDatabase": true,
+    "browsers": {
+      "firefox": {
+        "version": "155.0",
+        "executable": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe",
+        "headless": true
+      },
+      "chromium": {
+        "version": "153.0.8010.12",
+        "executable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe",
+        "headless": true
+      }
+    },
+    "baseURL": "http://127.0.0.1:51264"
+  },
+  "sourceHashesBefore": {
+    "package.json": "12d94b5a66c877794e34e4c9f393d3fe430f9814073cb527b253d54ea2e1a6dc",
+    "pnpm-lock.yaml": "cf6bf31c8956bf9cadb0de311435da7ddafe1eb09ea11f091967e7831d20e78f",
+    "playwright.config.ts": "f317583a826b330f08d172c3847e3dbb643864d5c943f7638400ee0547805680",
+    "app/ui/catalogue.ts": "4f54347d38a1c0644529d9ed79e4c3220fa32ba2d74f60fee458e2dd8f743af9",
+    "app/ui/detail.ts": "e10c51cab7f650f7ace1570b3a0b211fc448c324a35c3d95d9debc80229d954d",
+    "app/ui/main.ts": "709d5401e118607efeda5abed12a0ca70a81bb6500e25f0e96574747daf931c1",
+    "app/ui/styles.css": "35e2daecb81d4b63c616d0cab7da47074d80b22105db7460c4b296f789af3652",
+    "app/api/games.ts": "84bf3195b3905f5ca0a0cfac388866a6bb9dfdfa748a33d8be20fe76942fb23e",
+    "app/db/seed.ts": "c1d360e9d062099caab3f2b02e7a41bba059ab4fd51ed0646011a93a90f486c4",
+    "tests/fixtures/app.ts": "8f0f1a158d46904efd0b2999bbc60e08791bfe2a2fb4e403069b2f93abc5caf0"
+  },
+  "checks": [
+    {
+      "id": "FOLLOWUP-13",
+      "title": "Keyboard-only controls, navigation and visible focus",
+      "requirements": [
+        "REQ-A11Y-01"
+      ],
+      "scenario": "SCN-A11Y-01 / first-slice successful keyboard path",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "startedAtUtc": "2026-10-12T11:01:08.565Z",
+      "screenshots": [
+        "FOLLOWUP-13-genre-focus.png",
+        "FOLLOWUP-13-game-focus.png",
+        "FOLLOWUP-13-notes-focus.png"
+      ],
+      "observations": {
+        "focuses": [
+          {
+            "label": "Search games",
+            "text": "",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Genre",
+            "text": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Clear controls",
+            "text": "Clear controls",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Orbit",
+            "text": "Orbit",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Back",
+            "text": "Back",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Patch notes",
+            "text": "Patch notes",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Patch notes reverse",
+            "text": "Patch notes",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Back reverse",
+            "text": "Back",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          }
+        ],
+        "inputMethod": "Playwright real keyboard events only after initial navigation",
+        "genreOperation": "Home, ArrowDown selects Action; Tab moves to Clear controls",
+        "returnedToCatalogue": true,
+        "screenReaderExecuted": false,
+        "retryKeyboardExecuted": false
+      },
+      "console": [],
+      "pageErrors": [],
+      "apiRequests": [
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=O",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit&genre=Action",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=O",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1/patch-notes",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "method": "GET"
+        }
+      ],
+      "apiResponses": [
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 10,
+                "title": "Atlas Tactics",
+                "genre": "Strategy",
+                "description": "Guide mapmakers through turn-based island expeditions.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 6,
+                "title": "Ember Quest",
+                "genre": "RPG",
+                "description": "Build a party to restore the valley lanterns.",
+                "releaseYear": 2023,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 5,
+                "title": "Ember Trail",
+                "genre": "Adventure",
+                "description": "Walk a lantern trail and uncover woodland stories.",
+                "releaseYear": 2021,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Zeta",
+                "genre": "Strategy",
+                "description": "Plan supply routes across a fictional frontier.",
+                "releaseYear": 2022,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 10,
+            "filters": {
+              "search": "",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=O",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 6,
+            "filters": {
+              "search": "O",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Or",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orb",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orbi",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orbit",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit&genre=Action",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 1,
+            "filters": {
+              "search": "Orbit",
+              "genre": "Action"
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 10,
+                "title": "Atlas Tactics",
+                "genre": "Strategy",
+                "description": "Guide mapmakers through turn-based island expeditions.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 6,
+                "title": "Ember Quest",
+                "genre": "RPG",
+                "description": "Build a party to restore the valley lanterns.",
+                "releaseYear": 2023,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 5,
+                "title": "Ember Trail",
+                "genre": "Adventure",
+                "description": "Walk a lantern trail and uncover woodland stories.",
+                "releaseYear": 2021,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Zeta",
+                "genre": "Strategy",
+                "description": "Plan supply routes across a fictional frontier.",
+                "releaseYear": 2022,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 10,
+            "filters": {
+              "search": "",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=O",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 6,
+            "filters": {
+              "search": "O",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Or",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orb",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orbi",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orbit",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1",
+          "status": 200,
+          "body": {
+            "game": {
+              "id": 1,
+              "title": "Orbit",
+              "genre": "Action",
+              "description": "Defend a tiny space station from drifting robots.",
+              "releaseYear": 2018,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1/patch-notes",
+          "status": 200,
+          "body": {
+            "patchNotes": [
+              {
+                "id": 2,
+                "gameId": 1,
+                "version": "1.1.1",
+                "summary": "Fixed training arena navigation.",
+                "publishedAt": "2026-09-01"
+              },
+              {
+                "id": 1,
+                "gameId": 1,
+                "version": "1.1.0",
+                "summary": "Added a training arena.",
+                "publishedAt": "2026-09-01"
+              },
+              {
+                "id": 3,
+                "gameId": 1,
+                "version": "1.0.0",
+                "summary": "Initial release.",
+                "publishedAt": "2026-08-01"
+              }
+            ]
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 10,
+                "title": "Atlas Tactics",
+                "genre": "Strategy",
+                "description": "Guide mapmakers through turn-based island expeditions.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 6,
+                "title": "Ember Quest",
+                "genre": "RPG",
+                "description": "Build a party to restore the valley lanterns.",
+                "releaseYear": 2023,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 5,
+                "title": "Ember Trail",
+                "genre": "Adventure",
+                "description": "Walk a lantern trail and uncover woodland stories.",
+                "releaseYear": 2021,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Zeta",
+                "genre": "Strategy",
+                "description": "Plan supply routes across a fictional frontier.",
+                "releaseYear": 2022,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 10,
+            "filters": {
+              "search": "",
+              "genre": ""
+            }
+          }
+        }
+      ],
+      "outcome": "passed",
+      "finishedAtUtc": "2026-10-12T11:01:10.416Z"
+    },
+    {
+      "id": "FOLLOWUP-14",
+      "title": "Keyboard-only controls, navigation and visible focus",
+      "requirements": [
+        "REQ-A11Y-01"
+      ],
+      "scenario": "SCN-A11Y-01 / first-slice successful keyboard path",
+      "browserName": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "startedAtUtc": "2026-10-12T11:01:10.417Z",
+      "screenshots": [
+        "FOLLOWUP-14-genre-focus.png",
+        "FOLLOWUP-14-game-focus.png",
+        "FOLLOWUP-14-notes-focus.png"
+      ],
+      "observations": {
+        "focuses": [
+          {
+            "label": "Search games",
+            "text": "",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Genre",
+            "text": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Clear controls",
+            "text": "Clear controls",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Orbit",
+            "text": "Orbit",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Back",
+            "text": "Back",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Patch notes",
+            "text": "Patch notes",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Patch notes reverse",
+            "text": "Patch notes",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          },
+          {
+            "label": "Back reverse",
+            "text": "Back",
+            "focusVisible": true,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(20, 106, 171)",
+            "outlineOffset": "3px"
+          }
+        ],
+        "inputMethod": "Playwright real keyboard events only after initial navigation",
+        "genreOperation": "Home, ArrowDown selects Action; Tab moves to Clear controls",
+        "returnedToCatalogue": true,
+        "screenReaderExecuted": false,
+        "retryKeyboardExecuted": false
+      },
+      "console": [],
+      "pageErrors": [],
+      "apiRequests": [
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=O",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit&genre=Action",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=O",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1/patch-notes",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "method": "GET"
+        }
+      ],
+      "apiResponses": [
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 10,
+                "title": "Atlas Tactics",
+                "genre": "Strategy",
+                "description": "Guide mapmakers through turn-based island expeditions.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 6,
+                "title": "Ember Quest",
+                "genre": "RPG",
+                "description": "Build a party to restore the valley lanterns.",
+                "releaseYear": 2023,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 5,
+                "title": "Ember Trail",
+                "genre": "Adventure",
+                "description": "Walk a lantern trail and uncover woodland stories.",
+                "releaseYear": 2021,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Zeta",
+                "genre": "Strategy",
+                "description": "Plan supply routes across a fictional frontier.",
+                "releaseYear": 2022,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 10,
+            "filters": {
+              "search": "",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Or",
+          "status": 200,
+          "captureError": "Error: response.json: Protocol error (Network.getResponseBody): No data found for resource with given identifier\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orbit",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit&genre=Action",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 1,
+            "filters": {
+              "search": "Orbit",
+              "genre": "Action"
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 10,
+                "title": "Atlas Tactics",
+                "genre": "Strategy",
+                "description": "Guide mapmakers through turn-based island expeditions.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 6,
+                "title": "Ember Quest",
+                "genre": "RPG",
+                "description": "Build a party to restore the valley lanterns.",
+                "releaseYear": 2023,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 5,
+                "title": "Ember Trail",
+                "genre": "Adventure",
+                "description": "Walk a lantern trail and uncover woodland stories.",
+                "releaseYear": 2021,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Zeta",
+                "genre": "Strategy",
+                "description": "Plan supply routes across a fictional frontier.",
+                "releaseYear": 2022,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 10,
+            "filters": {
+              "search": "",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orb",
+          "status": 200,
+          "captureError": "Error: response.json: Protocol error (Network.getResponseBody): No data found for resource with given identifier\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbi",
+          "status": 200,
+          "captureError": "Error: response.json: Protocol error (Network.getResponseBody): No data found for resource with given identifier\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation."
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games?search=Orbit",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              }
+            ],
+            "total": 2,
+            "filters": {
+              "search": "Orbit",
+              "genre": ""
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1",
+          "status": 200,
+          "body": {
+            "game": {
+              "id": 1,
+              "title": "Orbit",
+              "genre": "Action",
+              "description": "Defend a tiny space station from drifting robots.",
+              "releaseYear": 2018,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            }
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games/1/patch-notes",
+          "status": 200,
+          "body": {
+            "patchNotes": [
+              {
+                "id": 2,
+                "gameId": 1,
+                "version": "1.1.1",
+                "summary": "Fixed training arena navigation.",
+                "publishedAt": "2026-09-01"
+              },
+              {
+                "id": 1,
+                "gameId": 1,
+                "version": "1.1.0",
+                "summary": "Added a training arena.",
+                "publishedAt": "2026-09-01"
+              },
+              {
+                "id": 3,
+                "gameId": 1,
+                "version": "1.0.0",
+                "summary": "Initial release.",
+                "publishedAt": "2026-08-01"
+              }
+            ]
+          }
+        },
+        {
+          "url": "http://127.0.0.1:51264/api/games",
+          "status": 200,
+          "body": {
+            "games": [
+              {
+                "id": 10,
+                "title": "Atlas Tactics",
+                "genre": "Strategy",
+                "description": "Guide mapmakers through turn-based island expeditions.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 6,
+                "title": "Ember Quest",
+                "genre": "RPG",
+                "description": "Build a party to restore the valley lanterns.",
+                "releaseYear": 2023,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 5,
+                "title": "Ember Trail",
+                "genre": "Adventure",
+                "description": "Walk a lantern trail and uncover woodland stories.",
+                "releaseYear": 2021,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 8,
+                "title": "Iron Citadel",
+                "genre": "Action",
+                "description": "Protect a clockwork fortress with a magnetic shield.",
+                "releaseYear": 2017,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 9,
+                "title": "Moss Garden",
+                "genre": "Puzzle",
+                "description": "Arrange stepping stones to grow an imaginary garden.",
+                "releaseYear": 2025,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 7,
+                "title": "Neon Sprint",
+                "genre": "Racing",
+                "description": "Race glowing circuits above a fictional city.",
+                "releaseYear": 2019,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Orbit",
+                "genre": "Action",
+                "description": "Defend a tiny space station from drifting robots.",
+                "releaseYear": 2018,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              },
+              {
+                "id": 2,
+                "title": "ORBIT",
+                "genre": "RPG",
+                "description": "Gather a crew and explore a ring of forgotten worlds.",
+                "releaseYear": 2020,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 4,
+                "title": "Zeta",
+                "genre": "Strategy",
+                "description": "Plan supply routes across a fictional frontier.",
+                "releaseYear": 2022,
+                "platforms": [
+                  "Windows"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Écho",
+                "genre": "Puzzle",
+                "description": "Follow sound patterns through a quiet crystal maze.",
+                "releaseYear": 2024,
+                "platforms": [
+                  "Windows",
+                  "Linux"
+                ]
+              }
+            ],
+            "total": 10,
+            "filters": {
+              "search": "",
+              "genre": ""
+            }
+          }
+        }
+      ],
+      "outcome": "passed",
+      "finishedAtUtc": "2026-10-12T11:01:10.989Z"
+    }
+  ],
+  "networkFailureSimulationExecuted": false,
+  "scopeExclusions": [
+    "HTTP 500 and network failure/Retry (user requested no repeat)",
+    "screen-reader announcements",
+    "axe/WCAG assessment",
+    "request races",
+    "favourites and feedback",
+    "WebKit",
+    "physical mobile devices",
+    "complete 66-check Firefox suite"
+  ],
+  "cleanup": {
+    "firefox": "closed",
+    "chromium": "closed",
+    "app": "stopped"
+  },
+  "sourceHashesAfter": {
+    "package.json": "12d94b5a66c877794e34e4c9f393d3fe430f9814073cb527b253d54ea2e1a6dc",
+    "pnpm-lock.yaml": "cf6bf31c8956bf9cadb0de311435da7ddafe1eb09ea11f091967e7831d20e78f",
+    "playwright.config.ts": "f317583a826b330f08d172c3847e3dbb643864d5c943f7638400ee0547805680",
+    "app/ui/catalogue.ts": "4f54347d38a1c0644529d9ed79e4c3220fa32ba2d74f60fee458e2dd8f743af9",
+    "app/ui/detail.ts": "e10c51cab7f650f7ace1570b3a0b211fc448c324a35c3d95d9debc80229d954d",
+    "app/ui/main.ts": "709d5401e118607efeda5abed12a0ca70a81bb6500e25f0e96574747daf931c1",
+    "app/ui/styles.css": "35e2daecb81d4b63c616d0cab7da47074d80b22105db7460c4b296f789af3652",
+    "app/api/games.ts": "84bf3195b3905f5ca0a0cfac388866a6bb9dfdfa748a33d8be20fe76942fb23e",
+    "app/db/seed.ts": "c1d360e9d062099caab3f2b02e7a41bba059ab4fd51ed0646011a93a90f486c4",
+    "tests/fixtures/app.ts": "8f0f1a158d46904efd0b2999bbc60e08791bfe2a2fb4e403069b2f93abc5caf0"
+  },
+  "sourcesUnchanged": true,
+  "finishedAtUtc": "2026-10-12T11:01:11.429Z",
+  "durationSeconds": 3.458,
+  "counts": {
+    "checkGroups": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "outcome": "passed"
+}

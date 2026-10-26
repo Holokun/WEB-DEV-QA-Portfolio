@@ -1,0 +1,345 @@
+{
+  "kind": "Consolidated latest results across an initial run and a focused keyboard rerun; not one new full-suite run",
+  "date": "2026-10-12",
+  "timezone": "Asia/Yerevan (UTC+04)",
+  "uniqueCheckGroups": 17,
+  "finalPassed": 17,
+  "unresolvedFailures": 0,
+  "initialRun": {
+    "source": "first-run/results.json",
+    "checkGroups": 17,
+    "passed": 16,
+    "failed": 1,
+    "durationSeconds": 19.152,
+    "note": "Chromium keyboard group failed because the test assumed Enter/Tab behavior was identical for native selects. Kept as a harness failure, not an application defect."
+  },
+  "focusedKeyboardRerun": {
+    "source": "keyboard-run/results.json",
+    "checkGroups": 2,
+    "passed": 2,
+    "failed": 0,
+    "durationSeconds": 3.458
+  },
+  "executedGroupsAcrossRuns": 19,
+  "passingExecutions": 18,
+  "correctedHarnessFailures": 1,
+  "networkFailureSimulationExecuted": false,
+  "sourceHashes": {
+    "package.json": "12d94b5a66c877794e34e4c9f393d3fe430f9814073cb527b253d54ea2e1a6dc",
+    "pnpm-lock.yaml": "cf6bf31c8956bf9cadb0de311435da7ddafe1eb09ea11f091967e7831d20e78f",
+    "playwright.config.ts": "f317583a826b330f08d172c3847e3dbb643864d5c943f7638400ee0547805680",
+    "app/ui/catalogue.ts": "4f54347d38a1c0644529d9ed79e4c3220fa32ba2d74f60fee458e2dd8f743af9",
+    "app/ui/detail.ts": "e10c51cab7f650f7ace1570b3a0b211fc448c324a35c3d95d9debc80229d954d",
+    "app/ui/main.ts": "709d5401e118607efeda5abed12a0ca70a81bb6500e25f0e96574747daf931c1",
+    "app/ui/styles.css": "35e2daecb81d4b63c616d0cab7da47074d80b22105db7460c4b296f789af3652",
+    "app/api/games.ts": "84bf3195b3905f5ca0a0cfac388866a6bb9dfdfa748a33d8be20fe76942fb23e",
+    "app/db/seed.ts": "c1d360e9d062099caab3f2b02e7a41bba059ab4fd51ed0646011a93a90f486c4",
+    "tests/fixtures/app.ts": "8f0f1a158d46904efd0b2999bbc60e08791bfe2a2fb4e403069b2f93abc5caf0"
+  },
+  "accepted": [
+    {
+      "id": "FOLLOWUP-01",
+      "title": "Seeded catalogue order, labels and count",
+      "requirements": [
+        "REQ-CAT-01"
+      ],
+      "scenario": "SCN-CAT-01 / loaded state",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:43.701Z",
+      "finishedAtUtc": "2026-10-12T10:58:44.746Z"
+    },
+    {
+      "id": "FOLLOWUP-02",
+      "title": "79 ASCII code points accepted",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-05"
+      ],
+      "scenario": "SCN-CAT-03 / accepted boundary",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:44.747Z",
+      "finishedAtUtc": "2026-10-12T10:58:45.595Z"
+    },
+    {
+      "id": "FOLLOWUP-03",
+      "title": "80 ASCII code points accepted",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-05"
+      ],
+      "scenario": "SCN-CAT-03 / accepted boundary",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:45.595Z",
+      "finishedAtUtc": "2026-10-12T10:58:45.972Z"
+    },
+    {
+      "id": "FOLLOWUP-04",
+      "title": "Whitespace trimmed before 80-code-point validation",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-05"
+      ],
+      "scenario": "SCN-CAT-03 / accepted boundary",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:45.973Z",
+      "finishedAtUtc": "2026-10-12T10:58:46.343Z"
+    },
+    {
+      "id": "FOLLOWUP-05",
+      "title": "80 emoji are 80 code points",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-05"
+      ],
+      "scenario": "SCN-CAT-03 / accepted boundary",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:46.343Z",
+      "finishedAtUtc": "2026-10-12T10:58:46.824Z"
+    },
+    {
+      "id": "FOLLOWUP-06",
+      "title": "81 ASCII: retain results; defer genre; recover",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-03",
+        "REQ-CAT-04"
+      ],
+      "scenario": "SCN-CAT-03 / invalid boundary and recovery",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:46.825Z",
+      "finishedAtUtc": "2026-10-12T10:58:47.707Z"
+    },
+    {
+      "id": "FOLLOWUP-07",
+      "title": "81 emoji: retain results; defer genre; recover",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-03",
+        "REQ-CAT-04"
+      ],
+      "scenario": "SCN-CAT-03 / invalid boundary and recovery",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:47.707Z",
+      "finishedAtUtc": "2026-10-12T10:58:48.455Z"
+    },
+    {
+      "id": "FOLLOWUP-08",
+      "title": "ASCII folding, Unicode, digits and literal symbols",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-05"
+      ],
+      "scenario": "SCN-CAT-02 / literal matching",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:48.455Z",
+      "finishedAtUtc": "2026-10-12T10:58:49.090Z"
+    },
+    {
+      "id": "FOLLOWUP-09",
+      "title": "All six genres return exact fixture IDs",
+      "requirements": [
+        "REQ-CAT-03"
+      ],
+      "scenario": "SCN-CAT-02 / all genres",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:49.090Z",
+      "finishedAtUtc": "2026-10-12T10:58:49.683Z"
+    },
+    {
+      "id": "FOLLOWUP-10",
+      "title": "AND matching and independently clearing controls",
+      "requirements": [
+        "REQ-CAT-02",
+        "REQ-CAT-03",
+        "REQ-CAT-04",
+        "REQ-CAT-05"
+      ],
+      "scenario": "SCN-CAT-02 / combined and clearing",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:49.684Z",
+      "finishedAtUtc": "2026-10-12T10:58:50.830Z"
+    },
+    {
+      "id": "FOLLOWUP-11",
+      "title": "Orbit detail fields and exact patch-note ordering",
+      "requirements": [
+        "REQ-DET-01",
+        "REQ-DET-02"
+      ],
+      "scenario": "SCN-DET-01 / ordered notes",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:50.831Z",
+      "finishedAtUtc": "2026-10-12T10:58:51.328Z"
+    },
+    {
+      "id": "FOLLOWUP-12",
+      "title": "Moss Garden has explicit empty patch notes",
+      "requirements": [
+        "REQ-DET-01",
+        "REQ-DET-02"
+      ],
+      "scenario": "SCN-DET-01 / no notes",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:51.329Z",
+      "finishedAtUtc": "2026-10-12T10:58:51.768Z"
+    },
+    {
+      "id": "FOLLOWUP-13",
+      "title": "Keyboard-only controls, navigation and visible focus",
+      "requirements": [
+        "REQ-A11Y-01"
+      ],
+      "scenario": "SCN-A11Y-01 / first-slice successful keyboard path",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "keyboard-run/results.json",
+      "startedAtUtc": "2026-10-12T11:01:08.565Z",
+      "finishedAtUtc": "2026-10-12T11:01:10.416Z"
+    },
+    {
+      "id": "FOLLOWUP-14",
+      "title": "Keyboard-only controls, navigation and visible focus",
+      "requirements": [
+        "REQ-A11Y-01"
+      ],
+      "scenario": "SCN-A11Y-01 / first-slice successful keyboard path",
+      "browserName": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "keyboard-run/results.json",
+      "startedAtUtc": "2026-10-12T11:01:10.417Z",
+      "finishedAtUtc": "2026-10-12T11:01:10.989Z"
+    },
+    {
+      "id": "FOLLOWUP-15",
+      "title": "Viewport usability: catalogue, search, validation, detail and notes",
+      "requirements": [
+        "REQ-LAY-01"
+      ],
+      "scenario": "SCN-LAY-01 / first-slice normal and validation states",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:57.961Z",
+      "finishedAtUtc": "2026-10-12T10:58:58.535Z"
+    },
+    {
+      "id": "FOLLOWUP-16",
+      "title": "Viewport usability: catalogue, search, validation, detail and notes",
+      "requirements": [
+        "REQ-LAY-01"
+      ],
+      "scenario": "SCN-LAY-01 / first-slice normal and validation states",
+      "browserName": "firefox",
+      "viewport": {
+        "width": 766,
+        "height": 577
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:58.536Z",
+      "finishedAtUtc": "2026-10-12T10:58:59.176Z"
+    },
+    {
+      "id": "FOLLOWUP-17",
+      "title": "Viewport usability: catalogue, search, validation, detail and notes",
+      "requirements": [
+        "REQ-LAY-01"
+      ],
+      "scenario": "SCN-LAY-01 / first-slice normal and validation states",
+      "browserName": "chromium",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "outcome": "passed",
+      "source": "first-run/results.json",
+      "startedAtUtc": "2026-10-12T10:58:59.178Z",
+      "finishedAtUtc": "2026-10-12T10:58:59.695Z"
+    }
+  ],
+  "assembledAtUtc": "2026-10-12T11:03:11.576Z"
+}

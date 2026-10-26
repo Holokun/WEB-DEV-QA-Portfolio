@@ -8,6 +8,7 @@
   },
   "packageManager": "pnpm@11.19.0",
   "scripts": {
+    "browsers:install": "node scripts/install-browsers.mjs",
     "typecheck": "tsc --noEmit",
     "build": "tsc && node scripts/copy-assets.mjs",
     "dev": "pnpm build && node dist/app/api/server.js",

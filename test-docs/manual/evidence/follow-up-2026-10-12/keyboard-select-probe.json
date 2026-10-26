@@ -1,0 +1,236 @@
+[
+  {
+    "name": "chromium",
+    "sequence": [
+      "Home",
+      "ArrowDown",
+      "Enter",
+      "Tab"
+    ],
+    "steps": [
+      {
+        "key": "Home",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": ""
+      },
+      {
+        "key": "ArrowDown",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Enter",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Tab",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      }
+    ]
+  },
+  {
+    "name": "chromium",
+    "sequence": [
+      "Home",
+      "ArrowDown",
+      "Enter",
+      "Escape",
+      "Tab"
+    ],
+    "steps": [
+      {
+        "key": "Home",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": ""
+      },
+      {
+        "key": "ArrowDown",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Enter",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Escape",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Tab",
+        "activeTag": "BUTTON",
+        "activeText": "Clear controls",
+        "activeId": "",
+        "genre": "Action"
+      }
+    ]
+  },
+  {
+    "name": "chromium",
+    "sequence": [
+      "Home",
+      "ArrowDown",
+      "Tab"
+    ],
+    "steps": [
+      {
+        "key": "Home",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": ""
+      },
+      {
+        "key": "ArrowDown",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Tab",
+        "activeTag": "BUTTON",
+        "activeText": "Clear controls",
+        "activeId": "",
+        "genre": "Action"
+      }
+    ]
+  },
+  {
+    "name": "firefox",
+    "sequence": [
+      "Home",
+      "ArrowDown",
+      "Enter",
+      "Tab"
+    ],
+    "steps": [
+      {
+        "key": "Home",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": ""
+      },
+      {
+        "key": "ArrowDown",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Enter",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Tab",
+        "activeTag": "BUTTON",
+        "activeText": "Clear controls",
+        "activeId": "",
+        "genre": "Action"
+      }
+    ]
+  },
+  {
+    "name": "firefox",
+    "sequence": [
+      "Home",
+      "ArrowDown",
+      "Enter",
+      "Escape",
+      "Tab"
+    ],
+    "steps": [
+      {
+        "key": "Home",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": ""
+      },
+      {
+        "key": "ArrowDown",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Enter",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Escape",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Tab",
+        "activeTag": "BUTTON",
+        "activeText": "Clear controls",
+        "activeId": "",
+        "genre": "Action"
+      }
+    ]
+  },
+  {
+    "name": "firefox",
+    "sequence": [
+      "Home",
+      "ArrowDown",
+      "Tab"
+    ],
+    "steps": [
+      {
+        "key": "Home",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": ""
+      },
+      {
+        "key": "ArrowDown",
+        "activeTag": "SELECT",
+        "activeText": "\n      All genresActionAdventurePuzzle\n      RacingRPGStrategy",
+        "activeId": "game-genre",
+        "genre": "Action"
+      },
+      {
+        "key": "Tab",
+        "activeTag": "BUTTON",
+        "activeText": "Clear controls",
+        "activeId": "",
+        "genre": "Action"
+      }
+    ]
+  }
+]

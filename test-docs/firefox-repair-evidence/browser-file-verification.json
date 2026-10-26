@@ -1,0 +1,13 @@
+{
+  "RecordedAt": "2026-10-05T23:43:25.9554873+04:00",
+  "Playwright": "1.63.0",
+  "BrowserVersion": "155.0",
+  "Revision": "1543",
+  "GlobalBrowserPath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox",
+  "ProjectBrowserPath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\.playwright-browsers\\firefox-1543\\firefox",
+  "GlobalFileCount": 59,
+  "ProjectFileCount": 59,
+  "Differences": [],
+  "ComparedFileContents": "SHA256 of every corresponding browser file",
+  "AllBrowserFilesIdentical": true
+}

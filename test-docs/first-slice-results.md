@@ -1,5 +1,9 @@
 # First-slice execution results
 
+Subsequent manual reporting: [Vadim's session](manual/testing-session-by-Vadim.md) and [2026-10-12 assistant follow-up](manual/follow-up-2026-10-12.md) now record separate human observations, 17 follow-up groups with passing latest results and a user-reported network simulation. The historical execution and limitations below remain dated records; the [current coverage review](manual/testing-session-by-Vadim-review.md) describes what this supplement adds and leaves open.
+
+Subsequent executions: the [Firefox-only rerun on 2026-10-05](firefox-rerun-results.md) attempted all 66 checks and reproduced the launch blocker. The [launch repair](firefox-launch-repair.md) first verified two checks. The [full Firefox rerun on 2026-10-06](firefox-regression-results-2026-10-06.md) then passed all 66 existing automated checks, without skips or retries; lifecycle warnings are recorded separately. The complete-suite results and coverage limits below remain the original execution record. No new combined 272-check execution is claimed.
+
 Final isolation follow-up executed on 2026-10-05 against the working tree based on commit `e31ab832b044a35be96b264d018e3fc390891ebb` plus the artifact-cleanup isolation fix. It follows the Task 3 milestone; historical Task 3 reports remain unchanged. This records the catalogue/detail/patch-note slice; the [full test plan](test-plan.md) and its release gates remain open.
 
 ## Actual automated results

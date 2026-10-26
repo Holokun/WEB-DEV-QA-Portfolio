@@ -1,6 +1,6 @@
 # Game Companion — Manual Test Scenarios
 
-Status: **All scenarios are planned; none has been executed.** Sources: [requirements](requirements-and-risks.md), [test plan](test-plan.md), and [traceability](traceability-matrix.md). `SCN-` IDs identify manual procedures; `TEST-` IDs identify the separate automation inventory.
+Status: **The procedures below define planned coverage; full scenario completion is not established.** Vadim's [manual session](manual/testing-session-by-Vadim.md), the separate [2026-10-12 assistant follow-up](manual/follow-up-2026-10-12.md) and [SIM-CAT-01](../bug-reports/SIM-CAT-01-network-recovery.md) record performed portions with source attribution. The [coverage review](manual/testing-session-by-Vadim-review.md) identifies remaining variants. Sources: [requirements](requirements-and-risks.md), [test plan](test-plan.md), and [traceability](traceability-matrix.md). `SCN-` IDs identify manual procedures; `TEST-` IDs identify the separate automation inventory.
 
 ## Common setup and recording
 

@@ -1,0 +1,25 @@
+{
+  "Stats": {
+    "startTime": "2026-10-06T05:38:59.943Z",
+    "duration": 41329.393,
+    "expected": 66,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "GroupedByFile": {
+    "e2e/catalogue.spec.ts": 38,
+    "e2e/detail.spec.ts": 23,
+    "e2e/layout.spec.ts": 5
+  },
+  "AllCollectedIdsExecutedExactlyOnce": true,
+  "SourceFilesUnchanged": 27,
+  "HtmlReportStatsMatch": true,
+  "LaunchUnknownCount": 0,
+  "LifecycleTimeoutWarningCount": 66,
+  "PreservedScreenshots": [
+    "catalogue-view.png",
+    "catalogue.png",
+    "detail-view.png"
+  ]
+}

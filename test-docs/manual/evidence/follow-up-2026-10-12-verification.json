@@ -1,0 +1,15 @@
+{
+  "verifiedAtUtc": "2026-10-12T11:17:20.511Z",
+  "outcome": "passed",
+  "latestPassingGroups": 17,
+  "sourceFilesUnchanged": 10,
+  "evidenceArtifactsVerified": 36,
+  "currentDocumentLinksVerified": 98,
+  "originalSnapshotPreserved": true,
+  "prePolishSnapshotPreserved": true,
+  "networkFailureExecutedByAssistant": false,
+  "separateHumanAndAssistantAttribution": true,
+  "polishedReportsChecked": 4,
+  "fillerMatches": 0,
+  "unsupportedNumericTokens": 0
+}

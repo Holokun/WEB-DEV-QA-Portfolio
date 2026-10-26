@@ -1,0 +1,184 @@
+{
+  "artifacts": [
+    {
+      "path": "consolidated-results.json",
+      "sha256": "f34ca163fe6fd82810e1836a7dc44d29077eec50ca6c0788700869df2253b83c",
+      "bytes": 10612
+    },
+    {
+      "path": "keyboard-before-correction.mjs",
+      "sha256": "6431b730969524004698494edb60e05e5de0d939ee2d2ffcc6f107651ede5494",
+      "bytes": 26152
+    },
+    {
+      "path": "keyboard-select-probe.json",
+      "sha256": "b38b895ee4fedb7d95b5133b37668cefa77ecdefe92d8581963ac0190322d978",
+      "bytes": 5830
+    },
+    {
+      "path": "run-checks.mjs",
+      "sha256": "cad5e23d4d7bc27498f10bd51f6dfa0b0451e22606d2fb4004b66d4ce67f7e79",
+      "bytes": 26302
+    },
+    {
+      "path": "first-run/FOLLOWUP-01-catalogue.png",
+      "sha256": "d05bf15545e954fb401a77e71dbaf9cbde9bfb7c97f546d4e14672a7f666136f",
+      "bytes": 49516
+    },
+    {
+      "path": "first-run/FOLLOWUP-02-accepted.png",
+      "sha256": "f68f19f306965046647af5f7f9970c264611c879da598df211e671f6921d0f2f",
+      "bytes": 30303
+    },
+    {
+      "path": "first-run/FOLLOWUP-03-accepted.png",
+      "sha256": "0c703111116a7ea82964bf6269513da0cf2a10c1bf5cf4322050d2aa7753558f",
+      "bytes": 30347
+    },
+    {
+      "path": "first-run/FOLLOWUP-04-accepted.png",
+      "sha256": "fa809a707878351d4e79d1d6d9c923df626db6f48e6f6ebbfe04edfaeca7769a",
+      "bytes": 30279
+    },
+    {
+      "path": "first-run/FOLLOWUP-05-accepted.png",
+      "sha256": "06023e9df2bcac66a7d3e2fe72e6695e09b0ade7c3d1911b813c820d30537669",
+      "bytes": 32414
+    },
+    {
+      "path": "first-run/FOLLOWUP-06-invalid-retained-results.png",
+      "sha256": "bda7e10f709ca8f6b607c7c0d2078b0643a84e012ae74e70f6834212830b83e5",
+      "bytes": 34840
+    },
+    {
+      "path": "first-run/FOLLOWUP-07-invalid-retained-results.png",
+      "sha256": "c14c912cd3dedc6e8314e32c556bc33f5311d4d83348f7166ca21df55f045500",
+      "bytes": 34944
+    },
+    {
+      "path": "first-run/FOLLOWUP-08-no-results.png",
+      "sha256": "2a09589a95cf7e7afbd5342fce0e899da693438ed8e56172bf742e384db6a0dd",
+      "bytes": 28401
+    },
+    {
+      "path": "first-run/FOLLOWUP-11-ordered-notes.png",
+      "sha256": "59b85e4adbc5b5a8277484fff1b14400a6c3f7c3d53e36383bce660076f297a3",
+      "bytes": 37326
+    },
+    {
+      "path": "first-run/FOLLOWUP-12-empty-notes.png",
+      "sha256": "0a505cb75c5e8bcc4b3d14ac6cf4cfd5db652f0db0ac2f40a553431b031e7189",
+      "bytes": 25805
+    },
+    {
+      "path": "first-run/FOLLOWUP-13-game-focus.png",
+      "sha256": "44d013ed820c961ad490c6e9c8da20aaa50d071500dc000a6c7af13be9671f0f",
+      "bytes": 31011
+    },
+    {
+      "path": "first-run/FOLLOWUP-13-genre-focus.png",
+      "sha256": "b4f2b292393de09257405d17a3ec06ae0dd3fb891fc66246fc13980d6adada82",
+      "bytes": 30448
+    },
+    {
+      "path": "first-run/FOLLOWUP-13-notes-focus.png",
+      "sha256": "b0ce9d02f65f881d21a8b4c104338b18d425aa17136380f1a991eb31caaa5c7f",
+      "bytes": 20609
+    },
+    {
+      "path": "first-run/FOLLOWUP-14-failure.png",
+      "sha256": "022cf3479190097e15999c3c763c1029de6add0235462b543621dce345005d03",
+      "bytes": 32192
+    },
+    {
+      "path": "first-run/FOLLOWUP-14-genre-focus.png",
+      "sha256": "47c450f371f4b93bfc46572f102e2fbc55060ff02bd99c9663a885d7822e038a",
+      "bytes": 36651
+    },
+    {
+      "path": "first-run/FOLLOWUP-15-catalogue.png",
+      "sha256": "d05bf15545e954fb401a77e71dbaf9cbde9bfb7c97f546d4e14672a7f666136f",
+      "bytes": 49516
+    },
+    {
+      "path": "first-run/FOLLOWUP-15-detail-notes.png",
+      "sha256": "59b85e4adbc5b5a8277484fff1b14400a6c3f7c3d53e36383bce660076f297a3",
+      "bytes": 37326
+    },
+    {
+      "path": "first-run/FOLLOWUP-15-validation.png",
+      "sha256": "3db45c25a668c1e3542e14d3f0c2de0b7664af0947cd6fc8c6aedb62f3819395",
+      "bytes": 32783
+    },
+    {
+      "path": "first-run/FOLLOWUP-16-catalogue.png",
+      "sha256": "e25cac5bda81d2adb15e113c61c4b2a08beddb46908439b5868d65ea8330d63b",
+      "bytes": 41390
+    },
+    {
+      "path": "first-run/FOLLOWUP-16-detail-notes.png",
+      "sha256": "df077dc0f53771b9172eaf5341edfc5afbc43210271782536230de25e3d35edc",
+      "bytes": 31972
+    },
+    {
+      "path": "first-run/FOLLOWUP-16-validation.png",
+      "sha256": "9218ac632832d40d460d9ad954824932e647bf472453ee15a70dbae422a6816f",
+      "bytes": 26153
+    },
+    {
+      "path": "first-run/FOLLOWUP-17-catalogue.png",
+      "sha256": "bcc068157de8353eebec6b7758a51a594fdfbafef2ea174f65466f3f0b9f49bf",
+      "bytes": 47022
+    },
+    {
+      "path": "first-run/FOLLOWUP-17-detail-notes.png",
+      "sha256": "fbb181ff91e5d0035f524e6869744965b4d2a6238ff507ead5c85ab15c17a986",
+      "bytes": 32144
+    },
+    {
+      "path": "first-run/FOLLOWUP-17-validation.png",
+      "sha256": "6337537c64df468b7c52a2025f96cd254685572c46abf3c4784ec1eb6d22d362",
+      "bytes": 28002
+    },
+    {
+      "path": "first-run/results.json",
+      "sha256": "5d40de29c3cb2ceb3a0e0c38ee34661059062cc8938871e5829d6759e6558b75",
+      "bytes": 205585
+    },
+    {
+      "path": "keyboard-run/FOLLOWUP-13-game-focus.png",
+      "sha256": "44d013ed820c961ad490c6e9c8da20aaa50d071500dc000a6c7af13be9671f0f",
+      "bytes": 31011
+    },
+    {
+      "path": "keyboard-run/FOLLOWUP-13-genre-focus.png",
+      "sha256": "b4f2b292393de09257405d17a3ec06ae0dd3fb891fc66246fc13980d6adada82",
+      "bytes": 30448
+    },
+    {
+      "path": "keyboard-run/FOLLOWUP-13-notes-focus.png",
+      "sha256": "b0ce9d02f65f881d21a8b4c104338b18d425aa17136380f1a991eb31caaa5c7f",
+      "bytes": 20609
+    },
+    {
+      "path": "keyboard-run/FOLLOWUP-14-game-focus.png",
+      "sha256": "926e23194dda0eaf56eca2869aa148694f7ca937cbf5a4197d02c375e2439c5b",
+      "bytes": 32566
+    },
+    {
+      "path": "keyboard-run/FOLLOWUP-14-genre-focus.png",
+      "sha256": "5292e705246d992014af5ccfcce802a2de618e5b8dae6b1d2a43a2a1fb6a6500",
+      "bytes": 32194
+    },
+    {
+      "path": "keyboard-run/FOLLOWUP-14-notes-focus.png",
+      "sha256": "c48fc756de10baf6ba3e41a405e2b4729628dfe4f2adab68c4c6abc66c27549c",
+      "bytes": 22484
+    },
+    {
+      "path": "keyboard-run/results.json",
+      "sha256": "0b9a30d52245927fa12337a3edf8bf65ae8b45f5cbfab80ad86025653052438b",
+      "bytes": 56444
+    }
+  ]
+}
