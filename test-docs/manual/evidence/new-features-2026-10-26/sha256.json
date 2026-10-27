@@ -1,0 +1,38 @@
+{
+  "capturedAt": "2026-10-27T06:36:56.069Z",
+  "scope": "Saved observations from the bounded IAB session; excludes this inventory",
+  "files": [
+    {
+      "path": "captured-console-2026-10-27.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "feedback-unicode-success-2026-10-27.png",
+      "sha256": "7e1c5f190b2667adbca523c122980064889bd8f11ebb2e0407996f480475b159"
+    },
+    {
+      "path": "keyboard-search-focus-2026-10-27.png",
+      "sha256": "fce56132bf3f788f6856807a88d1a374e766445c93abf0cb8ee824769b675f87"
+    },
+    {
+      "path": "requests-2026-10-27.jsonl",
+      "sha256": "9ed3fdca8dfe0847cd37d9662d995bdaa866c03098d95a8ffb96a6b410a9948f"
+    },
+    {
+      "path": "session-environment-2026-10-27.json",
+      "sha256": "9679fbd03abb670e6e6141976c6bd83ab292dfc23ca4066808dac49e67985098"
+    },
+    {
+      "path": "sql-after-recovery-2026-10-27.json",
+      "sha256": "8b7d8fce4c3aeff8f86149edea8a082af3016ff7f42bed0d4cdb16a517d14725"
+    },
+    {
+      "path": "sql-after-unicode-2026-10-27.json",
+      "sha256": "52cf6e95d908d3eb4b9e1b758bc86e7b21272f75502817d6ff0cf32fb0d5fe29"
+    },
+    {
+      "path": "verification-instrument-2026-10-27.mjs",
+      "sha256": "2e7815445d863985aff9f3f9dfbaaffbafaed6418e4817f200c90c735c5fd243"
+    }
+  ]
+}

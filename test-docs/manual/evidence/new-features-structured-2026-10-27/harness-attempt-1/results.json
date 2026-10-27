@@ -1,0 +1,574 @@
+[
+  {
+    "id": "RECON",
+    "scope": "Observed rendered UI",
+    "input": {},
+    "expected": "Find feedback field labels and submit control",
+    "startedAt": "2026-10-27T06:22:48.621Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:43:105\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:43:1",
+    "finishedAt": "2026-10-27T06:22:53.713Z"
+  },
+  {
+    "id": "EMAIL-01-UI",
+    "scope": "SCN-FBK-02 UI",
+    "input": {
+      "gameId": 1,
+      "email": "  player@example.com  ",
+      "description": "Synthetic structured QA EMAIL-01 UI 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "valid": true,
+      "uiPostCount": 1,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:22:53.714Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:38:153\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async uiVariant (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:38:55)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:44:195",
+    "finishedAt": "2026-10-27T06:22:58.757Z"
+  },
+  {
+    "id": "EMAIL-01-API",
+    "scope": "SCN-FBK-02/03 direct API",
+    "input": {
+      "gameId": 1,
+      "email": "  player@example.com  ",
+      "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "status": 201,
+      "code": null,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:22:58.758Z",
+    "actual": {
+      "countBefore": 0,
+      "countAfter": 1,
+      "returnedId": 1,
+      "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+      "sqlParameters": [
+        1
+      ],
+      "selectedRows": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsBefore": [],
+      "rowsAfter": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "request": "{\"gameId\":1,\"email\":\"  player@example.com  \",\"description\":\"Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z\"}",
+      "response": {
+        "status": 201,
+        "body": "{\"id\":1}"
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:22:58.783Z"
+  },
+  {
+    "id": "EMAIL-02-UI",
+    "scope": "SCN-FBK-02 UI",
+    "input": {
+      "gameId": 1,
+      "email": "Player09.first_qa+tag-test@example.com",
+      "description": "Synthetic structured QA EMAIL-02 UI 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "valid": true,
+      "uiPostCount": 1,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:22:58.784Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:38:153\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async uiVariant (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:38:55)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:44:195",
+    "finishedAt": "2026-10-27T06:23:03.840Z"
+  },
+  {
+    "id": "EMAIL-02-API",
+    "scope": "SCN-FBK-02/03 direct API",
+    "input": {
+      "gameId": 1,
+      "email": "Player09.first_qa+tag-test@example.com",
+      "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "status": 201,
+      "code": null,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:03.840Z",
+    "actual": {
+      "countBefore": 1,
+      "countAfter": 2,
+      "returnedId": 2,
+      "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+      "sqlParameters": [
+        2
+      ],
+      "selectedRows": [
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsBefore": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsAfter": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "request": "{\"gameId\":1,\"email\":\"Player09.first_qa+tag-test@example.com\",\"description\":\"Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z\"}",
+      "response": {
+        "status": 201,
+        "body": "{\"id\":2}"
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:23:03.850Z"
+  },
+  {
+    "id": "EMAIL-03-UI",
+    "scope": "SCN-FBK-02 UI",
+    "input": {
+      "gameId": 1,
+      "email": "player@games-2.example.com",
+      "description": "Synthetic structured QA EMAIL-03 UI 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "valid": true,
+      "uiPostCount": 1,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:03.858Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:38:153\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async uiVariant (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:38:55)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:44:195",
+    "finishedAt": "2026-10-27T06:23:08.916Z"
+  },
+  {
+    "id": "EMAIL-03-API",
+    "scope": "SCN-FBK-02/03 direct API",
+    "input": {
+      "gameId": 1,
+      "email": "player@games-2.example.com",
+      "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "status": 201,
+      "code": null,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:08.917Z",
+    "actual": {
+      "countBefore": 2,
+      "countAfter": 3,
+      "returnedId": 3,
+      "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+      "sqlParameters": [
+        3
+      ],
+      "selectedRows": [
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsBefore": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsAfter": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "request": "{\"gameId\":1,\"email\":\"player@games-2.example.com\",\"description\":\"Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z\"}",
+      "response": {
+        "status": 201,
+        "body": "{\"id\":3}"
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:23:08.925Z"
+  },
+  {
+    "id": "EMAIL-04-UI",
+    "scope": "SCN-FBK-02 UI",
+    "input": {
+      "gameId": 1,
+      "email": "player@example.co",
+      "description": "Synthetic structured QA EMAIL-04 UI 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "valid": true,
+      "uiPostCount": 1,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:08.925Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:38:153\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async uiVariant (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:38:55)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:44:195",
+    "finishedAt": "2026-10-27T06:23:13.970Z"
+  },
+  {
+    "id": "EMAIL-04-API",
+    "scope": "SCN-FBK-02/03 direct API",
+    "input": {
+      "gameId": 1,
+      "email": "player@example.co",
+      "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "status": 201,
+      "code": null,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:13.970Z",
+    "actual": {
+      "countBefore": 3,
+      "countAfter": 4,
+      "returnedId": 4,
+      "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+      "sqlParameters": [
+        4
+      ],
+      "selectedRows": [
+        {
+          "id": 4,
+          "game_id": 1,
+          "email": "player@example.co",
+          "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsBefore": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsAfter": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 4,
+          "game_id": 1,
+          "email": "player@example.co",
+          "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "request": "{\"gameId\":1,\"email\":\"player@example.co\",\"description\":\"Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z\"}",
+      "response": {
+        "status": 201,
+        "body": "{\"id\":4}"
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:23:13.978Z"
+  },
+  {
+    "id": "EMAIL-05-UI",
+    "scope": "SCN-FBK-02 UI",
+    "input": {
+      "gameId": 1,
+      "email": "player@example.COM",
+      "description": "Synthetic structured QA EMAIL-05 UI 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "valid": true,
+      "uiPostCount": 1,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:13.978Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:38:153\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async uiVariant (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:38:55)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:44:195",
+    "finishedAt": "2026-10-27T06:23:19.034Z"
+  },
+  {
+    "id": "EMAIL-05-API",
+    "scope": "SCN-FBK-02/03 direct API",
+    "input": {
+      "gameId": 1,
+      "email": "player@example.COM",
+      "description": "Synthetic structured QA EMAIL-05 API 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "status": 201,
+      "code": null,
+      "rowDelta": 1
+    },
+    "startedAt": "2026-10-27T06:23:19.034Z",
+    "actual": {
+      "countBefore": 4,
+      "countAfter": 5,
+      "returnedId": 5,
+      "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+      "sqlParameters": [
+        5
+      ],
+      "selectedRows": [
+        {
+          "id": 5,
+          "game_id": 1,
+          "email": "player@example.COM",
+          "description": "Synthetic structured QA EMAIL-05 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsBefore": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 4,
+          "game_id": 1,
+          "email": "player@example.co",
+          "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsAfter": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 4,
+          "game_id": 1,
+          "email": "player@example.co",
+          "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 5,
+          "game_id": 1,
+          "email": "player@example.COM",
+          "description": "Synthetic structured QA EMAIL-05 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "request": "{\"gameId\":1,\"email\":\"player@example.COM\",\"description\":\"Synthetic structured QA EMAIL-05 API 2026-10-27T06:22:48.208Z\"}",
+      "response": {
+        "status": 201,
+        "body": "{\"id\":5}"
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:23:19.045Z"
+  },
+  {
+    "id": "EMAIL-06-UI",
+    "scope": "SCN-FBK-02 UI",
+    "input": {
+      "gameId": 1,
+      "email": "@example.com",
+      "description": "Synthetic structured QA EMAIL-06 UI 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "valid": false,
+      "uiPostCount": 0,
+      "rowDelta": 0
+    },
+    "startedAt": "2026-10-27T06:23:19.046Z",
+    "status": "FAIL",
+    "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Feedback', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByRole('heading', { name: 'Feedback', exact: true }) with timeout 5000ms\n  - waiting for getByRole('heading', { name: 'Feedback', exact: true })\n\n    at captureRawStack (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:8588:17)\n    at callMatcherAsStep (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeVisible (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\lib\\matchers\\expect.js:13302:23)\n    at openForm (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:32:132)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:38:153\n    at async check (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:31:143)\n    at async uiVariant (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\probe.mjs:38:55)\n    at async file:///D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/task-3-data/probe.mjs:44:195",
+    "finishedAt": "2026-10-27T06:23:24.094Z"
+  },
+  {
+    "id": "EMAIL-06-API",
+    "scope": "SCN-FBK-02/03 direct API",
+    "input": {
+      "gameId": 1,
+      "email": "@example.com",
+      "description": "Synthetic structured QA EMAIL-06 API 2026-10-27T06:22:48.208Z"
+    },
+    "expected": {
+      "status": 400,
+      "code": "INVALID_BODY",
+      "rowDelta": 0
+    },
+    "startedAt": "2026-10-27T06:23:24.095Z",
+    "actual": {
+      "request": "{\"gameId\":1,\"email\":\"@example.com\",\"description\":\"Synthetic structured QA EMAIL-06 API 2026-10-27T06:22:48.208Z\"}",
+      "response": {
+        "status": 400,
+        "body": "{\"error\":{\"code\":\"INVALID_BODY\",\"message\":\"Invalid feedback body.\"}}"
+      },
+      "countBefore": 5,
+      "countAfter": 5,
+      "rowsBefore": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 4,
+          "game_id": 1,
+          "email": "player@example.co",
+          "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 5,
+          "game_id": 1,
+          "email": "player@example.COM",
+          "description": "Synthetic structured QA EMAIL-05 API 2026-10-27T06:22:48.208Z"
+        }
+      ],
+      "rowsAfter": [
+        {
+          "id": 1,
+          "game_id": 1,
+          "email": "player@example.com",
+          "description": "Synthetic structured QA EMAIL-01 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 2,
+          "game_id": 1,
+          "email": "Player09.first_qa+tag-test@example.com",
+          "description": "Synthetic structured QA EMAIL-02 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 3,
+          "game_id": 1,
+          "email": "player@games-2.example.com",
+          "description": "Synthetic structured QA EMAIL-03 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 4,
+          "game_id": 1,
+          "email": "player@example.co",
+          "description": "Synthetic structured QA EMAIL-04 API 2026-10-27T06:22:48.208Z"
+        },
+        {
+          "id": 5,
+          "game_id": 1,
+          "email": "player@example.COM",
+          "description": "Synthetic structured QA EMAIL-05 API 2026-10-27T06:22:48.208Z"
+        }
+      ]
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:23:24.097Z"
+  }
+]

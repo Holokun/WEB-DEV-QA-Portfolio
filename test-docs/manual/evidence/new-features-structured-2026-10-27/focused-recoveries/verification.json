@@ -1,0 +1,21 @@
+{
+  "verifiedAt": "2026-10-27T06:33:02.210Z",
+  "focusedExecutions": 2,
+  "focusedPassed": 2,
+  "focusedFailed": 0,
+  "focusedSQLRows": 2,
+  "distinctDescriptions": 2,
+  "pageErrors": 0,
+  "originalManifestHash": "3d81595d06dffcceb0dfd1f349fb329e8972262dcb3bfbc7be2f90f939ead964",
+  "originalArtifactHashesVerified": 32,
+  "originalArtifactsUnchanged": true,
+  "accounting": {
+    "originalFunctionalPassed": 120,
+    "originalConforming": 118,
+    "originalDataConventionDeviations": 2,
+    "focusedCorrected": 2,
+    "scenarioCoverageSupported": 120,
+    "historicalCompletedExecutions": 122,
+    "interruptedAttemptExcluded": true
+  }
+}

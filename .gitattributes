@@ -1,3 +1,5 @@
 # Native evidence and its recorded SHA-256 inventory must retain exact bytes.
 test-docs/accessibility-evidence/2026-10-26/** -text
 test-docs/smoke-evidence/2026-10-27/** -text
+test-docs/manual/evidence/new-features-2026-10-26/** -text
+test-docs/manual/evidence/new-features-structured-2026-10-27/** -text

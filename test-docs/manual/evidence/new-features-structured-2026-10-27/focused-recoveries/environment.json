@@ -1,0 +1,187 @@
+{
+  "startedAt": "2026-10-27T06:31:52.067Z",
+  "classification": "focused corrective structured automated agent QA; not manual/human/exploratory/native AT",
+  "source": "94779ebd20c08e763ec0c99cae4aa0dbb4238af7",
+  "currentHEAD": "94779ebd20c08e763ec0c99cae4aa0dbb4238af7",
+  "productDiff": "",
+  "node": "v24.22.1",
+  "playwright": "1.63.0",
+  "platform": "win32",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "dbPath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\focused-recovery-2026-10-27T06-31-52.067Z.sqlite",
+  "build": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\task-3-data\\build",
+  "buildFiles": [
+    {
+      "path": "app\\api\\application.js",
+      "sha256": "9d45eb41780f35d16fcf3cd04bfc769df2518f9e3b40c97b6dac09d98acc3a1f"
+    },
+    {
+      "path": "app\\api\\feedback.js",
+      "sha256": "ea9cd97315a9e16981f0074cce7f488e901ad45c1644e03bcc74a09b932e9586"
+    },
+    {
+      "path": "app\\api\\games.js",
+      "sha256": "9bb9fbf95d4ea47becc494f7387a9e359de8922859a6291b244ec0869affa8a3"
+    },
+    {
+      "path": "app\\api\\server.js",
+      "sha256": "880071b058adac12b66028c5d683c2666227ef1c0d99fd1370e561ae8fa6247e"
+    },
+    {
+      "path": "app\\db\\database.js",
+      "sha256": "2aa1286bfb4a58b0e6fc102c09fb761403356c19d448785de7cac8df304497ea"
+    },
+    {
+      "path": "app\\db\\reset.js",
+      "sha256": "1c5783392735a36e9e5bfe67d101c6c2dfc690cdcf55e1516c51fab21c699adc"
+    },
+    {
+      "path": "app\\db\\seed.js",
+      "sha256": "df9225382318dc9b22943e04d881465c7c5a725262851b05c88627f40b080ec7"
+    },
+    {
+      "path": "app\\shared\\contracts.js",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "app\\shared\\feedback-validation.js",
+      "sha256": "430c04e7022c376b880d5a234ef0b70fc0b3239860dcfdcfcec7be921f5b93ab"
+    },
+    {
+      "path": "app\\ui\\api-client.js",
+      "sha256": "b78452c3ec37633f2a530db0c14385bff85205f7a62c411bed2bb4c1a7a26b79"
+    },
+    {
+      "path": "app\\ui\\catalogue.js",
+      "sha256": "6a4193087b9d4d5fa877cef996213a42b9881f1ac2d5d08266dc492920599197"
+    },
+    {
+      "path": "app\\ui\\detail.js",
+      "sha256": "1a93c22a18de372a117f322f143e4166d5e73f77729a60e45cb6bb34b25b9180"
+    },
+    {
+      "path": "app\\ui\\favourite-button.js",
+      "sha256": "1968dcac320acc24862d3c81da16959d154bc9eb778a817a84c8d865a5d3d40e"
+    },
+    {
+      "path": "app\\ui\\favourites-view.js",
+      "sha256": "881a82a78b6ae15fa4186d5da7df598d93e3c9a670b03912d2ca669e49fbc1c7"
+    },
+    {
+      "path": "app\\ui\\favourites.js",
+      "sha256": "5d33ac144c6a8275fba7a6f50ec0a254b4811d35eb475055412514f7baab1e23"
+    },
+    {
+      "path": "app\\ui\\feedback.js",
+      "sha256": "36d0a4f74a398cb1f69d9092cbcad3aad1f4cc77b3a77fb0321cee46744e0da3"
+    },
+    {
+      "path": "app\\ui\\index.html",
+      "sha256": "528488312405bfdda6ed81a7355a76b97d7dbba9ebfa326ec4c8e37da166fe0d"
+    },
+    {
+      "path": "app\\ui\\main.js",
+      "sha256": "5a73faf89173dc24824c31ccd6fdbe48c669f8bdc3a02d1916bf30b2f60fbf0f"
+    },
+    {
+      "path": "app\\ui\\shared\\feedback-validation.js",
+      "sha256": "430c04e7022c376b880d5a234ef0b70fc0b3239860dcfdcfcec7be921f5b93ab"
+    },
+    {
+      "path": "app\\ui\\styles.css",
+      "sha256": "c5abb791a0b3979f1c431a7dab0022c36768c6a0f3622a483df9bbb6e3438e27"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "app\\api\\application.ts",
+      "sha256": "4bad52640de602170f0c9f6e7159a02e63dd9a3bc3ce381c54b23f07626f4ede"
+    },
+    {
+      "path": "app\\api\\feedback.ts",
+      "sha256": "de0928671686bafa1d97633fbf737507ff515ad62ea003a61466c72064fd4a21"
+    },
+    {
+      "path": "app\\api\\games.ts",
+      "sha256": "455b2be3a7c25923c62f30fb68299f0ae8ce5ff51e3f054a4957d41a4f98eebc"
+    },
+    {
+      "path": "app\\api\\server.ts",
+      "sha256": "84d951f26ea77aa5b11be1f7aac88b1d596e236605e198bf0202bdb211226cd6"
+    },
+    {
+      "path": "app\\db\\database.ts",
+      "sha256": "15650bb8198a795736bab1dcf68ddc7026cfb6e10a03befce7cc10d8f0e2cccd"
+    },
+    {
+      "path": "app\\db\\reset.ts",
+      "sha256": "a9c46386e489dc44f15337c4ef72ad989eab3a0e0ff83d771bb00ce41c28ce6a"
+    },
+    {
+      "path": "app\\db\\seed.ts",
+      "sha256": "c1d360e9d062099caab3f2b02e7a41bba059ab4fd51ed0646011a93a90f486c4"
+    },
+    {
+      "path": "app\\shared\\contracts.ts",
+      "sha256": "dab99cfe2da33431b99f80338aca14e11ccc60beb2168a9f006864012f89612a"
+    },
+    {
+      "path": "app\\shared\\feedback-validation.ts",
+      "sha256": "5bc04b01374b113b7d38425192e618a2b4577a02db7c68006400904437fa8756"
+    },
+    {
+      "path": "app\\ui\\api-client.ts",
+      "sha256": "b0634c06652f5c4d5ccccf1b57013947cb83978464c77478903523fe4869bc38"
+    },
+    {
+      "path": "app\\ui\\catalogue.ts",
+      "sha256": "429df6dba91e2d98348c63577a58891fcd180398b7d10bba147ae9e5fe63525a"
+    },
+    {
+      "path": "app\\ui\\detail.ts",
+      "sha256": "2afaf34a21c9c1c9251c24ab82e77fe24f28e99a70ca2e9ecb1a4c54acb5b89d"
+    },
+    {
+      "path": "app\\ui\\favourite-button.ts",
+      "sha256": "5bd137fa1f66f186f86eae1c916dfc86a0c0f3ebe99b9a135e4fcdc6ad8fec57"
+    },
+    {
+      "path": "app\\ui\\favourites-view.ts",
+      "sha256": "4812f78d385be2be80e7a24b256038f7454b8d8cd34c73ae1af69e291fa74661"
+    },
+    {
+      "path": "app\\ui\\favourites.ts",
+      "sha256": "ed21d5034996e544d7b220a2470dc7fbc900cec94beb1d40d0807590af91b445"
+    },
+    {
+      "path": "app\\ui\\feedback.ts",
+      "sha256": "ff6d6e95dc77eeac405bda906c938fa690f4602982e22f25cba7a8e3c85a81a1"
+    },
+    {
+      "path": "app\\ui\\index.html",
+      "sha256": "528488312405bfdda6ed81a7355a76b97d7dbba9ebfa326ec4c8e37da166fe0d"
+    },
+    {
+      "path": "app\\ui\\main.ts",
+      "sha256": "7745c42b0af61f6633a0d1823eb03c31f303b0462f90ef033122de1094f90b67"
+    },
+    {
+      "path": "app\\ui\\styles.css",
+      "sha256": "c5abb791a0b3979f1c431a7dab0022c36768c6a0f3622a483df9bbb6e3438e27"
+    }
+  ],
+  "originalManifestHash": "3d81595d06dffcceb0dfd1f349fb329e8972262dcb3bfbc7be2f90f939ead964",
+  "originalArtifactHashesVerified": 32,
+  "baseURL": "http://127.0.0.1:57525",
+  "browser": "153.0.8010.12",
+  "finishedAt": "2026-10-27T06:31:53.224Z",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "originalArtifactHashesStillMatch": true
+}

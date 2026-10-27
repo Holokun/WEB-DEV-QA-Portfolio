@@ -1,0 +1,162 @@
+[
+  {
+    "file": "app.stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "app.stdout.log",
+    "bytes": 33,
+    "sha256": "cd79609cf33207b3426c126b0fd071526079a052567c39043c1feafc137f6b09"
+  },
+  {
+    "file": "console.json",
+    "bytes": 3631,
+    "sha256": "4ab140f33dfe715ed43993af2ad11a9e49232124a3fcc819d94524da0aa8d543"
+  },
+  {
+    "file": "environment.json",
+    "bytes": 6211,
+    "sha256": "f5695484ac3f68f623a9e763c6656f915aaff2c0af4b3496450ca187d23e3402"
+  },
+  {
+    "file": "favourites-ABORT.png",
+    "bytes": 73957,
+    "sha256": "9d45a7b13a91920ef48f90a8ec040bcf0998a7b66d94194dd23d91cc67190930"
+  },
+  {
+    "file": "favourites-HELD.png",
+    "bytes": 73957,
+    "sha256": "9d45a7b13a91920ef48f90a8ec040bcf0998a7b66d94194dd23d91cc67190930"
+  },
+  {
+    "file": "favourites-HTTP500.png",
+    "bytes": 73939,
+    "sha256": "574ecf3d8c6c88446948782b9631a0c586aa227239b6378430dfa70ffba2ef5b"
+  },
+  {
+    "file": "feedback-ABORT.png",
+    "bytes": 38175,
+    "sha256": "2c11e85202d5a6c9f0817bd63cc8147d5dcc5b21c5f0a1b74465311fab121180"
+  },
+  {
+    "file": "feedback-final.png",
+    "bytes": 35738,
+    "sha256": "e4fb031e135e8708939336d929b59eba9667c6d5866a988b24b5138453ef4410"
+  },
+  {
+    "file": "feedback-HTTP500.png",
+    "bytes": 38175,
+    "sha256": "2c11e85202d5a6c9f0817bd63cc8147d5dcc5b21c5f0a1b74465311fab121180"
+  },
+  {
+    "file": "feedback-recon-aria.txt",
+    "bytes": 1007,
+    "sha256": "0543861ee9481aea7b9915ac2df0c714c3282c28bcebf6185540f5b7e40c57dd"
+  },
+  {
+    "file": "feedback-recon.png",
+    "bytes": 29269,
+    "sha256": "c28d17630bdc56d9bd381fd3617d5e42025332872d89c3d97ae0bf685cc436da"
+  },
+  {
+    "file": "finalize.mjs",
+    "bytes": 12340,
+    "sha256": "e1290561c53bc8755558bf9d83449c5c86c9dbf441fcd5718c46f5af5552c7d8"
+  },
+  {
+    "file": "harness-attempt-1/EMAIL-01-UI-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/EMAIL-02-UI-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/EMAIL-03-UI-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/EMAIL-04-UI-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/EMAIL-05-UI-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/EMAIL-06-UI-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/environment.json",
+    "bytes": 5936,
+    "sha256": "3485327277323d52736882e1525588a49ccf42545df6d4ef21631345a5f4ce25"
+  },
+  {
+    "file": "harness-attempt-1/native-run.log",
+    "bytes": 234,
+    "sha256": "c17220837e1d6beaf5200a303496c3dcb35d9583e0231a4a4ed9cc207e57b5f2"
+  },
+  {
+    "file": "harness-attempt-1/RECON-failure.png",
+    "bytes": 10381,
+    "sha256": "2371ce535ab8cef239fd2a65f4d873006069cb8094b1e4865bd2fdd9dc86117b"
+  },
+  {
+    "file": "harness-attempt-1/results.json",
+    "bytes": 27967,
+    "sha256": "d836ea43d742644eb037d906d0adf43267e732438817204a1672c7f324d18fae"
+  },
+  {
+    "file": "init-diagnostic.json",
+    "bytes": 643,
+    "sha256": "e157d0783589a8a2aba00da54e0a1dd1cbd69431e56709f6f53b1bc6604377b7"
+  },
+  {
+    "file": "init-diagnostic.mjs",
+    "bytes": 1857,
+    "sha256": "9fb54bfd53b5f717e956cd669cfc7147e81347fbc42b9acaef9e2bf763b6b23a"
+  },
+  {
+    "file": "native-run.log",
+    "bytes": 2628,
+    "sha256": "12597057a3100cdff8c698ba2574026bce01379ac5a29616892ca44238e3518a"
+  },
+  {
+    "file": "network.json",
+    "bytes": 54921,
+    "sha256": "b459f0df228a97e0bebdbd74dbffa8b52c660e637a3363fd54b1360606a5a6d3"
+  },
+  {
+    "file": "probe.mjs",
+    "bytes": 21449,
+    "sha256": "4c626092cb02ef9dfb4be16da88b4be5529ee050ba74a6454163dd02f586b493"
+  },
+  {
+    "file": "results.json",
+    "bytes": 616670,
+    "sha256": "4ae1b7fe7855fdd47be96906ebabfc652b56bb7ec41f3cfecfa2936d4cd1bfc6"
+  },
+  {
+    "file": "structured-final.sqlite",
+    "bytes": 20480,
+    "sha256": "204b3c0f36dbe3e6017a9b28e4fab4f96e32ba63c5cf52de8ad6caf5e84479c9"
+  },
+  {
+    "file": "structured-trace.zip",
+    "bytes": 3345155,
+    "sha256": "78625328eb39945452b21426c103c31f69ab5fa28a0bbca52fb8d1c165f220dc"
+  },
+  {
+    "file": "verification.json",
+    "bytes": 554,
+    "sha256": "da02c35c0b7e134a4c8e3a21a1c869c8fd40503ad9b92e1f23e7cbc7e3a71e04"
+  }
+]

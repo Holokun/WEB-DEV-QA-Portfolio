@@ -1,0 +1,661 @@
+[
+  {
+    "at": "2026-10-27T06:23:47.180Z",
+    "case": "RECON",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:47.192Z",
+    "case": "RECON",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.399Z",
+    "case": "EMAIL-01-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"player@example.com\",\"description\":\"Synthetic structured QA EMAIL-01 UI 2026-10-27T06:23:46.708Z\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.407Z",
+    "case": "EMAIL-01-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":1}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.530Z",
+    "case": "EMAIL-02-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"Player09.first_qa+tag-test@example.com\",\"description\":\"Synthetic structured QA EMAIL-02 UI 2026-10-27T06:23:46.708Z\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.541Z",
+    "case": "EMAIL-02-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":3}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.678Z",
+    "case": "EMAIL-03-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"player@games-2.example.com\",\"description\":\"Synthetic structured QA EMAIL-03 UI 2026-10-27T06:23:46.708Z\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.690Z",
+    "case": "EMAIL-03-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":5}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.813Z",
+    "case": "EMAIL-04-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"player@example.co\",\"description\":\"Synthetic structured QA EMAIL-04 UI 2026-10-27T06:23:46.708Z\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.825Z",
+    "case": "EMAIL-04-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":7}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.960Z",
+    "case": "EMAIL-05-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"player@example.COM\",\"description\":\"Synthetic structured QA EMAIL-05 UI 2026-10-27T06:23:46.708Z\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:47.974Z",
+    "case": "EMAIL-05-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":9}"
+  },
+  {
+    "at": "2026-10-27T06:23:50.824Z",
+    "case": "DESC-04-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"boundary@example.COM\",\"description\":\"12345678901234567890\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:50.840Z",
+    "case": "DESC-04-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":11}"
+  },
+  {
+    "at": "2026-10-27T06:23:50.925Z",
+    "case": "DESC-05-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"boundary@example.COM\",\"description\":\"12345678901234567890\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:50.940Z",
+    "case": "DESC-05-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":13}"
+  },
+  {
+    "at": "2026-10-27T06:23:51.107Z",
+    "case": "DESC-07-UI",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"boundary@example.COM\",\"description\":\"🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:51.123Z",
+    "case": "DESC-07-UI",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":15}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.230Z",
+    "case": "REAL-VALID-SUBMISSION",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":1,\"email\":\"Structured.Player+case@example.COM\",\"description\":\"Synthetic independent real submission 2026-10-27T06:23:46.708Z\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.242Z",
+    "case": "REAL-VALID-SUBMISSION",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":17}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.327Z",
+    "case": "FEEDBACK-HTTP500",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":6,\"email\":\"Preserve.Case@example.COM\",\"description\":\"Synthetic raw feedback must stay exactly entered.\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.342Z",
+    "case": "FEEDBACK-HTTP500",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 500,
+    "body": "{\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"Unexpected server error\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.493Z",
+    "case": "FEEDBACK-HTTP500",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":6,\"email\":\"Preserve.Case@example.COM\",\"description\":\"Synthetic raw feedback must stay exactly entered.\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.506Z",
+    "case": "FEEDBACK-HTTP500",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":18}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.610Z",
+    "case": "FEEDBACK-ABORT",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":6,\"email\":\"Preserve.Case@example.COM\",\"description\":\"Synthetic raw feedback must stay exactly entered.\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.627Z",
+    "case": "FEEDBACK-ABORT",
+    "event": "requestfailed",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "failure": {
+      "errorText": "net::ERR_FAILED"
+    }
+  },
+  {
+    "at": "2026-10-27T06:23:52.757Z",
+    "case": "FEEDBACK-ABORT",
+    "event": "request",
+    "method": "POST",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "postData": "{\"gameId\":6,\"email\":\"Preserve.Case@example.COM\",\"description\":\"Synthetic raw feedback must stay exactly entered.\"}"
+  },
+  {
+    "at": "2026-10-27T06:23:52.773Z",
+    "case": "FEEDBACK-ABORT",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/feedback",
+    "status": 201,
+    "body": "{\"id\":19}"
+  },
+  {
+    "at": "2026-10-27T06:23:53.635Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:53.651Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:53.772Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:53.773Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:53.811Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:53.822Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:53.874Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:53.885Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.013Z",
+    "case": "FAV-STORAGE-MALFORMED",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.024Z",
+    "case": "FAV-STORAGE-MALFORMED",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.057Z",
+    "case": "FAV-STORAGE-MALFORMED",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.067Z",
+    "case": "FAV-STORAGE-MALFORMED",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.244Z",
+    "case": "FAV-STORAGE-OBJECT",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.258Z",
+    "case": "FAV-STORAGE-OBJECT",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.292Z",
+    "case": "FAV-STORAGE-OBJECT",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.303Z",
+    "case": "FAV-STORAGE-OBJECT",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.457Z",
+    "case": "FAV-STORAGE-NULL",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.468Z",
+    "case": "FAV-STORAGE-NULL",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.497Z",
+    "case": "FAV-STORAGE-NULL",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.508Z",
+    "case": "FAV-STORAGE-NULL",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.652Z",
+    "case": "FAV-STORAGE-STRING",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.669Z",
+    "case": "FAV-STORAGE-STRING",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.701Z",
+    "case": "FAV-STORAGE-STRING",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.714Z",
+    "case": "FAV-STORAGE-STRING",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.883Z",
+    "case": "FAV-STORAGE-NUMBER",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.904Z",
+    "case": "FAV-STORAGE-NUMBER",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:54.937Z",
+    "case": "FAV-STORAGE-NUMBER",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:54.950Z",
+    "case": "FAV-STORAGE-NUMBER",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.144Z",
+    "case": "FAV-MIXED-COMPLETE",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.165Z",
+    "case": "FAV-MIXED-COMPLETE",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.335Z",
+    "case": "FAV-FULL-HELD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.383Z",
+    "case": "FAV-FULL-HELD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games?genre=Action",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.384Z",
+    "case": "FAV-FULL-HELD",
+    "event": "requestfailed",
+    "url": "http://127.0.0.1:54145/api/games",
+    "failure": {
+      "errorText": "net::ERR_ABORTED"
+    }
+  },
+  {
+    "at": "2026-10-27T06:23:55.395Z",
+    "case": "FAV-FULL-HELD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games?genre=Action",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":2,\"filters\":{\"search\":\"\",\"genre\":\"Action\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.426Z",
+    "case": "FAV-FULL-HELD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.439Z",
+    "case": "FAV-FULL-HELD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.475Z",
+    "case": "FAV-FULL-HELD",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games?search=Ember",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.479Z",
+    "case": "FAV-FULL-HELD",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games?search=Ember",
+    "status": 500,
+    "body": "{\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"Unexpected server error\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.679Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.684Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 500,
+    "body": "{\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"Unexpected server error\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.723Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games?genre=Action",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.728Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games?genre=Action",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":2,\"filters\":{\"search\":\"\",\"genre\":\"Action\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.757Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.771Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.799Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games?search=Ember",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.803Z",
+    "case": "FAV-FULL-HTTP500",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games?search=Ember",
+    "status": 500,
+    "body": "{\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"Unexpected server error\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:55.977Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:55.984Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "requestfailed",
+    "url": "http://127.0.0.1:54145/api/games",
+    "failure": {
+      "errorText": "net::ERR_FAILED"
+    }
+  },
+  {
+    "at": "2026-10-27T06:23:56.034Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games?genre=Action",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:56.045Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games?genre=Action",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":2,\"filters\":{\"search\":\"\",\"genre\":\"Action\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:56.093Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:56.104Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games",
+    "status": 200,
+    "body": "{\"games\":[{\"id\":10,\"title\":\"Atlas Tactics\",\"genre\":\"Strategy\",\"description\":\"Guide mapmakers through turn-based island expeditions.\",\"releaseYear\":2020,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":6,\"title\":\"Ember Quest\",\"genre\":\"RPG\",\"description\":\"Build a party to restore the valley lanterns.\",\"releaseYear\":2023,\"platforms\":[\"Windows\"]},{\"id\":5,\"title\":\"Ember Trail\",\"genre\":\"Adventure\",\"description\":\"Walk a lantern trail and uncover woodland stories.\",\"releaseYear\":2021,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":8,\"title\":\"Iron Citadel\",\"genre\":\"Action\",\"description\":\"Protect a clockwork fortress with a magnetic shield.\",\"releaseYear\":2017,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":9,\"title\":\"Moss Garden\",\"genre\":\"Puzzle\",\"description\":\"Arrange stepping stones to grow an imaginary garden.\",\"releaseYear\":2025,\"platforms\":[\"Windows\"]},{\"id\":7,\"title\":\"Neon Sprint\",\"genre\":\"Racing\",\"description\":\"Race glowing circuits above a fictional city.\",\"releaseYear\":2019,\"platforms\":[\"Windows\"]},{\"id\":1,\"title\":\"Orbit\",\"genre\":\"Action\",\"description\":\"Defend a tiny space station from drifting robots.\",\"releaseYear\":2018,\"platforms\":[\"Windows\",\"Linux\"]},{\"id\":2,\"title\":\"ORBIT\",\"genre\":\"RPG\",\"description\":\"Gather a crew and explore a ring of forgotten worlds.\",\"releaseYear\":2020,\"platforms\":[\"Windows\"]},{\"id\":4,\"title\":\"Zeta\",\"genre\":\"Strategy\",\"description\":\"Plan supply routes across a fictional frontier.\",\"releaseYear\":2022,\"platforms\":[\"Windows\"]},{\"id\":3,\"title\":\"Écho\",\"genre\":\"Puzzle\",\"description\":\"Follow sound patterns through a quiet crystal maze.\",\"releaseYear\":2024,\"platforms\":[\"Windows\",\"Linux\"]}],\"total\":10,\"filters\":{\"search\":\"\",\"genre\":\"\"}}"
+  },
+  {
+    "at": "2026-10-27T06:23:56.136Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "request",
+    "method": "GET",
+    "url": "http://127.0.0.1:54145/api/games?search=Ember",
+    "postData": null
+  },
+  {
+    "at": "2026-10-27T06:23:56.139Z",
+    "case": "FAV-FULL-ABORT",
+    "event": "response",
+    "url": "http://127.0.0.1:54145/api/games?search=Ember",
+    "status": 500,
+    "body": "{\"error\":{\"code\":\"INTERNAL_ERROR\",\"message\":\"Unexpected server error\"}}"
+  }
+]

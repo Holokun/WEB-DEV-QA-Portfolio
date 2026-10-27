@@ -1,0 +1,12 @@
+{
+  "capturedAt": "2026-10-27T06:10:41.328Z",
+  "count": {
+    "count": 2
+  },
+  "rowByResponseId": {
+    "id": 2,
+    "game_id": 1,
+    "email": "preservation@example.com",
+    "description": "Synthetic failure preservation exploration 2026-10-27"
+  }
+}

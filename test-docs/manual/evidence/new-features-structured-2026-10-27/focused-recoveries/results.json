@@ -1,0 +1,163 @@
+[
+  {
+    "id": "FEEDBACK-HTTP500-CORRECTED",
+    "scenario": "SCN-FBK-03",
+    "startedAt": "2026-10-27T06:31:52.390Z",
+    "simulation": "HTTP500",
+    "input": {
+      "gameId": 6,
+      "email": "  Preserve.Case@example.COM  ",
+      "description": "  Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z  "
+    },
+    "expected": {
+      "failure": "Visible request error; exact raw fields retained; zero inserted rows",
+      "recovery": "Real POST201 positive safe ID; +1 row; exact trimmed fields by returned ID",
+      "uniqueNonboundaryDescription": true
+    },
+    "actual": {
+      "failure": {
+        "rawRetained": {
+          "gameId": "6",
+          "email": "  Preserve.Case@example.COM  ",
+          "description": "  Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z  "
+        },
+        "countBefore": 0,
+        "countAfter": 0,
+        "rowsBefore": [],
+        "rowsAfter": []
+      },
+      "recovery": {
+        "requestRaw": "{\"gameId\":6,\"email\":\"Preserve.Case@example.COM\",\"description\":\"Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z\"}",
+        "response": {
+          "status": 201,
+          "bodyRaw": "{\"id\":1}"
+        },
+        "returnedId": 1,
+        "countBefore": 0,
+        "countAfter": 1,
+        "rowsBefore": [],
+        "rowsAfter": [
+          {
+            "id": 1,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z"
+          }
+        ],
+        "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+        "sqlParameters": [
+          1
+        ],
+        "selectedRows": [
+          {
+            "id": 1,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z"
+          }
+        ],
+        "confirmation": "Feedback submitted. Thank you!"
+      },
+      "uniqueness": {
+        "distinctInFocusedRun": true,
+        "absentFromOriginalAcceptedDescriptions": true
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:31:52.758Z"
+  },
+  {
+    "id": "FEEDBACK-ABORT-CORRECTED",
+    "scenario": "SCN-FBK-03",
+    "startedAt": "2026-10-27T06:31:52.758Z",
+    "simulation": "ABORT",
+    "input": {
+      "gameId": 6,
+      "email": "  Preserve.Case@example.COM  ",
+      "description": "  Synthetic focused recovery ABORT run 2026-10-27T06:31:52.067Z  "
+    },
+    "expected": {
+      "failure": "Visible request error; exact raw fields retained; zero inserted rows",
+      "recovery": "Real POST201 positive safe ID; +1 row; exact trimmed fields by returned ID",
+      "uniqueNonboundaryDescription": true
+    },
+    "actual": {
+      "failure": {
+        "rawRetained": {
+          "gameId": "6",
+          "email": "  Preserve.Case@example.COM  ",
+          "description": "  Synthetic focused recovery ABORT run 2026-10-27T06:31:52.067Z  "
+        },
+        "countBefore": 1,
+        "countAfter": 1,
+        "rowsBefore": [
+          {
+            "id": 1,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z"
+          }
+        ],
+        "rowsAfter": [
+          {
+            "id": 1,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z"
+          }
+        ]
+      },
+      "recovery": {
+        "requestRaw": "{\"gameId\":6,\"email\":\"Preserve.Case@example.COM\",\"description\":\"Synthetic focused recovery ABORT run 2026-10-27T06:31:52.067Z\"}",
+        "response": {
+          "status": 201,
+          "bodyRaw": "{\"id\":2}"
+        },
+        "returnedId": 2,
+        "countBefore": 1,
+        "countAfter": 2,
+        "rowsBefore": [
+          {
+            "id": 1,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z"
+          }
+        ],
+        "rowsAfter": [
+          {
+            "id": 1,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery HTTP500 run 2026-10-27T06:31:52.067Z"
+          },
+          {
+            "id": 2,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery ABORT run 2026-10-27T06:31:52.067Z"
+          }
+        ],
+        "sqlQuery": "SELECT id,game_id,email,description FROM feedback WHERE id=?",
+        "sqlParameters": [
+          2
+        ],
+        "selectedRows": [
+          {
+            "id": 2,
+            "game_id": 6,
+            "email": "Preserve.Case@example.COM",
+            "description": "Synthetic focused recovery ABORT run 2026-10-27T06:31:52.067Z"
+          }
+        ],
+        "confirmation": "Feedback submitted. Thank you!"
+      },
+      "uniqueness": {
+        "distinctInFocusedRun": true,
+        "absentFromOriginalAcceptedDescriptions": true
+      }
+    },
+    "status": "PASS",
+    "finishedAt": "2026-10-27T06:31:53.041Z"
+  }
+]

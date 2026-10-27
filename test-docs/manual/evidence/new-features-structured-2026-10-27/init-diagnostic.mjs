@@ -1,0 +1,15 @@
+import {chromium} from '@playwright/test';
+import {createServer} from 'node:http';
+import {once} from 'node:events';
+import {writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const events=[],server=createServer((q,s)=>{s.writeHead(200,{'Content-Type':'text/html'});s.end('<!doctype html><title>Isolated harness diagnostic</title>');});
+server.listen(0,'127.0.0.1');await once(server,'listening');const base=`http://127.0.0.1:${server.address().port}`;
+const b=await chromium.launch({headless:true}),c=await b.newContext();
+await c.addInitScript(()=>{if(!sessionStorage.getItem('structured-initialized')){localStorage.setItem('game-companion:favourites','[1]');sessionStorage.setItem('structured-initialized','yes');}});
+c.on('page',p=>p.on('pageerror',e=>events.push({at:new Date().toISOString(),url:p.url(),error:String(e)})));
+const p=await c.newPage();await p.goto(base);const storage=await p.evaluate(()=>({href:location.href,local:localStorage.getItem('game-companion:favourites'),session:sessionStorage.getItem('structured-initialized')}));
+assert.ok(events.length===1&&events[0].url==='about:blank'&&events[0].error.includes('sessionStorage'));assert.deepEqual(storage,{href:base+'/',local:'[1]',session:'yes'});
+await b.close();await new Promise(r=>server.close(r));
+writeFileSync('test-docs/manual/evidence/new-features-structured-2026-10-27/init-diagnostic.json',JSON.stringify({classification:'isolated harness diagnostic; no product changes or app requests',events,storage,conclusion:'The unguarded test storage initialization runs on about:blank where sessionStorage is denied. On the HTTP origin it runs successfully; main run storage assertions independently confirmed the intended values.'},null,2));
+console.log(JSON.stringify({expectedAboutBlankHarnessErrors:events.length,httpStorageInitialization:storage.local}));

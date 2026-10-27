@@ -1,0 +1,104 @@
+[
+  {
+    "at": "2026-10-27T06:23:52.340Z",
+    "case": "FEEDBACK-HTTP500",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  },
+  {
+    "at": "2026-10-27T06:23:52.627Z",
+    "case": "FEEDBACK-ABORT",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+  },
+  {
+    "at": "2026-10-27T06:23:53.595Z",
+    "case": "FAV-ADD-REMOVE-RELOAD",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:53.973Z",
+    "case": "FAV-STORAGE-MALFORMED",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:54.201Z",
+    "case": "FAV-STORAGE-OBJECT",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:54.414Z",
+    "case": "FAV-STORAGE-NULL",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:54.608Z",
+    "case": "FAV-STORAGE-STRING",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:54.832Z",
+    "case": "FAV-STORAGE-NUMBER",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:55.100Z",
+    "case": "FAV-MIXED-COMPLETE",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:55.279Z",
+    "case": "FAV-FULL-HELD",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:55.476Z",
+    "case": "FAV-FULL-HELD",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  },
+  {
+    "at": "2026-10-27T06:23:55.635Z",
+    "case": "FAV-FULL-HTTP500",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:55.683Z",
+    "case": "FAV-FULL-HTTP500",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  },
+  {
+    "at": "2026-10-27T06:23:55.803Z",
+    "case": "FAV-FULL-HTTP500",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  },
+  {
+    "at": "2026-10-27T06:23:55.932Z",
+    "case": "FAV-FULL-ABORT",
+    "type": "pageerror",
+    "text": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+  },
+  {
+    "at": "2026-10-27T06:23:55.984Z",
+    "case": "FAV-FULL-ABORT",
+    "type": "error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+  },
+  {
+    "at": "2026-10-27T06:23:56.138Z",
+    "case": "FAV-FULL-ABORT",
+    "type": "error",
+    "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "capturedAt": "2026-10-27T06:10:05.266Z",
+  "count": {
+    "count": 1
+  },
+  "rowByResponseId": {
+    "id": 1,
+    "game_id": 1,
+    "email": "Agent.Check+unicode@example.com",
+    "description": "🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮🎮"
+  }
+}

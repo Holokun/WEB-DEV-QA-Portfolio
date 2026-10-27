@@ -1,0 +1,144 @@
+{
+  "startedAt": "2026-10-27T06:07:48.818Z",
+  "sourceCommit": "87d97821efc864f962fdab1a6070c89eb4c22f8c",
+  "node": "v24.22.1",
+  "baseURL": "http://127.0.0.1:50519",
+  "DB_PATH": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\portfolio-completion-2026-10-26\\agent-session-2026-10-27.sqlite",
+  "snapshot": "qa-build-87d9782",
+  "snapshotHashes": [
+    {
+      "path": "qa-build-87d9782\\app\\api\\application.js",
+      "sha256": "9d45eb41780f35d16fcf3cd04bfc769df2518f9e3b40c97b6dac09d98acc3a1f"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\api\\feedback.js",
+      "sha256": "ea9cd97315a9e16981f0074cce7f488e901ad45c1644e03bcc74a09b932e9586"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\api\\games.js",
+      "sha256": "9bb9fbf95d4ea47becc494f7387a9e359de8922859a6291b244ec0869affa8a3"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\api\\server.js",
+      "sha256": "880071b058adac12b66028c5d683c2666227ef1c0d99fd1370e561ae8fa6247e"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\db\\database.js",
+      "sha256": "2aa1286bfb4a58b0e6fc102c09fb761403356c19d448785de7cac8df304497ea"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\db\\reset.js",
+      "sha256": "1c5783392735a36e9e5bfe67d101c6c2dfc690cdcf55e1516c51fab21c699adc"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\db\\seed.js",
+      "sha256": "df9225382318dc9b22943e04d881465c7c5a725262851b05c88627f40b080ec7"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\shared\\contracts.js",
+      "sha256": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\shared\\feedback-validation.js",
+      "sha256": "430c04e7022c376b880d5a234ef0b70fc0b3239860dcfdcfcec7be921f5b93ab"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\api-client.js",
+      "sha256": "b78452c3ec37633f2a530db0c14385bff85205f7a62c411bed2bb4c1a7a26b79"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\catalogue.js",
+      "sha256": "6a4193087b9d4d5fa877cef996213a42b9881f1ac2d5d08266dc492920599197"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\detail.js",
+      "sha256": "1a93c22a18de372a117f322f143e4166d5e73f77729a60e45cb6bb34b25b9180"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\favourite-button.js",
+      "sha256": "c5a38dfff71ab98ad37882097c9e672991df10010ce5cd25d431c21cae206778"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\favourites-view.js",
+      "sha256": "881a82a78b6ae15fa4186d5da7df598d93e3c9a670b03912d2ca669e49fbc1c7"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\favourites.js",
+      "sha256": "5d33ac144c6a8275fba7a6f50ec0a254b4811d35eb475055412514f7baab1e23"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\feedback.js",
+      "sha256": "36d0a4f74a398cb1f69d9092cbcad3aad1f4cc77b3a77fb0321cee46744e0da3"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\index.html",
+      "sha256": "528488312405bfdda6ed81a7355a76b97d7dbba9ebfa326ec4c8e37da166fe0d"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\main.js",
+      "sha256": "5a73faf89173dc24824c31ccd6fdbe48c669f8bdc3a02d1916bf30b2f60fbf0f"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\shared\\feedback-validation.js",
+      "sha256": "430c04e7022c376b880d5a234ef0b70fc0b3239860dcfdcfcec7be921f5b93ab"
+    },
+    {
+      "path": "qa-build-87d9782\\app\\ui\\styles.css",
+      "sha256": "fba84ed73aee65f109598a3bc7e4febc06ebe993ac521860b366856e142bfe08"
+    },
+    {
+      "path": "qa-build-87d9782\\playwright.config.js",
+      "sha256": "dbc29b29e1b4ec610d668d0bc68edacdcafa5a5ef33160f50cfbb02e8368bda1"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\api\\database.spec.js",
+      "sha256": "33d8def956fcfa23215a39446d2d125a2dcf9ddf5e4515d0d1963181d834d339"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\api\\feedback.spec.js",
+      "sha256": "74a5f9afa0f9c9bdc6f15b250d0999abc27ad3139ca67aae5d1af8e38d34cbff"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\api\\games.spec.js",
+      "sha256": "cdae3bbad19debc2f2da02467ddcdb15931f1a4991fef22f9799628ece7553b6"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\e2e\\catalogue.spec.js",
+      "sha256": "b6dd98ea154cdb36a7bf56e34da88f51506fc99b32985acbb4e2cd94775ca397"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\e2e\\detail.spec.js",
+      "sha256": "3c0beca17ee54ef5ce598a9b12ab37525332b6d6a40f8e5e3891ca9ba5648c2d"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\e2e\\favourites.spec.js",
+      "sha256": "62bd01ab1437e1900157a428fb8040734413bd751f8973233dc0d1e68e64ccb8"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\e2e\\feedback.spec.js",
+      "sha256": "d5be158a048065a4569e544c5a2641b93e4b68e7e95ca5ad94dea9d243963b97"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\e2e\\layout.spec.js",
+      "sha256": "5e8466aa101e145647e9558ad8102fb1238739e85071b00297e738546f36644d"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\fixtures\\app.js",
+      "sha256": "a18e18d029c6419e4e7a5f0db5be15ed5b2d5b5d95ba521b0a4d1ea3a05e0892"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\fixtures\\expected-data.js",
+      "sha256": "d96e6cb4ae9d267e3e9176902223a3beacf316ea32bdfb6c743874350c28f85c"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\fixtures\\feedback-data.js",
+      "sha256": "743b6d57109a14355e45bc5af60a8532e3dbeea72df87dd593f637d758b6c2c5"
+    },
+    {
+      "path": "qa-build-87d9782\\tests\\fixtures\\suite.js",
+      "sha256": "e4b090f7fba373cef3286d2ba9999cfa740d52c3f24de771813fe8050b8ddf87"
+    }
+  ],
+  "fixtureVersion": 1,
+  "instrumentation": "Request logging and opt-in labelled fault rules wrap the frozen app request handler; no product source is changed."
+}

@@ -1,0 +1,16 @@
+{
+  "classification": "isolated harness diagnostic; no product changes or app requests",
+  "events": [
+    {
+      "at": "2026-10-27T06:26:31.276Z",
+      "url": "about:blank",
+      "error": "SecurityError: Failed to read the 'sessionStorage' property from 'Window': Access is denied for this document."
+    }
+  ],
+  "storage": {
+    "href": "http://127.0.0.1:50281/",
+    "local": "[1]",
+    "session": "yes"
+  },
+  "conclusion": "The unguarded test storage initialization runs on about:blank where sessionStorage is denied. On the HTTP origin it runs successfully; main run storage assertions independently confirmed the intended values."
+}

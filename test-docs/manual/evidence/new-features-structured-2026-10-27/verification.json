@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-10-27T06:26:47.667Z",
+  "total": 120,
+  "passed": 120,
+  "failed": 0,
+  "emailPairs": 27,
+  "descriptionPairs": 7,
+  "acceptedInserts": 19,
+  "uniqueAcceptedIds": 19,
+  "pageErrors": 10,
+  "harnessInitErrors": 10,
+  "consoleEvents": 17,
+  "networkEvents": 82,
+  "source": "94779ebd20c08e763ec0c99cae4aa0dbb4238af7",
+  "sourceProductDiff": "",
+  "groups": {
+    "RECON": 1,
+    "EMAIL": 54,
+    "DESC": 14,
+    "REQUIRED": 7,
+    "REAL": 1,
+    "FEEDBACK": 2,
+    "SCHEMA": 28,
+    "UNKNOWN": 2,
+    "QUERY": 1,
+    "FAV": 10
+  }
+}
