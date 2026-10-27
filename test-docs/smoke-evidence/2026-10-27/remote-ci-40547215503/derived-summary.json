@@ -1,0 +1,86 @@
+{
+  "smoke": {
+    "stats": {
+      "startTime": "2026-10-27T17:08:27.540Z",
+      "duration": 20336.689000000002,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "projects": {
+      "chromium": 5,
+      "firefox": 5,
+      "webkit": 5
+    },
+    "retryAttempts": 0,
+    "smoke": 15,
+    "errors": [],
+    "workers": 1,
+    "retries": [
+      {
+        "name": "api",
+        "retries": 0
+      },
+      {
+        "name": "chromium",
+        "retries": 0
+      },
+      {
+        "name": "firefox",
+        "retries": 0
+      },
+      {
+        "name": "webkit",
+        "retries": 0
+      },
+      {
+        "name": "chromium-phone",
+        "retries": 0
+      }
+    ]
+  },
+  "full": {
+    "stats": {
+      "startTime": "2026-10-27T17:06:03.940Z",
+      "duration": 211573.704,
+      "expected": 583,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "projects": {
+      "api": 156,
+      "chromium": 140,
+      "firefox": 140,
+      "webkit": 140,
+      "chromium-phone": 7
+    },
+    "retryAttempts": 0,
+    "smoke": 15,
+    "errors": [],
+    "workers": 1,
+    "retries": [
+      {
+        "name": "api",
+        "retries": 0
+      },
+      {
+        "name": "chromium",
+        "retries": 0
+      },
+      {
+        "name": "firefox",
+        "retries": 0
+      },
+      {
+        "name": "webkit",
+        "retries": 0
+      },
+      {
+        "name": "chromium-phone",
+        "retries": 0
+      }
+    ]
+  }
+}

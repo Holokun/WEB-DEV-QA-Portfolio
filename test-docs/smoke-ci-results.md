@@ -1,5 +1,7 @@
 # Five-path smoke and CI configuration — 2026-10-27
 
+Later execution update: after publication, [hosted CI](github-actions-results.md) passed smoke15/15 and full583/583 at `09fb1e0`, without failures/skips/retries. The preparation and initial local failure below remain historical; no earlier screenshot root cause or fix is inferred from the later pass.
+
 Status: **implementation prepared for independent review; first local smoke run has a retained failure. GitHub Actions has not been published or executed.** The complete smoke invocation passed 14 of 15 tests. A separate unchanged Chromium catalogue check passed 1 of 1. These are separate results; they do not establish a passing 15-test invocation or close the portfolio release gate.
 
 ## Delivered scope

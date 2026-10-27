@@ -1,0 +1,857 @@
+{
+  "config": {
+    "argv": [
+      "/opt/hostedtoolcache/node/24.22.1/x64/bin/node",
+      "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/node_modules/@playwright/test/cli.js",
+      "test",
+      "--grep",
+      "@smoke",
+      "--project=chromium",
+      "--project=firefox",
+      "--project=webkit",
+      "--workers=1",
+      "--retries=0",
+      "--forbid-only",
+      "--reporter=list,html,json",
+      "--output=test-results/smoke/artifacts"
+    ],
+    "configFile": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/playwright.config.ts",
+    "rootDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": true,
+    "fullyParallel": false,
+    "globalSetup": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests/fixtures/suite.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/commit/09fb1e0b02ab6af909837408b89a476597b25fd3",
+        "commitHash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+        "buildHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/actions/runs/40547215503"
+      },
+      "gitCommit": {
+        "shortHash": "09fb1e0",
+        "hash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+        "subject": "docs: record final independent review and readiness gates",
+        "body": "docs: record final independent review and readiness gates\n",
+        "author": {
+          "name": "Vadim Lebedev",
+          "email": "lebedgod@gmail.com",
+          "time": 1793119472000
+        },
+        "committer": {
+          "name": "Vadim Lebedev",
+          "email": "lebedgod@gmail.com",
+          "time": 1793119472000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/test-results/smoke/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/commit/09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "commitHash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "buildHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/actions/runs/40547215503"
+          },
+          "gitCommit": {
+            "shortHash": "09fb1e0",
+            "hash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "subject": "docs: record final independent review and readiness gates",
+            "body": "docs: record final independent review and readiness gates\n",
+            "author": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "committer": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "api/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/test-results/smoke/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/commit/09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "commitHash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "buildHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/actions/runs/40547215503"
+          },
+          "gitCommit": {
+            "shortHash": "09fb1e0",
+            "hash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "subject": "docs: record final independent review and readiness gates",
+            "body": "docs: record final independent review and readiness gates\n",
+            "author": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "committer": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/test-results/smoke/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/commit/09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "commitHash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "buildHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/actions/runs/40547215503"
+          },
+          "gitCommit": {
+            "shortHash": "09fb1e0",
+            "hash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "subject": "docs: record final independent review and readiness gates",
+            "body": "docs: record final independent review and readiness gates\n",
+            "author": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "committer": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/test-results/smoke/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/commit/09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "commitHash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "buildHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/actions/runs/40547215503"
+          },
+          "gitCommit": {
+            "shortHash": "09fb1e0",
+            "hash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "subject": "docs: record final independent review and readiness gates",
+            "body": "docs: record final independent review and readiness gates\n",
+            "author": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "committer": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/test-results/smoke/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/commit/09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "commitHash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "buildHref": "https://github.com/Holokun/WEB-DEV-QA-Portfolio/actions/runs/40547215503"
+          },
+          "gitCommit": {
+            "shortHash": "09fb1e0",
+            "hash": "09fb1e0b02ab6af909837408b89a476597b25fd3",
+            "subject": "docs: record final independent review and readiness gates",
+            "body": "docs: record final independent review and readiness gates\n",
+            "author": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "committer": {
+              "name": "Vadim Lebedev",
+              "email": "lebedgod@gmail.com",
+              "time": 1793119472000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 1
+        },
+        "id": "chromium-phone",
+        "name": "chromium-phone",
+        "testDir": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/layout.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "html"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e/catalogue.spec.ts",
+      "file": "e2e/catalogue.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:28.480Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c15ccb58390e006a442-cfd4dfb004305b262b4e",
+          "file": "e2e/catalogue.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 361,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:30.456Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c15ccb58390e006a442-acdb9e35a20558638384",
+          "file": "e2e/catalogue.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1729,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:33.045Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c15ccb58390e006a442-cbb225f0d4df7cc169b4",
+          "file": "e2e/catalogue.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 602,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:35.354Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c15ccb58390e006a442-98b095c3078b55239710",
+          "file": "e2e/catalogue.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:39.448Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c15ccb58390e006a442-590978e4d68ae33caed1",
+          "file": "e2e/catalogue.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 561,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:44.776Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c15ccb58390e006a442-137f8e7cc33aafcfbe0b",
+          "file": "e2e/catalogue.spec.ts",
+          "line": 22,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e/detail.spec.ts",
+      "file": "e2e/detail.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:30.845Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e1c908847aaff9063c61-5c2570b982d1e89982ce",
+          "file": "e2e/detail.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 695,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:35.986Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e1c908847aaff9063c61-f6a280a7d6f3a8aa118c",
+          "file": "e2e/detail.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 765,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:45.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e1c908847aaff9063c61-05cfd367643aae61ad6f",
+          "file": "e2e/detail.spec.ts",
+          "line": 57,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e/favourites.spec.ts",
+      "file": "e2e/favourites.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:31.325Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "430a69e523e2ea3b84f7-6f32aa41f2de370622ef",
+          "file": "e2e/favourites.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1209,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:36.706Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "430a69e523e2ea3b84f7-a4c07e41a800f21eca1b",
+          "file": "e2e/favourites.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1008,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:46.146Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "430a69e523e2ea3b84f7-cfbd4957b1ee611aff44",
+          "file": "e2e/favourites.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e/feedback.spec.ts",
+      "file": "e2e/feedback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 420,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:32.133Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175c114781d6ac36faef-4f530119bb4aa294686e",
+          "file": "e2e/feedback.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:37.957Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175c114781d6ac36faef-950c24bd5c81321721dd",
+          "file": "e2e/feedback.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+          "ok": true,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 605,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:08:47.197Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175c114781d6ac36faef-97dd74c5dcef23a5457f",
+          "file": "e2e/feedback.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T17:08:27.540Z",
+    "duration": 20336.689000000002,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
