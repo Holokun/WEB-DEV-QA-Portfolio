@@ -3,8 +3,9 @@ import type { FavouritesStore } from './favourites.js';
 
 export function updateFavouriteButton(button: HTMLButtonElement, game: Game, store: FavouritesStore): void {
   const saved = store.has(game.id);
-  button.textContent = saved ? 'Remove favourite' : 'Add to favourites';
-  button.setAttribute('aria-label', `${saved ? 'Remove' : 'Add'} ${game.title} ${saved ? 'from' : 'to'} favourites`);
+  const name = `${saved ? 'Remove' : 'Add'} ${game.title} ${saved ? 'from' : 'to'} favourites`;
+  button.textContent = name;
+  button.setAttribute('aria-label', name);
   button.setAttribute('aria-pressed', String(saved));
 }
 

@@ -1,0 +1,9 @@
+# BUG-A11Y-02 — Favourite button visible wording differs from accessible name
+
+Status: fixed in the uncommitted Task 1 draft. Severity: medium; axe impact: serious. Requirement: REQ-A11Y-01. Discovered by agent-run Chromium axe on 2026-10-26, not a human execution claim.
+
+Reproduce on base `87d97821efc864f962fdab1a6070c89eb4c22f8c`: load the catalogue and inspect Orbit's button. Actual visible text is `Add to favourites`, accessible name is `Add Orbit to favourites`. In the saved state the visible text is `Remove favourite`, with accessible name `Remove Orbit from favourites`. Axe reports `label-content-name-mismatch`; catalogue red evidence contains ten affected buttons, detail and saved-list evidence one each. Expected: visible wording appears in the accessible name so a speech-input user can identify the displayed control consistently.
+
+Fix: generate visible text and aria-label from the same existing game-specific string, preserving exact accessible names and aria-pressed states. Examples remain `Add Orbit to favourites` and `Remove Orbit from favourites`. Green axe JSON contains the corrected rendered button HTML and passing name rule. Existing TEST-UI-07/08 now also asserts exact visible text before and after addition; the primary persistence path passed in all three desktop engines. Saved removal/focus, long titles, and detail keyboard navigation passed in desktop and Chromium 375x812 scope (15 focused executions total).
+
+Evidence: [red scan summary](../test-docs/accessibility-evidence/2026-10-26/red/scan-summary.json), [full green scans](../test-docs/accessibility-evidence/2026-10-26/green/playwright.json), [focused native results](../test-docs/accessibility-evidence/2026-10-26/affected/playwright.json). These DOM and keyboard checks do not record actual screen-reader announcements.

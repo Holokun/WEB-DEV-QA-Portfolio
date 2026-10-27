@@ -1,0 +1,80 @@
+{
+  "recordedAt": "2026-10-27T06:09:19.631Z",
+  "baseRevision": "87d97821efc864f962fdab1a6070c89eb4c22f8c",
+  "note": "Retrospective source hashes recorded after resuming Task 1, not captured at original axe invocation. Green JSON independently contains corrected rendered button HTML and footer colour/contrast. Sources were uncommitted. Focused affected run executed current rebuilt source. No original per-run DB path ledger was captured; suite uses unique marked owned DB and port 0.",
+  "runtime": {
+    "node": "v24.22.1",
+    "pnpm": "11.25.0",
+    "declaredPackageManager": "pnpm@11.19.0",
+    "playwright": "1.63.0",
+    "axe": "4.14.0",
+    "os": "win32"
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "sha256": "4a48bd3204cef7df7e70e0b2739f00f0d89297acd2e12c5bb0d2dcfa7fc6b81a",
+      "mtimeUtc": "2026-10-26T15:26:11.363Z"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "2a096864833dc8a8497b01f148f722bccb0ea5be8810cce48c0a2bd8215c0d76",
+      "mtimeUtc": "2026-10-26T15:26:11.347Z"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "97f0003f4688f3b97531407ada1f9b08870360d6988a676f743c3e99d113a9d3",
+      "mtimeUtc": "2026-10-26T15:27:21.957Z"
+    },
+    {
+      "path": "app/ui/favourite-button.ts",
+      "sha256": "5bd137fa1f66f186f86eae1c916dfc86a0c0f3ebe99b9a135e4fcdc6ad8fec57",
+      "mtimeUtc": "2026-10-26T15:31:04.938Z"
+    },
+    {
+      "path": "app/ui/styles.css",
+      "sha256": "c5abb791a0b3979f1c431a7dab0022c36768c6a0f3622a483df9bbb6e3438e27",
+      "mtimeUtc": "2026-10-26T15:31:04.938Z"
+    },
+    {
+      "path": "tests/accessibility/axe.spec.ts",
+      "sha256": "f991deed9432ec2e0c8af3bd04dfb18325b70bc57cdd6694c8db73441f215a34",
+      "mtimeUtc": "2026-10-26T15:31:04.935Z"
+    },
+    {
+      "path": "tests/accessibility/check.ts",
+      "sha256": "631e845ce7e6e08deef7aeb36e5fe4f9c2b0bea56ae35780186f9f0d8453b62c",
+      "mtimeUtc": "2026-10-26T15:27:21.960Z"
+    },
+    {
+      "path": "tests/e2e/favourites.spec.ts",
+      "sha256": "5e11a0dc705f71b41f1074118d25f0921c612392466889f392d00c2c2f645d8f",
+      "mtimeUtc": "2026-10-27T06:07:28.208Z"
+    },
+    {
+      "path": "tests/e2e/layout.spec.ts",
+      "sha256": "ce8b16320ff0a7908a306e857e8c9ed30c5032d4fd06da167e1af8c8a8a3c7c8",
+      "mtimeUtc": "2026-10-13T05:21:00.790Z"
+    },
+    {
+      "path": "tests/fixtures/app.ts",
+      "sha256": "8f0f1a158d46904efd0b2999bbc60e08791bfe2a2fb4e403069b2f93abc5caf0",
+      "mtimeUtc": "2026-10-05T11:38:45.668Z"
+    },
+    {
+      "path": "tests/fixtures/suite.ts",
+      "sha256": "ff50efa507e0fe789556180ed6a6dcfb2d22e57ca8716af555238ad82e123c2c",
+      "mtimeUtc": "2026-10-05T10:43:45.170Z"
+    },
+    {
+      "path": "dist/app/ui/favourite-button.js",
+      "sha256": "1968dcac320acc24862d3c81da16959d154bc9eb778a817a84c8d865a5d3d40e",
+      "mtimeUtc": "2026-10-27T06:07:44.099Z"
+    },
+    {
+      "path": "dist/app/ui/styles.css",
+      "sha256": "c5abb791a0b3979f1c431a7dab0022c36768c6a0f3622a483df9bbb6e3438e27",
+      "mtimeUtc": "2026-10-26T15:31:04.938Z"
+    }
+  ]
+}

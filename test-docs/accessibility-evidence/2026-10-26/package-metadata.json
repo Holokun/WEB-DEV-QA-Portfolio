@@ -1,0 +1,35 @@
+{
+  "version": "4.14.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "axe-core": "~4.14.0"
+  },
+  "peerDependencies": {
+    "playwright-core": ">= 1.0.0"
+  },
+  "dist": {
+    "shasum": "a137c84ad18cf1ec17b5458f300a6e370444fbe5",
+    "tarball": "https://registry.npmjs.org/@axe-core/playwright/-/playwright-4.14.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-SGUhG5PIHd2eMdpgBF2PyQLOhX+qyDR2PT4cmoS4Qk2ak+jX/rrSvst9l0PGv5WTHolKpUMvVmoHpr4cZgf1RQ==",
+    "signatures": [
+      {
+        "sig": "MEUCIA6w+BJnQjek8kis9DAxpI+nTiVzNlrife7JtR9OoyPvAiEAvzyqSs0pKu91sVkthRxFunInJn+1qqRsmHzLyD3Dr9w=",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      },
+      {
+        "sig": "MEYCIQDoAKPY1ukjPDtn9DVn8SdcXqBbZaNsr6e6UyYWa2pLJwIhAJOA1Ry10YrrfFUf52esVfoPJggo7bGYHY3NJZF9j+tN",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "attestations": {
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/@axe-core%2fplaywright@4.14.0",
+      "provenance": {
+        "predicateType": "https://slsa.dev/provenance/v1"
+      }
+    },
+    "unpackedSize": 47795
+  }
+}

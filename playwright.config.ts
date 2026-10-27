@@ -19,7 +19,7 @@ export default defineConfig({
   projects: [
     { name: 'api', testMatch: 'api/**/*.spec.ts' },
     ...(['chromium', 'firefox', 'webkit'] as const).map(browserName => ({
-      name: browserName, testMatch: 'e2e/**/*.spec.ts', use: {
+      name: browserName, testMatch: ['e2e/**/*.spec.ts', 'accessibility/**/*.spec.ts'], use: {
         browserName, viewport: { width: 1280, height: 800 },
         launchOptions: browserName === 'firefox' && windowsFirefoxExecutable
           ? { executablePath: windowsFirefoxExecutable } : undefined,

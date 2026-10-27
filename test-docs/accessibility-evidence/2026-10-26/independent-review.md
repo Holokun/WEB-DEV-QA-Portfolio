@@ -1,0 +1,27 @@
+# Task 1 independent specification and quality review
+
+Reviewed 2026-10-27. Scope: base `87d97821efc864f962fdab1a6070c89eb4c22f8c` plus the uncommitted Task 1 delta supplied in `task-1-review-package.txt`, the binding task brief, implementer handoff, and preserved evidence under `test-docs/accessibility-evidence/2026-10-26/`. Applied `guard-approved-plan`. This review made no implementation changes, commits, app launches, or suite reruns; this report is its only write.
+
+**Specification verdict: PASS for the Task 1 implementation and focused evidence. Quality verdict: PASS. No actionable new review findings or blocking defects found.** Controller-owned scoped commit and the later AT, CI, and full-project gates remain pending; this is not a portfolio completion verdict.
+
+## Evidence checked independently
+
+- Decoded the native green report's base64 axe attachments, rather than relying on its derived summary: 24 passed executions, zero skipped/unexpected/flaky, 63 complete result objects. Each desktop engine has 19 app analyses and two sentinel analyses. The 57 app analyses contain no critical/serious or minor findings and no incomplete results. Exactly three moderate occurrences remain: `page-has-heading-one` on `axe-detail-error`, once per engine.
+- Decoded original red attachments: six app failures and one passing sentinel assertion. Red app evidence contains the footer contrast defect and catalogue/detail/saved-button name mismatch, supporting both genuine defect records. Green catalogue attachment contains the corrected rendered button text/aria-label and footer color `#56665e`, measured at 5.59:1 against `#f4f6f4`.
+- Critical and serious standalone sentinel native reports each contain one unexpected failure and a full axe attachment. Their retained starts are 2026-10-26T15:28:30.493Z and 15:30:43.763Z, preceding the recorded 15:31:04.938Z remediation source timestamps. The permanent expected-rejection tests distinguish both actual impacts and do not misclassify the planted defects as app bugs. The original native-input sentinel's historical misleading title is explicitly disclosed.
+- The native affected report contains 15 passed executions, no retries/skips/failures, covering favourite persistence in three desktop engines and the three affected layout/keyboard checks in those engines plus Chromium phone. Its retained build log contains the successful compilation/assets command; no new verification run was needed.
+- Recomputed all 42 evidence inventory hashes and all 13 source/build manifest hashes: no mismatches or missing inventory files. The manifest and report explicitly disclose retrospective source hashing and the missing original DB-path ledger; neither is represented as contemporaneous proof. Rendered green attachment HTML independently corroborates the two UI fixes.
+
+## Specification and assertion assessment
+
+- The adapter is exactly pinned at 4.14.0 in package and lock. Recorded registry metadata agrees with the lock integrity and requires Node >=22.12.0 / playwright-core >=1.0.0, consistent with the recorded Node 24.22.1 and Playwright 1.63.0 environment. No additional dependency or launch/architecture change appears in the delta.
+- Desktop `testMatch` adds accessibility alongside the existing e2e pattern; the native config retains API once and phone layout selection unchanged. No existing test-match coverage is removed.
+- The helper analyzes the default full rule set, attaches results before asserting, and fails on critical/serious violations. There are no explicit disabled rules, tag filters, or excluded elements in the implementation; attachment tool options and full result categories agree.
+- Each app scan has observable state preconditions. Loaded catalogue/detail checks require real seeded content; loading/pending checks hold real requests; controlled error views require the real app's error UI and recovery requires real content. A blank page or an accidental generic error cannot satisfy these paths.
+- Feedback validates three invalid fields and descriptions, no POST/no SQL change for invalid submission, unchanged SQL on aborted submission, pending `aria-busy`/status, actual returned HTTP 201, positive safe id, +1 row, and exact trimmed SQL fields for that id. Success is not manufactured by a fulfilled 201 route.
+- Footer and favourite-label changes are narrow and match the observed defects. Preserving the existing accessible names limits locator/keyboard behavior changes; the added visible-text assertions and retained affected verification address the longer labels.
+- Lower-severity disposition is explicit and compatible with the agreed gate. `BUG-A11Y-03-detail-error-heading.md:3` remains open as a low/moderate best-practice finding, with no rule suppression or claim of WCAG certification. It is a known tracked issue, not a newly introduced review finding or an approval to alter acceptance criteria.
+
+## Limits
+
+This review verifies the supplied implementation and retained evidence, not a new execution. The original source hashes and exact original owned DB path cannot be reconstructed as contemporaneous evidence; the reports say so candidly. The unchanged fixture source was read only to verify the report's named ownership/port-isolation claim: fresh marked absolute DB, port 0, suite-owned app, and serial execution are consistent with the native reports. Native screen-reader speech, Linux CI, and whole-project matrix readiness are outside this Task 1 review and remain separate required gates.

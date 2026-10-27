@@ -34,7 +34,7 @@ button { cursor: pointer; background: #174e3b; color: white; font-weight: 650; }
 .request-error { padding: 16px; background: #fff1ed; border: 1px solid #cd8b74; border-radius: 8px; margin-bottom: 18px; }
 .request-error p { margin: 0 0 12px; }
 .result-summary { font-size: .85rem; color: #50695c; overflow-wrap: anywhere; }
-footer { color: #66766d; font-size: .8rem; padding-top: 40px; }
+footer { color: #56665e; font-size: .8rem; padding-top: 40px; }
 .detail { max-width: 780px; overflow-wrap: anywhere; }
 .back-link, .notes-link { display: inline-block; color: #174e3b; min-height: 44px; padding: 12px 0; font-weight: 650; text-underline-offset: 4px; }
 .detail .eyebrow { margin-top: 25px; }

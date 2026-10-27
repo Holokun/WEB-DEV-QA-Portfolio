@@ -17,7 +17,9 @@ test('TEST-UI-07/08: cards, detail and saved list share immediate state and relo
   await page.goto('/');
   await expect(page.getByRole('list', { name: 'Games' }).getByRole('link')).toHaveCount(10);
   expect(catalogueRequests).toBe(1);
+  await expect(page.getByRole('button', { name: 'Add Orbit to favourites', exact: true })).toHaveText('Add Orbit to favourites');
   await page.getByRole('button', { name: 'Add Orbit to favourites', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Remove Orbit from favourites', exact: true })).toHaveText('Remove Orbit from favourites');
   await expect(page.getByRole('button', { name: 'Remove Orbit from favourites', exact: true })).toHaveAttribute('aria-pressed', 'true');
   await expect(nav(page)).toHaveText('Favourites (1)');
   await page.getByRole('link', { name: 'Orbit', exact: true }).click();

@@ -1,0 +1,95 @@
+
+Running 1 test using 1 worker
+
+(node:32104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 test-results\sdd\portfolio-completion-2026-10-26\sentinel\sentinel.spec.ts:3:1 › RED controlled missing-label serious sentinel - test instrumentation only (503ms)
+
+
+  1) test-results\sdd\portfolio-completion-2026-10-26\sentinel\sentinel.spec.ts:3:1 › RED controlled missing-label serious sentinel - test instrumentation only 
+
+    Error: sentinel-missing-label: critical/serious axe findings: aria-input-field-name
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 61
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure every ARIA input field has an accessible name",
+    +     "help": "ARIA input fields must have an accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-input-field-name?application=playwright",
+    +     "id": "aria-input-field-name",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-label",
+    +             "impact": "serious",
+    +             "message": "aria-label attribute does not exist or is empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": null,
+    +             "id": "aria-labelledby",
+    +             "impact": "serious",
+    +             "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty",
+    +             "relatedNodes": Array [],
+    +           },
+    +           Object {
+    +             "data": Object {
+    +               "messageKey": "noAttr",
+    +             },
+    +             "id": "non-empty-title",
+    +             "impact": "serious",
+    +             "message": "Element has no title attribute",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   aria-label attribute does not exist or is empty
+    +   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+    +   Element has no title attribute",
+    +         "html": "<div role=\"textbox\" tabindex=\"0\" contenteditable=\"true\"></div>",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "div",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.aria",
+    +       "wcag2a",
+    +       "wcag412",
+    +       "TTv5",
+    +       "TT5.c",
+    +       "EN-301-549",
+    +       "EN-9.4.1.2",
+    +       "ACT",
+    +       "RGAAv4",
+    +       "RGAA-11.1.1",
+    +     ],
+    +   },
+    + ]
+
+       at ..\..\..\..\tests\accessibility\check.ts:10
+
+       8 |   await info.attach(`axe-${state}`, { body: JSON.stringify(results, null, 2), contentType: 'application/json' });
+       9 |   const blocking = results.violations.filter(item => item.impact === 'critical' || item.impact === 'serious');
+    > 10 |   expect(blocking, `${state}: critical/serious axe findings: ${blocking.map(item => item.id).join(', ')}`).toEqual([]);
+         |                                                                                                            ^
+      11 | }
+      12 |
+        at checkAccessibility (D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\accessibility\check.ts:10:108)
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\test-results\sdd\portfolio-completion-2026-10-26\sentinel\sentinel.spec.ts:6:3
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\sentinel-artifacts\sentinel-RED-controlled-mi-8fd9f---test-instrumentation-only\error-context.md
+
+  1 failed
+    test-results\sdd\portfolio-completion-2026-10-26\sentinel\sentinel.spec.ts:3:1 › RED controlled missing-label serious sentinel - test instrumentation only 

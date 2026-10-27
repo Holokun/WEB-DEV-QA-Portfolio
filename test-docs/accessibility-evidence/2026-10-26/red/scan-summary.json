@@ -1,0 +1,334 @@
+[
+  {
+    "project": "chromium",
+    "state": "axe-sentinel-missing-label",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "label",
+        "impact": "critical",
+        "nodes": [
+          {
+            "html": "<input type=\"text\">",
+            "target": [
+              "input"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "project": "chromium",
+    "state": "axe-catalogue-loaded",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>",
+            "target": [
+              "footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #66766d, background color: #f4f6f4, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Atlas Tactics to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "li:nth-child(1) > .favourite-button"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Ember Quest to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Ember Quest to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Ember Trail to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Ember Trail to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Iron Citadel to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Iron Citadel to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Moss Garden to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Moss Garden to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Neon Sprint to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Neon Sprint to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Orbit to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Orbit to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add ORBIT to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add ORBIT to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Zeta to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Zeta to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          },
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Écho to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              "button[aria-label=\"Add Écho to favourites\"]"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "project": "chromium",
+    "state": "axe-catalogue-loading",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>",
+            "target": [
+              "footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #66766d, background color: #f4f6f4, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "project": "chromium",
+    "state": "axe-detail-loaded",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>",
+            "target": [
+              "footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #66766d, background color: #f4f6f4, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Add Orbit to favourites\" aria-pressed=\"false\">Add to favourites</button>",
+            "target": [
+              ".favourite-button"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "project": "chromium",
+    "state": "axe-detail-error",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>",
+            "target": [
+              "footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #66766d, background color: #f4f6f4, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "page-has-heading-one",
+        "impact": "moderate",
+        "nodes": [
+          {
+            "html": "<html lang=\"en\">",
+            "target": [
+              "html"
+            ],
+            "summary": "Fix all of the following:\n  Page must have a level-one heading"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "project": "chromium",
+    "state": "axe-feedback-ready",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>",
+            "target": [
+              "footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #66766d, background color: #f4f6f4, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  {
+    "project": "chromium",
+    "state": "axe-favourites-saved",
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "environment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "windowWidth": 1280,
+      "windowHeight": 800,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<footer>Ten fictional worlds. A local catalogue for exploring and testing.</footer>",
+            "target": [
+              "footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #66766d, background color: #f4f6f4, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": "serious",
+        "nodes": [
+          {
+            "html": "<button type=\"button\" class=\"favourite-button\" aria-label=\"Remove Orbit from favourites\" aria-pressed=\"true\">Remove favourite</button>",
+            "target": [
+              ".favourite-button"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+          }
+        ]
+      }
+    ],
+    "incomplete": []
+  }
+]
