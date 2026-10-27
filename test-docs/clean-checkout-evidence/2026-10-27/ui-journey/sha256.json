@@ -1,0 +1,49 @@
+{
+  "capturedAt": "2026-10-27T12:04:31.790Z",
+  "files": [
+    {
+      "path": "console.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "favourites-after-reload.png",
+      "sha256": "e0d795594e2f6b520f7a5854538382b21fd1a758016a0b12daf54677d88d890d"
+    },
+    {
+      "path": "favourites-after-reload.txt",
+      "sha256": "e6cc9bb4cc45f46ea519c6e705f449918aacbd579aaacabf96faeaae5ac0ed19"
+    },
+    {
+      "path": "feedback-success.png",
+      "sha256": "af055da717409493bc38f8eeeb82bd97f9b6725b63e31f728cd5a1803eecdd91"
+    },
+    {
+      "path": "feedback-success.txt",
+      "sha256": "82bcc7e6ebacf722c9d306aec970c38dac4ac032139dafc21e89a1d6fad67908"
+    },
+    {
+      "path": "http-sql-proof.json",
+      "sha256": "3d15fb19e3915fe66d9f4f74a5ede75a53e918b3fa3a6c7a449cb90ebf34d44a"
+    },
+    {
+      "path": "http.jsonl",
+      "sha256": "3ea15309018faff880674522b99f704b55830d58e463d2cd286401d2be5ed083"
+    },
+    {
+      "path": "journal-proxy.mjs",
+      "sha256": "eb7af51c2c5ad86c7edf5e5c4e58350eda2aebf456ebdf15e1f71a64fc3a73d7"
+    },
+    {
+      "path": "observations.md",
+      "sha256": "e726d72a8b70f1e0768410e0501cb23feb0d882e8cff79cc39923ce0af87af21"
+    },
+    {
+      "path": "required-errors.txt",
+      "sha256": "825759d105d365f877e78f4014ed7a3e2fc1988f02ebfd275a5ba028e8c4fe23"
+    },
+    {
+      "path": "sql-before-feedback.json",
+      "sha256": "0d3e8a36d3a13fe751197f53a2e4d50ef8a50e76f2bbf2f67dce9379c09c06ea"
+    }
+  ]
+}

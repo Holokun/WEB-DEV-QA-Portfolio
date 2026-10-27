@@ -1,0 +1,587 @@
+$ pnpm build && playwright test "--list" "--reporter=json"
+$ tsc && node scripts/copy-assets.mjs
+Listing tests:
+  [api] › api\database.spec.ts:19:1 › Suite ownership: databases and owner markers stay outside artifact cleanup
+  [api] › api\database.spec.ts:33:1 › TEST-DATA-01 current slice: new path seeds every literal game/note field once
+  [api] › api\database.spec.ts:40:1 › TEST-DATA-01 current slice: restart preserves changed, added, and deleted records
+  [api] › api\database.spec.ts:59:1 › TEST-DATA-01 current slice: explicit reset restores every seed field and is idempotent
+  [api] › api\database.spec.ts:75:1 › TEST-DATA-01 current slice: reset refuses relative and ordinary development paths
+  [api] › api\database.spec.ts:83:1 › REQ-API-06: static allowlist does not disclose database, repository, or parent files
+  [api] › api\database.spec.ts:113:1 › Application import creates a stopped server; close leaves no conflicting SQLite lock
+  [api] › api\database.spec.ts:140:1 › REQ-DATA-01: new database has no feedback and enforces the feedback game reference
+  [api] › api\database.spec.ts:153:1 › REQ-DATA-01: old games/notes-only database adds feedback without restoring records
+  [api] › api\database.spec.ts:168:1 › REQ-DATA-01: restart preserves feedback rows and a counter beyond the highest surviving row
+  [api] › api\database.spec.ts:192:1 › REQ-DATA-01: reset clears feedback and its counter, restores seed, and repeats identically
+  [api] › api\database.spec.ts:207:1 › REQ-DATA-01: reset failure immediately before commit rolls back rows and the counter
+  [api] › api\database.spec.ts:225:1 › REQ-DATA-01: ownership rejection occurs before reset callback or database mutation
+  [api] › api\feedback.spec.ts:43:1 › TEST-API-03: trims a valid synthetic submission and inserts exactly one row selected by response ID
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-01 accepts literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-02 accepts literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-03 accepts literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-04 accepts literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-05 accepts literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-06 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-07 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-08 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-09 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-10 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-11 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-12 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-13 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-14 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-15 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-16 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-17 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-18 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-19 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-20 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-21 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-22 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-23 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-24 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-25 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-26 rejects literal email
+  [api] › api\feedback.spec.ts:46:38 › TEST-API-02: EMAIL-27 rejects literal email
+  [api] › api\feedback.spec.ts:56:47 › TEST-API-02: fixed description ASCII-19
+  [api] › api\feedback.spec.ts:56:47 › TEST-API-02: fixed description ASCII-20-TRIM
+  [api] › api\feedback.spec.ts:56:47 › TEST-API-02: fixed description EMOJI-19
+  [api] › api\feedback.spec.ts:56:47 › TEST-API-02: fixed description EMOJI-20-TRIM
+  [api] › api\feedback.spec.ts:56:47 › TEST-API-02: fixed description EMPTY
+  [api] › api\feedback.spec.ts:66:1 › TEST-API-02: internal description whitespace and SQL punctuation are stored as data without a maximum
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects null before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects array before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects string before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects number before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects boolean before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects empty object before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects missing game before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects missing email before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects missing description before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects extra field before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId "1" before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId null before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId true before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId [] before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId {} before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId 0 before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId -1 before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId 1.5 before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects gameId 9007199254740992 before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects email null before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects description null before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects email true before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects description true before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects email 1 before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects description 1 before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects email [] before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects description [] before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects email {} before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects description {} before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects empty email before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects unknown game and invalid email before game lookup without insertion
+  [api] › api\feedback.spec.ts:83:43 › REQ-API-07: rejects unknown game and invalid description before game lookup without insertion
+  [api] › api\feedback.spec.ts:87:47 › REQ-API-07: rejects malformed JSON ""
+  [api] › api\feedback.spec.ts:87:47 › REQ-API-07: rejects malformed JSON "{"
+  [api] › api\feedback.spec.ts:87:47 › REQ-API-07: rejects malformed JSON "{\"gameId\":1,"
+  [api] › api\feedback.spec.ts:91:61 › REQ-API-05: feedback query search= precedes malformed body and game lookup
+  [api] › api\feedback.spec.ts:91:61 › REQ-API-05: feedback query x=&x= precedes malformed body and game lookup
+  [api] › api\feedback.spec.ts:91:61 › REQ-API-05: feedback query =x precedes malformed body and game lookup
+  [api] › api\feedback.spec.ts:91:61 › REQ-API-05: feedback query GameId=1 precedes malformed body and game lookup
+  [api] › api\feedback.spec.ts:96:47 › REQ-API-07: valid absent game 999 is NOT_FOUND
+  [api] › api\feedback.spec.ts:96:47 › REQ-API-07: valid absent game 9007199254740991 is NOT_FOUND
+  [api] › api\feedback.spec.ts:100:1 › REQ-API-05: bare feedback question mark accepts no supplied keys
+  [api] › api\feedback.spec.ts:103:1 › REQ-API-06: real failed feedback insertion is generic and validation still runs first
+  [api] › api\feedback.spec.ts:122:1 › REQ-FBK-02: served pure validator matches all email examples and reports every invalid field
+  [api] › api\feedback.spec.ts:139:1 › REQ-API-06: an interrupted HTTP body inserts nothing and leaves the app responsive
+  [api] › api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740990 preserves the safe response ID contract
+  [api] › api\feedback.spec.ts:181:3 › REQ-API-07: feedback allocation at counter 9007199254740991 preserves the safe response ID contract
+  [api] › api\games.spec.ts:6:1 › TEST-API-01: catalogue returns all exact fields in folded code-point order
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=Ember
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters genre=RPG
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=%20%20Ember%20%20&genre=RPG
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=%20%20&genre=RPG
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=Orbit
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=%C3%89CH
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=%C3%A9ch
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=echo
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=no-such-title
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=Ember%20%20Quest
+  [api] › api\games.spec.ts:24:13 › TEST-API-01: literal filters search=&genre=
+  [api] › api\games.spec.ts:34:3 › TEST-API-01: punctuation is literal data ' OR 1=1 --
+  [api] › api\games.spec.ts:34:3 › TEST-API-01: punctuation is literal data %
+  [api] › api\games.spec.ts:34:3 › TEST-API-01: punctuation is literal data _
+  [api] › api\games.spec.ts:34:3 › TEST-API-01: punctuation is literal data [Orbit]
+  [api] › api\games.spec.ts:34:3 › TEST-API-01: punctuation is literal data .*
+  [api] › api\games.spec.ts:34:3 › TEST-API-01: punctuation is literal data Orbit; DROP TABLE games;
+  [api] › api\games.spec.ts:42:3 › TEST-API-01: trimmed a boundary 80
+  [api] › api\games.spec.ts:42:3 › TEST-API-01: trimmed a boundary 81
+  [api] › api\games.spec.ts:42:3 › TEST-API-01: trimmed 🎮 boundary 80
+  [api] › api\games.spec.ts:42:3 › TEST-API-01: trimmed 🎮 boundary 81
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query foo=x
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query Search=Orbit
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query Genre=Action
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query search=x&search=y
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query search=&search=
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query genre=RPG&genre=Action
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query =x
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query genre=action
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query genre=%20RPG
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query genre=RPG%20
+  [api] › api\games.spec.ts:51:3 › TEST-API-01: rejects invalid query genre=Unknown
+  [api] › api\games.spec.ts:57:1 › TEST-API-01: all strict genre values are accepted
+  [api] › api\games.spec.ts:65:1 › TEST-API-01: each detail preserves literal fixture fields
+  [api] › api\games.spec.ts:72:1 › TEST-API-01: notes have exact fields, stable date/ID order, and known empty result
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 0 precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID -1 precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 01 precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 1.5 precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID abc precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 9007199254740992 precedes query rejection
+  [api] › api\games.spec.ts:92:5 › TEST-API-01: valid absent ID 999
+  [api] › api\games.spec.ts:92:5 › TEST-API-01: valid absent ID 9007199254740991
+  [api] › api\games.spec.ts:98:5 › TEST-API-01: detail scope rejects search= before existence lookup
+  [api] › api\games.spec.ts:98:5 › TEST-API-01: detail scope rejects genre=Action before existence lookup
+  [api] › api\games.spec.ts:98:5 › TEST-API-01: detail scope rejects x=&x= before existence lookup
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 0/patch-notes precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID -1/patch-notes precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 01/patch-notes precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 1.5/patch-notes precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID abc/patch-notes precedes query rejection
+  [api] › api\games.spec.ts:84:5 › TEST-API-01: malformed ID 9007199254740992/patch-notes precedes query rejection
+  [api] › api\games.spec.ts:92:5 › TEST-API-01: valid absent ID 999/patch-notes
+  [api] › api\games.spec.ts:92:5 › TEST-API-01: valid absent ID 9007199254740991/patch-notes
+  [api] › api\games.spec.ts:98:5 › TEST-API-01: detail scope rejects search=/patch-notes before existence lookup
+  [api] › api\games.spec.ts:98:5 › TEST-API-01: detail scope rejects genre=Action/patch-notes before existence lookup
+  [api] › api\games.spec.ts:98:5 › TEST-API-01: detail scope rejects x=&x=/patch-notes before existence lookup
+  [api] › api\games.spec.ts:106:1 › TEST-API-01: bare question mark contains no supplied query keys
+  [api] › api\games.spec.ts:109:1 › REQ-API-06: unknown API paths use the error envelope
+  [api] › api\games.spec.ts:115:1 › TEST-API-01: ordering compares supplementary Unicode code points and prefix lengths
+  [api] › api\games.spec.ts:134:1 › TEST-API-04 / REQ-API-06: a real broken SQLite dependency yields generic errors after validation
+  [chromium] › accessibility\axe.spec.ts:28:3 › Accessibility gate sentinel: controlled missing-label critical violation is rejected (instrumentation)
+  [chromium] › accessibility\axe.spec.ts:28:3 › Accessibility gate sentinel: controlled missing-label serious violation is rejected (instrumentation)
+  [chromium] › accessibility\axe.spec.ts:35:1 › TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states
+  [chromium] › accessibility\axe.spec.ts:57:1 › TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery
+  [chromium] › accessibility\axe.spec.ts:81:1 › TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery
+  [chromium] › accessibility\axe.spec.ts:98:1 › TEST-A11Y-02 detail: HTTP error and real Retry recovery
+  [chromium] › accessibility\axe.spec.ts:110:1 › TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success
+  [chromium] › accessibility\axe.spec.ts:153:1 › TEST-A11Y-01 favourites supplement: saved and empty views
+  [chromium] › e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke
+  [chromium] › e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke
+  [chromium] › e2e\catalogue.spec.ts:38:1 › TEST-UI-05 catalogue: zero matches exposes clear controls and restores results
+  [chromium] › e2e\catalogue.spec.ts:47:1 › TEST-UI-01 loading: initial held response shows a perceivable loading state
+  [chromium] › e2e\catalogue.spec.ts:59:3 › TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results
+  [chromium] › e2e\catalogue.spec.ts:59:3 › TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results
+  [chromium] › e2e\catalogue.spec.ts:90:1 › TEST-UI-02: invalid search announces its reason and associates the message only while invalid
+  [chromium] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search Orbit
+  [chromium] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search ÉCH
+  [chromium] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search éch
+  [chromium] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search echo
+  [chromium] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search %' OR 1=1 --
+  [chromium] › e2e\catalogue.spec.ts:135:3 › TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover
+  [chromium] › e2e\catalogue.spec.ts:135:3 › TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest results
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest empty
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest error
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest loading
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest results
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest empty
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest error
+  [chromium] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest loading
+  [chromium] › e2e\catalogue.spec.ts:226:3 › TEST-UI-02: invalidating first request ignores its late success
+  [chromium] › e2e\catalogue.spec.ts:226:3 › TEST-UI-02: invalidating first request ignores its late failure
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 genre only: late success preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 genre only: late failure preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 combined controls: late success preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 combined controls: late failure preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing search: late success preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing search: late failure preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing genre: late success preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing genre: late failure preserves current controls
+  [chromium] › e2e\catalogue.spec.ts:278:3 › TEST-UI-02: invalidating a pending success retains earlier successful results
+  [chromium] › e2e\catalogue.spec.ts:278:3 › TEST-UI-02: invalidating a pending failure retains earlier successful results
+  [chromium] › e2e\catalogue.spec.ts:295:1 › TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status
+  [chromium] › e2e\catalogue.spec.ts:340:1 › REQ-A11Y-01 literal text: an isolated HTML-like database title never becomes markup
+  [chromium] › e2e\catalogue.spec.ts:356:1 › API client: non-2xx raises typed status/code and non-JSON preserves status
+  [chromium] › e2e\catalogue.spec.ts:376:1 › Catalogue destroy: removed view listeners and a late response cannot update retained DOM
+  [chromium] › e2e\detail.spec.ts:57:1 › TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke
+  [chromium] › e2e\detail.spec.ts:69:1 › TEST-UI-06 direct detail entry and browser history restore exactly one view
+  [chromium] › e2e\detail.spec.ts:82:1 › TEST-UI-06 notes: known game without notes shows explicit empty state
+  [chromium] › e2e\detail.spec.ts:91:1 › REQ-DET-03 held detail shows loading with usable Back before success
+  [chromium] › e2e\detail.spec.ts:102:1 › REQ-DET-04 notes load separately and retain usable details while pending
+  [chromium] › e2e\detail.spec.ts:119:3 › REQ-DET-03 detail HTTP 500: current-game Retry recovers content
+  [chromium] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes HTTP 500: Retry game 1 to ordered notes
+  [chromium] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes HTTP 500: Retry game 9 to empty notes
+  [chromium] › e2e\detail.spec.ts:119:3 › REQ-DET-03 detail network abort: current-game Retry recovers content
+  [chromium] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes network abort: Retry game 1 to ordered notes
+  [chromium] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes network abort: Retry game 9 to empty notes
+  [chromium] › e2e\detail.spec.ts:154:1 › REQ-DET-03 unknown game is distinct from transient error and has no Retry
+  [chromium] › e2e\detail.spec.ts:163:1 › REQ-DET-04 notes 404 retains details, Back and no notes Retry
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail success cannot replace another game
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail success cannot replace catalogue
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail failure cannot replace another game
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail failure cannot replace catalogue
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes success cannot replace another game
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes success cannot replace catalogue
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes failure cannot replace another game
+  [chromium] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes failure cannot replace catalogue
+  [chromium] › e2e\detail.spec.ts:204:1 › REQ-DET-03 persisted pagehide/pageshow remounts one fresh current route
+  [chromium] › e2e\detail.spec.ts:221:1 › REQ-A11Y-01 detail and note fixture text renders literally
+  [chromium] › e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke
+  [chromium] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state
+  [chromium] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage {"id":1} recovers to usable empty state
+  [chromium] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage null recovers to usable empty state
+  [chromium] › e2e\favourites.spec.ts:64:1 › TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success
+  [chromium] › e2e\favourites.spec.ts:95:1 › TEST-UI-08: games hidden by search and genre remain saved
+  [chromium] › e2e\favourites.spec.ts:109:3 › TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue
+  [chromium] › e2e\favourites.spec.ts:109:3 › TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue
+  [chromium] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable
+  [chromium] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable
+  [chromium] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable
+  [chromium] › e2e\favourites.spec.ts:156:3 › TEST-UI-08: Library return retains memory favourites after storage write failure
+  [chromium] › e2e\favourites.spec.ts:156:3 › TEST-UI-08: Library return retains memory favourites after storage access failure
+  [chromium] › e2e\favourites.spec.ts:195:1 › TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success
+  [chromium] › e2e\favourites.spec.ts:221:1 › TEST-UI-08: failed storage writes keep the last persisted selection on reload
+  [chromium] › e2e\favourites.spec.ts:235:1 › TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading
+  [chromium] › e2e\favourites.spec.ts:253:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px
+  [chromium] › e2e\favourites.spec.ts:253:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px
+  [chromium] › e2e\feedback.spec.ts:38:1 › TEST-UI-09: empty submission identifies all required fields without request or insertion
+  [chromium] › e2e\feedback.spec.ts:55:1 › TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-01 accepts its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-02 accepts its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-03 accepts its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-04 accepts its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-05 accepts its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-06 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-07 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-08 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-09 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-10 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-11 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-12 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-13 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-14 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-15 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-16 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-17 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-18 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-19 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-20 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-21 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-22 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-23 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-24 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-25 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-26 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-27 rejects its literal email example
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-19 keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-20-TRIM keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-19 keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-20-TRIM keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMPTY keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-20 keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-20 keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMPTY-LITERAL keeps the fixed Unicode/trim boundary unchanged
+  [chromium] › e2e\feedback.spec.ts:113:3 › TEST-UI-11: controlled network abort preserves every field and retry stores one row
+  [chromium] › e2e\feedback.spec.ts:113:3 › TEST-UI-11: controlled HTTP 500 preserves every field and retry stores one row
+  [chromium] › e2e\feedback.spec.ts:138:1 › TEST-UI-11: repeated submit events while pending send one real request and insert one row
+  [chromium] › e2e\feedback.spec.ts:172:3 › TEST-UI-11: navigation ignores a late submission success
+  [chromium] › e2e\feedback.spec.ts:172:3 › TEST-UI-11: navigation ignores a late submission controlled HTTP 500
+  [chromium] › e2e\feedback.spec.ts:218:3 › TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px
+  [chromium] › e2e\feedback.spec.ts:218:3 › TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px
+  [chromium] › e2e\feedback.spec.ts:241:3 › TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery
+  [chromium] › e2e\feedback.spec.ts:241:3 › TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery
+  [chromium] › e2e\layout.spec.ts:22:1 › TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification
+  [chromium] › e2e\layout.spec.ts:90:1 › TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport
+  [chromium] › e2e\layout.spec.ts:114:1 › TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit
+  [chromium] › e2e\layout.spec.ts:132:1 › TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow
+  [chromium] › e2e\layout.spec.ts:167:1 › TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap
+  [chromium] › e2e\layout.spec.ts:195:1 › TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus
+  [chromium] › e2e\layout.spec.ts:226:1 › TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard
+  [firefox] › accessibility\axe.spec.ts:28:3 › Accessibility gate sentinel: controlled missing-label critical violation is rejected (instrumentation)
+  [firefox] › accessibility\axe.spec.ts:28:3 › Accessibility gate sentinel: controlled missing-label serious violation is rejected (instrumentation)
+  [firefox] › accessibility\axe.spec.ts:35:1 › TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states
+  [firefox] › accessibility\axe.spec.ts:57:1 › TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery
+  [firefox] › accessibility\axe.spec.ts:81:1 › TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery
+  [firefox] › accessibility\axe.spec.ts:98:1 › TEST-A11Y-02 detail: HTTP error and real Retry recovery
+  [firefox] › accessibility\axe.spec.ts:110:1 › TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success
+  [firefox] › accessibility\axe.spec.ts:153:1 › TEST-A11Y-01 favourites supplement: saved and empty views
+  [firefox] › e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke
+  [firefox] › e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke
+  [firefox] › e2e\catalogue.spec.ts:38:1 › TEST-UI-05 catalogue: zero matches exposes clear controls and restores results
+  [firefox] › e2e\catalogue.spec.ts:47:1 › TEST-UI-01 loading: initial held response shows a perceivable loading state
+  [firefox] › e2e\catalogue.spec.ts:59:3 › TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results
+  [firefox] › e2e\catalogue.spec.ts:59:3 › TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results
+  [firefox] › e2e\catalogue.spec.ts:90:1 › TEST-UI-02: invalid search announces its reason and associates the message only while invalid
+  [firefox] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search Orbit
+  [firefox] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search ÉCH
+  [firefox] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search éch
+  [firefox] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search echo
+  [firefox] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search %' OR 1=1 --
+  [firefox] › e2e\catalogue.spec.ts:135:3 › TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover
+  [firefox] › e2e\catalogue.spec.ts:135:3 › TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest results
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest empty
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest error
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest loading
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest results
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest empty
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest error
+  [firefox] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest loading
+  [firefox] › e2e\catalogue.spec.ts:226:3 › TEST-UI-02: invalidating first request ignores its late success
+  [firefox] › e2e\catalogue.spec.ts:226:3 › TEST-UI-02: invalidating first request ignores its late failure
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 genre only: late success preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 genre only: late failure preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 combined controls: late success preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 combined controls: late failure preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing search: late success preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing search: late failure preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing genre: late success preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing genre: late failure preserves current controls
+  [firefox] › e2e\catalogue.spec.ts:278:3 › TEST-UI-02: invalidating a pending success retains earlier successful results
+  [firefox] › e2e\catalogue.spec.ts:278:3 › TEST-UI-02: invalidating a pending failure retains earlier successful results
+  [firefox] › e2e\catalogue.spec.ts:295:1 › TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status
+  [firefox] › e2e\catalogue.spec.ts:340:1 › REQ-A11Y-01 literal text: an isolated HTML-like database title never becomes markup
+  [firefox] › e2e\catalogue.spec.ts:356:1 › API client: non-2xx raises typed status/code and non-JSON preserves status
+  [firefox] › e2e\catalogue.spec.ts:376:1 › Catalogue destroy: removed view listeners and a late response cannot update retained DOM
+  [firefox] › e2e\detail.spec.ts:57:1 › TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke
+  [firefox] › e2e\detail.spec.ts:69:1 › TEST-UI-06 direct detail entry and browser history restore exactly one view
+  [firefox] › e2e\detail.spec.ts:82:1 › TEST-UI-06 notes: known game without notes shows explicit empty state
+  [firefox] › e2e\detail.spec.ts:91:1 › REQ-DET-03 held detail shows loading with usable Back before success
+  [firefox] › e2e\detail.spec.ts:102:1 › REQ-DET-04 notes load separately and retain usable details while pending
+  [firefox] › e2e\detail.spec.ts:119:3 › REQ-DET-03 detail HTTP 500: current-game Retry recovers content
+  [firefox] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes HTTP 500: Retry game 1 to ordered notes
+  [firefox] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes HTTP 500: Retry game 9 to empty notes
+  [firefox] › e2e\detail.spec.ts:119:3 › REQ-DET-03 detail network abort: current-game Retry recovers content
+  [firefox] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes network abort: Retry game 1 to ordered notes
+  [firefox] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes network abort: Retry game 9 to empty notes
+  [firefox] › e2e\detail.spec.ts:154:1 › REQ-DET-03 unknown game is distinct from transient error and has no Retry
+  [firefox] › e2e\detail.spec.ts:163:1 › REQ-DET-04 notes 404 retains details, Back and no notes Retry
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail success cannot replace another game
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail success cannot replace catalogue
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail failure cannot replace another game
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail failure cannot replace catalogue
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes success cannot replace another game
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes success cannot replace catalogue
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes failure cannot replace another game
+  [firefox] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes failure cannot replace catalogue
+  [firefox] › e2e\detail.spec.ts:204:1 › REQ-DET-03 persisted pagehide/pageshow remounts one fresh current route
+  [firefox] › e2e\detail.spec.ts:221:1 › REQ-A11Y-01 detail and note fixture text renders literally
+  [firefox] › e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke
+  [firefox] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state
+  [firefox] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage {"id":1} recovers to usable empty state
+  [firefox] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage null recovers to usable empty state
+  [firefox] › e2e\favourites.spec.ts:64:1 › TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success
+  [firefox] › e2e\favourites.spec.ts:95:1 › TEST-UI-08: games hidden by search and genre remain saved
+  [firefox] › e2e\favourites.spec.ts:109:3 › TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue
+  [firefox] › e2e\favourites.spec.ts:109:3 › TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue
+  [firefox] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable
+  [firefox] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable
+  [firefox] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable
+  [firefox] › e2e\favourites.spec.ts:156:3 › TEST-UI-08: Library return retains memory favourites after storage write failure
+  [firefox] › e2e\favourites.spec.ts:156:3 › TEST-UI-08: Library return retains memory favourites after storage access failure
+  [firefox] › e2e\favourites.spec.ts:195:1 › TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success
+  [firefox] › e2e\favourites.spec.ts:221:1 › TEST-UI-08: failed storage writes keep the last persisted selection on reload
+  [firefox] › e2e\favourites.spec.ts:235:1 › TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading
+  [firefox] › e2e\favourites.spec.ts:253:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px
+  [firefox] › e2e\favourites.spec.ts:253:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px
+  [firefox] › e2e\feedback.spec.ts:38:1 › TEST-UI-09: empty submission identifies all required fields without request or insertion
+  [firefox] › e2e\feedback.spec.ts:55:1 › TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-01 accepts its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-02 accepts its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-03 accepts its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-04 accepts its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-05 accepts its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-06 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-07 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-08 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-09 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-10 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-11 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-12 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-13 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-14 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-15 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-16 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-17 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-18 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-19 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-20 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-21 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-22 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-23 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-24 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-25 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-26 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-27 rejects its literal email example
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-19 keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-20-TRIM keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-19 keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-20-TRIM keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMPTY keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-20 keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-20 keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMPTY-LITERAL keeps the fixed Unicode/trim boundary unchanged
+  [firefox] › e2e\feedback.spec.ts:113:3 › TEST-UI-11: controlled network abort preserves every field and retry stores one row
+  [firefox] › e2e\feedback.spec.ts:113:3 › TEST-UI-11: controlled HTTP 500 preserves every field and retry stores one row
+  [firefox] › e2e\feedback.spec.ts:138:1 › TEST-UI-11: repeated submit events while pending send one real request and insert one row
+  [firefox] › e2e\feedback.spec.ts:172:3 › TEST-UI-11: navigation ignores a late submission success
+  [firefox] › e2e\feedback.spec.ts:172:3 › TEST-UI-11: navigation ignores a late submission controlled HTTP 500
+  [firefox] › e2e\feedback.spec.ts:218:3 › TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px
+  [firefox] › e2e\feedback.spec.ts:218:3 › TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px
+  [firefox] › e2e\feedback.spec.ts:241:3 › TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery
+  [firefox] › e2e\feedback.spec.ts:241:3 › TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery
+  [firefox] › e2e\layout.spec.ts:22:1 › TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification
+  [firefox] › e2e\layout.spec.ts:90:1 › TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport
+  [firefox] › e2e\layout.spec.ts:114:1 › TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit
+  [firefox] › e2e\layout.spec.ts:132:1 › TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow
+  [firefox] › e2e\layout.spec.ts:167:1 › TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap
+  [firefox] › e2e\layout.spec.ts:195:1 › TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus
+  [firefox] › e2e\layout.spec.ts:226:1 › TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard
+  [webkit] › accessibility\axe.spec.ts:28:3 › Accessibility gate sentinel: controlled missing-label critical violation is rejected (instrumentation)
+  [webkit] › accessibility\axe.spec.ts:28:3 › Accessibility gate sentinel: controlled missing-label serious violation is rejected (instrumentation)
+  [webkit] › accessibility\axe.spec.ts:35:1 › TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states
+  [webkit] › accessibility\axe.spec.ts:57:1 › TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery
+  [webkit] › accessibility\axe.spec.ts:81:1 › TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery
+  [webkit] › accessibility\axe.spec.ts:98:1 › TEST-A11Y-02 detail: HTTP error and real Retry recovery
+  [webkit] › accessibility\axe.spec.ts:110:1 › TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success
+  [webkit] › accessibility\axe.spec.ts:153:1 › TEST-A11Y-01 favourites supplement: saved and empty views
+  [webkit] › e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke
+  [webkit] › e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke
+  [webkit] › e2e\catalogue.spec.ts:38:1 › TEST-UI-05 catalogue: zero matches exposes clear controls and restores results
+  [webkit] › e2e\catalogue.spec.ts:47:1 › TEST-UI-01 loading: initial held response shows a perceivable loading state
+  [webkit] › e2e\catalogue.spec.ts:59:3 › TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results
+  [webkit] › e2e\catalogue.spec.ts:59:3 › TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results
+  [webkit] › e2e\catalogue.spec.ts:90:1 › TEST-UI-02: invalid search announces its reason and associates the message only while invalid
+  [webkit] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search Orbit
+  [webkit] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search ÉCH
+  [webkit] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search éch
+  [webkit] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search echo
+  [webkit] › e2e\catalogue.spec.ts:127:3 › TEST-UI-02: literal ASCII-only search %' OR 1=1 --
+  [webkit] › e2e\catalogue.spec.ts:135:3 › TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover
+  [webkit] › e2e\catalogue.spec.ts:135:3 › TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest results
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest empty
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest error
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale success cannot replace latest loading
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest results
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest empty
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest error
+  [webkit] › e2e\catalogue.spec.ts:198:5 › TEST-UI-04 stale failure cannot replace latest loading
+  [webkit] › e2e\catalogue.spec.ts:226:3 › TEST-UI-02: invalidating first request ignores its late success
+  [webkit] › e2e\catalogue.spec.ts:226:3 › TEST-UI-02: invalidating first request ignores its late failure
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 genre only: late success preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 genre only: late failure preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 combined controls: late success preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 combined controls: late failure preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing search: late success preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing search: late failure preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing genre: late success preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:247:5 › TEST-UI-04 clearing genre: late failure preserves current controls
+  [webkit] › e2e\catalogue.spec.ts:278:3 › TEST-UI-02: invalidating a pending success retains earlier successful results
+  [webkit] › e2e\catalogue.spec.ts:278:3 › TEST-UI-02: invalidating a pending failure retains earlier successful results
+  [webkit] › e2e\catalogue.spec.ts:295:1 › TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status
+  [webkit] › e2e\catalogue.spec.ts:340:1 › REQ-A11Y-01 literal text: an isolated HTML-like database title never becomes markup
+  [webkit] › e2e\catalogue.spec.ts:356:1 › API client: non-2xx raises typed status/code and non-JSON preserves status
+  [webkit] › e2e\catalogue.spec.ts:376:1 › Catalogue destroy: removed view listeners and a late response cannot update retained DOM
+  [webkit] › e2e\detail.spec.ts:57:1 › TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke
+  [webkit] › e2e\detail.spec.ts:69:1 › TEST-UI-06 direct detail entry and browser history restore exactly one view
+  [webkit] › e2e\detail.spec.ts:82:1 › TEST-UI-06 notes: known game without notes shows explicit empty state
+  [webkit] › e2e\detail.spec.ts:91:1 › REQ-DET-03 held detail shows loading with usable Back before success
+  [webkit] › e2e\detail.spec.ts:102:1 › REQ-DET-04 notes load separately and retain usable details while pending
+  [webkit] › e2e\detail.spec.ts:119:3 › REQ-DET-03 detail HTTP 500: current-game Retry recovers content
+  [webkit] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes HTTP 500: Retry game 1 to ordered notes
+  [webkit] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes HTTP 500: Retry game 9 to empty notes
+  [webkit] › e2e\detail.spec.ts:119:3 › REQ-DET-03 detail network abort: current-game Retry recovers content
+  [webkit] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes network abort: Retry game 1 to ordered notes
+  [webkit] › e2e\detail.spec.ts:134:5 › REQ-DET-04 notes network abort: Retry game 9 to empty notes
+  [webkit] › e2e\detail.spec.ts:154:1 › REQ-DET-03 unknown game is distinct from transient error and has no Retry
+  [webkit] › e2e\detail.spec.ts:163:1 › REQ-DET-04 notes 404 retains details, Back and no notes Retry
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail success cannot replace another game
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail success cannot replace catalogue
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail failure cannot replace another game
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale detail failure cannot replace catalogue
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes success cannot replace another game
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes success cannot replace catalogue
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes failure cannot replace another game
+  [webkit] › e2e\detail.spec.ts:178:7 › REQ-DET-03/04 stale notes failure cannot replace catalogue
+  [webkit] › e2e\detail.spec.ts:204:1 › REQ-DET-03 persisted pagehide/pageshow remounts one fresh current route
+  [webkit] › e2e\detail.spec.ts:221:1 › REQ-A11Y-01 detail and note fixture text renders literally
+  [webkit] › e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke
+  [webkit] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state
+  [webkit] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage {"id":1} recovers to usable empty state
+  [webkit] › e2e\favourites.spec.ts:52:3 › TEST-UI-08: malformed/non-array storage null recovers to usable empty state
+  [webkit] › e2e\favourites.spec.ts:64:1 › TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success
+  [webkit] › e2e\favourites.spec.ts:95:1 › TEST-UI-08: games hidden by search and genre remain saved
+  [webkit] › e2e\favourites.spec.ts:109:3 › TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue
+  [webkit] › e2e\favourites.spec.ts:109:3 › TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue
+  [webkit] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable
+  [webkit] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable
+  [webkit] › e2e\favourites.spec.ts:137:3 › TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable
+  [webkit] › e2e\favourites.spec.ts:156:3 › TEST-UI-08: Library return retains memory favourites after storage write failure
+  [webkit] › e2e\favourites.spec.ts:156:3 › TEST-UI-08: Library return retains memory favourites after storage access failure
+  [webkit] › e2e\favourites.spec.ts:195:1 › TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success
+  [webkit] › e2e\favourites.spec.ts:221:1 › TEST-UI-08: failed storage writes keep the last persisted selection on reload
+  [webkit] › e2e\favourites.spec.ts:235:1 › TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading
+  [webkit] › e2e\favourites.spec.ts:253:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px
+  [webkit] › e2e\favourites.spec.ts:253:3 › TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px
+  [webkit] › e2e\feedback.spec.ts:38:1 › TEST-UI-09: empty submission identifies all required fields without request or insertion
+  [webkit] › e2e\feedback.spec.ts:55:1 › TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-01 accepts its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-02 accepts its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-03 accepts its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-04 accepts its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-05 accepts its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-06 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-07 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-08 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-09 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-10 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-11 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-12 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-13 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-14 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-15 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-16 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-17 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-18 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-19 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-20 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-21 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-22 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-23 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-24 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-25 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-26 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:72:3 › TEST-UI-10: EMAIL-27 rejects its literal email example
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-19 keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-20-TRIM keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-19 keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-20-TRIM keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMPTY keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: ASCII-20 keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMOJI-20 keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:96:3 › TEST-UI-10: EMPTY-LITERAL keeps the fixed Unicode/trim boundary unchanged
+  [webkit] › e2e\feedback.spec.ts:113:3 › TEST-UI-11: controlled network abort preserves every field and retry stores one row
+  [webkit] › e2e\feedback.spec.ts:113:3 › TEST-UI-11: controlled HTTP 500 preserves every field and retry stores one row
+  [webkit] › e2e\feedback.spec.ts:138:1 › TEST-UI-11: repeated submit events while pending send one real request and insert one row
+  [webkit] › e2e\feedback.spec.ts:172:3 › TEST-UI-11: navigation ignores a late submission success
+  [webkit] › e2e\feedback.spec.ts:172:3 › TEST-UI-11: navigation ignores a late submission controlled HTTP 500
+  [webkit] › e2e\feedback.spec.ts:218:3 › TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px
+  [webkit] › e2e\feedback.spec.ts:218:3 › TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px
+  [webkit] › e2e\feedback.spec.ts:241:3 › TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery
+  [webkit] › e2e\feedback.spec.ts:241:3 › TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery
+  [webkit] › e2e\layout.spec.ts:22:1 › TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification
+  [webkit] › e2e\layout.spec.ts:90:1 › TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport
+  [webkit] › e2e\layout.spec.ts:114:1 › TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit
+  [webkit] › e2e\layout.spec.ts:132:1 › TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow
+  [webkit] › e2e\layout.spec.ts:167:1 › TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap
+  [webkit] › e2e\layout.spec.ts:195:1 › TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus
+  [webkit] › e2e\layout.spec.ts:226:1 › TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard
+  [chromium-phone] › e2e\layout.spec.ts:22:1 › TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification
+  [chromium-phone] › e2e\layout.spec.ts:90:1 › TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport
+  [chromium-phone] › e2e\layout.spec.ts:114:1 › TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit
+  [chromium-phone] › e2e\layout.spec.ts:132:1 › TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow
+  [chromium-phone] › e2e\layout.spec.ts:167:1 › TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap
+  [chromium-phone] › e2e\layout.spec.ts:195:1 › TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus
+  [chromium-phone] › e2e\layout.spec.ts:226:1 › TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard
+Total: 583 tests in 9 files

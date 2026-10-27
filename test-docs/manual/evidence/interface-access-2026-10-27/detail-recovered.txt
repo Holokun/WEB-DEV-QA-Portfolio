@@ -1,0 +1,25 @@
+- banner:
+  - generic: Game Companion
+  - navigation "Main":
+    - link "Library":
+      - /url: /
+    - link "Favourites (0)":
+      - /url: /#/favourites
+    - link "Feedback":
+      - /url: /#/feedback
+- main:
+  - link "Back":
+    - /url: /
+  - paragraph: FROM THE LIBRARY
+  - status: Game details loaded.
+  - heading "Orbit" [level=1]
+  - paragraph: Action
+  - paragraph: Defend a tiny space station from drifting robots.
+  - term: Release year
+  - definition: "2018"
+  - term: Platforms
+  - definition: Windows, Linux
+  - link "Patch notes":
+    - /url: /#/games/1
+  - button "Add Orbit to favourites"
+- contentinfo: Ten fictional worlds. A local catalogue for exploring and testing.

@@ -1,0 +1,61 @@
+{
+  "commit": "1ec3aa5082851c47a471e20ec14a0b34f8b762d0",
+  "node": "v24.22.1",
+  "modules": {
+    "@playwright/test": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\index.js",
+      "sha256": "499da5dd8585212108a1443793de31ebc061ca7db02343f107955f261180cdfc"
+    },
+    "playwright": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\index.js",
+      "sha256": "4e98f65f0a9d9bcab8cffc0c5cfdd87fd3f5b0be74fc494ff166a466b204cd44"
+    },
+    "playwright-core": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\index.js",
+      "sha256": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+    },
+    "@axe-core/playwright": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@axe-core+playwright@4.14.0_playwright-core@1.63.0\\node_modules\\@axe-core\\playwright\\dist\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@axe-core+playwright@4.14.0_playwright-core@1.63.0\\node_modules\\@axe-core\\playwright\\dist\\index.js",
+      "sha256": "c525b914a2308adb933f121478b8a8891a0aa686af22233300e1f3e2901292a3"
+    },
+    "axe-core": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\axe-core@4.14.0\\node_modules\\axe-core\\axe.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\axe-core@4.14.0\\node_modules\\axe-core\\axe.js",
+      "sha256": "aae0b8b36278089962105b2351ea64f4da7d3d440b54e162e21616d597aa0d6f"
+    },
+    "typescript": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\typescript@7.0.2\\node_modules\\typescript\\lib\\version.cjs",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\typescript@7.0.2\\node_modules\\typescript\\lib\\version.cjs",
+      "sha256": "b0a2b4a3976dad0f31325bd18eeee8e7d2a1ed674d3e486b1ad5c501207960a9"
+    }
+  },
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "executablePath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe",
+      "sha256": "9b07943f834485b43c9d54caea2951c78715f9f07070a80ab6658465ebd3e711"
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "executablePath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe",
+      "sha256": "425a0a0fb606f567a303bdcea727476e124c0deb589050b13668af688da17fcb"
+    },
+    {
+      "name": "webkit",
+      "version": "26.6",
+      "executablePath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\webkit-2359\\Playwright.exe",
+      "sha256": "6dafcf2b72f53cfebeb0fcb44f85203b3f5dd1e09be47e0e02eeaaacf623bef3"
+    }
+  ],
+  "devCounts": {
+    "games": 10,
+    "patchNotes": 4,
+    "feedback": 0
+  }
+}

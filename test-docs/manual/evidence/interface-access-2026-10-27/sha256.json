@@ -1,0 +1,101 @@
+{
+  "capturedAt": "2026-10-27T12:30:07.355Z",
+  "files": [
+    {
+      "path": "catalogue-error-retry-focused.png",
+      "sha256": "ba30c6494e413e87d3750a4d41c7e1bcd42983e0a0bfa51b3c7371bbf39b135a"
+    },
+    {
+      "path": "catalogue-error-retry-focused.txt",
+      "sha256": "8f19af1b21a621b29c05a300ea4847f178a4a0ac052f3b81edf17d588848901b"
+    },
+    {
+      "path": "catalogue-recovered.txt",
+      "sha256": "f970ea873ff4f7bcc62db2e0d0d04cd12464cbeb764f104d4e0bf3e84be61a84"
+    },
+    {
+      "path": "clear-controls-keyboard.txt",
+      "sha256": "63db5784e849b21f1ffe1c7a6f00cf73049d40f3066f5f08673a86aa83bcc1de"
+    },
+    {
+      "path": "combined-filter-keyboard.txt",
+      "sha256": "352f2e7ed9473f7a8f5944edbbf4dfbde4b605d33eb1eda90024bdc619e1b859"
+    },
+    {
+      "path": "detail-error-retry-focused.png",
+      "sha256": "df8f060653348bbf8c4e842749ac7d759173b9baec53f583888187c949d78cb9"
+    },
+    {
+      "path": "detail-error-retry-focused.txt",
+      "sha256": "50550d25df988c6f20f40c6e6819a1ba2dd932c2fc03a55394064a67b55bc0d6"
+    },
+    {
+      "path": "detail-recovered.txt",
+      "sha256": "655b1824c5ebe3b0b19bafe234b35e875f26c807374e207489759f20dd137f70"
+    },
+    {
+      "path": "feedback-error.png",
+      "sha256": "4922b002950361bf076de50fb51259d1fa033f01ce611d451f6485b45f211c5e"
+    },
+    {
+      "path": "feedback-error.txt",
+      "sha256": "23a74ecf71524983d5674de8438b36a8c55661e8d5f8bde638eee67e37189469"
+    },
+    {
+      "path": "feedback-pending.png",
+      "sha256": "f1bb8ea2a696652a38c526f14d0808b87685f8ac864050588726c7d72f16fc7c"
+    },
+    {
+      "path": "feedback-pending.txt",
+      "sha256": "177407d8193a9fb622a1b5e07ee7568f818c401c4b091460cff6839683dbd0ec"
+    },
+    {
+      "path": "feedback-required-keyboard.txt",
+      "sha256": "825759d105d365f877e78f4014ed7a3e2fc1988f02ebfd275a5ba028e8c4fe23"
+    },
+    {
+      "path": "feedback-success.png",
+      "sha256": "c4b8ae5746b96aab5cb3e9237de1aed9e6cadfb038918206c80973dbc6462c1b"
+    },
+    {
+      "path": "feedback-success.txt",
+      "sha256": "8b1db1e374c1c2774c77b9769b6ac2b2716c5524e764504db3d19dced1581c13"
+    },
+    {
+      "path": "gateway.mjs",
+      "sha256": "2674cd1e56eccf376de43206d5eb413359dd6f4e816e4170a601db7b6e3e8b85"
+    },
+    {
+      "path": "http-sql-proof.json",
+      "sha256": "1870f26620a56e186d8f7c52c73dd29b34bd7c374d5b9a3ab12271cda1cfcafa"
+    },
+    {
+      "path": "http.jsonl",
+      "sha256": "8874a2f0fb3ac5edaaf76ae850ff5a4317ad77a6c35fa6cdf3b8cc7593766837"
+    },
+    {
+      "path": "notes-error-retry-focused.png",
+      "sha256": "aa571b3de8991df33edd7d2010340154a058c0e88d7d45e504247fba7d5e8fef"
+    },
+    {
+      "path": "notes-error-retry-focused.txt",
+      "sha256": "dfd1483c2f25e7e632437d8c018d5eed8ac6a2c7cfed256ac66cd6d734fbf934"
+    },
+    {
+      "path": "notes-recovered.txt",
+      "sha256": "9d9202100bbd4753b2a35bc973cd8095ff3fa631e349b9ac89ad4a1ca4b922c4"
+    },
+    {
+      "path": "set-rules.mjs",
+      "sha256": "5f39573d839b92e74c76a2428e01082d375c14d10d04d57eb6c337525d0ae319"
+    },
+    {
+      "path": "sql-after-rejected-feedback.json",
+      "sha256": "b6c9ede431c45878a45bfbf52cf87756ae4d23cd20aa451cda15fa4d94ef8e11"
+    },
+    {
+      "path": "sql-before-feedback.json",
+      "sha256": "2071a11d49615718a5d8e1733625c098102b05f2dc30dbd9fd8e416c352b0371"
+    }
+  ]
+}

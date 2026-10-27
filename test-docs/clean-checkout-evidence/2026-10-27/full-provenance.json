@@ -1,0 +1,70 @@
+{
+  "startedAt": "2026-10-27T06:42:27.229Z",
+  "node": "v24.22.1",
+  "platform": "win32",
+  "release": "10.0.26200",
+  "architecture": "x64",
+  "cwd": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1",
+  "baseURL": "http://127.0.0.1:52227",
+  "dbPath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\test-results\\owned-databases\\run-MuyvAo\\games.sqlite",
+  "workers": 1,
+  "forbidOnly": true,
+  "projects": [
+    {
+      "name": "api",
+      "retries": 0,
+      "testMatch": "api/**/*.spec.ts"
+    },
+    {
+      "name": "chromium",
+      "retries": 0,
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "testMatch": [
+        "e2e/**/*.spec.ts",
+        "accessibility/**/*.spec.ts"
+      ]
+    },
+    {
+      "name": "firefox",
+      "retries": 0,
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "testMatch": [
+        "e2e/**/*.spec.ts",
+        "accessibility/**/*.spec.ts"
+      ],
+      "launchOptions": {
+        "executablePath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe"
+      }
+    },
+    {
+      "name": "webkit",
+      "retries": 0,
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "testMatch": [
+        "e2e/**/*.spec.ts",
+        "accessibility/**/*.spec.ts"
+      ]
+    },
+    {
+      "name": "chromium-phone",
+      "retries": 0,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "testMatch": "e2e/layout.spec.ts"
+    }
+  ],
+  "listedTests": 583,
+  "finishedAt": "2026-10-27T06:48:02.286Z",
+  "status": "passed"
+}

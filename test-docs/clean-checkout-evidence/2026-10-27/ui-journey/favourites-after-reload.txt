@@ -1,0 +1,20 @@
+- banner:
+  - generic: Game Companion
+  - navigation "Main":
+    - link "Library":
+      - /url: /
+    - link "Favourites (1)":
+      - /url: /#/favourites
+    - link "Feedback":
+      - /url: /#/feedback
+- main [active]:
+  - paragraph: YOUR COLLECTION
+  - heading "Favourites" [level=1]
+  - paragraph: Keep your next worlds close at hand.
+  - status: 1 favourite
+  - list "Favourite games":
+    - link "Orbit":
+      - /url: /#/games/1
+    - paragraph: Action
+    - button "Remove Orbit from favourites" [pressed]
+- contentinfo: Ten fictional worlds. A local catalogue for exploring and testing.

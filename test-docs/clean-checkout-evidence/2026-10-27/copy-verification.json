@@ -1,0 +1,12 @@
+{
+  "verifiedAt": "2026-10-27T12:04:56.434Z",
+  "copied": 64,
+  "copyByteMismatches": 0,
+  "manifestFiles": 69,
+  "excluded": [
+    "ui-journey/**",
+    "sha256.json",
+    "copy-verification.json"
+  ],
+  "sourceCommit": "1ec3aa5082851c47a471e20ec14a0b34f8b762d0"
+}

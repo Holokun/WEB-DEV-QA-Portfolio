@@ -1,0 +1,11 @@
+{
+  "capturedAt": "2026-10-27T12:24:01.320Z",
+  "rows": [
+    {
+      "id": 1,
+      "game_id": 1,
+      "email": "clean-journey@example.com",
+      "description": "Clean checkout UI journey 2026-10-27 at 12:01 UTC synthetic feedback"
+    }
+  ]
+}

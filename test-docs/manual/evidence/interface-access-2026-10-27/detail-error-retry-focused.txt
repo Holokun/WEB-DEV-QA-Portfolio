@@ -1,0 +1,18 @@
+- banner:
+  - generic: Game Companion
+  - navigation "Main":
+    - link "Library":
+      - /url: /
+    - link "Favourites (0)":
+      - /url: /#/favourites
+    - link "Feedback":
+      - /url: /#/feedback
+- main:
+  - link "Back":
+    - /url: /
+  - paragraph: FROM THE LIBRARY
+  - status
+  - alert:
+    - paragraph: Could not load game details
+    - button "Retry" [active]
+- contentinfo: Ten fictional worlds. A local catalogue for exploring and testing.

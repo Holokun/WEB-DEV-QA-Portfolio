@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-10-27T06:48:33.657Z",
+  "note": "Default headless launch for Chromium/WebKit; documented clone-local official Firefox. Native DEBUG launch lines accompany this record. Earlier environment-source-dev executablePath fields were registry defaults, not proof of Chromium actual launched executable.",
+  "runtime": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "registryDefaultExecutable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe",
+      "actualExecutable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+      "actualExecutableSha256": "addfa79abb060e1e514e155ed745d4bf96140bca402735958bb4e223aea0b98c",
+      "actualExecutableRealpath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe"
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "registryDefaultExecutable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe",
+      "actualExecutable": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe",
+      "actualExecutableSha256": "425a0a0fb606f567a303bdcea727476e124c0deb589050b13668af688da17fcb",
+      "actualExecutableRealpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe"
+    },
+    {
+      "name": "webkit",
+      "version": "26.6",
+      "registryDefaultExecutable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\webkit-2359\\Playwright.exe",
+      "actualExecutable": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\webkit-2359\\Playwright.exe",
+      "actualExecutableSha256": "6dafcf2b72f53cfebeb0fcb44f85203b3f5dd1e09be47e0e02eeaaacf623bef3",
+      "actualExecutableRealpath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\webkit-2359\\Playwright.exe"
+    }
+  ]
+}

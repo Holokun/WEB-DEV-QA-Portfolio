@@ -1,0 +1,20 @@
+{
+  "capturedAt": "2026-10-27T12:02:21.109Z",
+  "response": {
+    "at": "2026-10-27T12:01:53.767Z",
+    "method": "POST",
+    "path": "/api/feedback",
+    "status": 201,
+    "requestBody": "{\"gameId\":1,\"email\":\"clean-journey@example.com\",\"description\":\"Clean checkout UI journey 2026-10-27 at 12:01 UTC synthetic feedback\"}",
+    "responseBody": "{\"id\":1}"
+  },
+  "countBefore": 0,
+  "countAfter": 1,
+  "rowByResponseId": {
+    "id": 1,
+    "game_id": 1,
+    "email": "clean-journey@example.com",
+    "description": "Clean checkout UI journey 2026-10-27 at 12:01 UTC synthetic feedback"
+  },
+  "checkerCorrection": "First read-only comparison rejected the node:sqlite null-prototype row against a plain object although every field matched. Rechecked the same row after plain-object normalization; no second submission or product change."
+}

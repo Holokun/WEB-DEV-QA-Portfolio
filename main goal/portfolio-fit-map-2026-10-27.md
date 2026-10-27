@@ -1,0 +1,20 @@
+# Game Companion: evidence mapped to the saved vacancy
+
+Assessment date: 2026-10-27. This map uses the responsibilities, requirements and nice-to-haves in the saved [Junior Web Dev QA Analyst description](larian-qa.pdf), captured on 2026-10-04. Its relevant pages were read visually. It does not check whether that vacancy remains open or assess the candidate's entire experience. The [2026-10-04 audit](portfolio-fit-audit.md) remains an unchanged historical record.
+
+| Saved vacancy area | Concrete portfolio evidence | Practical limit |
+| --- | --- | --- |
+| HTML/CSS and JavaScript/TypeScript | [UI source](../app/ui/), [HTTP server](../app/api/), [TypeScript configuration](../tsconfig.json) and readable [test source](../tests/) | The implemented product is a small local web application. |
+| Test cases and scenarios | [Requirements and risks](../test-docs/requirements-and-risks.md), [manual scenarios](../test-docs/test-scenarios.md), [traceability](../test-docs/traceability-matrix.md) | Planned coverage is distinguished from recorded execution. |
+| Investigation, validation and regression | [Favourites/feedback investigations](../test-docs/favourites-feedback-results.md), [accessibility defects and checks](../test-docs/accessibility-results.md), [Firefox launch investigation](../test-docs/firefox-launch-repair.md) | Genuine defects, controlled simulations and undetermined causes are recorded separately. |
+| Develop and maintain E2E automation; Playwright | [Serial owned-app fixtures](../tests/fixtures/), [browser tests](../tests/e2e/), [clean-checkout execution](../test-docs/clean-checkout-results.md) | Execution counts measure project coverage, not personal experience or hiring readiness. |
+| REST APIs | [API/database tests](../tests/api/), [API and SQL results](../test-docs/favourites-feedback-results.md) | Local HTTP/SQLite implementation; no third-party integration or production service claim. |
+| SQL and relational data | [Verification queries](../sql/verification-queries.sql), response-ID/+1-row/trimmed-field assertions in [feedback tests](../tests/api/feedback.spec.ts) | No recorded database GUI administration demonstration. |
+| WCAG knowledge | [Axe results, sentinel and findings](../test-docs/accessibility-results.md), [keyboard coverage](../tests/e2e/layout.spec.ts), [agent observations](../test-docs/manual/new-features-agent-session-2026-10-26.md) | Actual screen-reader review remains open; automated scans do not establish full WCAG compliance. |
+| Reporting/task tools such as Jira | [Bug reports](../bug-reports/), [execution summary](../test-docs/test-summary-report.md), [TestRail project context](../AGENTS.md) | This does not demonstrate Jira experience. No automatic TestRail result publication is configured. |
+| GitLab CI/CD knowledge | [GitHub Actions workflow](../.github/workflows/tests.yml), [smoke/CI evidence and pending gates](../test-docs/smoke-ci-results.md) | GitHub Actions is not GitLab experience. A configured workflow does not prove an external CI run. |
+| Communication, independent work and follow-up | [Human session and limits](../test-docs/manual/testing-session-by-Vadim.md), [separate agent records](../test-docs/manual/new-features-structured-checks-2026-10-27.md), linked evidence and dispositions | Repository records cannot establish interpersonal/team performance. Agent-authored work is not attributed to Vadim. |
+| Gameplay QA support | Fictional game catalogue gives the project a game-related subject | No gameplay, game engine, console, or real game feature testing was performed. |
+| Full-time on-site work | Saved description lists Warsaw and an on-site role | Availability, relocation, work authorization and employment fit are outside repository evidence. |
+
+The [current summary](../test-docs/test-summary-report.md) is the entry point for results and outstanding release gates. The project adds practical evidence to the historical documentation-only baseline; it does not guarantee an interview, job offer or complete coverage of the saved description. No job application or external message was sent as part of this work.

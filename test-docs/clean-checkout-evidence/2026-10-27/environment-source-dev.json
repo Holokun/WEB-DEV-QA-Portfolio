@@ -1,0 +1,422 @@
+{
+  "recordedAt": "2026-10-27T06:41:45.219Z",
+  "commit": "1ec3aa5082851c47a471e20ec14a0b34f8b762d0",
+  "branch": "",
+  "origin": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio",
+  "trackedDiff": "",
+  "node": "v24.22.1",
+  "nodeExec": "D:\\programms\\nodejs\\node.exe",
+  "nodeSha256": "d702daa815eabbff763c7d3808e235cf031cf2ca70211b56847bc72f51e240e5",
+  "platform": "win32",
+  "osRelease": "10.0.26200",
+  "architecture": "x64",
+  "cwd": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1",
+  "modules": {
+    "@playwright/test": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\index.js",
+      "sha256": "499da5dd8585212108a1443793de31ebc061ca7db02343f107955f261180cdfc"
+    },
+    "playwright": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright@1.63.0\\node_modules\\playwright\\index.js",
+      "sha256": "4e98f65f0a9d9bcab8cffc0c5cfdd87fd3f5b0be74fc494ff166a466b204cd44"
+    },
+    "playwright-core": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\index.js",
+      "sha256": "a58fb2cec4293e7dcf73c58a179898a4f3986666451a19da4e731fa3af63265b"
+    },
+    "@axe-core/playwright": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@axe-core+playwright@4.14.0_playwright-core@1.63.0\\node_modules\\@axe-core\\playwright\\dist\\index.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\@axe-core+playwright@4.14.0_playwright-core@1.63.0\\node_modules\\@axe-core\\playwright\\dist\\index.js",
+      "sha256": "c525b914a2308adb933f121478b8a8891a0aa686af22233300e1f3e2901292a3"
+    },
+    "axe-core": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\axe-core@4.14.0\\node_modules\\axe-core\\axe.js",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\axe-core@4.14.0\\node_modules\\axe-core\\axe.js",
+      "sha256": "aae0b8b36278089962105b2351ea64f4da7d3d440b54e162e21616d597aa0d6f"
+    },
+    "typescript": {
+      "resolved": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\typescript@7.0.2\\node_modules\\typescript\\lib\\version.cjs",
+      "realpath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\node_modules\\.pnpm\\typescript@7.0.2\\node_modules\\typescript\\lib\\version.cjs",
+      "sha256": "b0a2b4a3976dad0f31325bd18eeee8e7d2a1ed674d3e486b1ad5c501207960a9"
+    }
+  },
+  "browsers": [
+    {
+      "name": "chromium",
+      "version": "153.0.8010.12",
+      "executablePath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\chromium-1243\\chrome-win64\\chrome.exe",
+      "sha256": "9b07943f834485b43c9d54caea2951c78715f9f07070a80ab6658465ebd3e711"
+    },
+    {
+      "name": "firefox",
+      "version": "155.0",
+      "executablePath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\.playwright-browsers\\firefox-1543\\firefox\\firefox.exe",
+      "sha256": "425a0a0fb606f567a303bdcea727476e124c0deb589050b13668af688da17fcb"
+    },
+    {
+      "name": "webkit",
+      "version": "26.6",
+      "executablePath": "C:\\Users\\Betelgoida\\AppData\\Local\\ms-playwright\\webkit-2359\\Playwright.exe",
+      "sha256": "6dafcf2b72f53cfebeb0fcb44f85203b3f5dd1e09be47e0e02eeaaacf623bef3"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "app/api/application.ts",
+      "sha256": "dedc59ba42e9e8268b28bc2a17ef81b216162e91014124ec8459f057a410a302"
+    },
+    {
+      "path": "app/api/feedback.ts",
+      "sha256": "2ca1cdd7e575a9a5a49394fec8b830c4c9707b335ff153e48216147a4c69f842"
+    },
+    {
+      "path": "app/api/games.ts",
+      "sha256": "3e0b5be9b3ded553d6052d616f4cd2a58258acec27b8de53bd71809b98257cbe"
+    },
+    {
+      "path": "app/api/server.ts",
+      "sha256": "f4cbceca5e63eb82f2da13f08ef13668544883e0d9951d6ab5d9193cd78bb696"
+    },
+    {
+      "path": "app/db/database.ts",
+      "sha256": "33d66b332adee315b7fec10c89cf3e2b89548b995fe0e9c5d15410bb115be0f8"
+    },
+    {
+      "path": "app/db/reset.ts",
+      "sha256": "c5b524c0a518585a615b73b649cf1b3353b0f96221191ec7400a7642e170cbc7"
+    },
+    {
+      "path": "app/db/seed.ts",
+      "sha256": "08bfc45404d1377bca601177a94b87ec44eefb302743ff0b802690056f928364"
+    },
+    {
+      "path": "app/shared/contracts.ts",
+      "sha256": "3af67b1b8c2d2892006156aa293130a5f01c260ff27868e6598155969f7ccb83"
+    },
+    {
+      "path": "app/shared/feedback-validation.ts",
+      "sha256": "1a7b4760f8c1fad0b9de68b4b409de04ee362e805500793ae103b9d907ee0d9e"
+    },
+    {
+      "path": "app/ui/api-client.ts",
+      "sha256": "5d2f55f060f6b0dc84d8ee7f46ce8352550f4f978de407934deafd02eadd7983"
+    },
+    {
+      "path": "app/ui/catalogue.ts",
+      "sha256": "7549b0b488c57528692fd25201cca3799b806a5ac72d3f06291e743423eb7c2d"
+    },
+    {
+      "path": "app/ui/detail.ts",
+      "sha256": "51e0038a43ff055873aac3db8e89b31e87f9fc60851f94a580f83e04c00a0ad4"
+    },
+    {
+      "path": "app/ui/favourite-button.ts",
+      "sha256": "7f9a431bb565252bc19614a1fc42e296adcae84ab611b7865dd8c19893a2c333"
+    },
+    {
+      "path": "app/ui/favourites-view.ts",
+      "sha256": "91adb00d7604f5db5e0882b0d21448bc2b10a6a42e33f390945ebb77ae6ed2f2"
+    },
+    {
+      "path": "app/ui/favourites.ts",
+      "sha256": "9cb74a56bae2c34070494a8a5996ab5c13bc6c034cd6dfbcfc25ef5004e303f1"
+    },
+    {
+      "path": "app/ui/feedback.ts",
+      "sha256": "bcfb22df1bc95d305cc32ddee67e76e2e622fdb15a208ac108244e63efa7b7d5"
+    },
+    {
+      "path": "app/ui/index.html",
+      "sha256": "12653716a0e9ed95ebd6889f4af6aa1ca13b3a73abbed8d4dfda0db06b29eb2e"
+    },
+    {
+      "path": "app/ui/main.ts",
+      "sha256": "9e7310d80171292fdfeb9a7d1f2303fa5c1234f37e7459e5af5d7c9b46e13867"
+    },
+    {
+      "path": "app/ui/styles.css",
+      "sha256": "4b49f268a1410105512520331a344cee95ea84dc0bbbed478838c53f3580b946"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4936f345ef2583ddbc0494140338e02513f0703dfe5b87edf8bbf2a88eee35ba"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "9d75f71a698c5adde2594d403469d34f0946ce3fbe63760f8609e912a17c26b8"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "a28bde43e959bca1b724a73ce114c1a91ededd7a6dbf2500ac53d8cb803b02b4"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "6ebc112b72cb7fd43481c85e43a755aaf7de3bb97442fc5c59d0ff3a06ff0bbb"
+    },
+    {
+      "path": "scripts/copy-assets.mjs",
+      "sha256": "d873b8e64744dd439fdc61d0b2f90d4af58df5c9ca9a942e01fe03419cd2dbe8"
+    },
+    {
+      "path": "scripts/install-browsers.mjs",
+      "sha256": "aa26e54b0fb01e10f7923db351327d910c7276ff434206bf23a2a8e15215cff2"
+    },
+    {
+      "path": "tests/accessibility/axe.spec.ts",
+      "sha256": "7da914502371ab3d93849ccb3dc618d9f8c5e9f10fd612b6d17dff5dbaf72d6d"
+    },
+    {
+      "path": "tests/accessibility/check.ts",
+      "sha256": "7a3f4490f73640ce7242c395d28b5a0790d440182e7c224a5e4b9eaf171a8a3a"
+    },
+    {
+      "path": "tests/api/database.spec.ts",
+      "sha256": "3724622488fa6419b3bc12e904abf59815491a822ea8fbe262c9c7c56399447c"
+    },
+    {
+      "path": "tests/api/feedback.spec.ts",
+      "sha256": "5e7f2712f5afb227d1e2fe8ad571aa9145c8c070ee0fa58eb80f353d6fe56dea"
+    },
+    {
+      "path": "tests/api/games.spec.ts",
+      "sha256": "fea6e52b727f15065892012c60b71d4cd7ba2302d7838d72889c4171ab923196"
+    },
+    {
+      "path": "tests/e2e/catalogue.spec.ts",
+      "sha256": "612396726395e39b543764b8d974538bfb425ddddda50906388a78757de8be1b"
+    },
+    {
+      "path": "tests/e2e/detail.spec.ts",
+      "sha256": "01ea9c0302ed5d34f9b1fd5d0b89a2f845f1f580e45a6b08375785f72a526445"
+    },
+    {
+      "path": "tests/e2e/favourites.spec.ts",
+      "sha256": "f3de4a08cce637159fa3c911b347df79ad1e442c078e79ea05f8a89b3d12028b"
+    },
+    {
+      "path": "tests/e2e/feedback.spec.ts",
+      "sha256": "f78ddee6fcf19f47cb3507e02ed2b89a16d43a7fb4b13a775ca588a4e99a2ce9"
+    },
+    {
+      "path": "tests/e2e/layout.spec.ts",
+      "sha256": "35c499d59e96438e2744720517fa8e3262e61baca406328b060b719c1a00b783"
+    },
+    {
+      "path": "tests/fixtures/app.ts",
+      "sha256": "4604ab02f1b53dc9cd48ada80da0e87899a78a55070b32d711972a60193757a8"
+    },
+    {
+      "path": "tests/fixtures/expected-data.ts",
+      "sha256": "a05392b99b061262224ff0d3e0e9a84925eb017f1f9397d352cb50a416b73f15"
+    },
+    {
+      "path": "tests/fixtures/feedback-data.ts",
+      "sha256": "929c2e3ea252c9700940dad1ebd1d4f14d658d150c65e3417162062cff4e5c13"
+    },
+    {
+      "path": "tests/fixtures/suite.ts",
+      "sha256": "454a0523edea186d560eb2e27a48b95bbf626f4885f6a45031fb1f1bc3401e8b"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "fe75ccc1b273d21065b42393a7036194285f7ed870c1e4220d96011f8bea90f6"
+    }
+  ],
+  "dev": {
+    "baseURL": "http://127.0.0.1:58730",
+    "dbPath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\test-results\\task4-dev-owned\\games.sqlite",
+    "api": {
+      "/api/games": {
+        "status": 200,
+        "body": {
+          "games": [
+            {
+              "id": 10,
+              "title": "Atlas Tactics",
+              "genre": "Strategy",
+              "description": "Guide mapmakers through turn-based island expeditions.",
+              "releaseYear": 2020,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            },
+            {
+              "id": 6,
+              "title": "Ember Quest",
+              "genre": "RPG",
+              "description": "Build a party to restore the valley lanterns.",
+              "releaseYear": 2023,
+              "platforms": [
+                "Windows"
+              ]
+            },
+            {
+              "id": 5,
+              "title": "Ember Trail",
+              "genre": "Adventure",
+              "description": "Walk a lantern trail and uncover woodland stories.",
+              "releaseYear": 2021,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            },
+            {
+              "id": 8,
+              "title": "Iron Citadel",
+              "genre": "Action",
+              "description": "Protect a clockwork fortress with a magnetic shield.",
+              "releaseYear": 2017,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            },
+            {
+              "id": 9,
+              "title": "Moss Garden",
+              "genre": "Puzzle",
+              "description": "Arrange stepping stones to grow an imaginary garden.",
+              "releaseYear": 2025,
+              "platforms": [
+                "Windows"
+              ]
+            },
+            {
+              "id": 7,
+              "title": "Neon Sprint",
+              "genre": "Racing",
+              "description": "Race glowing circuits above a fictional city.",
+              "releaseYear": 2019,
+              "platforms": [
+                "Windows"
+              ]
+            },
+            {
+              "id": 1,
+              "title": "Orbit",
+              "genre": "Action",
+              "description": "Defend a tiny space station from drifting robots.",
+              "releaseYear": 2018,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            },
+            {
+              "id": 2,
+              "title": "ORBIT",
+              "genre": "RPG",
+              "description": "Gather a crew and explore a ring of forgotten worlds.",
+              "releaseYear": 2020,
+              "platforms": [
+                "Windows"
+              ]
+            },
+            {
+              "id": 4,
+              "title": "Zeta",
+              "genre": "Strategy",
+              "description": "Plan supply routes across a fictional frontier.",
+              "releaseYear": 2022,
+              "platforms": [
+                "Windows"
+              ]
+            },
+            {
+              "id": 3,
+              "title": "Écho",
+              "genre": "Puzzle",
+              "description": "Follow sound patterns through a quiet crystal maze.",
+              "releaseYear": 2024,
+              "platforms": [
+                "Windows",
+                "Linux"
+              ]
+            }
+          ],
+          "total": 10,
+          "filters": {
+            "search": "",
+            "genre": ""
+          }
+        }
+      },
+      "/api/games?search=Ember&genre=RPG": {
+        "status": 200,
+        "body": {
+          "games": [
+            {
+              "id": 6,
+              "title": "Ember Quest",
+              "genre": "RPG",
+              "description": "Build a party to restore the valley lanterns.",
+              "releaseYear": 2023,
+              "platforms": [
+                "Windows"
+              ]
+            }
+          ],
+          "total": 1,
+          "filters": {
+            "search": "Ember",
+            "genre": "RPG"
+          }
+        }
+      },
+      "/api/games/1": {
+        "status": 200,
+        "body": {
+          "game": {
+            "id": 1,
+            "title": "Orbit",
+            "genre": "Action",
+            "description": "Defend a tiny space station from drifting robots.",
+            "releaseYear": 2018,
+            "platforms": [
+              "Windows",
+              "Linux"
+            ]
+          }
+        }
+      },
+      "/api/games/1/patch-notes": {
+        "status": 200,
+        "body": {
+          "patchNotes": [
+            {
+              "id": 2,
+              "gameId": 1,
+              "version": "1.1.1",
+              "summary": "Fixed training arena navigation.",
+              "publishedAt": "2026-09-01"
+            },
+            {
+              "id": 1,
+              "gameId": 1,
+              "version": "1.1.0",
+              "summary": "Added a training arena.",
+              "publishedAt": "2026-09-01"
+            },
+            {
+              "id": 3,
+              "gameId": 1,
+              "version": "1.0.0",
+              "summary": "Initial release.",
+              "publishedAt": "2026-08-01"
+            }
+          ]
+        }
+      }
+    },
+    "tableCounts": {
+      "games": 10,
+      "patchNotes": 4,
+      "feedback": 0
+    }
+  }
+}

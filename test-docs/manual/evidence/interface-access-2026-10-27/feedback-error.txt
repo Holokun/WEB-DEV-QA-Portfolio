@@ -1,0 +1,40 @@
+- banner:
+  - generic: Game Companion
+  - navigation "Main":
+    - link "Library":
+      - /url: /
+    - link "Favourites (0)":
+      - /url: /#/favourites
+    - link "Feedback":
+      - /url: /#/feedback
+- main:
+  - link "Back":
+    - /url: /
+  - paragraph: SHARE YOUR EXPERIENCE
+  - heading "Feedback" [level=1]
+  - paragraph: Choose a game and tell us about your experience.
+  - status
+  - alert: Could not submit feedback. Your entries are saved here; please try again.
+  - generic: Game
+  - combobox "Game":
+    - option "Choose a game"
+    - option "Atlas Tactics" [selected]
+    - option "Ember Quest"
+    - option "Ember Trail"
+    - option "Iron Citadel"
+    - option "Moss Garden"
+    - option "Neon Sprint"
+    - option "Orbit"
+    - option "ORBIT"
+    - option "Zeta"
+    - option "Écho"
+  - paragraph
+  - generic: Email
+  - textbox "Email": <redacted>
+  - paragraph
+  - generic: Description
+  - textbox "Description": Keyboard recovery UI 2026-10-27 continuation synthetic feedback
+  - paragraph: At least 20 characters after trimming spaces.
+  - paragraph
+  - button "Submit feedback"
+- contentinfo: Ten fictional worlds. A local catalogue for exploring and testing.

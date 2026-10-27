@@ -1,0 +1,24 @@
+{
+  "capturedAt": "2026-10-27T12:25:49.435Z",
+  "response": {
+    "at": "2026-10-27T12:25:26.350Z",
+    "method": "POST",
+    "path": "/api/feedback",
+    "injected": {
+      "path": "/api/feedback",
+      "method": "POST",
+      "hold": true
+    },
+    "status": 201,
+    "requestBody": "{\"gameId\":10,\"email\":\"keyboard-access@example.com\",\"description\":\"Keyboard recovery UI 2026-10-27 continuation synthetic feedback\"}",
+    "responseBody": "{\"id\":2}"
+  },
+  "countBefore": 1,
+  "countAfter": 2,
+  "rowByResponseId": {
+    "id": 2,
+    "game_id": 10,
+    "email": "keyboard-access@example.com",
+    "description": "Keyboard recovery UI 2026-10-27 continuation synthetic feedback"
+  }
+}

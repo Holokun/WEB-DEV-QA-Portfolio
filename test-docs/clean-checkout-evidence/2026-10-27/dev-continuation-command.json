@@ -1,0 +1,16 @@
+{
+  "mode": "dev-continuation",
+  "startedAt": "2026-10-27T11:58:18.059Z",
+  "node": "v24.22.1",
+  "execPath": "D:\\programms\\nodejs\\node.exe",
+  "cwd": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1",
+  "command": [
+    "node",
+    "D:/programms/nodejs/node_modules/npm/bin/npx-cli.js",
+    "--yes",
+    "pnpm@11.19.0",
+    "dev"
+  ],
+  "DB_PATH": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1\\test-results\\task4-dev-owned\\games.sqlite",
+  "PORT": "0"
+}

@@ -1,0 +1,22 @@
+{
+  "mode": "full",
+  "startedAt": "2026-10-27T06:42:23.553Z",
+  "node": "v24.22.1",
+  "execPath": "D:\\programms\\nodejs\\node.exe",
+  "cwd": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\clean-checkout-2026-10-27-a1",
+  "command": [
+    "node",
+    "D:/programms/nodejs/node_modules/npm/bin/npx-cli.js",
+    "--yes",
+    "pnpm@11.19.0",
+    "test",
+    "--workers=1",
+    "--retries=0",
+    "--forbid-only",
+    "--reporter=list,json,html,./task4-provenance.cjs"
+  ],
+  "pid": 20736,
+  "finishedAt": "2026-10-27T06:48:02.350Z",
+  "exitCode": 0,
+  "signal": null
+}

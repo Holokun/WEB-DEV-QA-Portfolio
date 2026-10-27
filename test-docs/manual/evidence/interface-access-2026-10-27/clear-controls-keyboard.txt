@@ -1,0 +1,71 @@
+- banner:
+  - generic: Game Companion
+  - navigation "Main":
+    - link "Library":
+      - /url: /
+    - link "Favourites (0)":
+      - /url: /#/favourites
+    - link "Feedback":
+      - /url: /#/feedback
+- main:
+  - paragraph: THE LIBRARY
+  - heading "Find your next world." [level=1]
+  - paragraph: Explore the collection by title or genre.
+  - generic: Search games
+  - textbox "Search games" [active]:
+    - /placeholder: Try Ember or Orbit
+  - paragraph
+  - generic: Genre
+  - combobox "Genre":
+    - option "All genres" [selected]
+    - option "Action"
+    - option "Adventure"
+    - option "Puzzle"
+    - option "Racing"
+    - option "RPG"
+    - option "Strategy"
+  - button "Clear controls"
+  - status: 10 games
+  - paragraph: Results for search “All titles”; genre “All genres” · 10 games
+  - list "Games":
+    - link "Atlas Tactics":
+      - /url: /#/games/10
+    - paragraph: Strategy
+    - button "Add Atlas Tactics to favourites"
+    - link "Ember Quest":
+      - /url: /#/games/6
+    - paragraph: RPG
+    - button "Add Ember Quest to favourites"
+    - link "Ember Trail":
+      - /url: /#/games/5
+    - paragraph: Adventure
+    - button "Add Ember Trail to favourites"
+    - link "Iron Citadel":
+      - /url: /#/games/8
+    - paragraph: Action
+    - button "Add Iron Citadel to favourites"
+    - link "Moss Garden":
+      - /url: /#/games/9
+    - paragraph: Puzzle
+    - button "Add Moss Garden to favourites"
+    - link "Neon Sprint":
+      - /url: /#/games/7
+    - paragraph: Racing
+    - button "Add Neon Sprint to favourites"
+    - link "Orbit":
+      - /url: /#/games/1
+    - paragraph: Action
+    - button "Add Orbit to favourites"
+    - link "ORBIT":
+      - /url: /#/games/2
+    - paragraph: RPG
+    - button "Add ORBIT to favourites"
+    - link "Zeta":
+      - /url: /#/games/4
+    - paragraph: Strategy
+    - button "Add Zeta to favourites"
+    - link "Écho":
+      - /url: /#/games/3
+    - paragraph: Puzzle
+    - button "Add Écho to favourites"
+- contentinfo: Ten fictional worlds. A local catalogue for exploring and testing.

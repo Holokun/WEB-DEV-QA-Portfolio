@@ -1,0 +1,3303 @@
+{
+  "generatedAt": "2026-10-27T12:04:23.788Z",
+  "source": "Unmodified native full-results.json and test-list.json; derived inventory expansion handles combined IDs such as TEST-UI-02/03.",
+  "nativeStats": {
+    "startTime": "2026-10-27T06:42:26.899Z",
+    "duration": 335083.74799999996,
+    "expected": 583,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "nativeErrors": [],
+  "listedExecutions": 583,
+  "executedDefinitions": 296,
+  "projectCounts": {
+    "api": {
+      "listed": 156,
+      "passed": 156,
+      "failed": 0,
+      "skipped": 0,
+      "attempts": 156,
+      "maxRetry": 0
+    },
+    "chromium": {
+      "listed": 140,
+      "passed": 140,
+      "failed": 0,
+      "skipped": 0,
+      "attempts": 140,
+      "maxRetry": 0
+    },
+    "firefox": {
+      "listed": 140,
+      "passed": 140,
+      "failed": 0,
+      "skipped": 0,
+      "attempts": 140,
+      "maxRetry": 0
+    },
+    "webkit": {
+      "listed": 140,
+      "passed": 140,
+      "failed": 0,
+      "skipped": 0,
+      "attempts": 140,
+      "maxRetry": 0
+    },
+    "chromium-phone": {
+      "listed": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "attempts": 7,
+      "maxRetry": 0
+    }
+  },
+  "allAttempts": 583,
+  "unexpected": [],
+  "inventoryIds": [
+    "TEST-A11Y-01",
+    "TEST-A11Y-02",
+    "TEST-API-01",
+    "TEST-API-02",
+    "TEST-API-03",
+    "TEST-API-04",
+    "TEST-DATA-01",
+    "TEST-UI-01",
+    "TEST-UI-02",
+    "TEST-UI-03",
+    "TEST-UI-04",
+    "TEST-UI-05",
+    "TEST-UI-06",
+    "TEST-UI-07",
+    "TEST-UI-08",
+    "TEST-UI-09",
+    "TEST-UI-10",
+    "TEST-UI-11",
+    "TEST-UI-12",
+    "TEST-UI-13",
+    "TEST-UI-14"
+  ],
+  "inventoryEntryCount": 21,
+  "smoke": {
+    "chromium": [
+      {
+        "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      }
+    ],
+    "firefox": [
+      {
+        "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      }
+    ],
+    "webkit": [
+      {
+        "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      },
+      {
+        "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+        "status": "expected",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0
+          }
+        ]
+      }
+    ]
+  },
+  "inventory": {
+    "TEST-DATA-01": [
+      {
+        "project": "api",
+        "title": "TEST-DATA-01 current slice: new path seeds every literal game/note field once",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-DATA-01 current slice: restart preserves changed, added, and deleted records",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-DATA-01 current slice: explicit reset restores every seed field and is idempotent",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-DATA-01 current slice: reset refuses relative and ordinary development paths",
+        "status": "expected"
+      }
+    ],
+    "TEST-API-03": [
+      {
+        "project": "api",
+        "title": "TEST-API-03: trims a valid synthetic submission and inserts exactly one row selected by response ID",
+        "status": "expected"
+      }
+    ],
+    "TEST-API-02": [
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-01 accepts literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-02 accepts literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-03 accepts literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-04 accepts literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-05 accepts literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-06 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-07 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-08 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-09 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-10 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-11 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-12 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-13 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-14 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-15 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-16 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-17 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-18 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-19 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-20 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-21 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-22 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-23 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-24 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-25 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-26 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: EMAIL-27 rejects literal email",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: fixed description ASCII-19",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: fixed description ASCII-20-TRIM",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: fixed description EMOJI-19",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: fixed description EMOJI-20-TRIM",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: fixed description EMPTY",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-02: internal description whitespace and SQL punctuation are stored as data without a maximum",
+        "status": "expected"
+      }
+    ],
+    "TEST-API-01": [
+      {
+        "project": "api",
+        "title": "TEST-API-01: catalogue returns all exact fields in folded code-point order",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=Ember",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters genre=RPG",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=%20%20Ember%20%20&genre=RPG",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=%20%20&genre=RPG",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=Orbit",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=%C3%89CH",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=%C3%A9ch",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=echo",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=no-such-title",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=Ember%20%20Quest",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: literal filters search=&genre=",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: punctuation is literal data ' OR 1=1 --",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: punctuation is literal data %",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: punctuation is literal data _",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: punctuation is literal data [Orbit]",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: punctuation is literal data .*",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: punctuation is literal data Orbit; DROP TABLE games;",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: trimmed a boundary 80",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: trimmed a boundary 81",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: trimmed 🎮 boundary 80",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: trimmed 🎮 boundary 81",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query foo=x",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query Search=Orbit",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query Genre=Action",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query search=x&search=y",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query search=&search=",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query genre=RPG&genre=Action",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query =x",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query genre=action",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query genre=%20RPG",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query genre=RPG%20",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: rejects invalid query genre=Unknown",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: all strict genre values are accepted",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: each detail preserves literal fixture fields",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: notes have exact fields, stable date/ID order, and known empty result",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 0 precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID -1 precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 01 precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 1.5 precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID abc precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 9007199254740992 precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: valid absent ID 999",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: valid absent ID 9007199254740991",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: detail scope rejects search= before existence lookup",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: detail scope rejects genre=Action before existence lookup",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: detail scope rejects x=&x= before existence lookup",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 0/patch-notes precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID -1/patch-notes precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 01/patch-notes precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 1.5/patch-notes precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID abc/patch-notes precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: malformed ID 9007199254740992/patch-notes precedes query rejection",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: valid absent ID 999/patch-notes",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: valid absent ID 9007199254740991/patch-notes",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: detail scope rejects search=/patch-notes before existence lookup",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: detail scope rejects genre=Action/patch-notes before existence lookup",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: detail scope rejects x=&x=/patch-notes before existence lookup",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: bare question mark contains no supplied query keys",
+        "status": "expected"
+      },
+      {
+        "project": "api",
+        "title": "TEST-API-01: ordering compares supplementary Unicode code points and prefix lengths",
+        "status": "expected"
+      }
+    ],
+    "TEST-API-04": [
+      {
+        "project": "api",
+        "title": "TEST-API-04 / REQ-API-06: a real broken SQLite dependency yields generic errors after validation",
+        "status": "expected"
+      }
+    ],
+    "TEST-A11Y-01": [
+      {
+        "project": "chromium",
+        "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+        "status": "expected"
+      }
+    ],
+    "TEST-A11Y-02": [
+      {
+        "project": "chromium",
+        "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-01": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-01 loading: initial held response shows a perceivable loading state",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-01 loading: initial held response shows a perceivable loading state",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-01 loading: initial held response shows a perceivable loading state",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-02": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: invalid search announces its reason and associates the message only while invalid",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: literal ASCII-only search Orbit",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: literal ASCII-only search ÉCH",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: literal ASCII-only search éch",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: literal ASCII-only search echo",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: literal ASCII-only search %' OR 1=1 --",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: invalidating first request ignores its late success",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: invalidating first request ignores its late failure",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: invalidating a pending success retains earlier successful results",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02: invalidating a pending failure retains earlier successful results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: invalid search announces its reason and associates the message only while invalid",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: literal ASCII-only search Orbit",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: literal ASCII-only search ÉCH",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: literal ASCII-only search éch",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: literal ASCII-only search echo",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: literal ASCII-only search %' OR 1=1 --",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: invalidating first request ignores its late success",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: invalidating first request ignores its late failure",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: invalidating a pending success retains earlier successful results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02: invalidating a pending failure retains earlier successful results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: trimmed 80/81 ASCII boundary blocks all requests and retains valid results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: trimmed 80/81 emoji boundary blocks all requests and retains valid results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: invalid search announces its reason and associates the message only while invalid",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: literal ASCII-only search Orbit",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: literal ASCII-only search ÉCH",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: literal ASCII-only search éch",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: literal ASCII-only search echo",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: literal ASCII-only search %' OR 1=1 --",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: invalidating first request ignores its late success",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: invalidating first request ignores its late failure",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: invalidating a pending success retains earlier successful results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02: invalidating a pending failure retains earlier successful results",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-03": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-05": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-05 catalogue: zero matches exposes clear controls and restores results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-05 catalogue: zero matches exposes clear controls and restores results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-05 catalogue: zero matches exposes clear controls and restores results",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-14": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-14 catalogue: HTTP 500 retains results, invalid input blocks Retry, then current controls recover",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-14 catalogue: network abort retains results, invalid input blocks Retry, then current controls recover",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-04": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale success cannot replace latest results",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale success cannot replace latest empty",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale success cannot replace latest error",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale success cannot replace latest loading",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale failure cannot replace latest results",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale failure cannot replace latest empty",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale failure cannot replace latest error",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 stale failure cannot replace latest loading",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 genre only: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 genre only: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 combined controls: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 combined controls: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 clearing search: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 clearing search: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 clearing genre: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-04 clearing genre: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale success cannot replace latest results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale success cannot replace latest empty",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale success cannot replace latest error",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale success cannot replace latest loading",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale failure cannot replace latest results",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale failure cannot replace latest empty",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale failure cannot replace latest error",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 stale failure cannot replace latest loading",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 genre only: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 genre only: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 combined controls: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 combined controls: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 clearing search: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 clearing search: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 clearing genre: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-04 clearing genre: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale success cannot replace latest results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale success cannot replace latest empty",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale success cannot replace latest error",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale success cannot replace latest loading",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale failure cannot replace latest results",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale failure cannot replace latest empty",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale failure cannot replace latest error",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 stale failure cannot replace latest loading",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 genre only: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 genre only: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 combined controls: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 combined controls: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 clearing search: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 clearing search: late failure preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 clearing genre: late success preserves current controls",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-04 clearing genre: late failure preserves current controls",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-12": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-12 catalogue: keyboard search, genre, link and Retry have visible focus and useful status",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-12 first-slice: keyboard opens game, follows notes and returns with visible focus",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-12 first-slice: detail and notes Retry are reached and activated by keyboard",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-06": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-06 direct detail entry and browser history restore exactly one view",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-06 notes: known game without notes shows explicit empty state",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-06 direct detail entry and browser history restore exactly one view",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-06 notes: known game without notes shows explicit empty state",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-06 direct detail entry and browser history restore exactly one view",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-06 notes: known game without notes shows explicit empty state",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-07": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12: removing saved cards retains focus on neighbouring controls and then the empty heading",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-08": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: malformed/non-array storage {\"id\":1} recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: malformed/non-array storage null recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: games hidden by search and genre remain saved",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: Library return retains memory favourites after storage write failure",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: Library return retains memory favourites after storage access failure",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-08: failed storage writes keep the last persisted selection on reload",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: malformed/non-array storage {\"id\":1} recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: malformed/non-array storage null recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: games hidden by search and genre remain saved",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: Library return retains memory favourites after storage write failure",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: Library return retains memory favourites after storage access failure",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-08: failed storage writes keep the last persisted selection on reload",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: malformed/non-array storage {broken recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: malformed/non-array storage {\"id\":1} recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: malformed/non-array storage null recovers to usable empty state",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: games hidden by search and genre remain saved",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: direct saved route loading and HTTP 500 retain candidates; Retry validates complete catalogue",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: direct saved route loading and network abort retain candidates; Retry validates complete catalogue",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: localStorage access failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: localStorage read failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: localStorage write failure warns and keeps toggles and navigation usable",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: Library return retains memory favourites after storage write failure",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: Library return retains memory favourites after storage access failure",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: a destroyed saved view cannot validate IDs after late complete success",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-08: failed storage writes keep the last persisted selection on reload",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-13": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/12/13: favourite controls use keyboard with visible focus and fit 375px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-12/13: keyboard follows header favourites and feedback, validates and submits with SQL verification",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-07/08/13: saved list, count and favourite controls fit the configured viewport",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-13 first-slice viewport: catalogue controls, filtered cards, detail and notes fit",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-13 first-slice viewport: loading and errors remain usable without overflow",
+        "status": "expected"
+      },
+      {
+        "project": "chromium-phone",
+        "title": "TEST-UI-13 first-slice viewport: isolated long title, description, platforms and notes wrap",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-09": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09: empty submission identifies all required fields without request or insertion",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09: empty submission identifies all required fields without request or insertion",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09: empty submission identifies all required fields without request or insertion",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 1280px",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-09/12/13: feedback fields work by keyboard with visible focus at 375px",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-11": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-11: controlled network abort preserves every field and retry stores one row",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-11: controlled HTTP 500 preserves every field and retry stores one row",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-11: repeated submit events while pending send one real request and insert one row",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-11: navigation ignores a late submission success",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-11: navigation ignores a late submission controlled HTTP 500",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-11: controlled network abort preserves every field and retry stores one row",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-11: controlled HTTP 500 preserves every field and retry stores one row",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-11: repeated submit events while pending send one real request and insert one row",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-11: navigation ignores a late submission success",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-11: navigation ignores a late submission controlled HTTP 500",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-11: controlled network abort preserves every field and retry stores one row",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-11: controlled HTTP 500 preserves every field and retry stores one row",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-11: repeated submit events while pending send one real request and insert one row",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-11: navigation ignores a late submission success",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-11: navigation ignores a late submission controlled HTTP 500",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery",
+        "status": "expected"
+      }
+    ],
+    "TEST-UI-10": [
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-01 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-02 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-03 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-04 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-05 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-06 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-07 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-08 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-09 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-10 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-11 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-12 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-13 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-14 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-15 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-16 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-17 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-18 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-19 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-20 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-21 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-22 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-23 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-24 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-25 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-26 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMAIL-27 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: ASCII-19 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: ASCII-20-TRIM keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMOJI-19 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMOJI-20-TRIM keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMPTY keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: ASCII-20 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMOJI-20 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10: EMPTY-LITERAL keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "chromium",
+        "title": "TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-01 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-02 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-03 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-04 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-05 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-06 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-07 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-08 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-09 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-10 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-11 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-12 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-13 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-14 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-15 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-16 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-17 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-18 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-19 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-20 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-21 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-22 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-23 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-24 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-25 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-26 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMAIL-27 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: ASCII-19 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: ASCII-20-TRIM keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMOJI-19 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMOJI-20-TRIM keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMPTY keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: ASCII-20 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMOJI-20 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10: EMPTY-LITERAL keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "firefox",
+        "title": "TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-01 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-02 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-03 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-04 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-05 accepts its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-06 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-07 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-08 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-09 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-10 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-11 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-12 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-13 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-14 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-15 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-16 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-17 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-18 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-19 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-20 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-21 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-22 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-23 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-24 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-25 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-26 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMAIL-27 rejects its literal email example",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: ASCII-19 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: ASCII-20-TRIM keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMOJI-19 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMOJI-20-TRIM keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMPTY keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: ASCII-20 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMOJI-20 keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10: EMPTY-LITERAL keeps the fixed Unicode/trim boundary unchanged",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10/11: game-list controlled network abort retains saved IDs until complete recovery",
+        "status": "expected"
+      },
+      {
+        "project": "webkit",
+        "title": "TEST-UI-10/11: game-list controlled HTTP 500 retains saved IDs until complete recovery",
+        "status": "expected"
+      }
+    ]
+  },
+  "attachments": [],
+  "inlineAttachments": [
+    {
+      "project": "chromium",
+      "title": "Accessibility gate sentinel: controlled missing-label critical violation is rejected (instrumentation)",
+      "name": "axe-sentinel-critical-missing-label",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "Accessibility gate sentinel: controlled missing-label serious violation is rejected (instrumentation)",
+      "name": "axe-sentinel-serious-missing-label",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-loaded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-filtered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-invalid-search",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-empty",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-loading",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-error-retained",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-recovered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-loaded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-notes-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-notes-expanded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+      "name": "axe-detail-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+      "name": "axe-detail-recovered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-ready",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-invalid",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-request-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-pending",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-success",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+      "name": "axe-favourites-saved",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "chromium",
+      "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+      "name": "axe-favourites-empty",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "Accessibility gate sentinel: controlled missing-label critical violation is rejected (instrumentation)",
+      "name": "axe-sentinel-critical-missing-label",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "Accessibility gate sentinel: controlled missing-label serious violation is rejected (instrumentation)",
+      "name": "axe-sentinel-serious-missing-label",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-loaded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-filtered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-invalid-search",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-empty",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-loading",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-error-retained",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-recovered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-loaded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-notes-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-notes-expanded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+      "name": "axe-detail-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+      "name": "axe-detail-recovered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-ready",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-invalid",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-request-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-pending",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-success",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+      "name": "axe-favourites-saved",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "firefox",
+      "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+      "name": "axe-favourites-empty",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "Accessibility gate sentinel: controlled missing-label critical violation is rejected (instrumentation)",
+      "name": "axe-sentinel-critical-missing-label",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "Accessibility gate sentinel: controlled missing-label serious violation is rejected (instrumentation)",
+      "name": "axe-sentinel-serious-missing-label",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-loaded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-filtered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-invalid-search",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: loaded, filtered, invalid and empty states",
+      "name": "axe-catalogue-empty",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-loading",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-error-retained",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 catalogue: real response loading, HTTP error and Retry recovery",
+      "name": "axe-catalogue-recovered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-loaded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-notes-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 detail: real game, expanded patch notes, notes error and recovery",
+      "name": "axe-detail-notes-expanded",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+      "name": "axe-detail-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 detail: HTTP error and real Retry recovery",
+      "name": "axe-detail-recovered",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-ready",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-invalid",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-request-error",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-pending",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-02 feedback: normal, invalid, request error, pending and real success",
+      "name": "axe-feedback-success",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+      "name": "axe-favourites-saved",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    },
+    {
+      "project": "webkit",
+      "title": "TEST-A11Y-01 favourites supplement: saved and empty views",
+      "name": "axe-favourites-empty",
+      "contentType": "application/json",
+      "bodyEncoding": "base64",
+      "bodyRetainedInNativeJSON": true
+    }
+  ],
+  "inlineAttachmentCount": 63
+}

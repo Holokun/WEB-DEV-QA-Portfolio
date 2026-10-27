@@ -1,6 +1,6 @@
 # Game Companion — Traceability Matrix
 
-Sources: [acceptance criteria and API contract](requirements-and-risks.md) and [test inventory](../PROJECT_PLAN.md). Rows below retain the coverage contract; actual local execution is recorded in the [regression report for 2026-10-13 and 2026-10-26](favourites-feedback-results.md). The latest run passed 559 project executions across 288 expanded definitions; 19 of 21 inventory entries are represented, while TEST-A11Y-01/02 remain pending. A test ID names an inventory entry; named variants are separate checks under that entry. Smoke runs the primary successful paths of Smoke entries. Validation, failure, recovery, and empty-state variants run in regression. Manual scenarios, axe scans and CI are pending unless a separately linked report explicitly records them.
+Sources: [acceptance criteria](requirements-and-risks.md) and [test inventory](../PROJECT_PLAN.md). Rows below retain the coverage contract. The [2026-10-27 clean-checkout report](clean-checkout-results.md) records583 passed executions across 296 expanded definitions and all 21 inventory entries, including TEST-A11Y-01/02; no failures/skips/retries. Its [derived case/project map](clean-checkout-evidence/2026-10-27/derived-summary.json) expands combined labels such as TEST-UI-02/03. Historical559/288/19 results remain in the [earlier report](favourites-feedback-results.md). Inventory IDs, expanded definitions and browser executions are different measures. All15 tagged primary smoke paths passed within the full run; actual CI and remaining manual/speech review remain open.
 
 | Requirement | Planned test(s) | Explicit assertions / variants |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ Sources: [acceptance criteria and API contract](requirements-and-risks.md) and [
 
 ## Manual scenario links
 
-The procedures, preconditions, expected results, and execution-record fields are in [test-scenarios.md](test-scenarios.md). All scenarios remain planned.
+The procedures, preconditions, expected results, and execution-record fields are in [test-scenarios.md](test-scenarios.md). Execution evidence is separately recorded in the [historical human session](manual/testing-session-by-Vadim.md), [bounded agent exploration](manual/new-features-agent-session-2026-10-26.md), [structured checks](manual/new-features-structured-checks-2026-10-27.md) and [partial actual speech review](manual/spoken-interface-check-2026-10-27.md); this does not mark every manual variant passed.
 
 | Requirement(s) | Manual scenario(s) |
 | --- | --- |
@@ -56,4 +56,4 @@ Checks that mutate catalogue/patch notes, verify database startup or reset, or f
 
 Browser projects and execution gates are defined in [test-plan.md](test-plan.md#browser-and-viewport-coverage). Manual keyboard/focus and screen-reader review supplements axe; it is not replaced by automated scans.
 
-Current test locations: `tests/e2e/favourites.spec.ts` covers TEST-UI-07/08 and saved-list keyboard focus; `tests/e2e/feedback.spec.ts` covers TEST-UI-09/10/11, EMAIL-01–27 and exact description boundaries. `tests/e2e/layout.spec.ts` runs TEST-UI-12/13 header navigation, feedback validation/entry/submission with SQL verification, favourites controls and layout in the required desktop/phone projects. `tests/api/feedback.spec.ts` exposes TEST-API-03 for primary successful insertion and TEST-API-02 for validation; `tests/api/games.spec.ts` exposes TEST-API-04 for the real isolated broken-SQLite dependency. `tests/api/database.spec.ts` covers TEST-DATA-01 startup/migration/reset/counter/rollback. Required REQ-A11Y-01 keyboard automation is covered; its axe and manual screen-reader portions remain pending.
+Current test locations: `tests/e2e/favourites.spec.ts` covers TEST-UI-07/08 and saved-list keyboard focus; `tests/e2e/feedback.spec.ts` covers TEST-UI-09/10/11, EMAIL-01–27 and exact description boundaries. `tests/e2e/layout.spec.ts` runs TEST-UI-12/13 header navigation, feedback validation/entry/submission with SQL verification, favourites controls and layout in the required desktop/phone projects. `tests/api/feedback.spec.ts` exposes TEST-API-03 for primary successful insertion and TEST-API-02 for validation; `tests/api/games.spec.ts` exposes TEST-API-04 for the real isolated broken-SQLite dependency. `tests/api/database.spec.ts` covers TEST-DATA-01 startup/migration/reset/counter/rollback. Required REQ-A11Y-01 keyboard automation and both axe entries passed in the fresh matrix; remaining actual announcements and complete manual review remain open.

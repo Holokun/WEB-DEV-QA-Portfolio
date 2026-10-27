@@ -1,0 +1,17 @@
+{
+  "kind": "agent-authored teardown record from tool outputs",
+  "date": "2026-10-27",
+  "sourceCommit": "1ec3aa5082851c47a471e20ec14a0b34f8b762d0",
+  "initialSession": 14488,
+  "initialURL": "http://127.0.0.1:58730",
+  "initialSessionLaterState": "Unknown process id after host permission/session transition; controller observed connection refusal",
+  "continuationSession": 74199,
+  "continuationURL": "http://127.0.0.1:63650",
+  "sameOwnedDatabasePreserved": true,
+  "controllerConfirmedUIJourneyCompleteBeforeStop": true,
+  "terminationAction": "write_stdin Ctrl+C to owned continuation session74199",
+  "terminationToolExitCode": 1,
+  "listenerVerification": "Get-NetTCPConnection -LocalPort63650 -State Listen: no result, exit1",
+  "fullMatrixRerun": false,
+  "note": "Original command JSON lacked a normal close record when the exec process group was interrupted; it is preserved unchanged. This additive record does not invent normal application exit metadata. Controller owns verification proxy cleanup and ui-journey manifest."
+}
