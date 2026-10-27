@@ -28,12 +28,17 @@ Search is trimmed, limited to 80 Unicode code points, and matched as a literal s
 ```powershell
 pnpm typecheck
 pnpm build
+pnpm test:smoke
 pnpm test:api
 pnpm test:ui
 pnpm test
 ```
 
 Install the test browsers once with `pnpm browsers:install`; use `pnpm browsers:install firefox` for Firefox alone. On Windows, this installs the official pinned Firefox in the ignored project-local `.playwright-browsers` cache, which the Firefox project selects automatically. Chromium and WebKit keep their normal cache. Other operating systems and explicit `PLAYWRIGHT_BROWSERS_PATH` overrides keep Playwright's standard behavior. No subscription or additional package is needed. `test:ui` runs catalogue/detail/notes, favourites, feedback and keyboard/layout checks in Chromium, Firefox and WebKit at 1280 × 800, plus the Chromium phone layout project at 375 × 812. `test:api` runs the browser-independent API/database project. Phone coverage is a viewport check; it does not represent a physical device or the whole desktop suite on phones. Playwright launches its own browser processes separately from the ordinary Firefox session.
+
+`pnpm test:smoke` builds and selects exactly five existing primary successful paths (`TEST-UI-01/02/06/07/11`) in Chromium, Firefox and WebKit: **15 executions**, one worker and zero retries. Feedback includes the real `201` response ID, exactly one new SQLite row and trimmed-field verification. `pnpm test:smoke --list` lists the selection without running it. Validation, error, recovery and empty-state variants remain in `pnpm test`. The [smoke/CI report](test-docs/smoke-ci-results.md) records the first local run honestly: 14 passed and one Chromium screenshot-capture failure; its focused unchanged reproduction passed. That is not a passing complete smoke run.
+
+[GitHub Actions](.github/workflows/tests.yml) configures smoke on every push, full regression on pull requests and default-branch pushes, and both on manual dispatch. Each job uses Ubuntu 24.04, pinned Node 24.22.1 and pnpm 11.19.0, a frozen lockfile and official Playwright browsers installed with Linux dependencies. Jobs keep one worker, zero retries and independently owned app/database lifecycles. Native HTML/JSON plus available failure traces/screenshots are uploaded after success or failure under distinct smoke/full artifact names for 14 days. Installation failures can leave no test report; upload reports that absence. The workflow is configured and locally checked; publication and observed CI results remain pending.
 
 The [Firefox launch repair](test-docs/firefox-launch-repair.md) uses the same official Firefox 155.0 revision `1543` in a different cache location. On the verified Windows 11 host, the user-cache executable fails SxS activation for `mozglue`; the project-cache executable launches. The exact Windows cause of that location-dependent failure remains undetermined. Production browser files and Windows security settings were not patched. The [full Firefox rerun on 2026-10-06](test-docs/firefox-regression-results-2026-10-06.md) passed **all 66 existing checks in 41.3 seconds**, with no failures, skips or retries. Browser diagnostics, including lifecycle warnings, are recorded separately in that report. Full-version inventory and release gates remain open.
 

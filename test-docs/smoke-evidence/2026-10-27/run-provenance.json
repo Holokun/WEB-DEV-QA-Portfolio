@@ -1,0 +1,52 @@
+{
+  "recordedAt": "2026-10-27T06:21:03.894Z",
+  "node": "v24.22.1",
+  "platform": "win32",
+  "release": "10.0.26200",
+  "architecture": "x64",
+  "cwd": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio",
+  "baseURL": "http://127.0.0.1:53515",
+  "dbPath": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\owned-databases\\run-0Hp2Yg\\games.sqlite",
+  "workers": 1,
+  "projects": [
+    {
+      "name": "api",
+      "retries": 0
+    },
+    {
+      "name": "chromium",
+      "retries": 0,
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "firefox",
+      "retries": 0,
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "webkit",
+      "retries": 0,
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    {
+      "name": "chromium-phone",
+      "retries": 0,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    }
+  ],
+  "listedTests": 15,
+  "finishedAt": "2026-10-27T06:21:21.801Z",
+  "status": "failed"
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "path": "test-docs\\smoke-evidence\\2026-10-27\\artifacts\\e2e-catalogue-TEST-UI-01-c-aa598-s-and-real-game-links-smoke-chromium\\trace.zip",
+    "events": [
+      {
+        "type": "before",
+        "callId": "pw:api@50",
+        "stepId": "pw:api@50",
+        "startTime": 1718.382,
+        "class": "Test",
+        "method": "pw:api",
+        "title": "Screenshot",
+        "params": {
+          "type": "png",
+          "fullPage": "true"
+        },
+        "stack": [
+          {
+            "file": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\e2e\\catalogue.spec.ts",
+            "line": 19,
+            "column": 14
+          }
+        ]
+      },
+      {
+        "type": "after",
+        "callId": "pw:api@50",
+        "endTime": 1744.405,
+        "annotations": [],
+        "error": {
+          "name": "",
+          "message": "Error: page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+          "stack": "Error: page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\e2e\\catalogue.spec.ts:19:14"
+        }
+      },
+      {
+        "type": "error",
+        "message": "Error: page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+        "stack": [
+          {
+            "file": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\e2e\\catalogue.spec.ts",
+            "line": 19,
+            "column": 14
+          }
+        ]
+      },
+      {
+        "type": "after",
+        "callId": "hook@51",
+        "endTime": 1868.407,
+        "attachments": [
+          {
+            "name": "screenshot",
+            "contentType": "image/png",
+            "file": "attachments/87c019946643b30227e0af97151b8fcb8a4c3656"
+          }
+        ],
+        "annotations": []
+      },
+      {
+        "type": "before",
+        "callId": "fixture@98",
+        "stepId": "fixture@98",
+        "parentId": "hook@88",
+        "startTime": 2002.296,
+        "class": "Test",
+        "method": "fixture",
+        "title": "Fixture \"screenshot\"",
+        "params": {},
+        "stack": [
+          {
+            "file": "project#chromium",
+            "line": 1,
+            "column": 1
+          }
+        ],
+        "group": "configuration"
+      },
+      {
+        "type": "before",
+        "callId": "call@25",
+        "startTime": 1718.58,
+        "class": "Page",
+        "method": "screenshot",
+        "params": {
+          "type": "png",
+          "fullPage": true
+        },
+        "stepId": "pw:api@50"
+      },
+      {
+        "type": "log",
+        "callId": "call@25",
+        "time": 1720.551,
+        "message": "taking page screenshot"
+      },
+      {
+        "type": "after",
+        "callId": "call@25",
+        "endTime": 1736.069,
+        "error": {
+          "message": "Protocol error (Page.captureScreenshot): Unable to capture screenshot",
+          "stack": "Error: Protocol error (Page.captureScreenshot): Unable to capture screenshot\n    at D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:34996:61\n    at new Promise (<anonymous>)\n    at _CRSession.send (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:34995:16)\n    at CRPage.takeScreenshot (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:37436:77)\n    at Screenshotter._screenshot (D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:21823:26)\n    at D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\playwright-core@1.63.0\\node_modules\\playwright-core\\lib\\coreBundle.js:21738:22",
+          "name": "Error"
+        }
+      }
+    ]
+  },
+  {
+    "path": "test-docs\\smoke-evidence\\2026-10-27\\catalogue-check\\artifacts\\e2e-catalogue-TEST-UI-01-c-aa598-s-and-real-game-links-smoke-chromium\\trace.zip",
+    "events": [
+      {
+        "type": "before",
+        "callId": "pw:api@50",
+        "stepId": "pw:api@50",
+        "startTime": 1422.105,
+        "class": "Test",
+        "method": "pw:api",
+        "title": "Screenshot",
+        "params": {
+          "type": "png",
+          "fullPage": "true"
+        },
+        "stack": [
+          {
+            "file": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\e2e\\catalogue.spec.ts",
+            "line": 19,
+            "column": 14
+          }
+        ]
+      },
+      {
+        "type": "before",
+        "callId": "call@25",
+        "startTime": 1422.293,
+        "class": "Page",
+        "method": "screenshot",
+        "params": {
+          "type": "png",
+          "fullPage": true
+        },
+        "stepId": "pw:api@50"
+      },
+      {
+        "type": "log",
+        "callId": "call@25",
+        "time": 1423.335,
+        "message": "taking page screenshot"
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+# Task 2 independent specification and quality review — 2026-10-27
+
+Scope: current Task 2 delta against `94779ebd20c08e763ec0c99cae4aa0dbb4238af7`, its brief/handoff, durable smoke/CI report, and dated native evidence. This review covers the Task 2 implementation and accuracy of its evidence, not overall release readiness. Read `guard-approved-plan`, relevant CI/Playwright guidance and Task 1 handoff. The approved serial execution, existing architecture/root/launch/dependencies and later release gates take precedence over generic skill examples.
+
+## Findings and verdicts
+
+**Actionable findings: none.** No P0–P3 defect introduced by the reviewed Task 2 changes was identified.
+
+**Specification verdict: PASS for the scoped implementation and evidence delivery.** Five existing primary paths are selected without changing test bodies, and the configured workflow matches the approved trigger/runtime/artifact contract. The required local smoke invocation was performed and its failure was retained and accurately reported; this verdict does not mean the smoke invocation passed.
+
+**Quality verdict: PASS for review/commit of this scoped implementation, with an unresolved execution limitation.** The first complete smoke remains **14 passed / 1 failed**, and a separate focused unchanged check remains **1 passed / 1 executed**. Chromium full-page capture failed at `tests/e2e/catalogue.spec.ts:19`; its cause is undetermined. The focused success establishes neither a fix nor a successful complete 15-test run. Screenshot stability, final clean-checkout/full-matrix verification and actual GitHub Actions execution remain open, as the implementation report states.
+
+## Requirement mapping and independent checks
+
+| Contract | Review result |
+| --- | --- |
+| Exactly TEST-UI-01/02/06/07/11 primary paths across three desktops | Native `listing.json` has exactly 15 selections: five each in Chromium, Firefox and WebKit. Titles map to the intended five paths; combined historical 02/03 and 07/08 cases remain intact. No API, phone or accessibility project is selected by smoke. Listing is discovery evidence, not executed passes. |
+| Existing assertions and real SQL retained | Independently compared all four test files with the base commit after removing only ` @smoke` and normalizing CRLF: all match. Focused inspection of the unchanged feedback helper confirms real POST 201, safe positive response ID, exactly +1 row, returned-ID lookup and exact trimmed fields. Opened the recorded run DB read-only: all three rows exactly match retained metadata. |
+| Package command and serial lifecycle | `package.json:18` builds, selects three desktop projects and sets workers=1, retries=0 and forbid-only. Existing `playwright.config.ts`, `tests/fixtures/suite.ts` and `app.ts` provide retained failure traces/screenshots, a unique owned DB, port 0, readiness checking and awaited teardown. Non-Windows Firefox uses the official default cache. No temporary reporter is imported by the command or workflow. |
+| Triggers | Parsed actual workflow with the installed Playwright-bundled YAML parser and independently evaluated six cases: feature push→smoke; main push→both; alternate current default branch push→both; PR→full; manual dispatch→both; tag named main→smoke. The actual expression at `.github/workflows/tests.yml:21` matches this table. This is local validation, not actionlint or GitHub engine execution. |
+| Pinned Linux toolchain | `.github/workflows/tests.yml:29` onwards uses full-SHA official checkout/setup-node/upload-artifact, Node 24.22.1 and pnpm 11.19.0. Fresh read-only official `git ls-remote` resolutions matched all three recorded SHAs. Official action metadata confirms node24 and the inputs used. Fresh direct official Node checksum and pnpm registry responses match retained evidence; pnpm requires Node >=22.13 and the project requires >=24.19.0. |
+| Installation and full coverage | Frozen lockfile install and `pnpm exec playwright install --with-deps chromium firefox webkit` are explicit. Smoke calls the declared script; full calls the existing complete `pnpm test` with workers=1/retries=0/forbid-only. No configuration filtering removes the existing API, desktop accessibility or phone coverage from full. Actual fresh Linux install and execution are pending. |
+| Permissions, bounds and evidence | Read-only contents, persist-credentials=false, standard ubuntu-24.04, fail-fast=false, 20-minute jobs, 5-minute upload and 14-day retention. Reporter environment paths and explicit artifact output paths all lie beneath the uploaded `test-results/<suite>/` tree. `always()` and suite/run/attempt artifact names preserve distinct smoke/full native JSON/HTML and available traces/screenshots; hidden files included. No continue-on-error, notifications or external credential requirement. Early installation failure can produce no report and is explicitly disclosed. |
+| Honest reporting and preservation | Independently parsed native JSON and HTML embedded reports: original 15 total/14 expected/1 unexpected, focused 1 expected, failed selection probe 0 tests with a global error. Original and focused trace ZIPs confirm the fullPage screenshot error and later successful capture respectively. The report preserves the failed probe and does not invent a cause or claim green smoke/CI. |
+
+## Fresh read-only verification performed
+
+- All 76 entries in the new SHA-256 inventory match the current native evidence; all 42 Task 1 entries still match.
+- Independently checked all 77 prospective Git-filter audit entries, including inventory bytes: recorded SHA-256 values match, and `git hash-object --no-filters` equals `git hash-object --path=<forward-slash path>` for each. No `-w`, staging or index mutation was used. Actual staged-blob verification remains the controller's responsibility.
+- Native HTML report data agrees with the corresponding JSON. Failure trace, error-context and failure image paths exist and are covered by the hash inventory. Native absolute Windows paths are preserved without rewriting; HTML bundles retain their copied data files.
+- `git diff --check` exited 0, with normal source CRLF advisories only.
+
+No tests or builds were rerun, no preserved evidence was overwritten, and no source/index/commit/push/publication operation was performed. Only this review file was written. Root manual evidence and unrelated untracked reports were outside scope and left untouched.
+
+Official sources checked: [checkout action metadata](https://raw.githubusercontent.com/actions/checkout/3d3c42e5aac5ba805825da76410c181273ba90b1/action.yml), [setup-node action metadata](https://raw.githubusercontent.com/actions/setup-node/949feb2413d6458794dcd2491c4babbbce0c15c1/action.yml), [upload-artifact action metadata](https://raw.githubusercontent.com/actions/upload-artifact/cf430e030ddbb5b0abf93d22962f4752f3646cd9/action.yml), [Node distribution checksums](https://nodejs.org/dist/v24.22.1/SHASUMS256.txt), [pnpm package metadata](https://registry.npmjs.org/pnpm/11.19.0).

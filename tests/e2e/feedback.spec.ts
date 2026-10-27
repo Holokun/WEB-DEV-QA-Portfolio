@@ -52,7 +52,7 @@ test('TEST-UI-09: empty submission identifies all required fields without reques
   await expect(page.getByLabel('Game', { exact: true })).toBeFocused();
 });
 
-test('TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row', async ({ page, dbPath }) => {
+test('TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke', async ({ page, dbPath }) => {
   await page.goto('/');
   const nav = page.getByRole('navigation', { name: 'Main' });
   await expect(nav.getByRole('link')).toHaveText(['Library', 'Favourites (0)', 'Feedback']);

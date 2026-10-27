@@ -9,7 +9,7 @@ async function expectTitles(page: Page, titles: string[]) {
   await expect(page.getByRole('status')).toContainText(`${titles.length} games`);
 }
 
-test('TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links', async ({ page }) => {
+test('TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke', async ({ page }) => {
   await page.goto('/');
   await expectTitles(page, ['Atlas Tactics', 'Ember Quest', 'Ember Trail', 'Iron Citadel', 'Moss Garden', 'Neon Sprint', 'Orbit', 'ORBIT', 'Zeta', 'Écho']);
   await expect(page.getByRole('list', { name: 'Games' }).locator('.genre')).toHaveText(['Strategy', 'RPG', 'Adventure', 'Action', 'Puzzle', 'Racing', 'Action', 'RPG', 'Strategy', 'Puzzle']);
@@ -19,7 +19,7 @@ test('TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real ga
   await page.screenshot({ path: test.info().outputPath('catalogue.png'), fullPage: true });
 });
 
-test('TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other', async ({ page }) => {
+test('TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke', async ({ page }) => {
   await page.goto('/');
   const search = page.getByRole('textbox', { name: 'Search games' });
   const genre = page.getByLabel('Genre');

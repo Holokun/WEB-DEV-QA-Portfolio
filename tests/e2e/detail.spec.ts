@@ -54,7 +54,7 @@ async function holdGameOne(page: Page, resource: 'detail' | 'notes') {
   };
 }
 
-test('TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back', async ({ page }) => {
+test('TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('link', { name: 'Orbit', exact: true }).click();
   await orbit(page);

@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ok 1 [chromium] › tests\e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke (550ms)
+
+  1 passed (1.4s)

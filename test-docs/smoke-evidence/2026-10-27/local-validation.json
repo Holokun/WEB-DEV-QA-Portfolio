@@ -1,0 +1,94 @@
+{
+  "recordedAt": "2026-10-27T06:28:37.707Z",
+  "validation": "YAML parse + exact field assertions + local JavaScript evaluation of the GitHub expression subset; not GitHub workflow execution or actionlint",
+  "checks": {
+    "yamlErrors": 0,
+    "triggerChecks": [
+      {
+        "event": "push",
+        "branch": "feature",
+        "defaultBranch": "main",
+        "refType": "branch",
+        "actual": [
+          "smoke"
+        ]
+      },
+      {
+        "event": "push",
+        "branch": "main",
+        "defaultBranch": "main",
+        "refType": "branch",
+        "actual": [
+          "smoke",
+          "full"
+        ]
+      },
+      {
+        "event": "push",
+        "branch": "trunk",
+        "defaultBranch": "trunk",
+        "refType": "branch",
+        "actual": [
+          "smoke",
+          "full"
+        ]
+      },
+      {
+        "event": "pull_request",
+        "branch": "feature",
+        "defaultBranch": "main",
+        "refType": "branch",
+        "actual": [
+          "full"
+        ]
+      },
+      {
+        "event": "workflow_dispatch",
+        "branch": "feature",
+        "defaultBranch": "main",
+        "refType": "branch",
+        "actual": [
+          "smoke",
+          "full"
+        ]
+      },
+      {
+        "event": "push",
+        "branch": "main",
+        "defaultBranch": "main",
+        "refType": "tag",
+        "actual": [
+          "smoke"
+        ]
+      }
+    ],
+    "listing": {
+      "total": 15,
+      "perDesktop": 5
+    },
+    "sourceBodiesUnchanged": [
+      "tests/e2e/catalogue.spec.ts",
+      "tests/e2e/detail.spec.ts",
+      "tests/e2e/favourites.spec.ts",
+      "tests/e2e/feedback.spec.ts"
+    ],
+    "task1InventoryMatches": 42,
+    "task1Mismatches": 0
+  },
+  "initialStats": {
+    "startTime": "2026-10-27T06:21:03.569Z",
+    "duration": 18021.886,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "focusedStats": {
+    "startTime": "2026-10-27T06:22:11.234Z",
+    "duration": 1447.417,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

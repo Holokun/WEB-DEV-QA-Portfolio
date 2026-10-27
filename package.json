@@ -15,6 +15,7 @@
     "reset:test-db": "pnpm build && node dist/app/db/reset.js",
     "test:api": "pnpm build && playwright test --project=api",
     "test:ui": "pnpm build && playwright test --project=chromium --project=firefox --project=webkit --project=chromium-phone",
+    "test:smoke": "pnpm build && playwright test --grep @smoke --project=chromium --project=firefox --project=webkit --workers=1 --retries=0 --forbid-only",
     "test": "pnpm build && playwright test"
   },
   "devDependencies": {

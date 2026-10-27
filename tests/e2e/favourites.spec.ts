@@ -11,7 +11,7 @@ async function seed(page: Page, value: string) {
   await page.addInitScript(({ storageKey, value }) => localStorage.setItem(storageKey, value), { storageKey: key, value });
 }
 
-test('TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence', async ({ page }) => {
+test('TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke', async ({ page }) => {
   let catalogueRequests = 0;
   page.on('request', request => { if (new URL(request.url()).pathname === '/api/games') ++catalogueRequests; });
   await page.goto('/');

@@ -1,0 +1,19 @@
+$ pnpm build && playwright test --grep @smoke --project=chromium --project=firefox --project=webkit --workers=1 --retries=0 --forbid-only "--list" "--reporter=list,json"
+$ tsc && node scripts/copy-assets.mjs
+Listing tests:
+  [chromium] › e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke
+  [chromium] › e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke
+  [chromium] › e2e\detail.spec.ts:57:1 › TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke
+  [chromium] › e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke
+  [chromium] › e2e\feedback.spec.ts:55:1 › TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke
+  [firefox] › e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke
+  [firefox] › e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke
+  [firefox] › e2e\detail.spec.ts:57:1 › TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke
+  [firefox] › e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke
+  [firefox] › e2e\feedback.spec.ts:55:1 › TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke
+  [webkit] › e2e\catalogue.spec.ts:12:1 › TEST-UI-01 catalogue: seeded cards have ordered titles, genres and real game links @smoke
+  [webkit] › e2e\catalogue.spec.ts:22:1 › TEST-UI-02/03 catalogue: search and genre intersect and clearing either preserves the other @smoke
+  [webkit] › e2e\detail.spec.ts:57:1 › TEST-UI-06 detail: card opens matching Orbit content, ordered notes and Back @smoke
+  [webkit] › e2e\favourites.spec.ts:14:1 › TEST-UI-07/08: cards, detail and saved list share immediate state and reload persistence @smoke
+  [webkit] › e2e\feedback.spec.ts:55:1 › TEST-UI-11: primary valid submission returns 201 and stores exactly one matching row @smoke
+Total: 15 tests in 4 files
