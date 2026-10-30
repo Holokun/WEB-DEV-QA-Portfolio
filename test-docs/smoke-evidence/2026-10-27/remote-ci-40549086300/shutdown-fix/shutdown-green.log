@@ -1,0 +1,36 @@
+Already up to date
+Done in 295ms using pnpm v11.19.0
+
+Running 3 tests using 1 worker
+
+  ok 1 [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (browser preconnect) (124ms)
+  ok 2 [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (partial headers) (116ms)
+  x  3 [api] › tests\api\lifecycle.spec.ts:46:1 › application shutdown drains a received feedback body and response while releasing an unused socket (16ms)
+
+
+  1) [api] › tests\api\lifecycle.spec.ts:46:1 › application shutdown drains a received feedback body and response while releasing an unused socket 
+
+    SyntaxError: Unexpected non-whitespace character after JSON at position 3 (line 2 column 1)
+
+      69 |     await stopped;
+      70 |     expect(response).toMatch(/^HTTP\/1\.1 201 /);
+    > 71 |     const { id } = JSON.parse(response.split('\r\n\r\n')[1]!) as { id: number };
+         |                         ^
+      72 |     expect(Number.isSafeInteger(id) && id > 0).toBe(true);
+      73 |     const db = new DatabaseSync(dbPath);
+      74 |     try {
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\lifecycle.spec.ts:71:25
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\shutdown-green-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\portfolio-completion-2026-10-26\shutdown-green-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\sdd\portfolio-completion-2026-10-26\shutdown-green-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [api] › tests\api\lifecycle.spec.ts:46:1 › application shutdown drains a received feedback body and response while releasing an unused socket 
+  2 passed (830ms)

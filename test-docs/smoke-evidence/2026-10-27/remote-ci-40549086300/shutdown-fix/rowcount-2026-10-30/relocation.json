@@ -1,0 +1,56 @@
+[
+  {
+    "originalPath": "app/api/application.ts",
+    "path": "source-snapshot/app/api/application.ts",
+    "bytes": 4264,
+    "sha256": "b55bcff2e9500ed90530a596b8bf8058e84ab6bbb4177c70356d184773402541"
+  },
+  {
+    "originalPath": "dist/app/api/application.js",
+    "path": "source-snapshot/dist/app/api/application.js",
+    "bytes": 4981,
+    "sha256": "c909cfb015ed3e22be524e1a12b30dd5d4833eafb55c3868621779744a81a92d"
+  },
+  {
+    "originalPath": "tests/api/lifecycle.spec.ts",
+    "path": "source-snapshot/tests/api/lifecycle.spec.ts",
+    "bytes": 5949,
+    "sha256": "6d82a4b64ac1c74bb2ad91f9dba355789f7a171a9b5c52715be171d9f4a8e1b9"
+  },
+  {
+    "originalPath": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2.json",
+    "path": "shutdown-r2.json",
+    "bytes": 5520,
+    "sha256": "f6b1d7a135e1169119387356a864cc02a00a451855a0d31f63e44e4e6f945707"
+  },
+  {
+    "originalPath": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2.log",
+    "path": "shutdown-r2.log",
+    "bytes": 819,
+    "sha256": "7cc01eee748372fe3a6b026637b66a0f76d9c3824a1017c6bdfab22552104c1a"
+  },
+  {
+    "originalPath": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2-typecheck.log",
+    "path": "shutdown-r2-typecheck.log",
+    "bytes": 674,
+    "sha256": "c90db9114464de5669b1b7b3b161c27b1fbc0d69029e6ef5b6340fa897c8d4d0"
+  },
+  {
+    "originalPath": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2-typecheck-escalated.log",
+    "path": "shutdown-r2-typecheck-escalated.log",
+    "bytes": 71,
+    "sha256": "15f6745a8911347bad15f97f335e6d3b82ca22f786a6332ddf8dc77d119a6436"
+  },
+  {
+    "originalPath": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-rowcount-report.md",
+    "path": "shutdown-rowcount-report.md",
+    "bytes": 4959,
+    "sha256": "5110347630410750a117b51de1f99b979837c36d1d9fc73b0b2756856542e55d"
+  },
+  {
+    "originalPath": "test-results/sdd/portfolio-completion-2026-10-26/scratchshutdown-r2-artifacts/.last-run.json",
+    "path": "scratchshutdown-r2-artifacts/.last-run.json",
+    "bytes": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  }
+]

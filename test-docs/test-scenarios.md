@@ -153,7 +153,7 @@ Requirements: `REQ-LAY-01`. Automation: `TEST-UI-13`.
 Requirements: `REQ-A11Y-01`. Automation: `TEST-UI-12`, `TEST-A11Y-01`, `TEST-A11Y-02`.
 
 1. Use only the keyboard to operate catalogue search/filter and game links, follow detail and patch-note links, use Back/page navigation, add/remove favourites, and enter/submit feedback. Trigger catalogue, detail, and notes errors separately, restore each response, and activate its Retry by keyboard. Verify accessible names, logical focus order, and visible focus throughout. All these paths are required automated variants of `TEST-UI-12` in Chromium, Firefox, and WebKit desktop regression, as well as part of this manual review.
-2. With an available screen-reader/browser pairing, trigger loading, no results, each request error, feedback confirmation, and overlong search. Verify useful announcements and validation associations; record the actual pairing/version.
+2. Optional extension under the [owner-approved acceptance scope](../docs/superpowers/plans/2026-10-27-owner-readiness-decision.md): with an available screen-reader/browser pairing, trigger loading, no results, request errors, feedback confirmation and overlong search; record actual announcements and the pairing/version. Required message semantics and validation associations remain covered by the application/keyboard and axe checks.
 3. Run axe on catalogue, detail, and feedback when the automation/tooling is available. No critical/serious violations are allowed. Record lower-impact findings separately; axe does not establish full accessibility conformance.
 
 ## API and data lifecycle

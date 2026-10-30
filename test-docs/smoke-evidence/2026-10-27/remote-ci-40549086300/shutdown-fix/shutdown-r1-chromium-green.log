@@ -1,0 +1,9 @@
+Already up to date
+Done in 347ms using pnpm v11.19.0
+
+Running 2 tests using 1 worker
+
+  ok 1 [chromium] › tests\e2e\favourites.spec.ts:64:1 › TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success (564ms)
+  ok 2 [chromium] › tests\e2e\feedback.spec.ts:138:1 › TEST-UI-11: repeated submit events while pending send one real request and insert one row (370ms)
+
+  2 passed (1.7s)

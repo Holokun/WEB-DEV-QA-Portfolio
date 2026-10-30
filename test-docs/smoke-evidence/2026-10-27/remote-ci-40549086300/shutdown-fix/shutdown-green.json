@@ -1,0 +1,291 @@
+{
+  "config": {
+    "argv": [
+      "D:\\programms\\nodejs\\node.exe",
+      "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/api/lifecycle.spec.ts",
+      "--project=api",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-artifacts"
+    ],
+    "configFile": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\playwright.config.ts",
+    "rootDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\fixtures\\suite.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "api/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-phone",
+        "name": "chromium-phone",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/layout.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\lifecycle.spec.ts",
+      "file": "api/lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "application shutdown releases an accepted socket without a complete request (browser preconnect)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:27:38.679Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-89d630d48568e8264bb6",
+          "file": "api/lifecycle.spec.ts",
+          "line": 23,
+          "column": 3
+        },
+        {
+          "title": "application shutdown releases an accepted socket without a complete request (partial headers)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:27:38.823Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-8798f90e8deb0bf6f966",
+          "file": "api/lifecycle.spec.ts",
+          "line": 23,
+          "column": 3
+        },
+        {
+          "title": "application shutdown drains a received feedback body and response while releasing an unused socket",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 16,
+                  "error": {
+                    "message": "SyntaxError: Unexpected non-whitespace character after JSON at position 3 (line 2 column 1)",
+                    "stack": "SyntaxError: Unexpected non-whitespace character after JSON at position 3 (line 2 column 1)\n    at D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\api\\lifecycle.spec.ts:71:25",
+                    "location": {
+                      "file": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\api\\lifecycle.spec.ts",
+                      "column": 25,
+                      "line": 71
+                    },
+                    "snippet": "  69 |     await stopped;\n  70 |     expect(response).toMatch(/^HTTP\\/1\\.1 201 /);\n> 71 |     const { id } = JSON.parse(response.split('\\r\\n\\r\\n')[1]!) as { id: number };\n     |                         ^\n  72 |     expect(Number.isSafeInteger(id) && id > 0).toBe(true);\n  73 |     const db = new DatabaseSync(dbPath);\n  74 |     try {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\api\\lifecycle.spec.ts",
+                        "column": 25,
+                        "line": 71
+                      },
+                      "message": "SyntaxError: Unexpected non-whitespace character after JSON at position 3 (line 2 column 1)\n\n  69 |     await stopped;\n  70 |     expect(response).toMatch(/^HTTP\\/1\\.1 201 /);\n> 71 |     const { id } = JSON.parse(response.split('\\r\\n\\r\\n')[1]!) as { id: number };\n     |                         ^\n  72 |     expect(Number.isSafeInteger(id) && id > 0).toBe(true);\n  73 |     const db = new DatabaseSync(dbPath);\n  74 |     try {\n    at D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\api\\lifecycle.spec.ts:71:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:27:38.946Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\api\\lifecycle.spec.ts",
+                    "column": 25,
+                    "line": 71
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-0b3c544d1a45c9c19444",
+          "file": "api/lifecycle.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T17:27:38.190Z",
+    "duration": 830.4780000000001,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,10 @@
+Already up to date
+Done in 287ms using pnpm v11.19.0
+
+Running 3 tests using 1 worker
+
+  ok 1 [api] › tests\api\lifecycle.spec.ts:24:3 › application shutdown releases an accepted socket without a complete request (browser preconnect) (132ms)
+  ok 2 [api] › tests\api\lifecycle.spec.ts:24:3 › application shutdown releases an accepted socket without a complete request (partial headers) (116ms)
+  ok 3 [api] › tests\api\lifecycle.spec.ts:47:1 › application shutdown drains a received feedback body and response while releasing an unused socket (133ms)
+
+  3 passed (923ms)

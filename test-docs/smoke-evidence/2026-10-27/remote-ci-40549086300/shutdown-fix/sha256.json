@@ -1,0 +1,257 @@
+[
+  {
+    "path": "relocation.json",
+    "bytes": 14049,
+    "sha256": "9c0493a4a82a27124a540c594230800346493640c0329b0c49c108ab7f11e147"
+  },
+  {
+    "path": "shutdown-build.log",
+    "bytes": 94,
+    "sha256": "8fd6a578805e0cb299022c062ec950443eb9038074078bcacfbf89556ab8e87e"
+  },
+  {
+    "path": "shutdown-evidence-hashes-r1.json",
+    "bytes": 11547,
+    "sha256": "8650c817aa8658998d7ab4bee9441875a0941f84d389b35ad6a3ddecf64a023f"
+  },
+  {
+    "path": "shutdown-evidence-hashes.json",
+    "bytes": 7834,
+    "sha256": "77ff7652933aa945317eceda3503da93d7f97960ed552350c700103700e317c6"
+  },
+  {
+    "path": "shutdown-final-build.log",
+    "bytes": 94,
+    "sha256": "28303397a4ef46e4c3ab3e6c630aca6b065e1b1af45b65be5a340eb65e03c319"
+  },
+  {
+    "path": "shutdown-final-typecheck.log",
+    "bytes": 71,
+    "sha256": "1732ca06bb4548d16562337764c9b4bc7dd6137294eb2b0cf6aa2f4e9637b259"
+  },
+  {
+    "path": "shutdown-fix-report-r1.md",
+    "bytes": 8217,
+    "sha256": "ed030b3da3a6595ca9975c20b42ddf5b6d9cdbc3acc4e3f1be4cdd5937672c69"
+  },
+  {
+    "path": "shutdown-fix-report.md",
+    "bytes": 11653,
+    "sha256": "9073d9929d2df2e509dc39cd2010d1c8fd59538183d97dcfbfd948c9189e2e0f"
+  },
+  {
+    "path": "shutdown-fix-review.md",
+    "bytes": 6200,
+    "sha256": "24c5ea7b69e859f4cff049372ffa25bd4ac17970994f68622ce5fdcf1ffa9a31"
+  },
+  {
+    "path": "shutdown-focused-artifacts/.last-run.json",
+    "bytes": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+    "path": "shutdown-focused.json",
+    "bytes": 12750,
+    "sha256": "faceec5571dc52a230d45b64cdb9bb1c76c6ea443a842aa0c412d9c68014246f"
+  },
+  {
+    "path": "shutdown-focused.log",
+    "bytes": 1223,
+    "sha256": "17ad1bdc24e20283dbeb0b76263a50b1ffa8a047b85e6abe3f0dc02a002b1f08"
+  },
+  {
+    "path": "shutdown-green-2-artifacts/.last-run.json",
+    "bytes": 96,
+    "sha256": "5684530d4107185798700e1cfe08dc069b06cdd277f672d9345ab1064d37cbae"
+  },
+  {
+    "path": "shutdown-green-2-artifacts/api-lifecycle-application--1cf1b--releasing-an-unused-socket-api/error-context.md",
+    "bytes": 5548,
+    "sha256": "5e02179be45e7c4df588b4557544c5a5c8ae4c748b22d04fff254e8c4b74ed0a"
+  },
+  {
+    "path": "shutdown-green-2-artifacts/api-lifecycle-application--1cf1b--releasing-an-unused-socket-api/trace.zip",
+    "bytes": 6664,
+    "sha256": "48dfdd50793b41f177daf68cc7d7aa1f9467d4c8cea3fb97ac6f50bd9bda0eb5"
+  },
+  {
+    "path": "shutdown-green-2.json",
+    "bytes": 11256,
+    "sha256": "57c7181b7197e73b4c016159e45fd1a3d0a02bda0a95757b735483c0bfcce353"
+  },
+  {
+    "path": "shutdown-green-2.log",
+    "bytes": 2650,
+    "sha256": "1f39a2dc59e9140005ecee8e5a5e316b880a54689d4819efeb94c8007adf17e4"
+  },
+  {
+    "path": "shutdown-green-3-artifacts/.last-run.json",
+    "bytes": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+    "path": "shutdown-green-3.json",
+    "bytes": 7620,
+    "sha256": "81c3bcc5083d59f0a1bba819907f53e27947e5e3e6967a2a8d521d2b145151bf"
+  },
+  {
+    "path": "shutdown-green-3.log",
+    "bytes": 592,
+    "sha256": "f9e03db36ff409f707e53db2c08403c00553617ca2743a8e330c27f8e0197d0d"
+  },
+  {
+    "path": "shutdown-green-artifacts/.last-run.json",
+    "bytes": 96,
+    "sha256": "5684530d4107185798700e1cfe08dc069b06cdd277f672d9345ab1064d37cbae"
+  },
+  {
+    "path": "shutdown-green-artifacts/api-lifecycle-application--1cf1b--releasing-an-unused-socket-api/error-context.md",
+    "bytes": 5049,
+    "sha256": "649865c3aa5940ddc297047a3a09501b5f22ccc5adc1adf875913b990ae5f910"
+  },
+  {
+    "path": "shutdown-green-artifacts/api-lifecycle-application--1cf1b--releasing-an-unused-socket-api/trace.zip",
+    "bytes": 6175,
+    "sha256": "1468e2530d723120d6ff4ae1f68f88fda5c8c279ededcca8273fe74534ef75f2"
+  },
+  {
+    "path": "shutdown-green.json",
+    "bytes": 10498,
+    "sha256": "d5b80c5f3a9fb5696f49ec5f597391f0b097cab17c63d2811efb8b93356b50e8"
+  },
+  {
+    "path": "shutdown-green.log",
+    "bytes": 2520,
+    "sha256": "4aaea0a819f650e0386aee2a90f582596aa6e227dee5fb2ccfb91b8ca2b6f32d"
+  },
+  {
+    "path": "shutdown-r1-build.log",
+    "bytes": 94,
+    "sha256": "8c47495906cb03eea170bbf6783ff1edd10675801496737c2800de85949879f6"
+  },
+  {
+    "path": "shutdown-r1-chromium-green-artifacts/.last-run.json",
+    "bytes": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+    "path": "shutdown-r1-chromium-green.json",
+    "bytes": 6918,
+    "sha256": "c316db1eabce27ae2dc336526b2b80bb33efb6e36e452ee29d253407a7186e2e"
+  },
+  {
+    "path": "shutdown-r1-chromium-green.log",
+    "bytes": 450,
+    "sha256": "f34fdece829505e205f07e004cd54e02bce142def57025bc3e35533159a676f5"
+  },
+  {
+    "path": "shutdown-r1-lifecycle-green-artifacts/.last-run.json",
+    "bytes": 45,
+    "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+  },
+  {
+    "path": "shutdown-r1-lifecycle-green.json",
+    "bytes": 8768,
+    "sha256": "31e69b9c27632e73fed654e6a01da493a6e31546e53d9541086d34f2174081c1"
+  },
+  {
+    "path": "shutdown-r1-lifecycle-green.log",
+    "bytes": 741,
+    "sha256": "62165f812bd1284927da9b63bc5d00abbf85562cbe36c85480cef135e7243983"
+  },
+  {
+    "path": "shutdown-r1-red-artifacts/.last-run.json",
+    "bytes": 96,
+    "sha256": "2cdb7b9b305db1e672a49d286ca14ef05f8b3d367eb6dbb52bfc57e3c77a50e0"
+  },
+  {
+    "path": "shutdown-r1-red-artifacts/api-lifecycle-application--34d67-mplete-next-request-headers-api/error-context.md",
+    "bytes": 7308,
+    "sha256": "b3b538b68bc70ae259d15d696aaaa64e501a716ea51d9e5e561f8061663b65f7"
+  },
+  {
+    "path": "shutdown-r1-red-artifacts/api-lifecycle-application--34d67-mplete-next-request-headers-api/trace.zip",
+    "bytes": 7325,
+    "sha256": "99776fa4189d738663c867dd22e4ca4f6c30e94469598cfcbef1fe5dbdc6bcda"
+  },
+  {
+    "path": "shutdown-r1-red.json",
+    "bytes": 9066,
+    "sha256": "64b51e78417723c47d8c60e5b5b528d92efa228ac72edbe21982e1a87defc3e9"
+  },
+  {
+    "path": "shutdown-r1-red.log",
+    "bytes": 2257,
+    "sha256": "b5528c8ac19d4ee1e254603c0860401a250fa5967ee6c329080618de8f2ee4d8"
+  },
+  {
+    "path": "shutdown-r1-typecheck.log",
+    "bytes": 71,
+    "sha256": "ed5f0e2c87de15449c2b74679ef6fc7809bf52c016b7fb58aea4557a0dbd2717"
+  },
+  {
+    "path": "shutdown-red-artifacts/.last-run.json",
+    "bytes": 194,
+    "sha256": "0a6a4bcd01dd72cc35e2aea8c9ebc4f6deb3fa824a11eca5ca8b58e84a15f61c"
+  },
+  {
+    "path": "shutdown-red-artifacts/api-lifecycle-application--1cf1b--releasing-an-unused-socket-api/error-context.md",
+    "bytes": 5118,
+    "sha256": "7baa3bebb02a33ba0dd3aefc08d588690df62d1526990604a935b1e368d31c70"
+  },
+  {
+    "path": "shutdown-red-artifacts/api-lifecycle-application--1cf1b--releasing-an-unused-socket-api/trace.zip",
+    "bytes": 6461,
+    "sha256": "d82c0089c627a9dbc9b0f5f96e8fc15e4ebae2145792f299dd927277c6cc3965"
+  },
+  {
+    "path": "shutdown-red-artifacts/api-lifecycle-application--952a5-request-browser-preconnect--api/error-context.md",
+    "bytes": 5118,
+    "sha256": "39b1b379bd74115cfa6fb352b2372181069bbe8f95ec658bb3614a63d5d1c14c"
+  },
+  {
+    "path": "shutdown-red-artifacts/api-lifecycle-application--952a5-request-browser-preconnect--api/trace.zip",
+    "bytes": 6432,
+    "sha256": "b86c5fc0ea44c558f43bf236945a28a338b1bd30952ed587254147022465ae51"
+  },
+  {
+    "path": "shutdown-red-artifacts/api-lifecycle-application--cd255-te-request-partial-headers--api/error-context.md",
+    "bytes": 5115,
+    "sha256": "174cc6e377918b7c44481908079b9581cc1e95474412438fed41682832d34491"
+  },
+  {
+    "path": "shutdown-red-artifacts/api-lifecycle-application--cd255-te-request-partial-headers--api/trace.zip",
+    "bytes": 6437,
+    "sha256": "72f88de0c41d6f0e8186cd3cb5d307d95e41dc95bc6eba72419fce4be6b1e746"
+  },
+  {
+    "path": "shutdown-red.json",
+    "bytes": 18628,
+    "sha256": "c7058a399a9d5474db51cae14d7737198f1949e512ef5b881b5f1418fbf7e80e"
+  },
+  {
+    "path": "shutdown-red.log",
+    "bytes": 7285,
+    "sha256": "971c60eb74c79bafe3b583d3812e5250f3561bdb381dfa7ebaf1bd9ca19375fc"
+  },
+  {
+    "path": "shutdown-typecheck.log",
+    "bytes": 71,
+    "sha256": "9c1014587e373ee31d841e3928ed541ebc757425c241dbd3f0fac14169fb5643"
+  },
+  {
+    "path": "source-snapshot/app/api/application.ts",
+    "bytes": 4264,
+    "sha256": "b55bcff2e9500ed90530a596b8bf8058e84ab6bbb4177c70356d184773402541"
+  },
+  {
+    "path": "source-snapshot/dist/app/api/application.js",
+    "bytes": 4981,
+    "sha256": "c909cfb015ed3e22be524e1a12b30dd5d4833eafb55c3868621779744a81a92d"
+  },
+  {
+    "path": "source-snapshot/tests/api/lifecycle.spec.ts",
+    "bytes": 5565,
+    "sha256": "850f3a10591b9f563107496da569bf9239da06542bd75148e026020d9bb03103"
+  }
+]

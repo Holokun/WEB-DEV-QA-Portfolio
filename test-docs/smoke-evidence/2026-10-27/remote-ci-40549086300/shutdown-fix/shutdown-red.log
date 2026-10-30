@@ -1,0 +1,110 @@
+Already up to date
+Done in 285ms using pnpm v11.19.0
+
+   ╭──────────────────────────────────────────╮
+   │                                          │
+   │   Update available! 11.19.0 → 12.15.0.   │
+   │   Changelog: https://pnpm.io/v/12.15.0   │
+   │     To update, run: pnpm add -g pnpm     │
+   │                                          │
+   ╰──────────────────────────────────────────╯
+
+
+Running 3 tests using 1 worker
+
+  x  1 [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (browser preconnect) (1.9s)
+  x  2 [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (partial headers) (1.9s)
+  x  3 [api] › tests\api\lifecycle.spec.ts:46:1 › application shutdown drains a received feedback body and response while releasing an unused socket (1.9s)
+
+
+  1) [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (browser preconnect) 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 2000ms exceeded while waiting on the predicate
+
+      33 |       let closed = false;
+      34 |       const stopped = app.close().then(() => { closed = true; });
+    > 35 |       await expect.poll(() => closed, { timeout: 2000 }).toBe(true);
+         |                                                          ^
+      36 |       await stopped;
+      37 |       await expect.poll(() => socket.destroyed).toBe(true);
+      38 |       expect(app.server.listening).toBe(false);
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\lifecycle.spec.ts:35:58
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--952a5-request-browser-preconnect--api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--952a5-request-browser-preconnect--api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--952a5-request-browser-preconnect--api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (partial headers) 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 2000ms exceeded while waiting on the predicate
+
+      33 |       let closed = false;
+      34 |       const stopped = app.close().then(() => { closed = true; });
+    > 35 |       await expect.poll(() => closed, { timeout: 2000 }).toBe(true);
+         |                                                          ^
+      36 |       await stopped;
+      37 |       await expect.poll(() => socket.destroyed).toBe(true);
+      38 |       expect(app.server.listening).toBe(false);
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\lifecycle.spec.ts:35:58
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--cd255-te-request-partial-headers--api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--cd255-te-request-partial-headers--api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--cd255-te-request-partial-headers--api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [api] › tests\api\lifecycle.spec.ts:46:1 › application shutdown drains a received feedback body and response while releasing an unused socket 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 2000ms exceeded while waiting on the predicate
+
+      66 |     active.end(body.slice(12));
+      67 |     await responseEnded;
+    > 68 |     await expect.poll(() => closed, { timeout: 2000 }).toBe(true);
+         |                                                        ^
+      69 |     await stopped;
+      70 |     expect(response).toMatch(/^HTTP\/1\.1 201 /);
+      71 |     const { id } = JSON.parse(response.split('\r\n\r\n')[1]!) as { id: number };
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\lifecycle.spec.ts:68:56
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\sdd\portfolio-completion-2026-10-26\shutdown-red-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (browser preconnect) 
+    [api] › tests\api\lifecycle.spec.ts:23:3 › application shutdown releases an accepted socket without a complete request (partial headers) 
+    [api] › tests\api\lifecycle.spec.ts:46:1 › application shutdown drains a received feedback body and response while releasing an unused socket 

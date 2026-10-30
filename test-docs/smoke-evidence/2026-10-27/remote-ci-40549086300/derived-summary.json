@@ -1,0 +1,54 @@
+{
+  "stats": {
+    "startTime": "2026-10-27T17:17:46.178Z",
+    "duration": 258990.16100000002,
+    "expected": 581,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "failed": [
+    {
+      "title": "TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success",
+      "project": "chromium",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "retry": 0,
+          "error": {
+            "message": "Error: Owned app failed to stop",
+            "stack": "Error: Owned app failed to stop\n    at Timeout._onTimeout (/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests/fixtures/app.ts:43:45)",
+            "location": {
+              "file": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests/fixtures/app.ts",
+              "column": 45,
+              "line": 43
+            },
+            "snippet": "   at fixtures/app.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m   \u001b[36mif\u001b[39m (child\u001b[33m.\u001b[39mexitCode \u001b[33m!==\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m||\u001b[39m child\u001b[33m.\u001b[39msignalCode \u001b[33m!==\u001b[39m \u001b[36mnull\u001b[39m) \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m((resolveExit\u001b[33m,\u001b[39m reject) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mconst\u001b[39m timeout \u001b[33m=\u001b[39m setTimeout(() \u001b[33m=>\u001b[39m reject(\u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Owned app failed to stop'\u001b[39m))\u001b[33m,\u001b[39m \u001b[35m10\u001b[39m_000)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     child\u001b[33m.\u001b[39monce(\u001b[32m'exit'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m { clearTimeout(timeout)\u001b[33m;\u001b[39m resolveExit()\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m     child\u001b[33m.\u001b[39mkill()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+          }
+        }
+      ]
+    },
+    {
+      "title": "TEST-UI-11: repeated submit events while pending send one real request and insert one row",
+      "project": "chromium",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "retry": 0,
+          "error": {
+            "message": "Error: Owned app failed to stop",
+            "stack": "Error: Owned app failed to stop\n    at Timeout._onTimeout (/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests/fixtures/app.ts:43:45)",
+            "location": {
+              "file": "/home/runner/work/WEB-DEV-QA-Portfolio/WEB-DEV-QA-Portfolio/tests/fixtures/app.ts",
+              "column": 45,
+              "line": 43
+            },
+            "snippet": "   at fixtures/app.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m   \u001b[36mif\u001b[39m (child\u001b[33m.\u001b[39mexitCode \u001b[33m!==\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m||\u001b[39m child\u001b[33m.\u001b[39msignalCode \u001b[33m!==\u001b[39m \u001b[36mnull\u001b[39m) \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m((resolveExit\u001b[33m,\u001b[39m reject) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mconst\u001b[39m timeout \u001b[33m=\u001b[39m setTimeout(() \u001b[33m=>\u001b[39m reject(\u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Owned app failed to stop'\u001b[39m))\u001b[33m,\u001b[39m \u001b[35m10\u001b[39m_000)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     child\u001b[33m.\u001b[39monce(\u001b[32m'exit'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m { clearTimeout(timeout)\u001b[33m;\u001b[39m resolveExit()\u001b[33m;\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m     child\u001b[33m.\u001b[39mkill()\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+          }
+        }
+      ]
+    }
+  ]
+}

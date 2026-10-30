@@ -1,0 +1,39 @@
+Already up to date
+Done in 303ms using pnpm v11.19.0
+
+Running 1 test using 1 worker
+
+  x  1 [api] › tests\api\lifecycle.spec.ts:48:1 › application shutdown releases a reused connection with incomplete next-request headers (1.9s)
+
+
+  1) [api] › tests\api\lifecycle.spec.ts:48:1 › application shutdown releases a reused connection with incomplete next-request headers 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 2000ms exceeded while waiting on the predicate
+
+      70 |     let closed = false;
+      71 |     const stopped = app.close().then(() => { closed = true; });
+    > 72 |     await expect.poll(() => closed, { timeout: 2000 }).toBe(true);
+         |                                                        ^
+      73 |     await stopped;
+      74 |     await expect.poll(() => socket.destroyed).toBe(true);
+      75 |   } finally {
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\lifecycle.spec.ts:72:56
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\shutdown-r1-red-artifacts\api-lifecycle-application--34d67-mplete-next-request-headers-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\portfolio-completion-2026-10-26\shutdown-r1-red-artifacts\api-lifecycle-application--34d67-mplete-next-request-headers-api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\sdd\portfolio-completion-2026-10-26\shutdown-r1-red-artifacts\api-lifecycle-application--34d67-mplete-next-request-headers-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [api] › tests\api\lifecycle.spec.ts:48:1 › application shutdown releases a reused connection with incomplete next-request headers 

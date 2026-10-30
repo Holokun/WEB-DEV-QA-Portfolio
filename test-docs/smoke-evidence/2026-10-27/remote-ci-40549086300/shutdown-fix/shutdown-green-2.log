@@ -1,0 +1,42 @@
+Already up to date
+Done in 281ms using pnpm v11.19.0
+
+Running 3 tests using 1 worker
+
+  ok 1 [api] › tests\api\lifecycle.spec.ts:24:3 › application shutdown releases an accepted socket without a complete request (browser preconnect) (125ms)
+  ok 2 [api] › tests\api\lifecycle.spec.ts:24:3 › application shutdown releases an accepted socket without a complete request (partial headers) (115ms)
+  x  3 [api] › tests\api\lifecycle.spec.ts:47:1 › application shutdown drains a received feedback body and response while releasing an unused socket (1.9s)
+
+
+  1) [api] › tests\api\lifecycle.spec.ts:47:1 › application shutdown drains a received feedback body and response while releasing an unused socket 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 2000ms exceeded while waiting on the predicate
+
+      75 |     active.end(body.slice(12));
+      76 |     const response = await responseEnded;
+    > 77 |     await expect.poll(() => closed, { timeout: 2000 }).toBe(true);
+         |                                                        ^
+      78 |     await stopped;
+      79 |     expect(response.status).toBe(201);
+      80 |     const { id } = JSON.parse(response.body) as { id: number };
+        at D:\Projects\WEB_DEV\WEB-DEV-QA-Portfolio\tests\api\lifecycle.spec.ts:77:56
+
+    Error Context: test-results\sdd\portfolio-completion-2026-10-26\shutdown-green-2-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\sdd\portfolio-completion-2026-10-26\shutdown-green-2-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results\sdd\portfolio-completion-2026-10-26\shutdown-green-2-artifacts\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [api] › tests\api\lifecycle.spec.ts:47:1 › application shutdown drains a received feedback body and response while releasing an unused socket 
+  2 passed (2.7s)

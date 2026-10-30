@@ -1,5 +1,7 @@
 # Portfolio Completion Implementation Plan
 
+Execution amendment on2026-10-27: the [explicit owner decision](2026-10-27-owner-readiness-decision.md) changes the accessibility acceptance gate prospectively. This original plan remains below as the historical pre-amendment plan; current acceptance is maintained in test-docs/test-plan.md.
+
 > **For agentic workers:** Use subagent-driven-development for implementation and independent task reviews, then whole-change review. The owner explicitly requires approval BEFORE architecture, final layout, Git location/ownership, launch method, new unapproved dependencies, mandatory workflow or acceptance changes. This boundary overrides autonomous-ruling clauses in skills.
 
 **Goal:** Finish the existing Game Companion portfolio requirements with evidenced new-feature checks, accessibility, smoke/full CI, clean-checkout reproduction and a truthful final summary.

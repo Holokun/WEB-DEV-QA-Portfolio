@@ -1,0 +1,422 @@
+{
+  "config": {
+    "argv": [
+      "D:\\programms\\nodejs\\node.exe",
+      "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/api/lifecycle.spec.ts",
+      "tests/api/feedback.spec.ts",
+      "tests/e2e/favourites.spec.ts",
+      "tests/e2e/feedback.spec.ts",
+      "--project=api",
+      "--project=chromium",
+      "--grep",
+      "application shutdown|interrupted HTTP body|real failed feedback insertion|invalid/duplicate IDs normalize|repeated submit events while pending",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=test-results/sdd/portfolio-completion-2026-10-26/shutdown-focused-artifacts"
+    ],
+    "configFile": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\playwright.config.ts",
+    "rootDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\fixtures\\suite.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "api/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-phone",
+        "name": "chromium-phone",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/layout.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\feedback.spec.ts",
+      "file": "api/feedback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "REQ-API-06: real failed feedback insertion is generic and validation still runs first",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 200,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:41.836Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "50e976cbf39103193093-50731e125c43b4f0c960",
+          "file": "api/feedback.spec.ts",
+          "line": 103,
+          "column": 1
+        },
+        {
+          "title": "REQ-API-06: an interrupted HTTP body inserts nothing and leaves the app responsive",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 63,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:42.057Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "50e976cbf39103193093-872c4077429290f19b7a",
+          "file": "api/feedback.spec.ts",
+          "line": 139,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "api\\lifecycle.spec.ts",
+      "file": "api/lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "application shutdown releases an accepted socket without a complete request (browser preconnect)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:42.143Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-89d630d48568e8264bb6",
+          "file": "api/lifecycle.spec.ts",
+          "line": 25,
+          "column": 3
+        },
+        {
+          "title": "application shutdown releases an accepted socket without a complete request (partial headers)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 115,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:42.274Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-8798f90e8deb0bf6f966",
+          "file": "api/lifecycle.spec.ts",
+          "line": 25,
+          "column": 3
+        },
+        {
+          "title": "application shutdown drains a received feedback body and response while releasing an unused socket",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 118,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:42.398Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-0b3c544d1a45c9c19444",
+          "file": "api/lifecycle.spec.ts",
+          "line": 48,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\favourites.spec.ts",
+      "file": "e2e/favourites.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:42.850Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "430a69e523e2ea3b84f7-0f672f063dd97f446e55",
+          "file": "e2e/favourites.spec.ts",
+          "line": 64,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\feedback.spec.ts",
+      "file": "e2e/feedback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-11: repeated submit events while pending send one real request and insert one row",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 431,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:30:44.587Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175c114781d6ac36faef-3b6a50b92959534f31e8",
+          "file": "e2e/feedback.spec.ts",
+          "line": 138,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T17:30:41.166Z",
+    "duration": 3923.179,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

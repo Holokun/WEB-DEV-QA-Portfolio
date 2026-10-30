@@ -1,6 +1,7 @@
 import { createServer, type Server } from 'node:http';
 import { readFileSync, realpathSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import type { Socket } from 'node:net';
 import { openDatabase } from '../db/database.js';
 import { apiError, handleGames, type ApiResult } from './games.js';
 import { handleFeedback } from './feedback.js';
@@ -15,7 +16,27 @@ const uiAssets = new Map<string, readonly [string, string]>([
 
 export function createApplication(options: { dbPath: string; uiDir?: string }): { server: Server; close(): Promise<void> } {
   const db = openDatabase(options.dbPath);
+  const activeRequests = new Map<Socket, number>();
   const server = createServer((request, response) => {
+    const socket = request.socket;
+    activeRequests.set(socket, (activeRequests.get(socket) ?? 0) + 1);
+    let responseFinished = false;
+    let released = false;
+    const releaseRequest = (): void => {
+      if (released || !responseFinished || !request.complete) return;
+      released = true;
+      const remaining = activeRequests.get(socket);
+      if (remaining !== undefined) activeRequests.set(socket, remaining - 1);
+      if (closed) {
+        if (activeRequests.get(socket) === 0) socket.end();
+        server.closeIdleConnections();
+      }
+    };
+    request.once('end', releaseRequest);
+    response.once('finish', () => {
+      responseFinished = true;
+      releaseRequest();
+    });
     const send = (result: ApiResult): void => {
       if (response.destroyed || response.writableEnded) return;
       if (response.headersSent) { response.destroy(); return; }
@@ -55,12 +76,21 @@ export function createApplication(options: { dbPath: string; uiDir?: string }): 
     };
     void respond();
   });
+  server.on('connection', socket => {
+    activeRequests.set(socket, 0);
+    socket.once('close', () => activeRequests.delete(socket));
+  });
   let closed = false;
   return { server, close: async () => {
     if (closed) return;
     closed = true;
     try {
-      if (server.listening) await new Promise<void>((resolve, reject) => server.close(error => error ? reject(error) : resolve()));
+      if (server.listening) await new Promise<void>((resolve, reject) => {
+        server.close(error => error ? reject(error) : resolve());
+        // Partial headers can keep Node's parser active even on a reused socket.
+        // Preserve parsed requests through their full bodies and responses.
+        for (const [socket, active] of activeRequests) if (active === 0) socket.destroy();
+      });
     } finally { db.close(); }
   } };
 }

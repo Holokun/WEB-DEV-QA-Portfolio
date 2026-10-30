@@ -1,0 +1,233 @@
+{
+  "config": {
+    "argv": [
+      "D:\\programms\\nodejs\\node.exe",
+      "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/favourites.spec.ts",
+      "tests/e2e/feedback.spec.ts",
+      "--project=chromium",
+      "--grep",
+      "invalid/duplicate IDs normalize|repeated submit events while pending",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=test-results/sdd/portfolio-completion-2026-10-26/shutdown-r1-chromium-green-artifacts"
+    ],
+    "configFile": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\playwright.config.ts",
+    "rootDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\fixtures\\suite.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-r1-chromium-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "api/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-r1-chromium-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-r1-chromium-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-r1-chromium-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-r1-chromium-green-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-phone",
+        "name": "chromium-phone",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/layout.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e\\favourites.spec.ts",
+      "file": "e2e/favourites.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-08: invalid/duplicate IDs normalize; failed/filtered requests retain candidates until complete success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 564,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:37:24.326Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "430a69e523e2ea3b84f7-0f672f063dd97f446e55",
+          "file": "e2e/favourites.spec.ts",
+          "line": 64,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "e2e\\feedback.spec.ts",
+      "file": "e2e/feedback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TEST-UI-11: repeated submit events while pending send one real request and insert one row",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 370,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:37:25.031Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "175c114781d6ac36faef-3b6a50b92959534f31e8",
+          "file": "e2e/feedback.spec.ts",
+          "line": 138,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T17:37:23.854Z",
+    "duration": 1686.3170000000002,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

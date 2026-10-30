@@ -1,0 +1,302 @@
+{
+  "date": "2026-10-30",
+  "purpose": "Additional shutdown feedback row-count verification; prior manifests remain historical and unchanged.",
+  "files": [
+    {
+      "Path": "app/api/application.ts",
+      "Hash": "b55bcff2e9500ed90530a596b8bf8058e84ab6bbb4177c70356d184773402541",
+      "Length": 4264
+    },
+    {
+      "Path": "dist/app/api/application.js",
+      "Hash": "c909cfb015ed3e22be524e1a12b30dd5d4833eafb55c3868621779744a81a92d",
+      "Length": 4981
+    },
+    {
+      "Path": "tests/api/lifecycle.spec.ts",
+      "Hash": "6d82a4b64ac1c74bb2ad91f9dba355789f7a171a9b5c52715be171d9f4a8e1b9",
+      "Length": 5949
+    },
+    {
+      "Path": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2.json",
+      "Hash": "f6b1d7a135e1169119387356a864cc02a00a451855a0d31f63e44e4e6f945707",
+      "Length": 5520
+    },
+    {
+      "Path": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2.log",
+      "Hash": "7cc01eee748372fe3a6b026637b66a0f76d9c3824a1017c6bdfab22552104c1a",
+      "Length": 819
+    },
+    {
+      "Path": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2-typecheck.log",
+      "Hash": "c90db9114464de5669b1b7b3b161c27b1fbc0d69029e6ef5b6340fa897c8d4d0",
+      "Length": 674
+    },
+    {
+      "Path": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-r2-typecheck-escalated.log",
+      "Hash": "15f6745a8911347bad15f97f335e6d3b82ca22f786a6332ddf8dc77d119a6436",
+      "Length": 71
+    },
+    {
+      "Path": "test-results/sdd/portfolio-completion-2026-10-26/shutdown-rowcount-report.md",
+      "Hash": "5110347630410750a117b51de1f99b979837c36d1d9fc73b0b2756856542e55d",
+      "Length": 4959
+    },
+    {
+      "Path": "test-results/sdd/portfolio-completion-2026-10-26/scratchshutdown-r2-artifacts/.last-run.json",
+      "Hash": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "Length": 45
+    }
+  ],
+  "historicalEvidenceVerification": {
+    "files": 49,
+    "changes": []
+  },
+  "historicalFiles": [
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\preserve-shutdown-evidence.cjs",
+      "Hash": "87B1D5243A3CD21018647229CE83F8C4A763CB382B77CB5F73CD88ECAD3B5FA6",
+      "Length": 1714
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-build.log",
+      "Hash": "8FD6A578805E0CB299022C062EC950443EB9038074078BCACFBF89556AB8E87E",
+      "Length": 94
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-evidence-hashes-r1.json",
+      "Hash": "8650C817AA8658998D7AB4BEE9441875A0941F84D389B35AD6A3DDECF64A023F",
+      "Length": 11547
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-evidence-hashes.json",
+      "Hash": "77FF7652933AA945317ECEDA3503DA93D7F97960ED552350C700103700E317C6",
+      "Length": 7834
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-final-build.log",
+      "Hash": "28303397A4EF46E4C3AB3E6C630ACA6B065E1B1AF45B65BE5A340EB65E03C319",
+      "Length": 94
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-final-typecheck.log",
+      "Hash": "1732CA06BB4548D16562337764C9B4BC7DD6137294EB2B0CF6AA2F4E9637B259",
+      "Length": 71
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-fix-report-r1.md",
+      "Hash": "ED030B3DA3A6595CA9975C20B42DDF5B6D9CDBC3ACC4E3F1BE4CDD5937672C69",
+      "Length": 8217
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-fix-report.md",
+      "Hash": "9073D9929D2DF2E509DC39CD2010D1C8FD59538183D97DCFBFD948C9189E2E0F",
+      "Length": 11653
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-fix-review.md",
+      "Hash": "24C5EA7B69E859F4CFF049372FFA25BD4AC17970994F68622CE5FDCF1FFA9A31",
+      "Length": 6200
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-focused.json",
+      "Hash": "FACEEC5571DC52A230D45B64CDB9BB1C76C6EA443A842AA0C412D9C68014246F",
+      "Length": 12750
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-focused.log",
+      "Hash": "17AD1BDC24E20283DBEB0B76263A50B1FFA8A047B85E6ABE3F0DC02A002B1F08",
+      "Length": 1223
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-2.json",
+      "Hash": "57C7181B7197E73B4C016159E45FD1A3D0A02BDA0A95757B735483C0BFCCE353",
+      "Length": 11256
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-2.log",
+      "Hash": "1F39A2DC59E9140005ECEE8E5A5E316B880A54689D4819EFEB94C8007ADF17E4",
+      "Length": 2650
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-3.json",
+      "Hash": "81C3BCC5083D59F0A1BBA819907F53E27947E5E3E6967A2A8D521D2B145151BF",
+      "Length": 7620
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-3.log",
+      "Hash": "F9E03DB36FF409F707E53DB2C08403C00553617CA2743A8E330C27F8E0197D0D",
+      "Length": 592
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green.json",
+      "Hash": "D5B80C5F3A9FB5696F49EC5F597391F0B097CAB17C63D2811EFB8B93356B50E8",
+      "Length": 10498
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green.log",
+      "Hash": "4AAEA0A819F650E0386AEE2A90F582596AA6E227DEE5FB2CCFB91B8CA2B6F32D",
+      "Length": 2520
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-build.log",
+      "Hash": "8C47495906CB03EEA170BBF6783FF1EDD10675801496737C2800DE85949879F6",
+      "Length": 94
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-chromium-green.json",
+      "Hash": "C316DB1EABCE27AE2DC336526B2B80BB33EFB6E36E452EE29D253407A7186E2E",
+      "Length": 6918
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-chromium-green.log",
+      "Hash": "F34FDECE829505E205F07E004CD54E02BCE142DEF57025BC3E35533159A676F5",
+      "Length": 450
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-lifecycle-green.json",
+      "Hash": "31E69B9C27632E73FED654E6A01DA493A6E31546E53D9541086D34F2174081C1",
+      "Length": 8768
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-lifecycle-green.log",
+      "Hash": "62165F812BD1284927DA9B63BC5D00ABBF85562CBE36C85480CEF135E7243983",
+      "Length": 741
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-red.json",
+      "Hash": "64B51E78417723C47D8C60E5B5B528D92EFA228AC72EDBE21982E1A87DEFC3E9",
+      "Length": 9066
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-red.log",
+      "Hash": "B5528C8AC19D4EE1E254603C0860401A250FA5967EE6C329080618DE8F2EE4D8",
+      "Length": 2257
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-review.md",
+      "Hash": "7D04439D9E7053ECB51A5E7CB3660BD2076A8121E6D54E7A52B904619067C92F",
+      "Length": 6532
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-typecheck.log",
+      "Hash": "ED5F0E2C87DE15449C2B74679EF6FC7809BF52C016B7FB58AEA4557A0DBD2717",
+      "Length": 71
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red.json",
+      "Hash": "C7058A399A9D5474DB51CAE14D7737198F1949E512EF5B881B5F1418FBF7E80E",
+      "Length": 18628
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red.log",
+      "Hash": "971C60EB74C79BAFE3B583D3812E5250F3561BDB381DFA7EBAF1BD9CA19375FC",
+      "Length": 7285
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-typecheck.log",
+      "Hash": "9C1014587E373EE31D841E3928ED541EBC757425C241DBD3F0FAC14169FB5643",
+      "Length": 71
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-focused-artifacts\\.last-run.json",
+      "Hash": "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+      "Length": 45
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-2-artifacts\\.last-run.json",
+      "Hash": "5684530D4107185798700E1CFE08DC069B06CDD277F672D9345AB1064D37CBAE",
+      "Length": 96
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-2-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\error-context.md",
+      "Hash": "5E02179BE45E7C4DF588B4557544C5A5C8AE4C748B22D04FFF254E8C4B74ED0A",
+      "Length": 5548
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-2-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\trace.zip",
+      "Hash": "48DFDD50793B41F177DAF68CC7D7AA1F9467D4C8CEA3FB97AC6F50BD9BDA0EB5",
+      "Length": 6664
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-3-artifacts\\.last-run.json",
+      "Hash": "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+      "Length": 45
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-artifacts\\.last-run.json",
+      "Hash": "5684530D4107185798700E1CFE08DC069B06CDD277F672D9345AB1064D37CBAE",
+      "Length": 96
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\error-context.md",
+      "Hash": "649865C3AA5940DDC297047A3A09501B5F22CCC5ADC1ADF875913B990AE5F910",
+      "Length": 5049
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-green-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\trace.zip",
+      "Hash": "1468E2530D723120D6FF4AE1F68F88FDA5C8C279EDEDCCA8273FE74534EF75F2",
+      "Length": 6175
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-chromium-green-artifacts\\.last-run.json",
+      "Hash": "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+      "Length": 45
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-lifecycle-green-artifacts\\.last-run.json",
+      "Hash": "91D1C43004802CD49950D78EB11C8FA7D05DA8FFFFE219A8B13B2F561BC00903",
+      "Length": 45
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-red-artifacts\\.last-run.json",
+      "Hash": "2CDB7B9B305DB1E672A49D286CA14EF05F8B3D367EB6DBB52BFC57E3C77A50E0",
+      "Length": 96
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-red-artifacts\\api-lifecycle-application--34d67-mplete-next-request-headers-api\\error-context.md",
+      "Hash": "B3B538B68BC70AE259D15D696AAAA64E501A716EA51D9E5E561F8061663B65F7",
+      "Length": 7308
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-r1-red-artifacts\\api-lifecycle-application--34d67-mplete-next-request-headers-api\\trace.zip",
+      "Hash": "99776FA4189D738663C867DD22E4CA4F6C30E94469598CFCBEF1FE5DBDC6BCDA",
+      "Length": 7325
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\.last-run.json",
+      "Hash": "0A6A4BCD01DD72CC35E2AEA8C9EBC4F6DEB3FA824A11ECA5CA8B58E84A15F61C",
+      "Length": 194
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\error-context.md",
+      "Hash": "7BAA3BEBB02A33BA0DD3AEFC08D588690DF62D1526990604A935B1E368D31C70",
+      "Length": 5118
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\api-lifecycle-application--1cf1b--releasing-an-unused-socket-api\\trace.zip",
+      "Hash": "D82C0089C627A9DBC9B0F5F96E8FC15E4EBAE2145792F299DD927277C6CC3965",
+      "Length": 6461
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\api-lifecycle-application--952a5-request-browser-preconnect--api\\error-context.md",
+      "Hash": "39B1B379BD74115CFA6FB352B2372181069BBE8F95EC658BB3614A63D5D1C14C",
+      "Length": 5118
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\api-lifecycle-application--952a5-request-browser-preconnect--api\\trace.zip",
+      "Hash": "B86C5FC0EA44C558F43BF236945A28A338B1BD30952ED587254147022465AE51",
+      "Length": 6432
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\api-lifecycle-application--cd255-te-request-partial-headers--api\\error-context.md",
+      "Hash": "174CC6E377918B7C44481908079B9581CC1E95474412438FED41682832D34491",
+      "Length": 5115
+    },
+    {
+      "Path": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\test-results\\sdd\\portfolio-completion-2026-10-26\\shutdown-red-artifacts\\api-lifecycle-application--cd255-te-request-partial-headers--api\\trace.zip",
+      "Hash": "72F88DE0C41D6F0E8186CD3CB5D307D95E41DC95BC6EBA72419FCE4BE6B1E746",
+      "Length": 6437
+    }
+  ]
+}

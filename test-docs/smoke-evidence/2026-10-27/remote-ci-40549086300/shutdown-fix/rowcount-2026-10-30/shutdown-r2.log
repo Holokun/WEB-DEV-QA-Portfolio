@@ -1,0 +1,17 @@
+Already up to date
+Done in 293ms using pnpm v11.19.0
+
+   ╭──────────────────────────────────────────╮
+   │                                          │
+   │   Update available! 11.19.0 → 12.16.1.   │
+   │   Changelog: https://pnpm.io/v/12.16.1   │
+   │     To update, run: pnpm add -g pnpm     │
+   │                                          │
+   ╰──────────────────────────────────────────╯
+
+
+Running 1 test using 1 worker
+
+  ok 1 [api] › tests\api\lifecycle.spec.ts:82:1 › application shutdown drains a received feedback body and response while releasing an unused socket (137ms)
+
+  1 passed (976ms)

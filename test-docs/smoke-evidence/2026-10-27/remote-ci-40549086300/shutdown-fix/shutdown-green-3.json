@@ -1,0 +1,256 @@
+{
+  "config": {
+    "argv": [
+      "D:\\programms\\nodejs\\node.exe",
+      "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\node_modules\\.pnpm\\@playwright+test@1.63.0\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/api/lifecycle.spec.ts",
+      "--project=api",
+      "--workers=1",
+      "--retries=0",
+      "--reporter=list,json",
+      "--output=test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-3-artifacts"
+    ],
+    "configFile": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\playwright.config.ts",
+    "rootDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\Projects\\WEB_DEV\\WEB-DEV-QA-Portfolio\\tests\\fixtures\\suite.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-3-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "api/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-3-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-3-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-3-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/**/*.spec.ts",
+          "accessibility/**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/test-results/sdd/portfolio-completion-2026-10-26/shutdown-green-3-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-phone",
+        "name": "chromium-phone",
+        "testDir": "D:/Projects/WEB_DEV/WEB-DEV-QA-Portfolio/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "e2e/layout.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\lifecycle.spec.ts",
+      "file": "api/lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "application shutdown releases an accepted socket without a complete request (browser preconnect)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:28:51.038Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-89d630d48568e8264bb6",
+          "file": "api/lifecycle.spec.ts",
+          "line": 24,
+          "column": 3
+        },
+        {
+          "title": "application shutdown releases an accepted socket without a complete request (partial headers)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:28:51.191Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-8798f90e8deb0bf6f966",
+          "file": "api/lifecycle.spec.ts",
+          "line": 24,
+          "column": 3
+        },
+        {
+          "title": "application shutdown drains a received feedback body and response while releasing an unused socket",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "api",
+              "projectName": "api",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 133,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T17:28:51.313Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7f265bf434040ac4eb5d-0b3c544d1a45c9c19444",
+          "file": "api/lifecycle.spec.ts",
+          "line": 47,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T17:28:50.551Z",
+    "duration": 922.674,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
